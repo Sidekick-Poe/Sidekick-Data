@@ -1,0 +1,76 @@
+﻿Id,Name,Category,ItemClassCategory,RemovedIfLeavesArea,Unknown0,Unknown1,AllocateToMapOwner,AlwaysAllocate,CanHaveVeiledMods,Unknown2,Unknown3,AlwaysShow,CanBeCorrupted,CanHaveIncubators,CanHaveInfluence,CanBeDoubleCorrupted,CanHaveAspects,CanTransferSkin,ItemStance,CanScourge,Unknown4
+LifeFlask,생명력 플라스크,Flasks,"<0, 0>",False,[],[],False,False,False,2612,1161,False,False,False,False,False,False,True,"<null, null>",False,False
+ManaFlask,마나 플라스크,Flasks,"<0, 0>",False,[],[],False,False,False,2612,1161,False,False,False,False,False,False,True,"<null, null>",False,False
+HybridFlask,하이브리드 플라스크,Flasks,"<0, 0>",False,[],[],False,False,False,2612,1161,False,False,False,False,False,False,True,"<null, null>",False,False
+Currency,화폐,Other,"<5, 0>",False,[],[],False,True,False,2612,1161,False,False,False,False,False,False,False,"<null, null>",False,False
+Amulet,목걸이,Jewellery,"<6, 0>",False,[],[],False,False,True,2612,1161,False,True,True,True,True,True,True,"<null, null>",True,True
+Ring,반지,Jewellery,"<7, 0>",False,[],[],False,False,True,2612,1161,False,True,True,True,True,True,True,"<null, null>",True,True
+Claw,클로,One Handed Weapon,"<8, 0>",False,[],[],False,False,True,2612,1161,False,True,True,True,True,True,True,"<0, 0>",True,True
+Dagger,단검,One Handed Weapon,"<3, 0>",False,[],[],False,False,True,2612,1161,False,True,True,True,True,True,True,"<1, 0>",True,True
+Wand,마법봉,One Handed Weapon,"<9, 0>",False,[],[],False,False,True,2612,1161,False,True,True,True,True,True,True,"<2, 0>",True,True
+One Hand Sword,한손 검,One Handed Weapon,"<2, 0>",False,[],[],False,False,True,2612,1161,False,True,True,True,True,True,True,"<3, 0>",True,True
+Thrusting One Hand Sword,날카로운 한손 검,One Handed Weapon,"<2, 0>",False,[],[],False,False,True,2612,1161,False,True,True,True,True,True,True,"<4, 0>",True,True
+One Hand Axe,한손 도끼,One Handed Weapon,"<10, 0>",False,[],[],False,False,True,2612,1161,False,True,True,True,True,True,True,"<3, 0>",True,True
+One Hand Mace,한손 철퇴,One Handed Weapon,"<1, 0>",False,[],[],False,False,True,2612,1161,False,True,True,True,True,True,True,"<3, 0>",True,True
+Bow,활,Two Handed Weapon,"<11, 0>",False,[],[],False,False,True,2612,1161,False,True,True,True,True,True,True,"<5, 0>",True,True
+Staff,지팡이,Two Handed Weapon,"<4, 0>",False,[],[],False,False,True,2612,1161,False,True,True,True,True,True,True,"<6, 0>",True,True
+Two Hand Sword,양손 검,Two Handed Weapon,"<12, 0>",False,[],[],False,False,True,2612,1161,False,True,True,True,True,True,True,"<7, 0>",True,True
+Two Hand Axe,양손 도끼,Two Handed Weapon,"<13, 0>",False,[],[],False,False,True,2612,1161,False,True,True,True,True,True,True,"<8, 0>",True,True
+Two Hand Mace,양손 철퇴,Two Handed Weapon,"<14, 0>",False,[],[],False,False,True,2612,1161,False,True,True,True,True,True,True,"<8, 0>",True,True
+Active Skill Gem,액티브 스킬 젬,Gems,"<15, 0>",False,[],[],False,True,False,2612,1161,False,True,False,False,False,False,False,"<null, null>",False,False
+Support Skill Gem,보조 스킬 젬,Gems,"<16, 0>",False,[],[],False,True,False,2612,1161,False,True,False,False,False,False,False,"<null, null>",False,False
+Quiver,화살통,Off-hand,"<17, 0>",False,[],[],False,False,True,2612,1161,False,True,True,True,True,True,True,"<9, 0>",True,True
+Belt,허리띠,Jewellery,"<18, 0>",False,[],[],False,False,True,2612,1161,False,True,True,True,True,True,True,"<null, null>",True,True
+Gloves,장갑,Armor,"<19, 0>",False,[],[],False,False,True,2612,1161,False,True,True,True,True,True,True,"<null, null>",True,True
+Boots,장화,Armor,"<20, 0>",False,[],[],False,False,True,2612,1161,False,True,True,True,True,True,True,"<null, null>",True,True
+Body Armour,갑옷,Armor,"<21, 0>",False,[],[],False,False,True,2612,1161,False,True,True,True,True,True,True,"<null, null>",True,True
+Helmet,투구,Armor,"<22, 0>",False,[],[],False,False,True,2612,1161,False,True,True,True,True,True,True,"<null, null>",True,True
+Shield,방패,Off-hand,"<23, 0>",False,[],[],False,False,True,2612,1161,False,True,True,True,True,True,True,"<10, 0>",True,True
+SmallRelic,소형 유물,,"<null, null>",False,[],[],False,False,False,2612,1161,False,False,False,False,False,False,False,"<null, null>",False,False
+MediumRelic,중형 유물,,"<null, null>",False,[],[],False,False,False,2612,1161,False,False,False,False,False,False,False,"<null, null>",False,False
+LargeRelic,대형 유물,,"<null, null>",False,[],[],False,False,False,2612,1161,False,False,False,False,False,False,False,"<null, null>",False,False
+StackableCurrency,중첩 가능 화폐,,"<5, 0>",False,[],[],False,True,False,2612,1161,False,False,False,False,False,False,False,"<null, null>",False,False
+QuestItem,퀘스트 아이템,,"<24, 0>",False,[],[],False,False,False,2612,1161,True,False,False,False,False,False,False,"<null, null>",False,False
+Sceptre,셉터,One Handed Weapon,"<1, 0>",False,[],[],False,False,True,2612,1161,False,True,True,True,True,True,True,"<3, 0>",True,True
+UtilityFlask,특수 플라스크,Flasks,"<0, 0>",False,[],[],False,False,False,2612,1161,False,False,False,False,False,False,True,"<null, null>",False,False
+UtilityFlaskCritical,강력한 특수 플라스크,,"<0, 0>",False,[],[],False,False,False,2612,1161,False,False,False,False,False,False,True,"<null, null>",False,False
+Map,지도,Other,"<25, 0>",False,[],[],False,True,False,1783,1161,False,True,False,False,False,False,False,"<null, null>",True,False
+Unarmed,,,"<null, null>",False,[],[],False,False,False,2612,1161,False,False,False,False,False,False,True,"<null, null>",False,False
+FishingRod,낚싯대,,"<26, 0>",False,[],[],False,False,False,2612,1161,False,True,True,False,True,True,True,"<7, 0>",True,True
+MapFragment,지도 조각,Other,"<27, 0>",False,[],[],True,True,False,2612,1161,False,False,False,False,False,False,False,"<null, null>",False,False
+HideoutDoodad,은신처 장식물,,"<null, null>",False,[],[],False,False,False,2612,1161,False,False,False,False,False,False,False,"<null, null>",False,False
+Microtransaction,포인트 아이템,Microtransactions,"<null, null>",False,[],[],False,False,False,2612,1161,False,False,False,False,False,False,False,"<null, null>",False,False
+Jewel,주얼,Other,"<28, 0>",False,[],[],False,True,False,1776,1161,False,True,False,False,True,False,False,"<null, null>",False,False
+DivinationCard,점술 카드,Other,"<29, 0>",False,[],[],False,True,False,1777,1161,False,False,False,False,False,False,False,"<null, null>",False,False
+LabyrinthItem,미궁 아이템,,"<30, 0>",True,[],[],False,False,False,2612,1161,True,False,False,False,False,False,False,"<null, null>",False,False
+LabyrinthTrinket,미궁 장신구,,"<31, 0>",True,[],[],False,False,False,2612,1161,True,False,False,False,False,False,False,"<null, null>",False,False
+LabyrinthMapItem,미궁 지도 아이템,,"<27, 0>",False,[],[],True,True,False,2612,1161,False,False,False,False,False,False,False,"<null, null>",False,False
+MiscMapItem,기타 지도 아이템,Other,"<32, 0>",False,[],[],False,True,False,2612,1161,False,True,False,False,False,False,False,"<null, null>",False,False
+Leaguestone,리그스톤,Other,"<33, 0>",False,[],[],False,True,False,2612,1161,False,False,False,False,False,False,False,"<null, null>",False,False
+PantheonSoul,판테온의 영혼,,"<34, 0>",False,[],[],False,False,False,2612,1161,True,False,False,False,False,False,False,"<null, null>",False,False
+UniqueFragment,조각,Other,"<35, 0>",False,[],[],True,True,False,2612,1161,False,False,False,False,False,False,False,"<null, null>",False,False
+AbyssJewel,심연 주얼,Other,"<36, 0>",False,[],[],False,True,False,2612,1161,False,True,False,False,True,False,False,"<null, null>",False,False
+IncursionItem,기습 아이템,,"<37, 0>",True,[],[],True,False,False,2612,1161,True,False,False,False,False,False,False,"<null, null>",False,False
+DelveSocketableCurrency,탐광 결합형 화폐,,"<38, 0>",False,[],[],False,True,False,2612,1161,False,False,False,False,False,False,False,"<null, null>",False,False
+Incubator,인큐베이터,,"<39, 0>",False,[],[],False,True,False,2612,1161,False,False,False,False,False,False,False,"<null, null>",False,False
+UniqueShard,파편,,"<null, null>",False,[],[],False,False,False,2612,1161,False,False,False,False,False,False,False,"<null, null>",False,False
+UniqueShardBase,파편 심장,,"<null, null>",False,[],[],False,False,False,2612,1161,False,False,False,False,False,False,False,"<null, null>",False,False
+Rune Dagger,룬 단검,One Handed Weapon,"<3, 0>",False,[],[],False,False,True,2612,1161,False,True,True,True,True,True,True,"<1, 0>",True,True
+Warstaff,전쟁지팡이,Two Handed Weapon,"<4, 0>",False,[],[],False,False,True,2612,1161,False,True,True,True,True,True,True,"<6, 0>",True,True
+DelveStackableSocketableCurrency,탐광 중첩 및 결합형 화폐,,"<38, 0>",False,[],[],False,True,False,2612,1161,False,False,False,False,False,False,False,"<null, null>",False,False
+AtlasRegionUpgradeItem,아틀라스 지역 업그레이드 아이템,,"<40, 0>",False,[],[],False,False,False,2612,607,False,False,False,False,False,False,False,"<null, null>",False,False
+MetamorphosisDNA,변형 샘플,,"<41, 0>",False,[],[],True,True,False,2612,1161,False,False,False,False,False,False,False,"<null, null>",False,False
+HiddenItem,숨겨진 아이템,,"<null, null>",False,[],[],False,False,False,2612,1161,False,False,False,False,False,False,False,"<null, null>",False,False
+DONOTUSE1,,,"<null, null>",False,[],[],False,False,False,2612,1161,False,False,False,False,False,False,False,"<null, null>",False,False
+DONOTUSE2,,,"<null, null>",False,[],[],False,False,False,2612,1161,False,False,False,False,False,False,False,"<null, null>",False,False
+DONOTUSE3,,,"<null, null>",False,[],[],False,False,False,2612,1161,False,False,False,False,False,False,False,"<null, null>",False,False
+HeistContract,계약,,"<42, 0>",False,[],[],False,False,False,2612,1161,False,True,False,False,False,False,False,"<null, null>",False,False
+HeistEquipmentWeapon,강탈 장비,,"<43, 0>",False,[],[],False,False,False,2612,1161,False,False,False,False,False,False,True,"<null, null>",False,False
+HeistEquipmentTool,강탈 도구,,"<44, 0>",False,[],[],False,False,False,2612,1161,False,False,False,False,False,False,True,"<null, null>",False,False
+HeistEquipmentUtility,강탈 망토,,"<45, 0>",False,[],[],False,False,False,2612,1161,False,False,False,False,False,False,True,"<null, null>",False,False
+HeistEquipmentReward,강탈 브로치,,"<46, 0>",False,[],[],False,False,False,2612,1161,False,False,False,False,False,False,True,"<null, null>",False,False
+HeistBlueprint,도면,,"<47, 0>",False,[],[],False,False,False,2612,1161,False,True,False,False,False,False,False,"<null, null>",False,False
+Trinket,장신구,Jewellery,"<48, 0>",False,[],[],False,False,False,2612,1161,False,True,True,False,False,False,False,"<null, null>",False,False
+HeistObjective,강탈 대상,,"<49, 0>",False,[],[],False,False,False,2612,1161,True,False,False,False,False,False,False,"<null, null>",False,False
+ExpeditionLogbook,탐험 일지,,"<50, 0>",False,[],[],False,False,False,2612,1161,True,True,False,False,False,False,False,"<null, null>",False,False
+IncubatorStackable,인큐베이터,,"<39, 0>",False,[],[],False,True,False,2612,1161,False,False,False,False,False,False,False,"<null, null>",False,False

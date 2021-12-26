@@ -1,0 +1,14 @@
+﻿Id,StatsKey,FormatText,Unknown0
+Mana,"<11746, 0>",{0} Mana,1
+Life,"<14015, 0>",{0} Leben,1
+ES,"<14874, 0>",{0} Energieschild,1
+Rage,"<14052, 0>",{0} Rausch,1
+ManaPercent,"<14014, 0>",{0}% Mana,1
+LifePercent,"<14016, 0>",{0}% Leben,1
+UnreservedManaPercent,"<14283, 0>",[DNT] {0}% Unreserved Mana ,1
+ManaPerMinute,"<14704, 0>",{0} Mana pro Sekunde,60
+LifePerMinute,"<14705, 0>",{0} Leben pro Sekunde,60
+ManaPercentPerMinute,"<14708, 0>",{0}% Mana pro Sekunde,60
+LifePercentPerMinute,"<14709, 0>",{0}% Leben pro Sekunde,60
+ESPerMinute,"<14786, 0>",{0) Energieschild pro Sekunde,60
+ESPercentPerMinute,"<14787, 0>",{0)% Energieschild pro Sekunde,60

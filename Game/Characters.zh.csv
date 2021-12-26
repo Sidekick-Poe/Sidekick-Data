@@ -1,0 +1,36 @@
+﻿Id,Name,AOFile,ACTFile,BaseMaxLife,BaseMaxMana,WeaponSpeed,MinDamage,MaxDamage,MaxAttackDistance,Icon,IntegerId,BaseStrength,BaseDexterity,BaseIntelligence,Keys0,Description,StartSkillGem_SkillGemsKey,Key13,Key14,Unknown0,Unknown1,CharacterSize,IntroSoundFile,StartWeapon_BaseItemTypesKey,Gender,TraitDescription,Key0,Key1,Key2,Key3,Unknown2,Keys1,BaseClassIllustrationsDdsFile,Unknown3,Unknown4
+Metadata/Characters/Str/Str,野蠻人,Metadata/Characters/Str/Str.ao,Metadata/Characters/Str/Str.act,38,34,833,2,8,8,,1,32,14,14,"[<2332, 0>]","你以為自己夠格面對這片受詛咒的大地嗎，野蠻人？
+
+我們賜你真理，但你仍執迷不悟；我們給你侍奉的機會，但你輕蔑的的放棄。
+
+瓦爾克拉斯將會教你何謂真正的殺戮。","<100, 0>",<0>,<0>,6,1,2,Audio/Dialogue/NPC/DominusGlyph/Dom_Intro_Marauder.ogg,"<4080, 0>",M,特性：力量，近戰,"<334, 0>","<239, 0>","<334, 0>","<4243, 0>",1,"[<1104, 0>]",Art/2DArt/BaseClassIllustrations/Str.dds,-1736,-1350
+Metadata/Characters/Int/Int,女巫,Metadata/Characters/Int/Int.ao,Metadata/Characters/Int/Int.act,38,34,833,2,5,8,,3,14,14,32,"[<2332, 0>]","為什麼要用黑暗與墮落，來滿足妳心靈渴望的好奇心？
+
+聖潔是我們的父親，奧瑞亞是我們的母親。當女兒背離正道時，家將無她的容身之處。
+
+謹記一切在瓦爾克拉斯所學，這將是妳唯一回到奧瑞亞的希望。","<0, 0>",<0>,<0>,6,1,2,Audio/Dialogue/NPC/DominusGlyph/Dom_Intro_Witch.ogg,"<3914, 0>",F,特性：智慧，法術,"<336, 0>","<280, 0>","<336, 0>","<3914, 0>",2,"[<4120, 0>]",Art/2DArt/BaseClassIllustrations/Int.dds,-1532,-669
+Metadata/Characters/StrDexInt/StrDexInt,貴族,Metadata/Characters/StrDexInt/StrDexInt.ao,Metadata/Characters/StrDexInt/StrDexInt.act,38,34,833,2,6,8,,0,20,20,20,"[<2332, 0>]","貴族應擁有堅忍不拔的心智、無懈可擊的外貌以及高貴優雅的舉止。貴族是我們文明至高無上的榮耀，他賜予我們希望，給予我們光明。
+
+但妳，只為我們帶來無盡的殺戮與黑暗。
+
+我們對妳惱人的存在已經無法再容忍了，願瓦爾克拉斯能接納妳的一切。","<206, 0>",<0>,<0>,6,1,2,Audio/Dialogue/NPC/DominusGlyph/Dom_Intro_Scion.ogg,"<4027, 0>",F,特性：智慧，力量，敏捷,"<335, 0>","<null, null>","<null, null>","<null, null>",5,[],,0,0
+Metadata/Characters/Dex/Dex,遊俠,Metadata/Characters/Dex/Dex.ao,Metadata/Characters/Dex/Dex.act,38,34,833,2,5,8,,2,14,32,14,"[<2332, 0>]","妳鬼祟且狡詐地從他人手中搶奪賞金。
+
+妳野蠻的行徑，與烏鴉掠奪作物、野狗殘殺牲畜，又有何異？
+
+奧瑞亞是人類居住的地方，而非野獸棲息之地。等看著吧，遊俠，就讓瓦爾克拉斯教你如何成為一頭真正的野獸。 ","<137, 0>",<0>,<0>,6,1,2,Audio/Dialogue/NPC/DominusGlyph/Dom_Intro_Ranger.ogg,"<4136, 0>",F,特性：敏捷，遠距離,"<69, 0>","<45, 0>","<69, 0>","<4136, 0>",2,"[<1104, 0>, <2566, 0>]",Art/2DArt/BaseClassIllustrations/Dex.dds,-850,-1255
+Metadata/Characters/StrDex/StrDex,決鬥者,Metadata/Characters/StrDex/StrDex.ao,Metadata/Characters/StrDex/StrDex.act,38,34,833,2,6,8,,4,23,23,14,"[<2332, 0>]","你天生擁有敏捷的身手和強健的體魄。你對老天給你的天賦做了什麼，決鬥者？你的自我沉淪，浪費了這些才能。
+
+你的雙手已經被無意義的殺戮玷汙，是罪引領你墮落於此。
+
+你已經背叛了大競技場的律法。瓦爾克拉斯將是你殺戮秀的觀眾...和仇敵。","<18, 0>",<0>,<0>,6,1,2,Audio/Dialogue/NPC/DominusGlyph/Dom_Intro_Duelist.ogg,"<4027, 0>",M,特性：力量，敏捷,"<323, 0>","<18, 0>","<323, 0>","<4027, 0>",1,"[<1104, 0>]",Art/2DArt/BaseClassIllustrations/StrDex.dds,-1959,-1432
+Metadata/Characters/DexInt/DexInt,暗影刺客,Metadata/Characters/DexInt/DexInt.ao,Metadata/Characters/DexInt/DexInt.act,38,34,833,2,5,8,,6,14,23,23,"[<2332, 0>]","你生來身手矯健和有著敏銳的思緒。但你是如何報答這些才能？屠殺無辜的生命。
+
+你的才能造就你熟練掠奪，並開啟了殺戮的事業。你奪走無數的生命只為填滿你的行囊。
+
+你在瓦爾克拉斯好好拾回你的名望吧。","<79, 0>",<0>,<0>,6,1,2,Audio/Dialogue/NPC/DominusGlyph/Dom_Intro_Shadow.ogg,"<3938, 0>",M,特性：敏捷，智慧,"<324, 0>","<300, 0>","<336, 0>","<3914, 0>",3,"[<2233, 0>]",Art/2DArt/BaseClassIllustrations/DexInt.dds,-1140,-2172
+Metadata/Characters/StrInt/StrInt,聖堂武僧,Metadata/Characters/StrInt/StrInt.ao,Metadata/Characters/StrInt/StrInt.act,38,34,833,2,6,8,,5,23,14,23,"[<2332, 0>]","你誓死支持並且奉獻靈魂來服侍偉大的神，以及聖堂武僧的紀律。多年來你的生活都建立在信仰上，但罪孽只輕輕一碰，你堅守的信仰就已經四分五裂、蕩然無存。
+
+這不是天大的笑話嗎？失去了信仰你將一無所有。
+
+你曾經被神選召為聖堂武僧。現在瓦爾克拉斯指名你為流亡者。","<73, 0>",<0>,<0>,6,1,2,Audio/Dialogue/NPC/DominusGlyph/Dom_Intro_Templar.ogg,"<4108, 0>",M,特性：力量，智慧,"<139, 0>","<378, 0>","<139, 0>","<4108, 0>",1,"[<4120, 0>]",Art/2DArt/BaseClassIllustrations/StrInt.dds,-918,-1581

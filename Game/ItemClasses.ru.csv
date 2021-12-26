@@ -1,0 +1,76 @@
+﻿Id,Name,Category,ItemClassCategory,RemovedIfLeavesArea,Unknown0,Unknown1,AllocateToMapOwner,AlwaysAllocate,CanHaveVeiledMods,Unknown2,Unknown3,AlwaysShow,CanBeCorrupted,CanHaveIncubators,CanHaveInfluence,CanBeDoubleCorrupted,CanHaveAspects,CanTransferSkin,ItemStance,CanScourge,Unknown4
+LifeFlask,Флаконы жизни,Flasks,"<0, 0>",False,[],[],False,False,False,2612,1161,False,False,False,False,False,False,True,"<null, null>",False,False
+ManaFlask,Флаконы маны,Flasks,"<0, 0>",False,[],[],False,False,False,2612,1161,False,False,False,False,False,False,True,"<null, null>",False,False
+HybridFlask,Флаконы равновесия,Flasks,"<0, 0>",False,[],[],False,False,False,2612,1161,False,False,False,False,False,False,True,"<null, null>",False,False
+Currency,Вещи на обмен,Other,"<5, 0>",False,[],[],False,True,False,2612,1161,False,False,False,False,False,False,False,"<null, null>",False,False
+Amulet,Амулеты,Jewellery,"<6, 0>",False,[],[],False,False,True,2612,1161,False,True,True,True,True,True,True,"<null, null>",True,True
+Ring,Кольца,Jewellery,"<7, 0>",False,[],[],False,False,True,2612,1161,False,True,True,True,True,True,True,"<null, null>",True,True
+Claw,Когти,One Handed Weapon,"<8, 0>",False,[],[],False,False,True,2612,1161,False,True,True,True,True,True,True,"<0, 0>",True,True
+Dagger,Кинжалы,One Handed Weapon,"<3, 0>",False,[],[],False,False,True,2612,1161,False,True,True,True,True,True,True,"<1, 0>",True,True
+Wand,Жезлы,One Handed Weapon,"<9, 0>",False,[],[],False,False,True,2612,1161,False,True,True,True,True,True,True,"<2, 0>",True,True
+One Hand Sword,Одноручные мечи,One Handed Weapon,"<2, 0>",False,[],[],False,False,True,2612,1161,False,True,True,True,True,True,True,"<3, 0>",True,True
+Thrusting One Hand Sword,Шпаги,One Handed Weapon,"<2, 0>",False,[],[],False,False,True,2612,1161,False,True,True,True,True,True,True,"<4, 0>",True,True
+One Hand Axe,Одноручные топоры,One Handed Weapon,"<10, 0>",False,[],[],False,False,True,2612,1161,False,True,True,True,True,True,True,"<3, 0>",True,True
+One Hand Mace,Одноручные булавы,One Handed Weapon,"<1, 0>",False,[],[],False,False,True,2612,1161,False,True,True,True,True,True,True,"<3, 0>",True,True
+Bow,Луки,Two Handed Weapon,"<11, 0>",False,[],[],False,False,True,2612,1161,False,True,True,True,True,True,True,"<5, 0>",True,True
+Staff,Посохи,Two Handed Weapon,"<4, 0>",False,[],[],False,False,True,2612,1161,False,True,True,True,True,True,True,"<6, 0>",True,True
+Two Hand Sword,Двуручные мечи,Two Handed Weapon,"<12, 0>",False,[],[],False,False,True,2612,1161,False,True,True,True,True,True,True,"<7, 0>",True,True
+Two Hand Axe,Двуручные топоры,Two Handed Weapon,"<13, 0>",False,[],[],False,False,True,2612,1161,False,True,True,True,True,True,True,"<8, 0>",True,True
+Two Hand Mace,Двуручные булавы,Two Handed Weapon,"<14, 0>",False,[],[],False,False,True,2612,1161,False,True,True,True,True,True,True,"<8, 0>",True,True
+Active Skill Gem,Камни умений,Gems,"<15, 0>",False,[],[],False,True,False,2612,1161,False,True,False,False,False,False,False,"<null, null>",False,False
+Support Skill Gem,Камни поддержки,Gems,"<16, 0>",False,[],[],False,True,False,2612,1161,False,True,False,False,False,False,False,"<null, null>",False,False
+Quiver,Колчаны,Off-hand,"<17, 0>",False,[],[],False,False,True,2612,1161,False,True,True,True,True,True,True,"<9, 0>",True,True
+Belt,Пояса,Jewellery,"<18, 0>",False,[],[],False,False,True,2612,1161,False,True,True,True,True,True,True,"<null, null>",True,True
+Gloves,Перчатки,Armor,"<19, 0>",False,[],[],False,False,True,2612,1161,False,True,True,True,True,True,True,"<null, null>",True,True
+Boots,Обувь,Armor,"<20, 0>",False,[],[],False,False,True,2612,1161,False,True,True,True,True,True,True,"<null, null>",True,True
+Body Armour,Доспехи,Armor,"<21, 0>",False,[],[],False,False,True,2612,1161,False,True,True,True,True,True,True,"<null, null>",True,True
+Helmet,Шлемы,Armor,"<22, 0>",False,[],[],False,False,True,2612,1161,False,True,True,True,True,True,True,"<null, null>",True,True
+Shield,Щиты,Off-hand,"<23, 0>",False,[],[],False,False,True,2612,1161,False,True,True,True,True,True,True,"<10, 0>",True,True
+SmallRelic,Малые реликвии,,"<null, null>",False,[],[],False,False,False,2612,1161,False,False,False,False,False,False,False,"<null, null>",False,False
+MediumRelic,Средние реликвии,,"<null, null>",False,[],[],False,False,False,2612,1161,False,False,False,False,False,False,False,"<null, null>",False,False
+LargeRelic,Большие реликвии,,"<null, null>",False,[],[],False,False,False,2612,1161,False,False,False,False,False,False,False,"<null, null>",False,False
+StackableCurrency,Валюта,,"<5, 0>",False,[],[],False,True,False,2612,1161,False,False,False,False,False,False,False,"<null, null>",False,False
+QuestItem,Вещи для заданий,,"<24, 0>",False,[],[],False,False,False,2612,1161,True,False,False,False,False,False,False,"<null, null>",False,False
+Sceptre,Скипетры,One Handed Weapon,"<1, 0>",False,[],[],False,False,True,2612,1161,False,True,True,True,True,True,True,"<3, 0>",True,True
+UtilityFlask,Особые флаконы,Flasks,"<0, 0>",False,[],[],False,False,False,2612,1161,False,False,False,False,False,False,True,"<null, null>",False,False
+UtilityFlaskCritical,Важные особые флаконы,,"<0, 0>",False,[],[],False,False,False,2612,1161,False,False,False,False,False,False,True,"<null, null>",False,False
+Map,Карты,Other,"<25, 0>",False,[],[],False,True,False,1783,1161,False,True,False,False,False,False,False,"<null, null>",True,False
+Unarmed,,,"<null, null>",False,[],[],False,False,False,2612,1161,False,False,False,False,False,False,True,"<null, null>",False,False
+FishingRod,Удочки,,"<26, 0>",False,[],[],False,False,False,2612,1161,False,True,True,False,True,True,True,"<7, 0>",True,True
+MapFragment,Обрывки карт,Other,"<27, 0>",False,[],[],True,True,False,2612,1161,False,False,False,False,False,False,False,"<null, null>",False,False
+HideoutDoodad,Предметы убежища,,"<null, null>",False,[],[],False,False,False,2612,1161,False,False,False,False,False,False,False,"<null, null>",False,False
+Microtransaction,Микротранзакции,Microtransactions,"<null, null>",False,[],[],False,False,False,2612,1161,False,False,False,False,False,False,False,"<null, null>",False,False
+Jewel,Самоцветы,Other,"<28, 0>",False,[],[],False,True,False,1776,1161,False,True,False,False,True,False,False,"<null, null>",False,False
+DivinationCard,Гадальные карты,Other,"<29, 0>",False,[],[],False,True,False,1777,1161,False,False,False,False,False,False,False,"<null, null>",False,False
+LabyrinthItem,Предметы Лабиринта,,"<30, 0>",True,[],[],False,False,False,2612,1161,True,False,False,False,False,False,False,"<null, null>",False,False
+LabyrinthTrinket,Украшения Лабиринта,,"<31, 0>",True,[],[],False,False,False,2612,1161,True,False,False,False,False,False,False,"<null, null>",False,False
+LabyrinthMapItem,Карты Лабиринта,,"<27, 0>",False,[],[],True,True,False,2612,1161,False,False,False,False,False,False,False,"<null, null>",False,False
+MiscMapItem,Прочие предметы карт,Other,"<32, 0>",False,[],[],False,True,False,2612,1161,False,True,False,False,False,False,False,"<null, null>",False,False
+Leaguestone,Камни лиги,Other,"<33, 0>",False,[],[],False,True,False,2612,1161,False,False,False,False,False,False,False,"<null, null>",False,False
+PantheonSoul,Души Пантеона,,"<34, 0>",False,[],[],False,False,False,2612,1161,True,False,False,False,False,False,False,"<null, null>",False,False
+UniqueFragment,Фрагменты,Other,"<35, 0>",False,[],[],True,True,False,2612,1161,False,False,False,False,False,False,False,"<null, null>",False,False
+AbyssJewel,Самоцветы Бездны,Other,"<36, 0>",False,[],[],False,True,False,2612,1161,False,True,False,False,True,False,False,"<null, null>",False,False
+IncursionItem,Предметы Вмешательства,,"<37, 0>",True,[],[],True,False,False,2612,1161,True,False,False,False,False,False,False,"<null, null>",False,False
+DelveSocketableCurrency,Валюта Спуска,,"<38, 0>",False,[],[],False,True,False,2612,1161,False,False,False,False,False,False,False,"<null, null>",False,False
+Incubator,Инкубаторы,,"<39, 0>",False,[],[],False,True,False,2612,1161,False,False,False,False,False,False,False,"<null, null>",False,False
+UniqueShard,Осколки,,"<null, null>",False,[],[],False,False,False,2612,1161,False,False,False,False,False,False,False,"<null, null>",False,False
+UniqueShardBase,Стержни осколков,,"<null, null>",False,[],[],False,False,False,2612,1161,False,False,False,False,False,False,False,"<null, null>",False,False
+Rune Dagger,Рунические кинжалы,One Handed Weapon,"<3, 0>",False,[],[],False,False,True,2612,1161,False,True,True,True,True,True,True,"<1, 0>",True,True
+Warstaff,Воинские посохи,Two Handed Weapon,"<4, 0>",False,[],[],False,False,True,2612,1161,False,True,True,True,True,True,True,"<6, 0>",True,True
+DelveStackableSocketableCurrency,Валюта Спуска,,"<38, 0>",False,[],[],False,True,False,2612,1161,False,False,False,False,False,False,False,"<null, null>",False,False
+AtlasRegionUpgradeItem,Предметы улучшения области Атласа,,"<40, 0>",False,[],[],False,False,False,2612,607,False,False,False,False,False,False,False,"<null, null>",False,False
+MetamorphosisDNA,Образцы Метаморфа,,"<41, 0>",False,[],[],True,True,False,2612,1161,False,False,False,False,False,False,False,"<null, null>",False,False
+HiddenItem,Сокрытые предметы,,"<null, null>",False,[],[],False,False,False,2612,1161,False,False,False,False,False,False,False,"<null, null>",False,False
+DONOTUSE1,,,"<null, null>",False,[],[],False,False,False,2612,1161,False,False,False,False,False,False,False,"<null, null>",False,False
+DONOTUSE2,,,"<null, null>",False,[],[],False,False,False,2612,1161,False,False,False,False,False,False,False,"<null, null>",False,False
+DONOTUSE3,,,"<null, null>",False,[],[],False,False,False,2612,1161,False,False,False,False,False,False,False,"<null, null>",False,False
+HeistContract,Контракты,,"<42, 0>",False,[],[],False,False,False,2612,1161,False,True,False,False,False,False,False,"<null, null>",False,False
+HeistEquipmentWeapon,Разбойничьи принадлежности,,"<43, 0>",False,[],[],False,False,False,2612,1161,False,False,False,False,False,False,True,"<null, null>",False,False
+HeistEquipmentTool,Разбойничий инструмент,,"<44, 0>",False,[],[],False,False,False,2612,1161,False,False,False,False,False,False,True,"<null, null>",False,False
+HeistEquipmentUtility,Разбойничьи накидки,,"<45, 0>",False,[],[],False,False,False,2612,1161,False,False,False,False,False,False,True,"<null, null>",False,False
+HeistEquipmentReward,Разбойничьи броши,,"<46, 0>",False,[],[],False,False,False,2612,1161,False,False,False,False,False,False,True,"<null, null>",False,False
+HeistBlueprint,Чертежи,,"<47, 0>",False,[],[],False,False,False,2612,1161,False,True,False,False,False,False,False,"<null, null>",False,False
+Trinket,Украшения,Jewellery,"<48, 0>",False,[],[],False,False,False,2612,1161,False,True,True,False,False,False,False,"<null, null>",False,False
+HeistObjective,Предметы кражи,,"<49, 0>",False,[],[],False,False,False,2612,1161,True,False,False,False,False,False,False,"<null, null>",False,False
+ExpeditionLogbook,Журналы экспедиции,,"<50, 0>",False,[],[],False,False,False,2612,1161,True,True,False,False,False,False,False,"<null, null>",False,False
+IncubatorStackable,Инкубаторы,,"<39, 0>",False,[],[],False,True,False,2612,1161,False,False,False,False,False,False,False,"<null, null>",False,False

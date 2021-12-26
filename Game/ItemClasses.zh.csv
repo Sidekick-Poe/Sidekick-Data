@@ -1,0 +1,76 @@
+﻿Id,Name,Category,ItemClassCategory,RemovedIfLeavesArea,Unknown0,Unknown1,AllocateToMapOwner,AlwaysAllocate,CanHaveVeiledMods,Unknown2,Unknown3,AlwaysShow,CanBeCorrupted,CanHaveIncubators,CanHaveInfluence,CanBeDoubleCorrupted,CanHaveAspects,CanTransferSkin,ItemStance,CanScourge,Unknown4
+LifeFlask,生命藥劑,Flasks,"<0, 0>",False,[],[],False,False,False,2612,1161,False,False,False,False,False,False,True,"<null, null>",False,False
+ManaFlask,魔力藥劑,Flasks,"<0, 0>",False,[],[],False,False,False,2612,1161,False,False,False,False,False,False,True,"<null, null>",False,False
+HybridFlask,複合藥劑,Flasks,"<0, 0>",False,[],[],False,False,False,2612,1161,False,False,False,False,False,False,True,"<null, null>",False,False
+Currency,通貨,Other,"<5, 0>",False,[],[],False,True,False,2612,1161,False,False,False,False,False,False,False,"<null, null>",False,False
+Amulet,項鍊,Jewellery,"<6, 0>",False,[],[],False,False,True,2612,1161,False,True,True,True,True,True,True,"<null, null>",True,True
+Ring,戒指,Jewellery,"<7, 0>",False,[],[],False,False,True,2612,1161,False,True,True,True,True,True,True,"<null, null>",True,True
+Claw,爪,One Handed Weapon,"<8, 0>",False,[],[],False,False,True,2612,1161,False,True,True,True,True,True,True,"<0, 0>",True,True
+Dagger,匕首,One Handed Weapon,"<3, 0>",False,[],[],False,False,True,2612,1161,False,True,True,True,True,True,True,"<1, 0>",True,True
+Wand,法杖,One Handed Weapon,"<9, 0>",False,[],[],False,False,True,2612,1161,False,True,True,True,True,True,True,"<2, 0>",True,True
+One Hand Sword,單手劍,One Handed Weapon,"<2, 0>",False,[],[],False,False,True,2612,1161,False,True,True,True,True,True,True,"<3, 0>",True,True
+Thrusting One Hand Sword,細劍,One Handed Weapon,"<2, 0>",False,[],[],False,False,True,2612,1161,False,True,True,True,True,True,True,"<4, 0>",True,True
+One Hand Axe,單手斧,One Handed Weapon,"<10, 0>",False,[],[],False,False,True,2612,1161,False,True,True,True,True,True,True,"<3, 0>",True,True
+One Hand Mace,單手錘,One Handed Weapon,"<1, 0>",False,[],[],False,False,True,2612,1161,False,True,True,True,True,True,True,"<3, 0>",True,True
+Bow,弓,Two Handed Weapon,"<11, 0>",False,[],[],False,False,True,2612,1161,False,True,True,True,True,True,True,"<5, 0>",True,True
+Staff,長杖,Two Handed Weapon,"<4, 0>",False,[],[],False,False,True,2612,1161,False,True,True,True,True,True,True,"<6, 0>",True,True
+Two Hand Sword,雙手劍,Two Handed Weapon,"<12, 0>",False,[],[],False,False,True,2612,1161,False,True,True,True,True,True,True,"<7, 0>",True,True
+Two Hand Axe,雙手斧,Two Handed Weapon,"<13, 0>",False,[],[],False,False,True,2612,1161,False,True,True,True,True,True,True,"<8, 0>",True,True
+Two Hand Mace,雙手錘,Two Handed Weapon,"<14, 0>",False,[],[],False,False,True,2612,1161,False,True,True,True,True,True,True,"<8, 0>",True,True
+Active Skill Gem,主動技能寶石,Gems,"<15, 0>",False,[],[],False,True,False,2612,1161,False,True,False,False,False,False,False,"<null, null>",False,False
+Support Skill Gem,輔助技能寶石,Gems,"<16, 0>",False,[],[],False,True,False,2612,1161,False,True,False,False,False,False,False,"<null, null>",False,False
+Quiver,箭袋,Off-hand,"<17, 0>",False,[],[],False,False,True,2612,1161,False,True,True,True,True,True,True,"<9, 0>",True,True
+Belt,腰帶,Jewellery,"<18, 0>",False,[],[],False,False,True,2612,1161,False,True,True,True,True,True,True,"<null, null>",True,True
+Gloves,手套,Armor,"<19, 0>",False,[],[],False,False,True,2612,1161,False,True,True,True,True,True,True,"<null, null>",True,True
+Boots,鞋子,Armor,"<20, 0>",False,[],[],False,False,True,2612,1161,False,True,True,True,True,True,True,"<null, null>",True,True
+Body Armour,胸甲,Armor,"<21, 0>",False,[],[],False,False,True,2612,1161,False,True,True,True,True,True,True,"<null, null>",True,True
+Helmet,頭部,Armor,"<22, 0>",False,[],[],False,False,True,2612,1161,False,True,True,True,True,True,True,"<null, null>",True,True
+Shield,盾,Off-hand,"<23, 0>",False,[],[],False,False,True,2612,1161,False,True,True,True,True,True,True,"<10, 0>",True,True
+SmallRelic,小型聖物,,"<null, null>",False,[],[],False,False,False,2612,1161,False,False,False,False,False,False,False,"<null, null>",False,False
+MediumRelic,中型聖物,,"<null, null>",False,[],[],False,False,False,2612,1161,False,False,False,False,False,False,False,"<null, null>",False,False
+LargeRelic,大型聖物,,"<null, null>",False,[],[],False,False,False,2612,1161,False,False,False,False,False,False,False,"<null, null>",False,False
+StackableCurrency,可堆疊通貨,,"<5, 0>",False,[],[],False,True,False,2612,1161,False,False,False,False,False,False,False,"<null, null>",False,False
+QuestItem,任務物品,,"<24, 0>",False,[],[],False,False,False,2612,1161,True,False,False,False,False,False,False,"<null, null>",False,False
+Sceptre,權杖,One Handed Weapon,"<1, 0>",False,[],[],False,False,True,2612,1161,False,True,True,True,True,True,True,"<3, 0>",True,True
+UtilityFlask,功能藥劑,Flasks,"<0, 0>",False,[],[],False,False,False,2612,1161,False,False,False,False,False,False,True,"<null, null>",False,False
+UtilityFlaskCritical,暴擊藥劑,,"<0, 0>",False,[],[],False,False,False,2612,1161,False,False,False,False,False,False,True,"<null, null>",False,False
+Map,異界地圖,Other,"<25, 0>",False,[],[],False,True,False,1783,1161,False,True,False,False,False,False,False,"<null, null>",True,False
+Unarmed,,,"<null, null>",False,[],[],False,False,False,2612,1161,False,False,False,False,False,False,True,"<null, null>",False,False
+FishingRod,魚竿,,"<26, 0>",False,[],[],False,False,False,2612,1161,False,True,True,False,True,True,True,"<7, 0>",True,True
+MapFragment,地圖碎片,Other,"<27, 0>",False,[],[],True,True,False,2612,1161,False,False,False,False,False,False,False,"<null, null>",False,False
+HideoutDoodad,藏身處裝飾,,"<null, null>",False,[],[],False,False,False,2612,1161,False,False,False,False,False,False,False,"<null, null>",False,False
+Microtransaction,商城物品,Microtransactions,"<null, null>",False,[],[],False,False,False,2612,1161,False,False,False,False,False,False,False,"<null, null>",False,False
+Jewel,珠寶,Other,"<28, 0>",False,[],[],False,True,False,1776,1161,False,True,False,False,True,False,False,"<null, null>",False,False
+DivinationCard,命運卡,Other,"<29, 0>",False,[],[],False,True,False,1777,1161,False,False,False,False,False,False,False,"<null, null>",False,False
+LabyrinthItem,迷宮物品,,"<30, 0>",True,[],[],False,False,False,2612,1161,True,False,False,False,False,False,False,"<null, null>",False,False
+LabyrinthTrinket,迷宮飾品,,"<31, 0>",True,[],[],False,False,False,2612,1161,True,False,False,False,False,False,False,"<null, null>",False,False
+LabyrinthMapItem,異界迷宮物品,,"<27, 0>",False,[],[],True,True,False,2612,1161,False,False,False,False,False,False,False,"<null, null>",False,False
+MiscMapItem,其它,Other,"<32, 0>",False,[],[],False,True,False,2612,1161,False,True,False,False,False,False,False,"<null, null>",False,False
+Leaguestone,聯盟石,Other,"<33, 0>",False,[],[],False,True,False,2612,1161,False,False,False,False,False,False,False,"<null, null>",False,False
+PantheonSoul,眾神之魂,,"<34, 0>",False,[],[],False,False,False,2612,1161,True,False,False,False,False,False,False,"<null, null>",False,False
+UniqueFragment,碎片,Other,"<35, 0>",False,[],[],True,True,False,2612,1161,False,False,False,False,False,False,False,"<null, null>",False,False
+AbyssJewel,深淵珠寶,Other,"<36, 0>",False,[],[],False,True,False,2612,1161,False,True,False,False,True,False,False,"<null, null>",False,False
+IncursionItem,穿越物品,,"<37, 0>",True,[],[],True,False,False,2612,1161,True,False,False,False,False,False,False,"<null, null>",False,False
+DelveSocketableCurrency,掘獄插槽通貨,,"<38, 0>",False,[],[],False,True,False,2612,1161,False,False,False,False,False,False,False,"<null, null>",False,False
+Incubator,培育器,,"<39, 0>",False,[],[],False,True,False,2612,1161,False,False,False,False,False,False,False,"<null, null>",False,False
+UniqueShard,碎片,,"<null, null>",False,[],[],False,False,False,2612,1161,False,False,False,False,False,False,False,"<null, null>",False,False
+UniqueShardBase,碎片之心,,"<null, null>",False,[],[],False,False,False,2612,1161,False,False,False,False,False,False,False,"<null, null>",False,False
+Rune Dagger,符紋匕首,One Handed Weapon,"<3, 0>",False,[],[],False,False,True,2612,1161,False,True,True,True,True,True,True,"<1, 0>",True,True
+Warstaff,征戰長杖,Two Handed Weapon,"<4, 0>",False,[],[],False,False,True,2612,1161,False,True,True,True,True,True,True,"<6, 0>",True,True
+DelveStackableSocketableCurrency,掘獄可堆疊有插槽通貨,,"<38, 0>",False,[],[],False,True,False,2612,1161,False,False,False,False,False,False,False,"<null, null>",False,False
+AtlasRegionUpgradeItem,輿圖地區升級道具,,"<40, 0>",False,[],[],False,False,False,2612,607,False,False,False,False,False,False,False,"<null, null>",False,False
+MetamorphosisDNA,鍊魔樣本,,"<41, 0>",False,[],[],True,True,False,2612,1161,False,False,False,False,False,False,False,"<null, null>",False,False
+HiddenItem,隱藏道具,,"<null, null>",False,[],[],False,False,False,2612,1161,False,False,False,False,False,False,False,"<null, null>",False,False
+DONOTUSE1,,,"<null, null>",False,[],[],False,False,False,2612,1161,False,False,False,False,False,False,False,"<null, null>",False,False
+DONOTUSE2,,,"<null, null>",False,[],[],False,False,False,2612,1161,False,False,False,False,False,False,False,"<null, null>",False,False
+DONOTUSE3,,,"<null, null>",False,[],[],False,False,False,2612,1161,False,False,False,False,False,False,False,"<null, null>",False,False
+HeistContract,契約書,,"<42, 0>",False,[],[],False,False,False,2612,1161,False,True,False,False,False,False,False,"<null, null>",False,False
+HeistEquipmentWeapon,劫盜裝備,,"<43, 0>",False,[],[],False,False,False,2612,1161,False,False,False,False,False,False,True,"<null, null>",False,False
+HeistEquipmentTool,劫盜工具,,"<44, 0>",False,[],[],False,False,False,2612,1161,False,False,False,False,False,False,True,"<null, null>",False,False
+HeistEquipmentUtility,劫盜披風,,"<45, 0>",False,[],[],False,False,False,2612,1161,False,False,False,False,False,False,True,"<null, null>",False,False
+HeistEquipmentReward,劫盜胸針,,"<46, 0>",False,[],[],False,False,False,2612,1161,False,False,False,False,False,False,True,"<null, null>",False,False
+HeistBlueprint,藍圖,,"<47, 0>",False,[],[],False,False,False,2612,1161,False,True,False,False,False,False,False,"<null, null>",False,False
+Trinket,飾品,Jewellery,"<48, 0>",False,[],[],False,False,False,2612,1161,False,True,True,False,False,False,False,"<null, null>",False,False
+HeistObjective,劫盜目標,,"<49, 0>",False,[],[],False,False,False,2612,1161,True,False,False,False,False,False,False,"<null, null>",False,False
+ExpeditionLogbook,探險日誌,,"<50, 0>",False,[],[],False,False,False,2612,1161,True,True,False,False,False,False,False,"<null, null>",False,False
+IncubatorStackable,培育器,,"<39, 0>",False,[],[],False,True,False,2612,1161,False,False,False,False,False,False,False,"<null, null>",False,False

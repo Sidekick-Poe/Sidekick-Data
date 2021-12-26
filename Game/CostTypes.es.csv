@@ -1,0 +1,14 @@
+﻿Id,StatsKey,FormatText,Unknown0
+Mana,"<11746, 0>",{0} de maná,1
+Life,"<14015, 0>",{0} de vida,1
+ES,"<14874, 0>",{0} de escudo de energía,1
+Rage,"<14052, 0>",{0} de furia,1
+ManaPercent,"<14014, 0>",{0}% de maná,1
+LifePercent,"<14016, 0>",{0}% de vida,1
+UnreservedManaPercent,"<14283, 0>",[DNT] {0}% Unreserved Mana ,1
+ManaPerMinute,"<14704, 0>",{0} de maná por segundo,60
+LifePerMinute,"<14705, 0>",{0} de vida por segundo,60
+ManaPercentPerMinute,"<14708, 0>",{0}% de maná por segundo,60
+LifePercentPerMinute,"<14709, 0>",{0}% de vida por segundo,60
+ESPerMinute,"<14786, 0>",{0) de escudo de energía por segundo,60
+ESPercentPerMinute,"<14787, 0>",{0}% de escudo de energía por segundo,60

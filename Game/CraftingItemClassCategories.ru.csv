@@ -1,0 +1,18 @@
+﻿Id,ItemClassesKeys,Unknown0,Text
+OneHandMelee,"[<7, 0>, <56, 0>, <11, 0>, <12, 0>, <9, 0>, <6, 0>, <32, 0>, <10, 0>]",1HandedMelee,Одноручное ближний бой
+TwoHandMelee,"[<16, 0>, <17, 0>, <15, 0>, <14, 0>, <57, 0>]",2HandedMelee,Двуручное ближний бой
+OneHandRanged,"[<8, 0>]",1HandedRange,Одноручное дальний бой
+TwoHandRanged,"[<13, 0>]",2HandedRange,Двуручное дальний бой
+Shield,"[<26, 0>]",Shield,Щит
+Helmet,"[<25, 0>]",Helmet,Шлем
+BodyArmour,"[<24, 0>]",Armour,Нательный доспех
+Gloves,"[<22, 0>]",Gloves,Перчатки
+Boots,"[<23, 0>]",Boots,Сапоги
+Ring,"[<5, 0>]",Ring,Кольцо
+Amulet,"[<4, 0>]",Amulet,Амулет
+Belt,"[<21, 0>]",Belt,Пояс
+Flask,"[<0, 0>, <1, 0>, <2, 0>, <33, 0>, <34, 0>]",Flask,Флакон
+Quiver,"[<20, 0>]",Quiver,Колчан
+Map,"[<35, 0>]",,Карта
+MapFragment,"[<38, 0>]",,Фрагмент карты
+Jewel,"[<41, 0>, <50, 0>]",,Самоцвет

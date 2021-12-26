@@ -1,0 +1,18 @@
+﻿Id,ItemClassesKeys,Unknown0,Text
+OneHandMelee,"[<7, 0>, <56, 0>, <11, 0>, <12, 0>, <9, 0>, <6, 0>, <32, 0>, <10, 0>]",1HandedMelee,Nahkampf: Einhand
+TwoHandMelee,"[<16, 0>, <17, 0>, <15, 0>, <14, 0>, <57, 0>]",2HandedMelee,Nahkampf: Zweihand
+OneHandRanged,"[<8, 0>]",1HandedRange,Fernkampf: Einhand
+TwoHandRanged,"[<13, 0>]",2HandedRange,Fernkampf: Zweihand
+Shield,"[<26, 0>]",Shield,Schild
+Helmet,"[<25, 0>]",Helmet,Helm
+BodyArmour,"[<24, 0>]",Armour,Körperrüstung
+Gloves,"[<22, 0>]",Gloves,Handschuhe
+Boots,"[<23, 0>]",Boots,Stiefel
+Ring,"[<5, 0>]",Ring,Ring
+Amulet,"[<4, 0>]",Amulet,Amulett
+Belt,"[<21, 0>]",Belt,Gürtel
+Flask,"[<0, 0>, <1, 0>, <2, 0>, <33, 0>, <34, 0>]",Flask,Fläschchen
+Quiver,"[<20, 0>]",Quiver,Köcher
+Map,"[<35, 0>]",,Karte
+MapFragment,"[<38, 0>]",,Kartenfragment
+Jewel,"[<41, 0>, <50, 0>]",,Juwel

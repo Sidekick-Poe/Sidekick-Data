@@ -1,0 +1,129 @@
+﻿Id,Unknown0,Unknown1,UnlockType,CraftingItemClassCategoriesKeys,ObtainingDescription
+JunAddedColdAndLightningDamage,1,"[1, 1, 1]",Hinzugefügter Kälte- und Blitzschaden - Rang,"[<4, 0>, <9, 0>, <13, 0>]","Enthüllen: Schilde, Ringe oder Köcher"
+JunAddedFireAndColdDamage,1,"[1, 1, 1]",Hinzugefügter Feuer- und Kälteschaden - Rang,"[<4, 0>, <9, 0>, <13, 0>]","Enthüllen: Schilde, Ringe oder Köcher"
+JunAddedFireAndLightningDamage,1,"[1, 1, 1]",Hinzugefügter Feuer- und Blitzschaden - Rang,"[<4, 0>, <9, 0>, <13, 0>]","Enthüllen: Schilde, Ringe oder Köcher"
+JunAllDamage,1,"[1, 1]",Schaden - Rang,"[<9, 0>, <11, 0>]",Enthüllen: bestimmte Ringe oder Gürtel von Leo
+JunAlwaysHits,1,[1],Treffern kann nicht ausgewichen werden - Rang,"[<0, 0>, <1, 0>]",Enthüllen: bestimmte Nahkampfwaffen von Vagan
+JunArmourAndEnergyShield,1,"[1, 1, 1]",Rüstung und Energieschild - Rang,"[<11, 0>]",Enthüllen: Gürtel
+JunArmourAndEvasionRating,1,"[1, 1, 1]",Rüstung und Ausweichwert - Rang,"[<11, 0>, <13, 0>]",Enthüllen: Gürtel oder Köcher
+JunAttackAndCastSpeed,1,"[1, 1, 1]",Angriffs- und Zaubergeschwindigkeit - Rang,"[<10, 0>, <13, 0>]",Enthüllen: Amulette oder Köcher
+JunAttackAndCastSpeedWhileFocused,1,"[1, 1, 1]","Angriffs- und Zaubergeschwindigkeit, während Ihr fokussiert seid - Rang","[<7, 0>]",Enthüllen: Handschuhe
+JunAttackSpeedPercentIfRareOrUniqueEnemyNearby,1,"[1, 1, 1]","Angriffsgeschwindigkeit, während sich ein seltener oder einzigartiger Gegner im Umkreis befindet","[<0, 0>, <1, 0>, <2, 0>, <3, 0>]",Enthüllen: Waffen
+JunAvoidElementalDamageChancePercentDuringSoulGainPrevention,1,"[1, 1]",Vermeidet während der 'Kein Seelenerhalt'-Dauer Elementarschaden - Rang,"[<6, 0>, <5, 0>]",Enthüllen: Körperrüstungen oder Helme
+JunAvoidFreeze,1,"[1, 1]",Einfrieren vermeiden - Rang,"[<8, 0>]",Enthüllen: bestimmte Stiefel von Rin Yuushu
+JunBaseLifeAndMana,1,"[1, 1, 1]",Leben und Mana - Rang,"[<5, 0>, <7, 0>, <8, 0>, <9, 0>, <10, 0>, <11, 0>, <13, 0>]","Enthüllen: Helme, Handschuhe, Stiefel, Ringe, Amulette, Gürtel oder Köcher"
+JunBleedOnHitGained,1,"[1, 1]",Hinzugefügter physischer Schaden und bei Treffer verursachtes Bluten - Rang,"[<0, 0>, <1, 0>, <2, 0>, <3, 0>]",Enthüllen: bestimmte Waffen von Tora
+JunChanceToDealDoubleDamageWhileFocused,1,"[1, 1, 1]","Chance, doppelten Schaden zu verursachen, während Ihr fokussiert seid - Rang","[<0, 0>, <1, 0>, <2, 0>, <3, 0>]",Enthüllen: Waffen
+JunChanceToNotConsumeFlaskCharges,1,"[1, 1]","Chance, bei Fläschchennutzung keine Füllung zu verbrauchen - Rang","[<11, 0>]",Enthüllen: Gürtel
+JunChaosDamageAndChaosSkillDuration,1,"[1, 1, 1]",Chaosschaden und Chaos-Fertigkeitseffektdauer - Rang,"[<0, 0>, <1, 0>, <2, 0>, <3, 0>]",Enthüllen: Waffen
+JunChaosNonAilmentDamageOverTimeMultiplier,1,"[1, 1, 1]",Multiplikator für Physischen und Chaosschaden über Zeit - Rang,"[<0, 0>, <1, 0>, <2, 0>, <3, 0>]",Enthüllen: Waffen
+JunChaosPenetrationWithAttacks,1,"[1, 1, 1]",Chaoswiderstand-Durchdringung mit Waffen - Rang,"[<0, 0>, <1, 0>, <2, 0>, <3, 0>]",Enthüllen: Waffen
+JunColdDamageAndBaseChanceToFreeze,1,"[1, 1, 1]",Kälteschaden und Chance auf Einfrieren - Rang,"[<0, 0>, <1, 0>, <2, 0>, <3, 0>]",Enthüllen: Waffen
+JunColdDamageOnCritAndCritChance,1,"[1, 1]",Kritische Trefferchance und Multiplikator für kritische Treffer beim Zerschmettern - Rang,"[<9, 0>]",Enthüllen: bestimmte Ringe von Cameria der Kaltblütige
+JunColdDamageOverTimeMultiplier,1,"[1, 1, 1]",Multiplikator für Kälte- und Feuerschaden über Zeit - Rang,"[<0, 0>, <1, 0>, <2, 0>, <3, 0>]",Enthüllen: Waffen
+JunCriticalChanceAndAddedChaosDamageIfHaveCritRecently,1,"[1, 1, 1]",Kritische Trefferchance und hinzugefügter Chaosschaden bei kritischem Treffer - Rang,"[<7, 0>, <13, 0>]",Enthüllen: Handschuhe oder Köcher
+JunCriticalChanceAndElementalDamagePercentIfHaveCritRecently,1,"[1, 1, 1]",Kritische Trefferchance und Elementarschaden bei kritischem Treffer - Rang,"[<7, 0>, <13, 0>]",Enthüllen: Handschuhe oder Köcher
+JunCriticalChanceAndGainFrenzyChargeOnCriticalStrikePercent,1,"[1, 1, 1]",Kritische Trefferchance und Erhalt einer Raserei-Ladung bei kritischem Treffer - Rang,"[<13, 0>]",Enthüllen: Köcher
+JunCriticalStrikeMultiplierIfRareOrUniqueEnemyNearby,1,"[1, 1, 1]","Multiplikator für kritischen Treffer, während ein seltener oder einzigartiger Gegner im Umkreis ist - Rang","[<0, 0>, <1, 0>, <2, 0>, <3, 0>]",Enthüllen: Waffen
+JunCurseEffect,1,"[1, 1]",Fluchwirkung - Rang,"[<4, 0>]",Enthüllen: Schilde
+JunDamageDuringFlaskEffect,1,"[1, 1]",Schaden während Fläschchenwirkung - Rang,"[<7, 0>]",Enthüllen: bestimmte Handschuhe von Guff Grenn
+JunDamagePerEnduranceCharge,1,[1],Schaden pro Widerstands-Ladung,"[<0, 0>, <1, 0>, <2, 0>, <3, 0>]",Enthüllen: Waffen
+JunDamagePerFrenzyCharge,1,[1],Schaden pro Raserei-Ladung,"[<0, 0>, <1, 0>, <2, 0>, <3, 0>]",Enthüllen: Waffen
+JunDamagePerPowerCharge,1,[1],Schaden pro Energie-Ladung,"[<0, 0>, <1, 0>, <2, 0>, <3, 0>]",Enthüllen: Waffen
+JunDamagePlusPercentWithNonVaalSkillsDuringSoulGainPrevention,1,"[1, 1, 1]",Schaden mit Fertigkeiten (Vaal-Fertigkeiten ausgenommen) während der 'Kein Seelenerhalt'-Dauer - Rang,"[<8, 0>, <7, 0>]",Enthüllen: Stiefel oder Handschuhe
+JunDamageRemovedFromManaBeforeLifeWhileFocused,1,[1],"Erlittener Schaden wird zuerst vom Mana abgezogen, während Ihr fokussiert seid","[<6, 0>]",Enthüllen: Körperrüstungen
+JunDamageWhileLeeching,1,"[1, 1]",Schaden während des Raubs - Rang,"[<7, 0>, <10, 0>]",Enthüllen: bestimmte Handschuhe oder Amulette von Vorici
+JunDexterityAndIntelligence,1,"[1, 1, 1]",Geschick und Intelligenz - Rang,"[<6, 0>, <8, 0>, <7, 0>, <5, 0>, <4, 0>, <10, 0>, <11, 0>, <9, 0>, <13, 0>]","Enthüllen: Körperrüstungen, Stiefel, Handschuhe, Helme, Schilde, Amulette, Gürtel, Ringe oder Köcher"
+JunDodgeChanceDuringFocus,1,"[1, 1, 1]","Erhöhter Ausweichwert, während Ihr fokussiert seid - Rang","[<5, 0>, <8, 0>]",Enthüllen: Helme oder Stiefel
+JunDoubleDamageChance,1,"[1, 1]","Chance, doppelten Schaden zu verursachen - Rang","[<0, 0>, <1, 0>, <2, 0>, <3, 0>]",Enthüllen: Waffen
+JunWolfOnKill,1,[1],Bei Tötung Spektralwolf beschwören,"[<10, 0>]",Enthüllen: bestimmte Amulette von Thane Jorgin
+JunEffectOfAilments,1,"[1, 1]",Wirkung von nicht schädlichen Beeinträchtigungen - Rang,"[<8, 0>, <10, 0>]",Enthüllen: Stiefel oder Amulette
+JunElementalPenetrationWithAttacks,1,"[1, 1, 1]",Elementarwiderstand-Durchdringung mit Waffen - Rang,"[<0, 0>, <1, 0>, <2, 0>, <3, 0>]",Enthüllen: Waffen
+JunEnergyShieldRegenerationRatePerMinuteIfRareOrUniqueEnemyNearby,1,"[1, 1, 1]","Energieschild-Regeneration, während ein seltener oder einzigartiger Gegner im Umkreis ist - Rang","[<6, 0>, <11, 0>]",Enthüllen: Körperrüstungen oder Gürtel
+JunEvasionRatingAndEnergyShield,1,"[1, 1, 1]",Ausweichwert und Energieschild - Rang,"[<11, 0>, <13, 0>]",Enthüllen: Gürtel oder Köcher
+JunFireDamageAndChanceToIgnite,1,"[1, 1, 1]",Feuerschaden und Chance auf Entzünden - Rang,"[<0, 0>, <1, 0>, <2, 0>, <3, 0>]",Enthüllen: Waffen
+JunFlaskEffect,1,"[1, 1, 1]",Fläschchenwirkung - Rang,"[<11, 0>]",Enthüllen: Gürtel
+JunFlaskEffectAndFlaskChargesGained,1,"[1, 1]",Fläschchenwirkung und verringerte Anzahl erhaltener Fläschchenfüllungen - Rang,"[<11, 0>]",Enthüllen: Gürtel
+JunFortifyEffectWhileFocused,1,"[1, 1, 1]","Wirkung von Verstärken, während Ihr fokussiert seid - Rang","[<6, 0>]",Enthüllen: Körperrüstungen
+JunGainOnslaughtDuringSoulGainPrevention,1,[1],Ansturm während der 'Kein Seelenerhalt'-Dauer,"[<8, 0>, <7, 0>]",Enthüllen: Stiefel oder Handschuhe
+JunBrandAttachmentRange,1,"[1, 1, 1]",Zeichen-Anheftungsreichweite - Rang,"[<10, 0>, <7, 0>]",Enthüllen: Amulette oder Handschuhe
+JunGlobalCooldownRecovery,1,"[1, 1]",Abklingzeit - Rang,"[<11, 0>]",Enthüllen: Gürtel
+JunImmuneToStatusAilmentsWhileFocused,1,[1],Immun gegen Beeinträchtigungen während Ihr fokussiert seid und Fokus-Abklingzeit,"[<8, 0>]",Enthüllen: Stiefel
+JunIncreasedChaosAndPhysicalDamage,1,"[1, 1]",Chaosschaden und physischer Schaden - Rang,"[<9, 0>]",Enthüllen: bestimmte Ringe von Aisling Laffrey
+JunIncreasedDefencesAndLife,1,"[1, 1, 1]",Defensive und Leben - Rang,"[<6, 0>, <8, 0>, <7, 0>, <5, 0>, <4, 0>]","Enthüllen: Körperrüstungen, Stiefel, Handschuhe, Helme oder Schilde"
+JunIncreasedFireAndLightningDamage,1,"[1, 1]",Feuer- und Blitzschaden - Rang,"[<9, 0>]",Enthüllen: bestimmte Ringe von Riker Maloney
+JunIncreasedManaAndRegen,1,"[1, 1, 1]",Mana und Manaregeneration pro Sekunde - Rang,"[<9, 0>, <10, 0>]",Enthüllen: Ringe oder Amulette
+JunItemRarityFromRareAndUniqueEnemies,1,"[1, 1]",Gegenstandsseltenheit von seltenen und einzigartigen Gegnern - Rang,"[<5, 0>]",Enthüllen: bestimmte Helme von Janus Perandus
+JunLifeAddedAsEnergyShield,1,"[1, 1]",Maximales Leben als extra Energieschild - Rang,"[<6, 0>]","Enthüllen: bestimmte Körperrüstungen von Gravicius, Wiedergeborener"
+JunLifeLeechFromAnyDamagePermyriadWhileFocused,1,[1],"Vaal-Pakt und Schaden als Leben geraubt, während Ihr fokussiert seid","[<10, 0>]",Enthüllen: Amulette
+JunLifeRegeneration,1,"[1, 1]",Lebensregeneration - Rang,"[<10, 0>, <4, 0>]",Enthüllen: Amulette oder Schilde
+JunLifeRegenerationPerEvasionDuringFocus,1,[1],"Ausweichwert als Leben regeneriert, während Ihr fokussiert seid","[<6, 0>]",Enthüllen: Körperrüstungen
+JunLightningDamageAndChanceToShock,1,"[1, 1, 1]",Blitzschaden und Chance auf Schocken - Rang,"[<0, 0>, <1, 0>, <2, 0>, <3, 0>]",Enthüllen: Waffen
+JunLocalFlaskAvoidStunChanceAndMovementSpeedDuringFlaskEffect,1,[1],"Chance, Betäuben zu vermeiden während Fläschchenwirkung","[<12, 0>]",Enthüllen: Fläschchen
+JunLocalFlaskCriticalStrikeChanceDuringFlaskEffect,1,[1],Verringerter erlittener reflektierter Schaden während Fläschchenwirkung,"[<12, 0>]",Enthüllen: Fläschchen
+JunLocalFlaskItemFoundRarityDuringFlaskEffect,1,[1],Seltenheit gefundener Gegenstände während Fläschchenwirkung,"[<12, 0>]",Enthüllen: Fläschchen
+JunLocalFlaskLifeLeechOnDamageTakenDuringFlaskEffect,1,[1],Erlittener Schaden als Leben geraubt während Fläschchenwirkung,"[<12, 0>]",Enthüllen: Fläschchen
+JunLocalFlaskLifeRegenerationPerMinuteDuringFlaskEffect,1,[1],Lebensregeneration während Fläschchenwirkung,"[<12, 0>]",Enthüllen: Fläschchen
+JunLocalFlaskSkillManaCostDuringFlaskEffect,1,[1],Manakosten von Fertigkeiten während Fläschchenwirkung,"[<12, 0>]",Enthüllen: Fläschchen
+JunLocalIncreasedPhysicalDamageAndBleedChance,1,"[1, 1, 1]","Physischer Schaden und Chance, Bluten zu verursachen - Rang","[<0, 0>, <1, 0>, <2, 0>, <3, 0>]",Enthüllen: Waffen
+JunLocalIncreasedPhysicalDamageAndBlindChance,1,"[1, 1, 1]",Physischer Schaden und Chance auf Blenden - Rang,"[<0, 0>, <1, 0>, <2, 0>, <3, 0>]",Enthüllen: Waffen
+JunLocalIncreasedPhysicalDamageAndImpale,1,"[1, 1, 1]",Physischer Schaden und Chance auf Aufspießen - Rang,"[<0, 0>, <1, 0>, <2, 0>, <3, 0>]",Enthüllen: Waffen
+JunLocalIncreasedPhysicalDamageAndPoisonChance,1,"[1, 1, 1]",Physischer Schaden und Chance auf Vergiften - Rang,"[<0, 0>, <1, 0>, <2, 0>, <3, 0>]",Enthüllen: Waffen
+JunLocalIncreaseSocketedSupportGemLevel,1,"[1, 1]",Stufe von Unterstützungsgemmen - Rang,"[<0, 0>, <2, 0>, <1, 0>, <3, 0>, <4, 0>]",Enthüllen: bestimmte Waffen oder Schilde des Drahtziehers
+JunLuckyCriticalsDuringFocus,1,[1],"Kritische Trefferchance ist günstig, während Ihr fokussiert seid","[<11, 0>]",Enthüllen: Gürtel
+JunManaAndDamageTakenGoesToManaPercent,1,"[1, 1, 1]",Mana und Erhalt von erlittenem Schaden als Mana - Rang,"[<9, 0>, <10, 0>]",Enthüllen: Ringe oder Amulette
+JunManaAndManaCostPercent,1,"[1, 1, 1]",Mana und Manakosten von Fertigkeiten - Rang,"[<9, 0>, <10, 0>]",Enthüllen: Ringe oder Amulette
+JunMaximumCurse,1,[1],Zusätzlicher Fluch,"[<6, 0>]",Enthüllen: Körperrüstungen
+JunMaximumTotem,1,[1],Anzahl beschworener Totems,"[<4, 0>]",Enthüllen: Schilde
+JunMaximumZombieAndSkeleton,1,[1],Anzahl beschworener Zombies und Skelette,"[<5, 0>]",Enthüllen: Helme
+JunMeleeRangeAndMeleeGemLevel,1,"[1, 1, 1]",Nahkampfreichweite und Nahkampfmodifikatoren - Rang,"[<5, 0>, <7, 0>, <10, 0>]","Enthüllen: Helme, Handschuhe oder Amulette"
+JunMineLayingSpeed,1,"[1, 1, 1]",Minen-Wurfgeschwindigkeit - Rang,"[<10, 0>, <5, 0>]",Enthüllen: Amulette oder Helme
+JunMinimumEnduranceCharges,1,[1],Minimum an Widerstands-Ladungen,"[<9, 0>, <10, 0>]",Enthüllen: Ringe oder Amulette
+JunMinimumFrenzyCharges,1,[1],Minimum an Raserei-Ladungen,"[<9, 0>, <10, 0>]",Enthüllen: Ringe oder Amulette
+JunMinimumPowerCharges,1,[1],Minimum an Energie-Ladungen,"[<9, 0>, <10, 0>]",Enthüllen: Ringe oder Amulette
+JunMinionAttackAndCastSpeedOnWeapon,1,"[1, 1, 1]",Kreaturenangriffs- und -zaubergeschwindigkeit - Rang,"[<0, 0>, <1, 0>, <2, 0>, <3, 0>]",Enthüllen: Waffen
+JunMinionDamageAndMinionMaximumLife,1,"[1, 1, 1]",Kreaturenschaden und -leben - Rang,"[<0, 0>, <1, 0>, <2, 0>, <3, 0>]",Enthüllen: Waffen
+JunMinionsRecoverMaximumLifeWhenYouFocus,1,[1],"Kreaturen stellen Leben wieder her, wenn Ihr Fokus erhaltet","[<7, 0>]",Enthüllen: Handschuhe
+JunMovementVelocityAndCannotBeChilled,1,"[1, 1, 1]",Bewegungsgeschwindigkeit und Kann nicht unterkühlt werden - Rang,"[<8, 0>]",Enthüllen: Stiefel
+JunMovementVelocityAndMovementVelocityIfNotHitRecently,1,"[1, 1, 1]",Bewegungsgeschwindigkeit und Geschwindigkeit ohne erlittenem Treffer - Rang,"[<8, 0>]",Enthüllen: Stiefel
+JunMovementVelocityAndOnslaughtOnKill,1,"[1, 1, 1]",Bewegungsgeschwindigkeit und Ansturm bei Tötung - Rang,"[<8, 0>]",Enthüllen: Stiefel
+JunNonChaosAddedAsChaos,1,"[1, 1]",Schaden als extra Chaosschaden - Rang,"[<0, 0>, <2, 0>, <1, 0>, <3, 0>, <4, 0>]","Enthüllen: bestimmte Waffen oder Schilde von Es, das entkam"
+JunPercentageAllAttributes,1,"[1, 1]",Attribute - Rang,"[<6, 0>]",Enthüllen: bestimmte Körperrüstungen von Hillock der Schmied
+JunPhysicalDamageConvertedToCold,1,[1],Physischer Schaden umgewandelt in Kälteschaden,"[<7, 0>]",Enthüllen: Handschuhe
+JunPhysicalDamageConvertedToFire,1,[1],Physischer Schaden umgewandelt in Feuerschaden,"[<7, 0>]",Enthüllen: Handschuhe
+JunPhysicalDamageConvertedToLightning,1,[1],Physischer Schaden umgewandelt in Blitzschaden,"[<7, 0>]",Enthüllen: Handschuhe
+JunPhysicalDamageReductionDuringFocus,1,"[1, 1, 1]","Physische Schadensminderung, während Ihr fokussiert seid - Rang","[<5, 0>, <7, 0>]",Enthüllen: Helme oder Handschuhe
+JunPhysicalDamageReductionRatingDuringSoulGainPrevention,1,"[1, 1, 1]",Rüstung während 'Kein Seelenerhalt'-Dauer - Rang,"[<6, 0>, <4, 0>]",Enthüllen: Körperrüstungen oder Schilde
+JunPhysicalDamageTakenAsFirePercent,1,"[1, 1]",Physischer Schaden als prozentualer Feuerschaden erlitten - Rang,"[<5, 0>]",Enthüllen: bestimmte Helme von Korell Goya
+JunProjectilePierceAndProjectileGemLevel,1,"[1, 1, 1]",Durchbohren mit Projektilen und Projektilmodifikatoren - Rang,"[<5, 0>, <7, 0>, <10, 0>]","Enthüllen: Helme, Handschuhe oder Amulette"
+JunReduceGlobalFlatManaCost,1,"[1, 1, 1]",Manakosten von Fertigkeiten - Rang,"[<9, 0>, <10, 0>]",Enthüllen: bestimmte Ringe oder Amulette von Elreon
+JunRestoreManaAndEnergyShieldOnFocus,1,"[1, 1, 1]","Mana und Energieschild, wenn Ihr Fokus erhaltet - Rang","[<6, 0>]",Enthüllen: Körperrüstungen
+JunShockNearbyEnemiesOnFocus,1,"[1, 1, 1]","Schockt Gegner im Umkreis, wenn Ihr Fokus erhaltet - Rang","[<9, 0>]",Enthüllen: Ringe
+JunSkillAreaOfEffectPercentAndAreaOfEffectGemLevel,1,"[1, 1, 1]",Wirkungsbereich und Flächenmodifikatoren,"[<5, 0>, <7, 0>, <10, 0>]","Enthüllen: Helme, Handschuhe oder Amulette"
+JunSkillsCostNoManaWhileFocused,1,[1],"Fertigkeiten kosten kein Mana, während Ihr fokussiert seid","[<10, 0>]",Enthüllen: Amulette
+JunSocketedGemQuality,1,"[1, 1]",Qualität von Gemmen - Rang,"[<0, 0>, <2, 0>, <1, 0>, <3, 0>, <4, 0>]",Enthüllen: bestimmte Waffen oder Schilde von Haku
+JunSpellDamageAndManaRegenerationRate,1,"[1, 1, 1]",Zauberschaden und Mana-Regenerationsrate - Rang,"[<0, 0>, <1, 0>, <2, 0>, <3, 0>]",Enthüllen: Waffen
+JunSpellDamageAndNonChaosDamageToAddAsChaosDamage,1,"[1, 1, 1]",Zauberschaden und Schaden (Chaosschaden ausgenommen) als extra Chaosschaden - Rang,"[<0, 0>, <1, 0>, <2, 0>]",Enthüllen: Waffen
+JunStatusAilmentsYouInflictDurationWhileFocused,1,"[1, 1, 1]","Dauer von Beeinträchtigungen, während Ihr fokussiert seid - Rang","[<5, 0>]",Enthüllen: Helme
+JunStrengthAndDexterity,1,"[1, 1, 1]",Stärke und Geschick - Rang,"[<6, 0>, <8, 0>, <7, 0>, <5, 0>, <4, 0>, <10, 0>, <11, 0>, <9, 0>, <13, 0>]","Enthüllen: Körperrüstungen, Stiefel, Handschuhe, Helme, Schilde, Amulette, Gürtel, Ringe oder Köcher"
+JunStrengthAndIntelligence,1,"[1, 1, 1]",Stärke und Intelligenz - Rang,"[<6, 0>, <8, 0>, <7, 0>, <5, 0>, <4, 0>, <10, 0>, <11, 0>, <9, 0>, <13, 0>]","Enthüllen: Körperrüstungen, Stiefel, Handschuhe, Helme, Schilde, Amulette, Gürtel, Ringe oder Köcher"
+JunSummonTotemCastSpeed,1,"[1, 1, 1]",Totem-Platzierungsgeschwindigkeit - Rang,"[<8, 0>, <10, 0>]",Enthüllen: Stiefel oder Amulette
+JunTrapThrowSpeed,1,"[1, 1, 1]",Fallen-Wurfgeschwindigkeit - Rang,"[<10, 0>, <11, 0>]",Enthüllen: Amulette oder Gürtel
+JunTriggerSocketedSpellWhenYouFocus,1,[1],"Löst eingefasste Zauber aus, wenn Ihr Fokus erhaltet","[<5, 0>]",Enthüllen: Helme
+JunLocalAttackSpeedAndLocalItemQuality,1,"[1, 1]","Lokale Angriffsgeschwindigkeit, Geschick und Intelligenz - Rang","[<0, 0>, <2, 0>, <1, 0>, <3, 0>]",Enthüllen: Waffen
+JunLocalCriticalStrikeChanceAndLocalItemQuality,1,"[1, 1]","Kritische Trefferchance, Stärke und Intelligenz - Rang","[<0, 0>, <2, 0>, <1, 0>, <3, 0>]",Enthüllen: Waffen
+JunLocalAccuracyRatingAndLocalItemQuality,1,"[1, 1, 1]","Treffgenauigkeit, Stärke und Geschick - Rang","[<0, 0>, <2, 0>, <1, 0>, <3, 0>]",Enthüllen: Waffen
+JunLocalAttackSpeedAndLocalDisplayTriggerLevelBloodRageOnKillChance,1,"[1, 1]",Angriffsgeschwindigkeit und Auslösung von Blutrausch bei Tötung - Rang,"[<0, 0>, <2, 0>, <1, 0>, <3, 0>]",Enthüllen: Waffen
+JunCastSpeedAndGainArcaneSurgeOnKillChance,1,"[1, 1, 1]",Zaubergeschwindigkeit und Erhalt von Arkane Woge bei Tötung - Rang,"[<0, 0>, <2, 0>, <1, 0>, <3, 0>]",Enthüllen: Waffen
+JunTriggerSocketedSpellOnSkillUse,1,[1],"Löst einen eingefassten Zauber aus, wenn Ihr eine Fertigkeit benutzt","[<0, 0>, <2, 0>, <1, 0>, <3, 0>]",Enthüllen: Waffen
+JunFireAndChaosDamageResistance,1,"[1, 1, 1]",Feuer- und Chaoswiderstand - Rang,"[<0, 0>, <1, 0>, <2, 0>, <3, 0>, <6, 0>, <7, 0>, <8, 0>, <5, 0>, <4, 0>, <9, 0>, <10, 0>, <11, 0>, <13, 0>]","Enthüllen: Waffen, Körperrüstungen, Handschuhe, Stiefel, Helme, Schilde, Ringe, Amulette, Gürtel oder Köcher"
+JunLightningAndChaosDamageResistance,1,"[1, 1, 1]",Blitz- und Chaoswiderstand - Rang,"[<0, 0>, <1, 0>, <2, 0>, <3, 0>, <6, 0>, <7, 0>, <8, 0>, <5, 0>, <4, 0>, <9, 0>, <10, 0>, <11, 0>, <13, 0>]","Enthüllen: Waffen, Körperrüstungen, Handschuhe, Stiefel, Helme, Schilde, Ringe, Amulette, Gürtel oder Köcher"
+JunColdAndChaosDamageResistance,1,"[1, 1, 1]",Kälte- und Chaoswiderstand - Rang,"[<0, 0>, <1, 0>, <2, 0>, <3, 0>, <6, 0>, <7, 0>, <8, 0>, <5, 0>, <4, 0>, <9, 0>, <10, 0>, <11, 0>, <13, 0>]","Enthüllen: Waffen, Körperrüstungen, Handschuhe, Stiefel, Helme, Schilde, Ringe, Amulette, Gürtel oder Köcher"
+JunStrengthAndLocalItemQuality,1,"[1, 1, 1]",Stärke und Entzünden vermeiden - Rang,"[<0, 0>, <1, 0>, <2, 0>, <3, 0>, <6, 0>, <4, 0>]","Enthüllen: Waffen, Körperrüstungen oder Schilde"
+JunDexterityAndLocalItemQuality,1,"[1, 1, 1]",Geschick und Einfrieren vermeiden - Rang,"[<0, 0>, <1, 0>, <2, 0>, <3, 0>, <6, 0>, <4, 0>]","Enthüllen: Waffen, Körperrüstungen oder Schilde"
+JunIntelligenceAndLocalItemQuality,1,"[1, 1, 1]",Intelligenz und Schock vermeiden - Rang,"[<0, 0>, <1, 0>, <2, 0>, <3, 0>, <6, 0>, <4, 0>]","Enthüllen: Waffen, Körperrüstungen oder Schilde"
+JunLifeRegenerationRatePerMinuteWhileUsingFlask,1,"[1, 1, 1]",Lebensregenerations-Rate während Fläschchenwirkung - Rang,"[<11, 0>]",Enthüllen: Gürtel
+JunPercentageLifeAndMana,1,[1],Erhöhtes Leben und Mana,"[<6, 0>]",Enthüllen: Körperrüstungen
+JunBlockPercent,1,[1],"Chance, Angriffsschaden zu blocken","[<6, 0>]",Enthüllen: Körperrüstungen
+JunSpellDodgePercentage,1,[1],"Chance, Zauberschaden zu blocken","[<6, 0>]",Enthüllen: Körperrüstungen
+JunAvoidStunAndElementalStatusAilments,1,[1],Betäubung und elementare Beeinträchtigungen vermeiden,"[<6, 0>]",Enthüllen: Körperrüstungen

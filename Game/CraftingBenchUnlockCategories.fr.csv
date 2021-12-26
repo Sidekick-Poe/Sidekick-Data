@@ -1,0 +1,129 @@
+﻿Id,Unknown0,Unknown1,UnlockType,CraftingItemClassCategoriesKeys,ObtainingDescription
+JunAddedColdAndLightningDamage,1,"[1, 1, 1]",Dégâts de froid et de foudre supplémentaires - Rang,"[<4, 0>, <9, 0>, <13, 0>]","Décryptez des boucliers, des carquois, des bagues ou des anneaux"
+JunAddedFireAndColdDamage,1,"[1, 1, 1]",Dégâts de feu et de froid supplémentaires - Rang,"[<4, 0>, <9, 0>, <13, 0>]","Décryptez des boucliers, des carquois, des bagues ou des anneaux"
+JunAddedFireAndLightningDamage,1,"[1, 1, 1]",Dégâts de feu et de foudre supplémentaires - Rang,"[<4, 0>, <9, 0>, <13, 0>]","Décryptez des boucliers, des carquois, des bagues ou des anneaux"
+JunAllDamage,1,"[1, 1]",Dégâts - Rang,"[<9, 0>, <11, 0>]","Décryptez certaines ceintures, ou certaines bagues ou anneaux de Léo"
+JunAlwaysHits,1,[1],Ignore l'Évasion des cibles,"[<0, 0>, <1, 0>]",Décryptez certaines armes de mêlée de Vagan
+JunArmourAndEnergyShield,1,"[1, 1, 1]",Armure et Bouclier d'énergie - Rang,"[<11, 0>]",Décryptez des ceintures
+JunArmourAndEvasionRating,1,"[1, 1, 1]",Armure et Évasion - Rang,"[<11, 0>, <13, 0>]",Décryptez des ceintures ou des carquois
+JunAttackAndCastSpeed,1,"[1, 1, 1]",Vitesse d'attaque et d'incantation - Rang,"[<10, 0>, <13, 0>]",Décryptez des amulettes ou des carquois
+JunAttackAndCastSpeedWhileFocused,1,"[1, 1, 1]",Vitesse d'attaque et d'incantation pendant la Focalisation - Rang,"[<7, 0>]",Décryptez des gants
+JunAttackSpeedPercentIfRareOrUniqueEnemyNearby,1,"[1, 1, 1]",Vitesse d'attaque tant qu'un Ennemi Rare ou Unique est à proximité - Rang,"[<0, 0>, <1, 0>, <2, 0>, <3, 0>]",Décryptez des armes
+JunAvoidElementalDamageChancePercentDuringSoulGainPrevention,1,"[1, 1]",Immunité aux Dégâts élémentaires pendant l'Empêchement de gain d'Âmes - Rang,"[<6, 0>, <5, 0>]",Décryptez des armures ou des casques
+JunAvoidFreeze,1,"[1, 1]",Immunité au Gel - Rang,"[<8, 0>]",Décryptez certaines bottes de Rin Yuushu
+JunBaseLifeAndMana,1,"[1, 1, 1]",Vie et Mana - Rang,"[<5, 0>, <7, 0>, <8, 0>, <9, 0>, <10, 0>, <11, 0>, <13, 0>]","Décryptez des casques, des gants, des bottes, des bagues, des anneaux, des amulettes, des ceintures ou des carquois"
+JunBleedOnHitGained,1,"[1, 1]",Dégâts physiques supplémentaires et Saignement au Toucher - Rang,"[<0, 0>, <1, 0>, <2, 0>, <3, 0>]",Décryptez certaines armes de Tora
+JunChanceToDealDoubleDamageWhileFocused,1,"[1, 1, 1]",Chances d'infliger des Dégâts doublés pendant la Focalisation - Rang,"[<0, 0>, <1, 0>, <2, 0>, <3, 0>]",Décryptez des armes
+JunChanceToNotConsumeFlaskCharges,1,"[1, 1]",Chances que les Flacons ne consomment pas de Charges - Rang,"[<11, 0>]",Décryptez des ceintures
+JunChaosDamageAndChaosSkillDuration,1,"[1, 1, 1]",Dégâts de chaos et Durée des Aptitudes de chaos - Rang,"[<0, 0>, <1, 0>, <2, 0>, <3, 0>]",Décryptez des armes
+JunChaosNonAilmentDamageOverTimeMultiplier,1,"[1, 1, 1]",Multiplicateur de Dégâts physiques et de chaos sur la durée - Rang,"[<0, 0>, <1, 0>, <2, 0>, <3, 0>]",Décryptez des armes
+JunChaosPenetrationWithAttacks,1,"[1, 1, 1]",Pénétration de la Résistance au chaos pour les armes - Rang,"[<0, 0>, <1, 0>, <2, 0>, <3, 0>]",Décryptez des armes
+JunColdDamageAndBaseChanceToFreeze,1,"[1, 1, 1]",Dégâts de froid et chances de Geler - Rang,"[<0, 0>, <1, 0>, <2, 0>, <3, 0>]",Décryptez des armes
+JunColdDamageOnCritAndCritChance,1,"[1, 1]",Chances de coup critique et Multiplicateur de critique en cas de Fracassement - Rang,"[<9, 0>]","Décryptez certaines bagues ou anneaux de Caméria, le Sans-pitié"
+JunColdDamageOverTimeMultiplier,1,"[1, 1, 1]",Multiplicateur des Dégâts de feu et de froid sur la durée - Rang,"[<0, 0>, <1, 0>, <2, 0>, <3, 0>]",Décryptez des armes
+JunCriticalChanceAndAddedChaosDamageIfHaveCritRecently,1,"[1, 1, 1]",Chances de critique et Dégâts de chaos supplémentaires en cas de Coup critique - Rang,"[<7, 0>, <13, 0>]",Décryptez des gants ou des carquois
+JunCriticalChanceAndElementalDamagePercentIfHaveCritRecently,1,"[1, 1, 1]",Chances de critique et Dégâts élémentaires supplémentaires en cas de Coup critique - Rang,"[<7, 0>, <13, 0>]",Décryptez des gants ou des carquois
+JunCriticalChanceAndGainFrenzyChargeOnCriticalStrikePercent,1,"[1, 1, 1]",Chances de critique et Gain de Charge de frénésie en cas de Coup critique - Rang,"[<13, 0>]",Décryptez des carquois
+JunCriticalStrikeMultiplierIfRareOrUniqueEnemyNearby,1,"[1, 1, 1]",Multiplicateur de coup critique à proximité d'un Ennemi Rare ou Unique - Rang,"[<0, 0>, <1, 0>, <2, 0>, <3, 0>]",Décryptez des armes
+JunCurseEffect,1,"[1, 1]",Effet des Malédictions - Rang,"[<4, 0>]",Décryptez des boucliers
+JunDamageDuringFlaskEffect,1,"[1, 1]",Dégâts pendant l'Effet d'un Flacon - Rang,"[<7, 0>]","Décryptez certains gants de Guff Grenn, « le Gringalet »"
+JunDamagePerEnduranceCharge,1,[1],Dégâts par Charge d'endurance - Rang,"[<0, 0>, <1, 0>, <2, 0>, <3, 0>]",Décryptez des armes
+JunDamagePerFrenzyCharge,1,[1],Dégâts par Charge de frénésie - Rang,"[<0, 0>, <1, 0>, <2, 0>, <3, 0>]",Décryptez des armes
+JunDamagePerPowerCharge,1,[1],Dégâts par Charge de pouvoir - Rang,"[<0, 0>, <1, 0>, <2, 0>, <3, 0>]",Décryptez des armes
+JunDamagePlusPercentWithNonVaalSkillsDuringSoulGainPrevention,1,"[1, 1, 1]",Dégâts avec les Aptitudes non vaal pendant l'Empêchement de gain d'Âmes - Rang,"[<8, 0>, <7, 0>]",Décryptez des bottes ou des gants
+JunDamageRemovedFromManaBeforeLifeWhileFocused,1,[1],Les Dégâts retirent du Mana avant de retirer de la Vie pendant la Focalisation,"[<6, 0>]",Décryptez des armures
+JunDamageWhileLeeching,1,"[1, 1]",Dégâts pendant le Drain - Rang,"[<7, 0>, <10, 0>]",Décryptez certains gants ou certaines amulettes de Vorici
+JunDexterityAndIntelligence,1,"[1, 1, 1]",Dextérité et Intelligence - Rang,"[<6, 0>, <8, 0>, <7, 0>, <5, 0>, <4, 0>, <10, 0>, <11, 0>, <9, 0>, <13, 0>]","Décryptez des armures, des bottes, des gants, des casques, des boucliers, des amulettes, des ceintures, des bagues, des anneaux ou des carquois"
+JunDodgeChanceDuringFocus,1,"[1, 1, 1]",Augmentation du Score d'Évasion pendant la Focalisation - Rang,"[<5, 0>, <8, 0>]",Décryptez des casques ou des bottes
+JunDoubleDamageChance,1,"[1, 1]",Chances d'infliger des Dégâts doublés - Rang,"[<0, 0>, <1, 0>, <2, 0>, <3, 0>]",Décryptez des armes
+JunWolfOnKill,1,[1],Invocation de Loup spectral - Rang,"[<10, 0>]",Décryptez certaines amulettes du Thane Jorgin
+JunEffectOfAilments,1,"[1, 1]",Effet des Altérations n'infligeant pas de Dégâts - Rang,"[<8, 0>, <10, 0>]",Décryptez des bottes ou des amulettes
+JunElementalPenetrationWithAttacks,1,"[1, 1, 1]",Pénétration des Résistances élémentaires pour les armes - Rang,"[<0, 0>, <1, 0>, <2, 0>, <3, 0>]",Décryptez des armes
+JunEnergyShieldRegenerationRatePerMinuteIfRareOrUniqueEnemyNearby,1,"[1, 1, 1]",Régénération de Bouclier d'énergie à proximité d'un Ennemi Rare ou Unique - Rang,"[<6, 0>, <11, 0>]",Décryptez des armures ou des ceintures
+JunEvasionRatingAndEnergyShield,1,"[1, 1, 1]",Score d'Évasion et Bouclier d'énergie - Rang,"[<11, 0>, <13, 0>]",Décryptez des ceintures ou des carquois
+JunFireDamageAndChanceToIgnite,1,"[1, 1, 1]",Dégâts de feu et Chances d'Embrasement - Rang,"[<0, 0>, <1, 0>, <2, 0>, <3, 0>]",Décryptez des armes
+JunFlaskEffect,1,"[1, 1, 1]",Effet des Flacons - Rang,"[<11, 0>]",Décryptez des ceintures
+JunFlaskEffectAndFlaskChargesGained,1,"[1, 1]",Effet des Flacons et Réduction du gain de Charges de Flacon - Rang,"[<11, 0>]",Décryptez des ceintures
+JunFortifyEffectWhileFocused,1,"[1, 1, 1]",Effet du Renforcement pendant la Focalisation - Rang,"[<6, 0>]",Décryptez des armures
+JunGainOnslaughtDuringSoulGainPrevention,1,[1],Assaut pendant l'Empêchement de gain d'Âmes,"[<8, 0>, <7, 0>]",Décryptez des bottes ou des gants
+JunBrandAttachmentRange,1,"[1, 1, 1]",Portée de ciblage des Symboles - Rang,"[<10, 0>, <7, 0>]",Décryptez des amulettes ou des gants
+JunGlobalCooldownRecovery,1,"[1, 1]",Vitesse de Temps de recharge - Rang,"[<11, 0>]",Décryptez des ceintures
+JunImmuneToStatusAilmentsWhileFocused,1,[1],"Immunité aux Altérations pendant la Focalisation, et Vitesse de recharge de la Focalisation","[<8, 0>]",Décryptez des bottes
+JunIncreasedChaosAndPhysicalDamage,1,"[1, 1]",Dégâts physiques et de chaos - Rang,"[<9, 0>]",Décryptez certaines bagues ou anneaux d'Aisling Laffrey
+JunIncreasedDefencesAndLife,1,"[1, 1, 1]",Défenses et Vie - Rang,"[<6, 0>, <8, 0>, <7, 0>, <5, 0>, <4, 0>]","Décryptez des armures, des bottes, des gants, des casques ou des boucliers"
+JunIncreasedFireAndLightningDamage,1,"[1, 1]",Dégâts de feu et de foudre - Rang,"[<9, 0>]",Décryptez certaines bagues ou anneaux de Riker Maloney
+JunIncreasedManaAndRegen,1,"[1, 1, 1]",Mana et Régénération de Mana par seconde - Rang,"[<9, 0>, <10, 0>]","Décryptez des amulettes, des bagues ou des anneaux"
+JunItemRarityFromRareAndUniqueEnemies,1,"[1, 1]",Rareté des Objets cédés par les Ennemis Rares ou Uniques - Rang,"[<5, 0>]",Décryptez certains casques de Janus Pérandus
+JunLifeAddedAsEnergyShield,1,"[1, 1]",Vie Maximale sous forme de Bouclier d'énergie supplémentaire - Rang,"[<6, 0>]","Décryptez certaines armures de Gravicius, le Ressuscité"
+JunLifeLeechFromAnyDamagePermyriadWhileFocused,1,[1],Pacte vaal et Drain de Vie pendant la Focalisation,"[<10, 0>]",Décryptez des amulettes
+JunLifeRegeneration,1,"[1, 1]",Régénération de Vie - Rang,"[<10, 0>, <4, 0>]",Décryptez des amulettes ou des boucliers
+JunLifeRegenerationPerEvasionDuringFocus,1,[1],Score d'Évasion Régénéré sous forme de Vie pendant la Focalisation,"[<6, 0>]",Décryptez des armures
+JunLightningDamageAndChanceToShock,1,"[1, 1, 1]",Dégâts de foudre et Chances d'Électrocution - Rang,"[<0, 0>, <1, 0>, <2, 0>, <3, 0>]",Décryptez des armes
+JunLocalFlaskAvoidStunChanceAndMovementSpeedDuringFlaskEffect,1,[1],Chances de ne pas subir l'Étourdissement pendant l'Effet des Flacons,"[<12, 0>]",Décryptez des flacons
+JunLocalFlaskCriticalStrikeChanceDuringFlaskEffect,1,[1],Réduction des Dégâts renvoyés subis pendant l'Effet des Flacons,"[<12, 0>]",Décryptez des flacons
+JunLocalFlaskItemFoundRarityDuringFlaskEffect,1,[1],Rareté des Objets trouvés pendant l'Effet des Flacons,"[<12, 0>]",Décryptez des flacons
+JunLocalFlaskLifeLeechOnDamageTakenDuringFlaskEffect,1,[1],Dégâts subis Drainés sous forme de Vie pendant l'Effet des Flacons,"[<12, 0>]",Décryptez des flacons
+JunLocalFlaskLifeRegenerationPerMinuteDuringFlaskEffect,1,[1],Régénération de Vie pendant l'Effet des Flacons,"[<12, 0>]",Décryptez des flacons
+JunLocalFlaskSkillManaCostDuringFlaskEffect,1,[1],Coût en Mana des Aptitudes pendant l'Effet des Flacons - Rang,"[<12, 0>]",Décryptez des flacons
+JunLocalIncreasedPhysicalDamageAndBleedChance,1,"[1, 1, 1]",Dégâts physiques et chances d'infliger le Saignement - Rang,"[<0, 0>, <1, 0>, <2, 0>, <3, 0>]",Décryptez des armes
+JunLocalIncreasedPhysicalDamageAndBlindChance,1,"[1, 1, 1]",Dégâts physiques et chances d'Aveugler - Rang,"[<0, 0>, <1, 0>, <2, 0>, <3, 0>]",Décryptez des armes
+JunLocalIncreasedPhysicalDamageAndImpale,1,"[1, 1, 1]",Dégâts physiques et chances d'Empaler - Rang,"[<0, 0>, <1, 0>, <2, 0>, <3, 0>]",Décryptez des armes
+JunLocalIncreasedPhysicalDamageAndPoisonChance,1,"[1, 1, 1]",Dégâts physiques et chances d'Empoisonner - Rang,"[<0, 0>, <1, 0>, <2, 0>, <3, 0>]",Décryptez des armes
+JunLocalIncreaseSocketedSupportGemLevel,1,"[1, 1]",Niveau des Gemmes de soutien - Rang,"[<0, 0>, <2, 0>, <1, 0>, <3, 0>, <4, 0>]",Décryptez certaines armes ou certains boucliers du Cerveau du Syndicat
+JunLuckyCriticalsDuringFocus,1,[1],Vos Chances de coup critique sont en votre Faveur pendant la Focalisation,"[<11, 0>]",Décryptez des ceintures
+JunManaAndDamageTakenGoesToManaPercent,1,"[1, 1, 1]",Mana et Dégâts subis gagnés sous forme de Mana - Rang,"[<9, 0>, <10, 0>]","Décryptez des bagues, des anneaux ou des amulettes"
+JunManaAndManaCostPercent,1,"[1, 1, 1]",Mana et Coût en Mana des Aptitudes - Rang,"[<9, 0>, <10, 0>]","Décryptez des bagues, des anneaux ou des amulettes"
+JunMaximumCurse,1,[1],Malédiction supplémentaire - Rang,"[<6, 0>]",Décryptez des armures
+JunMaximumTotem,1,[1],Nombre de Totems Invoqués - Rang,"[<4, 0>]",Décryptez des boucliers
+JunMaximumZombieAndSkeleton,1,[1],Nombre de Zombies et Squelettes - Rang,"[<5, 0>]",Décryptez des casques
+JunMeleeRangeAndMeleeGemLevel,1,"[1, 1, 1]",Modificateurs d'Allonge et de Mêlée - Rang,"[<5, 0>, <7, 0>, <10, 0>]","Décryptez des casques, des gants ou des amulettes"
+JunMineLayingSpeed,1,"[1, 1, 1]",Vitesse de jet des Mines - Rang,"[<10, 0>, <5, 0>]",Décryptez des amulettes ou des casques
+JunMinimumEnduranceCharges,1,[1],Minimum de Charges d'endurance - Rang,"[<9, 0>, <10, 0>]","Décryptez des bagues, des anneaux ou des amulettes"
+JunMinimumFrenzyCharges,1,[1],Minimum de Charges de frénésie - Rang,"[<9, 0>, <10, 0>]","Décryptez des bagues, des anneaux ou des amulettes"
+JunMinimumPowerCharges,1,[1],Minimum de Charges de pouvoir - Rang,"[<9, 0>, <10, 0>]","Décryptez des bagues, des anneaux ou des amulettes"
+JunMinionAttackAndCastSpeedOnWeapon,1,"[1, 1, 1]",Vitesse d'attaque et d'incantation des Créatures - Rang,"[<0, 0>, <1, 0>, <2, 0>, <3, 0>]",Décryptez des armes
+JunMinionDamageAndMinionMaximumLife,1,"[1, 1, 1]",Dégâts et Vie des Créatures - Rang,"[<0, 0>, <1, 0>, <2, 0>, <3, 0>]",Décryptez des armes
+JunMinionsRecoverMaximumLifeWhenYouFocus,1,[1],Récupération de Vie des Créatures lorsque vous vous Focalisez,"[<7, 0>]",Décryptez des gants
+JunMovementVelocityAndCannotBeChilled,1,"[1, 1, 1]",Vitesse de déplacement et Immunité à la Frigorification - Rang,"[<8, 0>]",Décryptez des bottes
+JunMovementVelocityAndMovementVelocityIfNotHitRecently,1,"[1, 1, 1]",Vitesse de déplacement et Vitesse de déplacement tant que vous n'êtes pas Touché - Rang,"[<8, 0>]",Décryptez des bottes
+JunMovementVelocityAndOnslaughtOnKill,1,"[1, 1, 1]",Vitesse de déplacement et Assaut au Toucher - Rang,"[<8, 0>]",Décryptez des bottes
+JunNonChaosAddedAsChaos,1,"[1, 1]",Rajout de Dégâts sous forme de Dégâts de chaos - Rang,"[<0, 0>, <2, 0>, <1, 0>, <3, 0>, <4, 0>]",Décryptez certaines armes ou certains boucliers de La Chose qui a fui
+JunPercentageAllAttributes,1,"[1, 1]",Attributs - Rang,"[<6, 0>]","Décryptez certaines armures d'Hillock, le Forgeron"
+JunPhysicalDamageConvertedToCold,1,[1],Conversion des Dégâts physiques en Dégâts de froid,"[<7, 0>]",Décryptez des gants
+JunPhysicalDamageConvertedToFire,1,[1],Conversion des Dégâts physiques en Dégâts de feu,"[<7, 0>]",Décryptez des gants
+JunPhysicalDamageConvertedToLightning,1,[1],Conversion des Dégâts physiques en Dégâts de foudre,"[<7, 0>]",Décryptez des gants
+JunPhysicalDamageReductionDuringFocus,1,"[1, 1, 1]",Réduction des Dégâts physiques subis pendant la Focalisation - Rang,"[<5, 0>, <7, 0>]",Décryptez des casques ou des gants
+JunPhysicalDamageReductionRatingDuringSoulGainPrevention,1,"[1, 1, 1]",Armure pendant l'Empêchement de gain d'Âmes - Rang,"[<6, 0>, <4, 0>]",Décryptez des armures ou des boucliers
+JunPhysicalDamageTakenAsFirePercent,1,"[1, 1]",Pourcentage de Dégâts physiques subis sous forme de Dégâts de feu - Rang,"[<5, 0>]",Décryptez certains casques de Korell Goya
+JunProjectilePierceAndProjectileGemLevel,1,"[1, 1, 1]",Modificateurs de Projectiles et Transpercement - Rang,"[<5, 0>, <7, 0>, <10, 0>]","Décryptez des casques, des gants ou des amulettes"
+JunReduceGlobalFlatManaCost,1,"[1, 1, 1]",Coût en Mana des Aptitudes - Rang,"[<9, 0>, <10, 0>]","Décryptez certaines amulettes, ou certaines bagues ou anneaux d'Elréon"
+JunRestoreManaAndEnergyShieldOnFocus,1,"[1, 1, 1]",Mana et Bouclier d'énergie lorsque vous vous Focalisez - Rang,"[<6, 0>]",Décryptez des armures
+JunShockNearbyEnemiesOnFocus,1,"[1, 1, 1]",Électrocution des Ennemis à proximité lorsque vous vous Focalisez - Rang,"[<9, 0>]",Décryptez des bagues ou des anneaux
+JunSkillAreaOfEffectPercentAndAreaOfEffectGemLevel,1,"[1, 1, 1]",Zone d'effet et Modificateurs de Zone - Rang,"[<5, 0>, <7, 0>, <10, 0>]","Décryptez des casques, des gants ou des amulettes"
+JunSkillsCostNoManaWhileFocused,1,[1],Vos Aptitudes ne coûtent pas de Mana pendant la Focalisation,"[<10, 0>]",Décryptez des amulettes
+JunSocketedGemQuality,1,"[1, 1]",Qualité des Gemmes - Rang,"[<0, 0>, <2, 0>, <1, 0>, <3, 0>, <4, 0>]",Décryptez certaines armes ou certains boucliers d'Haku
+JunSpellDamageAndManaRegenerationRate,1,"[1, 1, 1]",Dégâts des Sorts et Taux de Régénération de Mana - Rang,"[<0, 0>, <1, 0>, <2, 0>, <3, 0>]",Décryptez des armes
+JunSpellDamageAndNonChaosDamageToAddAsChaosDamage,1,"[1, 1, 1]",Dégâts des Sorts et Rajout des Dégâts autres que chaos sous forme de Dégâts de chaos - Rang,"[<0, 0>, <1, 0>, <2, 0>]",Décryptez des armes
+JunStatusAilmentsYouInflictDurationWhileFocused,1,"[1, 1, 1]",Durée des Altérations pendant la Focalisation - Rang,"[<5, 0>]",Décryptez des casques
+JunStrengthAndDexterity,1,"[1, 1, 1]",Force et Dextérité - Rang,"[<6, 0>, <8, 0>, <7, 0>, <5, 0>, <4, 0>, <10, 0>, <11, 0>, <9, 0>, <13, 0>]","Décryptez des armures, des bottes, des gants, des casques, des boucliers, des amulettes, des ceintures, des bagues, des anneaux ou des carquois"
+JunStrengthAndIntelligence,1,"[1, 1, 1]",Force et Intelligence - Rang,"[<6, 0>, <8, 0>, <7, 0>, <5, 0>, <4, 0>, <10, 0>, <11, 0>, <9, 0>, <13, 0>]","Décryptez des armures, des bottes, des gants, des casques, des boucliers, des amulettes, des ceintures, des bagues, des anneaux ou des carquois"
+JunSummonTotemCastSpeed,1,"[1, 1, 1]",Vitesse de placement des Totems - Rang,"[<8, 0>, <10, 0>]",Décryptez des bottes ou des amulettes
+JunTrapThrowSpeed,1,"[1, 1, 1]",Vitesse de jet des Pièges - Rang,"[<10, 0>, <11, 0>]",Décryptez des amulettes ou des ceintures
+JunTriggerSocketedSpellWhenYouFocus,1,[1],Déclenche les Sorts Enchâssés lorsque vous vous Focalisez,"[<5, 0>]",Décryptez des casques
+JunLocalAttackSpeedAndLocalItemQuality,1,"[1, 1]",Vitesse d'atttaque Locale ; Dextérité et Intelligence - Rang,"[<0, 0>, <2, 0>, <1, 0>, <3, 0>]",Décryptez des armes
+JunLocalCriticalStrikeChanceAndLocalItemQuality,1,"[1, 1]",Chances de Coup critique ; Force et Intelligence - Rang,"[<0, 0>, <2, 0>, <1, 0>, <3, 0>]",Décryptez des armes
+JunLocalAccuracyRatingAndLocalItemQuality,1,"[1, 1, 1]",Score de Précision ; Force et Dextérité - Rang,"[<0, 0>, <2, 0>, <1, 0>, <3, 0>]",Décryptez des armes
+JunLocalAttackSpeedAndLocalDisplayTriggerLevelBloodRageOnKillChance,1,"[1, 1]",Vitesse d'attaque et Déclenche Rage sanguinaire lorsque vous Tuez - Rang,"[<0, 0>, <2, 0>, <1, 0>, <3, 0>]",Décryptez des armes
+JunCastSpeedAndGainArcaneSurgeOnKillChance,1,"[1, 1, 1]",Vitesse d'incantation et gain d'Éruption arcanique en Tuant - Rang,"[<0, 0>, <2, 0>, <1, 0>, <3, 0>]",Décryptez des armes
+JunTriggerSocketedSpellOnSkillUse,1,[1],Déclenche un Sort Enchâssé lorsque vous utilisez une Aptitude,"[<0, 0>, <2, 0>, <1, 0>, <3, 0>]",Décryptez des armes
+JunFireAndChaosDamageResistance,1,"[1, 1, 1]",Résistances au feu et au chaos - Rang,"[<0, 0>, <1, 0>, <2, 0>, <3, 0>, <6, 0>, <7, 0>, <8, 0>, <5, 0>, <4, 0>, <9, 0>, <10, 0>, <11, 0>, <13, 0>]","Décryptez des armes, des armures, des gants, des bottes, des casques, des boucliers, des bagues, des anneaux, des amulettes, des ceintures ou des carquois"
+JunLightningAndChaosDamageResistance,1,"[1, 1, 1]",Résistances à la foudre et au chaos - Rang,"[<0, 0>, <1, 0>, <2, 0>, <3, 0>, <6, 0>, <7, 0>, <8, 0>, <5, 0>, <4, 0>, <9, 0>, <10, 0>, <11, 0>, <13, 0>]","Décryptez des armes, des armures, des gants, des bottes, des casques, des boucliers, des bagues, des anneaux, des amulettes, des ceintures ou des carquois"
+JunColdAndChaosDamageResistance,1,"[1, 1, 1]",Résistances au froid et au chaos - Rang,"[<0, 0>, <1, 0>, <2, 0>, <3, 0>, <6, 0>, <7, 0>, <8, 0>, <5, 0>, <4, 0>, <9, 0>, <10, 0>, <11, 0>, <13, 0>]","Décryptez des armes, des armures, des gants, des bottes, des casques, des boucliers, des bagues, des anneaux, des amulettes, des ceintures ou des carquois"
+JunStrengthAndLocalItemQuality,1,"[1, 1, 1]",Force et Immunité à l'Embrasement - Rang,"[<0, 0>, <1, 0>, <2, 0>, <3, 0>, <6, 0>, <4, 0>]","Décryptez des armes, des armures ou des boucliers"
+JunDexterityAndLocalItemQuality,1,"[1, 1, 1]",Dextérité et Immunité au Gel - Rang,"[<0, 0>, <1, 0>, <2, 0>, <3, 0>, <6, 0>, <4, 0>]","Décryptez des armes, des armures ou des boucliers"
+JunIntelligenceAndLocalItemQuality,1,"[1, 1, 1]",Intelligence et Immunité à l'Électrocution - Rang,"[<0, 0>, <1, 0>, <2, 0>, <3, 0>, <6, 0>, <4, 0>]","Décryptez des armes, des armures ou des boucliers"
+JunLifeRegenerationRatePerMinuteWhileUsingFlask,1,"[1, 1, 1]",Taux de Régénération de Vie pendant l'Effet des Flacons - Rang,"[<11, 0>]",Décryptez des ceintures
+JunPercentageLifeAndMana,1,[1],Augmentation de Vie et de Mana - Rang,"[<6, 0>]",Décryptez des armures
+JunBlockPercent,1,[1],Chances de Bloquer les Dégâts d'Attaque,"[<6, 0>]",Décryptez des armures
+JunSpellDodgePercentage,1,[1],Chances de Bloquer les Dégâts des Sorts,"[<6, 0>]",Décryptez des armures
+JunAvoidStunAndElementalStatusAilments,1,[1],Immunité à l'Étourdissement et aux Altérations,"[<6, 0>]",Décryptez des armures

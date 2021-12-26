@@ -1,0 +1,76 @@
+﻿Id,Name,Category,ItemClassCategory,RemovedIfLeavesArea,Unknown0,Unknown1,AllocateToMapOwner,AlwaysAllocate,CanHaveVeiledMods,Unknown2,Unknown3,AlwaysShow,CanBeCorrupted,CanHaveIncubators,CanHaveInfluence,CanBeDoubleCorrupted,CanHaveAspects,CanTransferSkin,ItemStance,CanScourge,Unknown4
+LifeFlask,Life Flasks,Flasks,"<0, 0>",False,[],[],False,False,False,2612,1161,False,False,False,False,False,False,True,"<null, null>",False,False
+ManaFlask,Mana Flasks,Flasks,"<0, 0>",False,[],[],False,False,False,2612,1161,False,False,False,False,False,False,True,"<null, null>",False,False
+HybridFlask,Hybrid Flasks,Flasks,"<0, 0>",False,[],[],False,False,False,2612,1161,False,False,False,False,False,False,True,"<null, null>",False,False
+Currency,Currency,Other,"<5, 0>",False,[],[],False,True,False,2612,1161,False,False,False,False,False,False,False,"<null, null>",False,False
+Amulet,Amulets,Jewellery,"<6, 0>",False,[],[],False,False,True,2612,1161,False,True,True,True,True,True,True,"<null, null>",True,True
+Ring,Rings,Jewellery,"<7, 0>",False,[],[],False,False,True,2612,1161,False,True,True,True,True,True,True,"<null, null>",True,True
+Claw,Claws,One Handed Weapon,"<8, 0>",False,[],[],False,False,True,2612,1161,False,True,True,True,True,True,True,"<0, 0>",True,True
+Dagger,Daggers,One Handed Weapon,"<3, 0>",False,[],[],False,False,True,2612,1161,False,True,True,True,True,True,True,"<1, 0>",True,True
+Wand,Wands,One Handed Weapon,"<9, 0>",False,[],[],False,False,True,2612,1161,False,True,True,True,True,True,True,"<2, 0>",True,True
+One Hand Sword,One Hand Swords,One Handed Weapon,"<2, 0>",False,[],[],False,False,True,2612,1161,False,True,True,True,True,True,True,"<3, 0>",True,True
+Thrusting One Hand Sword,Thrusting One Hand Swords,One Handed Weapon,"<2, 0>",False,[],[],False,False,True,2612,1161,False,True,True,True,True,True,True,"<4, 0>",True,True
+One Hand Axe,One Hand Axes,One Handed Weapon,"<10, 0>",False,[],[],False,False,True,2612,1161,False,True,True,True,True,True,True,"<3, 0>",True,True
+One Hand Mace,One Hand Maces,One Handed Weapon,"<1, 0>",False,[],[],False,False,True,2612,1161,False,True,True,True,True,True,True,"<3, 0>",True,True
+Bow,Bows,Two Handed Weapon,"<11, 0>",False,[],[],False,False,True,2612,1161,False,True,True,True,True,True,True,"<5, 0>",True,True
+Staff,Staves,Two Handed Weapon,"<4, 0>",False,[],[],False,False,True,2612,1161,False,True,True,True,True,True,True,"<6, 0>",True,True
+Two Hand Sword,Two Hand Swords,Two Handed Weapon,"<12, 0>",False,[],[],False,False,True,2612,1161,False,True,True,True,True,True,True,"<7, 0>",True,True
+Two Hand Axe,Two Hand Axes,Two Handed Weapon,"<13, 0>",False,[],[],False,False,True,2612,1161,False,True,True,True,True,True,True,"<8, 0>",True,True
+Two Hand Mace,Two Hand Maces,Two Handed Weapon,"<14, 0>",False,[],[],False,False,True,2612,1161,False,True,True,True,True,True,True,"<8, 0>",True,True
+Active Skill Gem,Active Skill Gems,Gems,"<15, 0>",False,[],[],False,True,False,2612,1161,False,True,False,False,False,False,False,"<null, null>",False,False
+Support Skill Gem,Support Skill Gems,Gems,"<16, 0>",False,[],[],False,True,False,2612,1161,False,True,False,False,False,False,False,"<null, null>",False,False
+Quiver,Quivers,Off-hand,"<17, 0>",False,[],[],False,False,True,2612,1161,False,True,True,True,True,True,True,"<9, 0>",True,True
+Belt,Belts,Jewellery,"<18, 0>",False,[],[],False,False,True,2612,1161,False,True,True,True,True,True,True,"<null, null>",True,True
+Gloves,Gloves,Armor,"<19, 0>",False,[],[],False,False,True,2612,1161,False,True,True,True,True,True,True,"<null, null>",True,True
+Boots,Boots,Armor,"<20, 0>",False,[],[],False,False,True,2612,1161,False,True,True,True,True,True,True,"<null, null>",True,True
+Body Armour,Body Armours,Armor,"<21, 0>",False,[],[],False,False,True,2612,1161,False,True,True,True,True,True,True,"<null, null>",True,True
+Helmet,Helmets,Armor,"<22, 0>",False,[],[],False,False,True,2612,1161,False,True,True,True,True,True,True,"<null, null>",True,True
+Shield,Shields,Off-hand,"<23, 0>",False,[],[],False,False,True,2612,1161,False,True,True,True,True,True,True,"<10, 0>",True,True
+SmallRelic,Small Relics,,"<null, null>",False,[],[],False,False,False,2612,1161,False,False,False,False,False,False,False,"<null, null>",False,False
+MediumRelic,Medium Relics,,"<null, null>",False,[],[],False,False,False,2612,1161,False,False,False,False,False,False,False,"<null, null>",False,False
+LargeRelic,Large Relics,,"<null, null>",False,[],[],False,False,False,2612,1161,False,False,False,False,False,False,False,"<null, null>",False,False
+StackableCurrency,Stackable Currency,,"<5, 0>",False,[],[],False,True,False,2612,1161,False,False,False,False,False,False,False,"<null, null>",False,False
+QuestItem,Quest Items,,"<24, 0>",False,[],[],False,False,False,2612,1161,True,False,False,False,False,False,False,"<null, null>",False,False
+Sceptre,Sceptres,One Handed Weapon,"<1, 0>",False,[],[],False,False,True,2612,1161,False,True,True,True,True,True,True,"<3, 0>",True,True
+UtilityFlask,Utility Flasks,Flasks,"<0, 0>",False,[],[],False,False,False,2612,1161,False,False,False,False,False,False,True,"<null, null>",False,False
+UtilityFlaskCritical,Critical Utility Flasks,,"<0, 0>",False,[],[],False,False,False,2612,1161,False,False,False,False,False,False,True,"<null, null>",False,False
+Map,Maps,Other,"<25, 0>",False,[],[],False,True,False,1783,1161,False,True,False,False,False,False,False,"<null, null>",True,False
+Unarmed,,,"<null, null>",False,[],[],False,False,False,2612,1161,False,False,False,False,False,False,True,"<null, null>",False,False
+FishingRod,Fishing Rods,,"<26, 0>",False,[],[],False,False,False,2612,1161,False,True,True,False,True,True,True,"<7, 0>",True,True
+MapFragment,Map Fragments,Other,"<27, 0>",False,[],[],True,True,False,2612,1161,False,False,False,False,False,False,False,"<null, null>",False,False
+HideoutDoodad,Hideout Doodads,,"<null, null>",False,[],[],False,False,False,2612,1161,False,False,False,False,False,False,False,"<null, null>",False,False
+Microtransaction,Microtransactions,Microtransactions,"<null, null>",False,[],[],False,False,False,2612,1161,False,False,False,False,False,False,False,"<null, null>",False,False
+Jewel,Jewels,Other,"<28, 0>",False,[],[],False,True,False,1776,1161,False,True,False,False,True,False,False,"<null, null>",False,False
+DivinationCard,Divination Cards,Other,"<29, 0>",False,[],[],False,True,False,1777,1161,False,False,False,False,False,False,False,"<null, null>",False,False
+LabyrinthItem,Labyrinth Items,,"<30, 0>",True,[],[],False,False,False,2612,1161,True,False,False,False,False,False,False,"<null, null>",False,False
+LabyrinthTrinket,Labyrinth Trinkets,,"<31, 0>",True,[],[],False,False,False,2612,1161,True,False,False,False,False,False,False,"<null, null>",False,False
+LabyrinthMapItem,Labyrinth Map Items,,"<27, 0>",False,[],[],True,True,False,2612,1161,False,False,False,False,False,False,False,"<null, null>",False,False
+MiscMapItem,Misc Map Items,Other,"<32, 0>",False,[],[],False,True,False,2612,1161,False,True,False,False,False,False,False,"<null, null>",False,False
+Leaguestone,Leaguestones,Other,"<33, 0>",False,[],[],False,True,False,2612,1161,False,False,False,False,False,False,False,"<null, null>",False,False
+PantheonSoul,Pantheon Souls,,"<34, 0>",False,[],[],False,False,False,2612,1161,True,False,False,False,False,False,False,"<null, null>",False,False
+UniqueFragment,Pieces,Other,"<35, 0>",False,[],[],True,True,False,2612,1161,False,False,False,False,False,False,False,"<null, null>",False,False
+AbyssJewel,Abyss Jewels,Other,"<36, 0>",False,[],[],False,True,False,2612,1161,False,True,False,False,True,False,False,"<null, null>",False,False
+IncursionItem,Incursion Items,,"<37, 0>",True,[],[],True,False,False,2612,1161,True,False,False,False,False,False,False,"<null, null>",False,False
+DelveSocketableCurrency,Delve Socketable Currency,,"<38, 0>",False,[],[],False,True,False,2612,1161,False,False,False,False,False,False,False,"<null, null>",False,False
+Incubator,Incubators,,"<39, 0>",False,[],[],False,True,False,2612,1161,False,False,False,False,False,False,False,"<null, null>",False,False
+UniqueShard,Shards,,"<null, null>",False,[],[],False,False,False,2612,1161,False,False,False,False,False,False,False,"<null, null>",False,False
+UniqueShardBase,Shard Hearts,,"<null, null>",False,[],[],False,False,False,2612,1161,False,False,False,False,False,False,False,"<null, null>",False,False
+Rune Dagger,Rune Daggers,One Handed Weapon,"<3, 0>",False,[],[],False,False,True,2612,1161,False,True,True,True,True,True,True,"<1, 0>",True,True
+Warstaff,Warstaves,Two Handed Weapon,"<4, 0>",False,[],[],False,False,True,2612,1161,False,True,True,True,True,True,True,"<6, 0>",True,True
+DelveStackableSocketableCurrency,Delve Stackable Socketable Currency,,"<38, 0>",False,[],[],False,True,False,2612,1161,False,False,False,False,False,False,False,"<null, null>",False,False
+AtlasRegionUpgradeItem,Atlas Region Upgrade Items,,"<40, 0>",False,[],[],False,False,False,2612,607,False,False,False,False,False,False,False,"<null, null>",False,False
+MetamorphosisDNA,Metamorph Samples,,"<41, 0>",False,[],[],True,True,False,2612,1161,False,False,False,False,False,False,False,"<null, null>",False,False
+HiddenItem,Hidden Items,,"<null, null>",False,[],[],False,False,False,2612,1161,False,False,False,False,False,False,False,"<null, null>",False,False
+DONOTUSE1,,,"<null, null>",False,[],[],False,False,False,2612,1161,False,False,False,False,False,False,False,"<null, null>",False,False
+DONOTUSE2,,,"<null, null>",False,[],[],False,False,False,2612,1161,False,False,False,False,False,False,False,"<null, null>",False,False
+DONOTUSE3,,,"<null, null>",False,[],[],False,False,False,2612,1161,False,False,False,False,False,False,False,"<null, null>",False,False
+HeistContract,Contracts,,"<42, 0>",False,[],[],False,False,False,2612,1161,False,True,False,False,False,False,False,"<null, null>",False,False
+HeistEquipmentWeapon,Heist Gear,,"<43, 0>",False,[],[],False,False,False,2612,1161,False,False,False,False,False,False,True,"<null, null>",False,False
+HeistEquipmentTool,Heist Tools,,"<44, 0>",False,[],[],False,False,False,2612,1161,False,False,False,False,False,False,True,"<null, null>",False,False
+HeistEquipmentUtility,Heist Cloaks,,"<45, 0>",False,[],[],False,False,False,2612,1161,False,False,False,False,False,False,True,"<null, null>",False,False
+HeistEquipmentReward,Heist Brooches,,"<46, 0>",False,[],[],False,False,False,2612,1161,False,False,False,False,False,False,True,"<null, null>",False,False
+HeistBlueprint,Blueprints,,"<47, 0>",False,[],[],False,False,False,2612,1161,False,True,False,False,False,False,False,"<null, null>",False,False
+Trinket,Trinkets,Jewellery,"<48, 0>",False,[],[],False,False,False,2612,1161,False,True,True,False,False,False,False,"<null, null>",False,False
+HeistObjective,Heist Targets,,"<49, 0>",False,[],[],False,False,False,2612,1161,True,False,False,False,False,False,False,"<null, null>",False,False
+ExpeditionLogbook,Expedition Logbooks,,"<50, 0>",False,[],[],False,False,False,2612,1161,True,True,False,False,False,False,False,"<null, null>",False,False
+IncubatorStackable,Incubators,,"<39, 0>",False,[],[],False,True,False,2612,1161,False,False,False,False,False,False,False,"<null, null>",False,False

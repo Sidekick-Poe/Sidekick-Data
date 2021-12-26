@@ -1,0 +1,14 @@
+﻿Id,StatsKey,FormatText,Unknown0
+Mana,"<11746, 0>",{0} de Mana,1
+Life,"<14015, 0>",{0} de Vie,1
+ES,"<14874, 0>",{0} de Bouclier d'énergie,1
+Rage,"<14052, 0>",{0} de Rage,1
+ManaPercent,"<14014, 0>",{0}% de Mana,1
+LifePercent,"<14016, 0>",{0}% de Vie,1
+UnreservedManaPercent,"<14283, 0>",[DNT] {0}% Unreserved Mana ,1
+ManaPerMinute,"<14704, 0>",{0} de Mana par seconde,60
+LifePerMinute,"<14705, 0>",{0} de Vie par seconde,60
+ManaPercentPerMinute,"<14708, 0>",{0}% de Mana par seconde,60
+LifePercentPerMinute,"<14709, 0>",{0}% de Vie par seconde,60
+ESPerMinute,"<14786, 0>",{0} de Bouclier d'énergie par seconde,60
+ESPercentPerMinute,"<14787, 0>",{0}% de Bouclier d'énergie par seconde,60

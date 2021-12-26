@@ -1,0 +1,14 @@
+﻿Id,StatsKey,FormatText,Unknown0
+Mana,"<11746, 0>",มานา {0} หน่วย,1
+Life,"<14015, 0>",พลังชีวิต {0} หน่วย,1
+ES,"<14874, 0>",โล่พลังงาน {0} หน่วย,1
+Rage,"<14052, 0>",สถานะคลั่ง {0} ระดับ,1
+ManaPercent,"<14014, 0>",มานา {0}%,1
+LifePercent,"<14016, 0>",พลังชีวิต {0}%,1
+UnreservedManaPercent,"<14283, 0>",[DNT] {0}% Unreserved Mana ,1
+ManaPerMinute,"<14704, 0>",มานา {0} ต่อวินาที,60
+LifePerMinute,"<14705, 0>",พลังชีวิต {0} ต่อวินาที,60
+ManaPercentPerMinute,"<14708, 0>",มานา {0}% ต่อวินาที,60
+LifePercentPerMinute,"<14709, 0>",พลังชีวิต {0}% ต่อวินาที,60
+ESPerMinute,"<14786, 0>",โล่พลังงาน {0) ต่อวินาที,60
+ESPercentPerMinute,"<14787, 0>",โล่พลังงาน {0}% ต่อวินาที,60

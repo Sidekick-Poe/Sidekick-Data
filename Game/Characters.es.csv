@@ -1,0 +1,35 @@
+﻿Id,Name,AOFile,ACTFile,BaseMaxLife,BaseMaxMana,WeaponSpeed,MinDamage,MaxDamage,MaxAttackDistance,Icon,IntegerId,BaseStrength,BaseDexterity,BaseIntelligence,Keys0,Description,StartSkillGem_SkillGemsKey,Key13,Key14,Unknown0,Unknown1,CharacterSize,IntroSoundFile,StartWeapon_BaseItemTypesKey,Gender,TraitDescription,Key0,Key1,Key2,Key3,Unknown2,Keys1,BaseClassIllustrationsDdsFile,Unknown3,Unknown4
+Metadata/Characters/Str/Str,Guerrero,Metadata/Characters/Str/Str.ao,Metadata/Characters/Str/Str.act,38,34,833,2,8,8,,1,32,14,14,"[<2332, 0>]","¿Te crees lo suficientemente salvaje para enfrentarte a la tierra de los condenados, Guerrero?
+
+Te ofrecimos la verdad y sin embargo te aferraste a tus mentiras supersticiosas. Te ofrecimos servicio y sin embargo desperdiciaste tu fuerza al desafiarnos.
+
+Wraeclast te ofrece algo distinto: educarte en el verdadero salvajismo.","<100, 0>",<0>,<0>,6,1,2,Audio/Dialogue/NPC/DominusGlyph/Dom_Intro_Marauder.ogg,"<4080, 0>",M,"Rasgos: Fuerza, Cuerpo a Cuerpo","<334, 0>","<239, 0>","<334, 0>","<4243, 0>",1,"[<1104, 0>]",Art/2DArt/BaseClassIllustrations/Str.dds,-1736,-1350
+Metadata/Characters/Int/Int,Bruja,Metadata/Characters/Int/Int.ao,Metadata/Characters/Int/Int.act,38,34,833,2,5,8,,3,14,14,32,"[<2332, 0>]","¿Por qué será que aquellos de mente sagaz buscan saciar su curiosidad en la oscuridad y la depravación?
+Inocencia es nuestro Padre, Oriath es nuestra Madre. Cuando una hija se aleja de la luz, elige ser huérfana.
+
+Aprende bien las lecciones que Wraeclast te enseñará, Bruja. Es tu única esperanza para encontrar el camino a casa.","<0, 0>",<0>,<0>,6,1,2,Audio/Dialogue/NPC/DominusGlyph/Dom_Intro_Witch.ogg,"<3914, 0>",F,"Rasgos: Inteligencia, Hechizos","<336, 0>","<280, 0>","<336, 0>","<3914, 0>",2,"[<4120, 0>]",Art/2DArt/BaseClassIllustrations/Int.dds,-1532,-669
+Metadata/Characters/StrDexInt/StrDexInt,Heredera,Metadata/Characters/StrDexInt/StrDexInt.ao,Metadata/Characters/StrDexInt/StrDexInt.act,38,34,833,2,6,8,,0,20,20,20,"[<2332, 0>]","Una Heredera es la perfección de la mente, del cuerpo y de la gracia. La Gloria que corona nuestra civilización, que nos ofrece esperanza, que nos ofrece luz.
+
+Sin embargo tú solo nos diste muerte y oscuridad.
+
+Que Wraeclast te acoja como nosotros no podemos, pues tu sola presencia se ha vuelto demasiado dolorosa para soportar.","<206, 0>",<0>,<0>,6,1,2,Audio/Dialogue/NPC/DominusGlyph/Dom_Intro_Scion.ogg,"<4027, 0>",F,"Rasgos: Fuerza, Destreza, Inteligencia","<335, 0>","<null, null>","<null, null>","<null, null>",5,[],,0,0
+Metadata/Characters/Dex/Dex,Cazadora,Metadata/Characters/Dex/Dex.ao,Metadata/Characters/Dex/Dex.act,38,34,833,2,5,8,,2,14,32,14,"[<2332, 0>]","Rápida y silenciosa, robaste las recompensas de otros. 
+
+El cuervo que saquea nuestras cosechas. El perro callejero que mata nuestras ovejas.
+
+Oriath es tierra de hombres, no de animales. Recuerda eso, Cazadora, cuando Wraeclast te muestre cómo vivir verdaderamente como un animal.","<137, 0>",<0>,<0>,6,1,2,Audio/Dialogue/NPC/DominusGlyph/Dom_Intro_Ranger.ogg,"<4136, 0>",F,"Rasgos: Destreza, Rango","<69, 0>","<45, 0>","<69, 0>","<4136, 0>",2,"[<1104, 0>, <2566, 0>]",Art/2DArt/BaseClassIllustrations/Dex.dds,-850,-1255
+Metadata/Characters/StrDex/StrDex,Duelista,Metadata/Characters/StrDex/StrDex.ao,Metadata/Characters/StrDex/StrDex.act,38,34,833,2,6,8,,4,23,23,14,"[<2332, 0>]","Naciste para ser veloz y fuerte. ¿Qué hiciste con esos dones, Duelista? Los desperdiciaste en autosatisfacción.
+
+El pecado te trajo aquí por un camino manchado con sangre de asesinatos innecesarios.
+
+Traicionaste a la Gran Arena. Ahora Wraeclast será tu audiencia... y tu oponente.","<18, 0>",<0>,<0>,6,1,2,Audio/Dialogue/NPC/DominusGlyph/Dom_Intro_Duelist.ogg,"<4027, 0>",M,"Rasgos: Fuerza, Destreza","<323, 0>","<18, 0>","<323, 0>","<4027, 0>",1,"[<1104, 0>]",Art/2DArt/BaseClassIllustrations/StrDex.dds,-1959,-1432
+Metadata/Characters/DexInt/DexInt,Sombra,Metadata/Characters/DexInt/DexInt.ao,Metadata/Characters/DexInt/DexInt.act,38,34,833,2,5,8,,6,14,23,23,"[<2332, 0>]","Naciste con un cuerpo ligero y una mente aguda. ¿Cómo pagaste por esos dones? Con sangre inocente.
+
+Tu profesión es la de un depredador. El negocio de la carnicería. Robaste muchas vidas para llenar tu monedero.
+
+Ahora deberás ganarte la redención en Wraeclast.","<79, 0>",<0>,<0>,6,1,2,Audio/Dialogue/NPC/DominusGlyph/Dom_Intro_Shadow.ogg,"<3938, 0>",M,"Rasgos: Destreza, Inteligencia","<324, 0>","<300, 0>","<336, 0>","<3914, 0>",3,"[<2233, 0>]",Art/2DArt/BaseClassIllustrations/DexInt.dds,-1140,-2172
+Metadata/Characters/StrInt/StrInt,Templario,Metadata/Characters/StrInt/StrInt.ao,Metadata/Characters/StrInt/StrInt.act,38,34,833,2,6,8,,5,23,14,23,"[<2332, 0>]","Juraste, en cuerpo y alma, servir a Dios y a la Orden de los Templarios. Durante años construiste tu vida alrededor de la Fe, solo para destruirla con un único y pecaminoso golpe. 
+
+¿No es esa acaso la peor de todas las locuras? ¿Perder la Fe cuando es lo único que te queda?
+
+Alguna vez fuiste el elegido de Dios: un Templario. Ahora eres el elegido de Wraeclast: un exiliado.","<73, 0>",<0>,<0>,6,1,2,Audio/Dialogue/NPC/DominusGlyph/Dom_Intro_Templar.ogg,"<4108, 0>",M,"Rasgos: Fuerza, Inteligencia","<139, 0>","<378, 0>","<139, 0>","<4108, 0>",1,"[<4120, 0>]",Art/2DArt/BaseClassIllustrations/StrInt.dds,-918,-1581

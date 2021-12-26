@@ -1,0 +1,129 @@
+﻿Id,Unknown0,Unknown1,UnlockType,CraftingItemClassCategoriesKeys,ObtainingDescription
+JunAddedColdAndLightningDamage,1,"[1, 1, 1]",Daño de hielo y rayo agregado - Nivel,"[<4, 0>, <9, 0>, <13, 0>]","Desencriptando escudos, anillos o carcajes"
+JunAddedFireAndColdDamage,1,"[1, 1, 1]",Daño de fuego y hielo agregado - Nivel,"[<4, 0>, <9, 0>, <13, 0>]","Desencriptando escudos, anillos o carcajes"
+JunAddedFireAndLightningDamage,1,"[1, 1, 1]",Daño de fuego y rayo agregado - Nivel,"[<4, 0>, <9, 0>, <13, 0>]","Desencriptando escudos, anillos o carcajes"
+JunAllDamage,1,"[1, 1]",Daño - Nivel,"[<9, 0>, <11, 0>]",Desencriptando anillos o cinturones de Leo
+JunAlwaysHits,1,[1],No se pueden evadir los golpes,"[<0, 0>, <1, 0>]",Desencriptando ciertas armas cuerpo a cuerpo de Vagan
+JunArmourAndEnergyShield,1,"[1, 1, 1]",Armadura y escudo de energía - Nivel,"[<11, 0>]",Desencriptando cinturones
+JunArmourAndEvasionRating,1,"[1, 1, 1]",Armadura y evasión - Nivel,"[<11, 0>, <13, 0>]",Desencriptando cinturones o carcajes
+JunAttackAndCastSpeed,1,"[1, 1, 1]",Velocidad de ataque y de lanzamiento de hechizos - Nivel,"[<10, 0>, <13, 0>]",Desencriptando amuletos o carcajes
+JunAttackAndCastSpeedWhileFocused,1,"[1, 1, 1]",Velocidad de ataque y de lanzamiento de hechizos mientras estás Concentrado - Nivel,"[<7, 0>]",Desencriptando guantes
+JunAttackSpeedPercentIfRareOrUniqueEnemyNearby,1,"[1, 1, 1]",Velocidad de ataque mientras haya un enemigo raro o único cerca - Nivel,"[<0, 0>, <1, 0>, <2, 0>, <3, 0>]",Desencriptando armas
+JunAvoidElementalDamageChancePercentDuringSoulGainPrevention,1,"[1, 1]",Evita el daño elemental durante la Prevención de obtención de almas - Nivel,"[<6, 0>, <5, 0>]",Desencriptando armaduras o cascos
+JunAvoidFreeze,1,"[1, 1]",Evita el congelamiento - Nivel,"[<8, 0>]",Desencriptando ciertas botas de Rin Yuushu
+JunBaseLifeAndMana,1,"[1, 1, 1]",Vida y maná - Nivel,"[<5, 0>, <7, 0>, <8, 0>, <9, 0>, <10, 0>, <11, 0>, <13, 0>]","Desencriptando cascos, guanes, botas, anillos, amuletos, cinturones o carcajes"
+JunBleedOnHitGained,1,"[1, 1]",Daño físico agregado y sangrado con cada golpe - Nivel,"[<0, 0>, <1, 0>, <2, 0>, <3, 0>]",Desencriptando ciertas armas de Tora
+JunChanceToDealDoubleDamageWhileFocused,1,"[1, 1, 1]",Probabilidad de infligir daño doble mientras estás concentrado - Nivel,"[<0, 0>, <1, 0>, <2, 0>, <3, 0>]",Desencriptando armas
+JunChanceToNotConsumeFlaskCharges,1,"[1, 1]",Probabilidad de que los frascos no consuman cargas - Nivel,"[<11, 0>]",Desencriptando cinturones
+JunChaosDamageAndChaosSkillDuration,1,"[1, 1, 1]",Daño de caos y duración del efecto de las habilidades de caos - Nivel,"[<0, 0>, <1, 0>, <2, 0>, <3, 0>]",Desencriptando armas
+JunChaosNonAilmentDamageOverTimeMultiplier,1,"[1, 1, 1]",Multiplicador de daño degenerativo de caos - Nivel,"[<0, 0>, <1, 0>, <2, 0>, <3, 0>]",Desencriptando armas
+JunChaosPenetrationWithAttacks,1,"[1, 1, 1]",Penetración a la resistencia al caos para el arma - Nivel,"[<0, 0>, <1, 0>, <2, 0>, <3, 0>]",Desencriptando armas
+JunColdDamageAndBaseChanceToFreeze,1,"[1, 1, 1]",Daño de hielo y probabilidad de congelar - Nivel,"[<0, 0>, <1, 0>, <2, 0>, <3, 0>]",Desencriptando armas
+JunColdDamageOnCritAndCritChance,1,"[1, 1]",Probabilidad de golpe crítico y multiplicador de golpe crítico al hacer añicos - Nivel,"[<9, 0>]",Desencriptando ciertos anillos de Cameria el Sangrefría
+JunColdDamageOverTimeMultiplier,1,"[1, 1, 1]",Multiplicador de daño degenerativo de hielo y fuego - Nivel,"[<0, 0>, <1, 0>, <2, 0>, <3, 0>]",Desencriptando armas
+JunCriticalChanceAndAddedChaosDamageIfHaveCritRecently,1,"[1, 1, 1]",Probabilidad de golpe crítico y daño de caos agregado con cada golpe crítico - Nivel,"[<7, 0>, <13, 0>]",Desencriptando guantes o carcajes
+JunCriticalChanceAndElementalDamagePercentIfHaveCritRecently,1,"[1, 1, 1]",Probabilidad de golpe crítico y daño elemental con cada golpe crítico - Nivel,"[<7, 0>, <13, 0>]",Desencriptando guantes o carcajes
+JunCriticalChanceAndGainFrenzyChargeOnCriticalStrikePercent,1,"[1, 1, 1]",Probabilidad de golpe crítico y gana una carga de frenesí con cada golpe crítico - Nivel,"[<13, 0>]",Desencriptando carcajes
+JunCriticalStrikeMultiplierIfRareOrUniqueEnemyNearby,1,"[1, 1, 1]",Multiplicador de golpe crítico si hay un enemigo raro o único cerca - Nivel,"[<0, 0>, <1, 0>, <2, 0>, <3, 0>]",Desencriptando armas
+JunCurseEffect,1,"[1, 1]",Efecto de maldiciones - Nivel,"[<4, 0>]",Desencriptando escudos
+JunDamageDuringFlaskEffect,1,"[1, 1]",Daño durante el efecto del frasco - Nivel,"[<7, 0>]",Desencriptando ciertos guantes de Guff Grenn
+JunDamagePerEnduranceCharge,1,[1],Daño por cada carga de aguante,"[<0, 0>, <1, 0>, <2, 0>, <3, 0>]",Desencriptando armas
+JunDamagePerFrenzyCharge,1,[1],Daño por cada carga de frenesí,"[<0, 0>, <1, 0>, <2, 0>, <3, 0>]",Desencriptando armas
+JunDamagePerPowerCharge,1,[1],Daño por cada carga de poder,"[<0, 0>, <1, 0>, <2, 0>, <3, 0>]",Desencriptando armas
+JunDamagePlusPercentWithNonVaalSkillsDuringSoulGainPrevention,1,"[1, 1, 1]",Daño con las habilidades que no son vaal durante la prevención de obtención de almas - Nivel,"[<8, 0>, <7, 0>]",Desencriptando botas o guantes
+JunDamageRemovedFromManaBeforeLifeWhileFocused,1,[1],El daño se toma del maná antes que de la vida mientras estás concentrado,"[<6, 0>]",Desencriptando armaduras
+JunDamageWhileLeeching,1,"[1, 1]",Daño mientras absorbes - Nivel,"[<7, 0>, <10, 0>]",Desencriptando ciertos guantes o amuletos de Vorici
+JunDexterityAndIntelligence,1,"[1, 1, 1]",Destreza e inteligencia - Nivel,"[<6, 0>, <8, 0>, <7, 0>, <5, 0>, <4, 0>, <10, 0>, <11, 0>, <9, 0>, <13, 0>]","Desencriptando armaduras, botas, guantes, cascos, escudos, amuletos, cinturones, anillos o carcajes"
+JunDodgeChanceDuringFocus,1,"[1, 1, 1]",Evasión aumentada mientras estás concentrado - Nivel,"[<5, 0>, <8, 0>]",Desencriptando cascos o botas
+JunDoubleDamageChance,1,"[1, 1]",Probabilidad de infligir daño doble - Nivel,"[<0, 0>, <1, 0>, <2, 0>, <3, 0>]",Desencriptando armas
+JunWolfOnKill,1,[1],Invocar Lobo espectral al matar,"[<10, 0>]",Desencriptando ciertos amuletos de Thane Jorgin
+JunEffectOfAilments,1,"[1, 1]",Efecto de achaques no dañinos - Nivel,"[<8, 0>, <10, 0>]",Desencriptando botas o amuletos
+JunElementalPenetrationWithAttacks,1,"[1, 1, 1]",Penetración a la resistencia elemental para el arma - Nivel,"[<0, 0>, <1, 0>, <2, 0>, <3, 0>]",Desencriptando armas
+JunEnergyShieldRegenerationRatePerMinuteIfRareOrUniqueEnemyNearby,1,"[1, 1, 1]",Regeneración del escudo de energía si hay un enemigo raro o único cerca - Nivel,"[<6, 0>, <11, 0>]",Desencriptando armaduras o cinturones
+JunEvasionRatingAndEnergyShield,1,"[1, 1, 1]",Evasión y escudo de energía - Nivel,"[<11, 0>, <13, 0>]",Desencriptando cinturones o carcajes
+JunFireDamageAndChanceToIgnite,1,"[1, 1, 1]",Daño de fuego y probabilidad de quemar - Nivel,"[<0, 0>, <1, 0>, <2, 0>, <3, 0>]",Desencriptando armas
+JunFlaskEffect,1,"[1, 1, 1]",Efecto del frasco - Nivel,"[<11, 0>]",Desencriptando cinturones
+JunFlaskEffectAndFlaskChargesGained,1,"[1, 1]",Efecto del frasco y cargas de frascos ganadas reducidas - Nivel,"[<11, 0>]",Desencriptando cinturones
+JunFortifyEffectWhileFocused,1,"[1, 1, 1]",Efecto de Fortificar mientras estás concentrado - Nivel,"[<6, 0>]",Desencriptando armaduras
+JunGainOnslaughtDuringSoulGainPrevention,1,[1],Fervor durante la prevención de obtención de almas,"[<8, 0>, <7, 0>]",Desencriptando botas o guantes
+JunBrandAttachmentRange,1,"[1, 1, 1]",Rango de adhesión de marcas - Nivel,"[<10, 0>, <7, 0>]",Desencriptando amuletos o guantes
+JunGlobalCooldownRecovery,1,"[1, 1]",Velocidad de recuperación del tiempo de recarga - Nivel,"[<11, 0>]",Desencriptando cinturones
+JunImmuneToStatusAilmentsWhileFocused,1,[1],Inmune a los achaques mientras estás concentrado y recuperación del tiempo de recarga de la concentración,"[<8, 0>]",Desencriptando botas
+JunIncreasedChaosAndPhysicalDamage,1,"[1, 1]",Daño de caos y físico - Nivel,"[<9, 0>]",Desencriptando ciertos anillos de Aisling Laffrey
+JunIncreasedDefencesAndLife,1,"[1, 1, 1]",Defensas y vida - Nivel,"[<6, 0>, <8, 0>, <7, 0>, <5, 0>, <4, 0>]","Desencriptando armaduras, botas, guantes, cascos o escudos"
+JunIncreasedFireAndLightningDamage,1,"[1, 1]",Daño de fuego y rayo - Nivel,"[<9, 0>]",Desencriptando ciertos anillos de Riker Maloney
+JunIncreasedManaAndRegen,1,"[1, 1, 1]",Maná y maná regenerado por segundo - Nivel,"[<9, 0>, <10, 0>]",Desencriptando anillos o amuletos
+JunItemRarityFromRareAndUniqueEnemies,1,"[1, 1]",Rareza de los objetos de los enemigos raros y únicos - Nivel,"[<5, 0>]",Desencriptando ciertos cascos de Janus Perandus
+JunLifeAddedAsEnergyShield,1,"[1, 1]",Vida máxima como escudo de energía extra - Nivel,"[<6, 0>]",Desencriptando ciertas armaduras de Gravicius Renacido
+JunLifeLeechFromAnyDamagePermyriadWhileFocused,1,[1],Pacto vaal y daño absorbido como vida mientras estás concentrado,"[<10, 0>]",Desencriptando amuletos
+JunLifeRegeneration,1,"[1, 1]",Regeneración de Vida - Nivel,"[<10, 0>, <4, 0>]",Desencriptando amuletos o escudos
+JunLifeRegenerationPerEvasionDuringFocus,1,[1],Evasión regenerada como vida mientras estás concentrado,"[<6, 0>]",Desencriptando armaduras
+JunLightningDamageAndChanceToShock,1,"[1, 1, 1]",Daño de rayo y probabilidad de electrocutar - Nivel,"[<0, 0>, <1, 0>, <2, 0>, <3, 0>]",Desencriptando armas
+JunLocalFlaskAvoidStunChanceAndMovementSpeedDuringFlaskEffect,1,[1],Probabilidad de evitar el aturdimiento durante el efecto del frasco,"[<12, 0>]",Desencriptando frascos
+JunLocalFlaskCriticalStrikeChanceDuringFlaskEffect,1,[1],Daño reflejado recibido reducido durante el efecto del frasco,"[<12, 0>]",Desencriptando frascos
+JunLocalFlaskItemFoundRarityDuringFlaskEffect,1,[1],Rareza de los objetos encontrados durante el efecto del frasco,"[<12, 0>]",Desencriptando frascos
+JunLocalFlaskLifeLeechOnDamageTakenDuringFlaskEffect,1,[1],Daño recibido absorbido como vida durante el efecto del frasco,"[<12, 0>]",Desencriptando frascos
+JunLocalFlaskLifeRegenerationPerMinuteDuringFlaskEffect,1,[1],Regeneración de vida local del frasco durante el efecto del frasco,"[<12, 0>]",Desencriptando frascos
+JunLocalFlaskSkillManaCostDuringFlaskEffect,1,[1],Costo de maná de las habilidades durante el efecto del frasco,"[<12, 0>]",Desencriptando frascos
+JunLocalIncreasedPhysicalDamageAndBleedChance,1,"[1, 1, 1]",Daño físico y probabilidad de infligir sangrado - Nivel,"[<0, 0>, <1, 0>, <2, 0>, <3, 0>]",Desencriptando armas
+JunLocalIncreasedPhysicalDamageAndBlindChance,1,"[1, 1, 1]",Daño físico y probabilidad de cegar - Nivel,"[<0, 0>, <1, 0>, <2, 0>, <3, 0>]",Desencriptando armas
+JunLocalIncreasedPhysicalDamageAndImpale,1,"[1, 1, 1]",Daño físico y probabilidad de empalar - Nivel,"[<0, 0>, <1, 0>, <2, 0>, <3, 0>]",Desencriptando armas
+JunLocalIncreasedPhysicalDamageAndPoisonChance,1,"[1, 1, 1]",Daño físico y probabilidad de envenenar - Nivel,"[<0, 0>, <1, 0>, <2, 0>, <3, 0>]",Desencriptando armas
+JunLocalIncreaseSocketedSupportGemLevel,1,"[1, 1]",Nivel de las gemas asistidas - Nivel,"[<0, 0>, <2, 0>, <1, 0>, <3, 0>, <4, 0>]",Desencriptando ciertas armas o escudos de la Mente Maestra del Sindicato
+JunLuckyCriticalsDuringFocus,1,[1],La probabilidad de golpe crítico es afortunada mientras estás concentrado,"[<11, 0>]",Desencriptando cinturones
+JunManaAndDamageTakenGoesToManaPercent,1,"[1, 1, 1]",Maná y daño recibido ganado como maná - Nivel,"[<9, 0>, <10, 0>]",Desencriptando anillos o amuletos
+JunManaAndManaCostPercent,1,"[1, 1, 1]",Maná y coste de maná de las habilidades - Nivel,"[<9, 0>, <10, 0>]",Desencriptando anillos o amuletos
+JunMaximumCurse,1,[1],Una maldición adicional,"[<6, 0>]",Desencriptando armaduras
+JunMaximumTotem,1,[1],Número de tótems invocados,"[<4, 0>]",Desencriptando escudos
+JunMaximumZombieAndSkeleton,1,[1],Número de zombis y esqueletos,"[<5, 0>]",Desencriptando cascos
+JunMeleeRangeAndMeleeGemLevel,1,"[1, 1, 1]",Rango cuerpo a cuerpo y modificadores cuerpo a cuerpo - Nivel,"[<5, 0>, <7, 0>, <10, 0>]","Desencriptando cascos, guantes o amuletos"
+JunMineLayingSpeed,1,"[1, 1, 1]",Velocidad de lanzamiento de minas - Nivel,"[<10, 0>, <5, 0>]",Desencriptando amuletos o cascos
+JunMinimumEnduranceCharges,1,[1],Cargas de aguante mínimas,"[<9, 0>, <10, 0>]",Desencriptando anillos o amuletos
+JunMinimumFrenzyCharges,1,[1],Cargas de frenesí mínimas,"[<9, 0>, <10, 0>]",Desencriptando anillos o amuletos
+JunMinimumPowerCharges,1,[1],Cargas de poder mínimas,"[<9, 0>, <10, 0>]",Desencriptando anillos o amuletos
+JunMinionAttackAndCastSpeedOnWeapon,1,"[1, 1, 1]",Velocidad de ataque y velocidad de lanzamiento de hechizos de los esbirros - Nivel,"[<0, 0>, <1, 0>, <2, 0>, <3, 0>]",Desencriptando armas
+JunMinionDamageAndMinionMaximumLife,1,"[1, 1, 1]",Daño y vida de los esbirros - Nivel,"[<0, 0>, <1, 0>, <2, 0>, <3, 0>]",Desencriptando armas
+JunMinionsRecoverMaximumLifeWhenYouFocus,1,[1],Los esbirros recuperan vida cuando te concentras,"[<7, 0>]",Desencriptando guantes
+JunMovementVelocityAndCannotBeChilled,1,"[1, 1, 1]",Velocidad de movimiento y no puedes ser escarchado - Nivel,"[<8, 0>]",Desencriptando botas
+JunMovementVelocityAndMovementVelocityIfNotHitRecently,1,"[1, 1, 1]",Velocidad de movimiento y velocidad de movimiento cuando no eres golpeado - Nivel,"[<8, 0>]",Desencriptando botas
+JunMovementVelocityAndOnslaughtOnKill,1,"[1, 1, 1]",Velocidad de movimiento y Fervor al matar - Nivel,"[<8, 0>]",Desencriptando botas
+JunNonChaosAddedAsChaos,1,"[1, 1]",Daño como daño de caos extra - Nivel,"[<0, 0>, <2, 0>, <1, 0>, <3, 0>, <4, 0>]",Desencriptando ciertas armas o escudos de Eso que escapó
+JunPercentageAllAttributes,1,"[1, 1]",Atributos - Nivel,"[<6, 0>]","Desencriptando ciertas armaduras de Hillock, el Herrero"
+JunPhysicalDamageConvertedToCold,1,[1],Daño físico convertido a daño de hielo,"[<7, 0>]",Desencriptando guantes
+JunPhysicalDamageConvertedToFire,1,[1],Daño físico convertido a daño de fuego,"[<7, 0>]",Desencriptando guantes
+JunPhysicalDamageConvertedToLightning,1,[1],Daño físico convertido a daño de rayo,"[<7, 0>]",Desencriptando guantes
+JunPhysicalDamageReductionDuringFocus,1,"[1, 1, 1]",Reducción de daño físico mientras estás concentrado - Nivel,"[<5, 0>, <7, 0>]",Desencriptando cascos o guantes
+JunPhysicalDamageReductionRatingDuringSoulGainPrevention,1,"[1, 1, 1]",Armadura durante la prevención de obtención de almas - Nivel,"[<6, 0>, <4, 0>]",Desencriptando armaduras o escudos
+JunPhysicalDamageTakenAsFirePercent,1,"[1, 1]",Porcentaje de daño físico recibido como fuego - Nivel,"[<5, 0>]",Desencriptando ciertos cascos de Korell Goya
+JunProjectilePierceAndProjectileGemLevel,1,"[1, 1, 1]",Perforación de proyectiles y modificadores de proyectiles - Nivel,"[<5, 0>, <7, 0>, <10, 0>]","Desencriptando cascos, guantes o amuletos"
+JunReduceGlobalFlatManaCost,1,"[1, 1, 1]",Costo de maná de las habilidades,"[<9, 0>, <10, 0>]",Desencriptando ciertos anillos o amuletos de Elreon
+JunRestoreManaAndEnergyShieldOnFocus,1,"[1, 1, 1]",Maná y escudo de energía cuando te concentras - Nivel,"[<6, 0>]",Desencriptando armaduras
+JunShockNearbyEnemiesOnFocus,1,"[1, 1, 1]",Electrocuta a los enemigos cercanos cuando te concentras - Nivel,"[<9, 0>]",Desencriptando anillos
+JunSkillAreaOfEffectPercentAndAreaOfEffectGemLevel,1,"[1, 1, 1]",Área de efecto y modificadores de área,"[<5, 0>, <7, 0>, <10, 0>]","Desencriptando cascos, guantes o amuletos"
+JunSkillsCostNoManaWhileFocused,1,[1],Las habilidades no cuestan maná mientras estés concentrado,"[<10, 0>]",Desencriptando amuletos
+JunSocketedGemQuality,1,"[1, 1]",Gemas de calidad - Nivel,"[<0, 0>, <2, 0>, <1, 0>, <3, 0>, <4, 0>]",Desencriptando ciertas armas o escudos de Haku
+JunSpellDamageAndManaRegenerationRate,1,"[1, 1, 1]",Daño de hechizos y velocidad de regeneración de maná - Nivel,"[<0, 0>, <1, 0>, <2, 0>, <3, 0>]",Desencriptando armas
+JunSpellDamageAndNonChaosDamageToAddAsChaosDamage,1,"[1, 1, 1]",Daño de hechizos y daño que no sea de caos como daño de caos extra - Nivel,"[<0, 0>, <1, 0>, <2, 0>]",Desencriptando armas
+JunStatusAilmentsYouInflictDurationWhileFocused,1,"[1, 1, 1]",Duración de achaques mientras estás concentrado - Nivel,"[<5, 0>]",Desencriptando cascos
+JunStrengthAndDexterity,1,"[1, 1, 1]",Fuerza y destreza - Nivel,"[<6, 0>, <8, 0>, <7, 0>, <5, 0>, <4, 0>, <10, 0>, <11, 0>, <9, 0>, <13, 0>]","Desencriptando armaduras, botas, guantes, cascos, escudos, amuletos, cinturones, anillos o carcajes"
+JunStrengthAndIntelligence,1,"[1, 1, 1]",Fuerza e inteligencia - Nivel,"[<6, 0>, <8, 0>, <7, 0>, <5, 0>, <4, 0>, <10, 0>, <11, 0>, <9, 0>, <13, 0>]","Desencriptando armaduras, botas, guantes, cascos, escudos, amuletos, cinturones, anillos o carcajes"
+JunSummonTotemCastSpeed,1,"[1, 1, 1]",Velocidad de colocación de tótems - Nivel,"[<8, 0>, <10, 0>]",Desencriptando botas o amuletos
+JunTrapThrowSpeed,1,"[1, 1, 1]",Velocidad de lanzamiento de trampas - Nivel,"[<10, 0>, <11, 0>]",Desencriptando amuletos o cinturones
+JunTriggerSocketedSpellWhenYouFocus,1,[1],Activa hechizos engarzados cuando te concentras,"[<5, 0>]",Desencriptando cascos
+JunLocalAttackSpeedAndLocalItemQuality,1,"[1, 1]","Velocidad de ataque local, destreza e inteligencia - Nivel","[<0, 0>, <2, 0>, <1, 0>, <3, 0>]",Desencriptando armas
+JunLocalCriticalStrikeChanceAndLocalItemQuality,1,"[1, 1]","Probabilidad de golpe crítico, fuerza e inteligencia - Nivel","[<0, 0>, <2, 0>, <1, 0>, <3, 0>]",Desencriptando armas
+JunLocalAccuracyRatingAndLocalItemQuality,1,"[1, 1, 1]","Precisión, fuerza y destreza - Nivel","[<0, 0>, <2, 0>, <1, 0>, <3, 0>]",Desencriptando armas
+JunLocalAttackSpeedAndLocalDisplayTriggerLevelBloodRageOnKillChance,1,"[1, 1]",Velocidad de ataque y activa Furia de sangre al matar - Nivel,"[<0, 0>, <2, 0>, <1, 0>, <3, 0>]",Desencriptando armas
+JunCastSpeedAndGainArcaneSurgeOnKillChance,1,"[1, 1, 1]",Velocidad de lanzamiento de hechizos y gana sobrecarga arcana al matar - Nivel,"[<0, 0>, <2, 0>, <1, 0>, <3, 0>]",Desencriptando armas
+JunTriggerSocketedSpellOnSkillUse,1,[1],Activa un hechizo engarzado cuando usas una habilidad,"[<0, 0>, <2, 0>, <1, 0>, <3, 0>]",Desencriptando armas
+JunFireAndChaosDamageResistance,1,"[1, 1, 1]",Resistencia al fuego y al caos - Nivel,"[<0, 0>, <1, 0>, <2, 0>, <3, 0>, <6, 0>, <7, 0>, <8, 0>, <5, 0>, <4, 0>, <9, 0>, <10, 0>, <11, 0>, <13, 0>]","Desencriptando armas, armaduras, guantes, botas, cascos, escudos, anillos, amuletos, cinturones o carcajes"
+JunLightningAndChaosDamageResistance,1,"[1, 1, 1]",Resistencia al rayo y al caos - Nivel,"[<0, 0>, <1, 0>, <2, 0>, <3, 0>, <6, 0>, <7, 0>, <8, 0>, <5, 0>, <4, 0>, <9, 0>, <10, 0>, <11, 0>, <13, 0>]","Desencriptando armas, armaduras, guantes, botas, cascos, escudos, anillos, amuletos, cinturones o carcajes"
+JunColdAndChaosDamageResistance,1,"[1, 1, 1]",Resistencia al hielo y al caos - Nivel,"[<0, 0>, <1, 0>, <2, 0>, <3, 0>, <6, 0>, <7, 0>, <8, 0>, <5, 0>, <4, 0>, <9, 0>, <10, 0>, <11, 0>, <13, 0>]","Desencriptando armas, armaduras, guantes, botas, cascos, escudos, anillos, amuletos, cinturones o carcajes"
+JunStrengthAndLocalItemQuality,1,"[1, 1, 1]",Fuerza y evitar la quemadura - Nivel,"[<0, 0>, <1, 0>, <2, 0>, <3, 0>, <6, 0>, <4, 0>]","Desencriptando armas, armaduras o escudos"
+JunDexterityAndLocalItemQuality,1,"[1, 1, 1]",Destreza y evitar el congelamiento - Nivel,"[<0, 0>, <1, 0>, <2, 0>, <3, 0>, <6, 0>, <4, 0>]","Desencriptando armas, armaduras o escudos"
+JunIntelligenceAndLocalItemQuality,1,"[1, 1, 1]",Inteligencia y evitar la electrocución - Nivel,"[<0, 0>, <1, 0>, <2, 0>, <3, 0>, <6, 0>, <4, 0>]","Desencriptando armas, armaduras o escudos"
+JunLifeRegenerationRatePerMinuteWhileUsingFlask,1,"[1, 1, 1]",Velocidad de regeneración de vida durante el efecto del frasco - Nivel,"[<11, 0>]",Desencriptando cinturones
+JunPercentageLifeAndMana,1,[1],Vida y maná aumentados,"[<6, 0>]",Desencriptando armaduras
+JunBlockPercent,1,[1],Probabilidad de esquivar daño de ataques,"[<6, 0>]",Desencriptando armaduras
+JunSpellDodgePercentage,1,[1],Probabilidad de bloquear daño de hechizos,"[<6, 0>]",Desencriptando armaduras
+JunAvoidStunAndElementalStatusAilments,1,[1],Evitar aturdimiento y achaques de estados elementales,"[<6, 0>]",Desencriptando armaduras
