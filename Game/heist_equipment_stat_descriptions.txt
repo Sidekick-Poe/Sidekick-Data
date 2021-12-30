@@ -1,0 +1,4636 @@
+﻿﻿description
+	1 damage_+%
+	2
+		1|# "{0}% increased Damage"
+		#|-1 "{0}% reduced Damage" negate 1
+	lang "Portuguese"
+	2
+		1|# "Dano aumentado em {0}%"
+		#|-1 "Dano reduzido em {0}%" negate 1
+	lang "Traditional Chinese"
+	2
+		1|# "增加 {0}% 傷害"
+		#|-1 "減少 {0}% 傷害" negate 1
+	lang "Simplified Chinese"
+	2
+		1|# "伤害提高 {0}%"
+		#|-1 "伤害降低 {0}%" negate 1
+	lang "Thai"
+	2
+		1|# "เพิ่มความเสียหาย {0}%"
+		#|-1 "ลดความเสียหาย {0}%" negate 1
+	lang "Russian"
+	2
+		1|# "{0}% увеличение урона"
+		#|-1 "{0}% уменьшение урона" negate 1
+	lang "French"
+	2
+		1|# "{0}% d'Augmentation de Dégâts"
+		#|-1 "{0}% de Réduction de Dégâts" negate 1
+	lang "German"
+	2
+		1|# "{0}% erhöhter Schaden"
+		#|-1 "{0}% verringerter Schaden" negate 1
+	lang "Spanish"
+	2
+		1|# "Daño aumentado un {0}%"
+		#|-1 "Daño reducido un {0}%" negate 1
+	lang "Korean"
+	2
+		1|# "피해 {0}% 증가"
+		#|-1 "피해 {0}% 감소" negate 1
+
+description
+	1 spell_damage_+%
+	2
+		1|# "{0}% increased Spell Damage"
+		#|-1 "{0}% reduced Spell Damage" negate 1
+	lang "Portuguese"
+	2
+		1|# "Dano Mágico aumentado em {0}%"
+		#|-1 "Dano Mágico reduzido em {0}%" negate 1
+	lang "Traditional Chinese"
+	2
+		1|# "增加 {0}% 法術傷害"
+		#|-1 "減少 {0}% 法術傷害" negate 1
+	lang "Simplified Chinese"
+	2
+		1|# "法术伤害提高 {0}%"
+		#|-1 "法术伤害降低 {0}%" negate 1
+	lang "Thai"
+	2
+		1|# "เพิ่มความเสียหาย เวท {0}%"
+		#|-1 "ลดความเสียหาย เวท {0}%" negate 1
+	lang "Russian"
+	2
+		1|# "{0}% увеличение урона от чар"
+		#|-1 "{0}% уменьшение урона от чар" negate 1
+	lang "French"
+	2
+		1|# "{0}% d'Augmentation des Dégâts des Sorts"
+		#|-1 "{0}% de Réduction des Dégâts des Sorts" negate 1
+	lang "German"
+	2
+		1|# "{0}% erhöhter Zauberschaden"
+		#|-1 "{0}% verringerter Zauberschaden" negate 1
+	lang "Spanish"
+	2
+		1|# "Daño de Hechizos aumentado un {0}%"
+		#|-1 "Daño de Hechizos reducido un {0}%" negate 1
+	lang "Korean"
+	2
+		1|# "주문 피해 {0}% 증가"
+		#|-1 "주문 피해 {0}% 감소" negate 1
+
+description
+	1 melee_damage_+%
+	2
+		1|# "{0}% increased Melee Damage"
+		#|-1 "{0}% reduced Melee Damage" negate 1
+	lang "Portuguese"
+	2
+		1|# "Dano Corpo a Corpo aumentado em {0}%"
+		#|-1 "Dano Corpo a Corpo reduzido em {0}%" negate 1
+	lang "Traditional Chinese"
+	2
+		1|# "增加 {0}% 近戰傷害"
+		#|-1 "減少 {0}% 近戰傷害" negate 1
+	lang "Simplified Chinese"
+	2
+		1|# "近战伤害提高 {0}%"
+		#|-1 "近战伤害降低 {0}%" negate 1
+	lang "Thai"
+	2
+		1|# "เพิ่มความเสียหาย ประชิด {0}%"
+		#|-1 "ลดความเสียหาย ประชิด {0}%" negate 1
+	lang "Russian"
+	2
+		1|# "{0}% увеличение урона в ближнем бою"
+		#|-1 "{0}% уменьшение урона в ближнем бою" negate 1
+	lang "French"
+	2
+		1|# "{0}% d'Augmentation des Dégâts de mêlée"
+		#|-1 "{0}% de Réduction des Dégâts de mêlée" negate 1
+	lang "German"
+	2
+		1|# "{0}% erhöhter Nahkampfschaden"
+		#|-1 "{0}% verringerter Nahkampfschaden" negate 1
+	lang "Spanish"
+	2
+		1|# "Daño Cuerpo a Cuerpo aumentado un {0}%"
+		#|-1 "Daño Cuerpo a Cuerpo reducido un {0}%" negate 1
+	lang "Korean"
+	2
+		1|# "근접 피해 {0}% 증가"
+		#|-1 "근접 피해 {0}% 감소" negate 1
+
+description
+	2 player_and_minion_global_minimum_added_physical_damage player_and_minion_global_maximum_added_physical_damage
+	1
+		# # "{0} to {1} added Physical Damage\nPlayers and their Minions have {0} to {1} added Physical Damage"
+	lang "French"
+	1
+		# # "{0} à {1} Dégâts physiques supplémentaires\nLes joueurs et leurs Créatures ont {0} à {1} Dégâts physiques supplémentaires"
+	lang "Korean"
+	1
+		# # "물리 피해 {0}~{1} 추가\n플레이어 및 소환수의 물리 피해 {0}~{1} 추가"
+	lang "German"
+	1
+		# # "{0} bis {1} zusätzlicher physischer Schaden\nSpieler und ihre Kreaturen haben {0} bis {1} zusätzlichen physischen Schaden"
+	lang "Russian"
+	1
+		# # "Добавляет от {0} до {1} физического урона\nИгроки и их приспешники имеют от {0} до {1} добавленного физического урона"
+	lang "Portuguese"
+	1
+		# # "{0} a {1} de Dano Físico adicional\nJogadores e seus Lacaios têm {0} a {1} de Dano Físico adicional"
+	lang "Spanish"
+	1
+		# # "De {0} a {1} de daño físico agregado\nLos jugadores y sus esbirros tienen de {0} a {1} de daño físico agregado"
+	lang "Traditional Chinese"
+	1
+		# # "附加 {0} 至 {1} 物理傷害\n玩家和他們的召喚物附加 {0} 至 {1} 物理傷害"
+	lang "Simplified Chinese"
+	1
+		# # "附加 {0} 到 {1} 点物理伤害\n玩家和他们的召唤生物附加 {0} 到 {1} 点物理伤害"
+	lang "Thai"
+	1
+		# # "เสริมความเสียหาย กายภาพ {0} ถึง {1}\nผู้เล่นกับมิเนียนของพวกเขา มีการเสริมความเสียหาย กายภาพ {0} ถึง {1}"
+
+description
+	2 player_and_minion_global_minimum_added_fire_damage player_and_minion_global_maximum_added_fire_damage
+	1
+		# # "{0} to {1} added Fire Damage\nPlayers and their Minions have {0} to {1} added Fire Damage"
+	lang "French"
+	1
+		# # "{0} à {1} Dégâts de feu supplémentaires\nLes joueurs et leurs Créatures ont {0} à {1} Dégâts de feu supplémentaires"
+	lang "Korean"
+	1
+		# # "화염 피해 {0}~{1} 추가\n플레이어 및 소환수의 화염 피해 {0}~{1} 추가"
+	lang "German"
+	1
+		# # "{0} bis {1} zusätzlicher Feuerschaden\nSpieler und ihre Kreaturen haben {0} bis {1} zusätzlichen Feuerschaden"
+	lang "Russian"
+	1
+		# # "Добавляет от {0} до {1} урона от огня\nИгроки и их приспешники имеют от {0} до {1} добавленного урона от огня"
+	lang "Portuguese"
+	1
+		# # "{0} a {1} de Dano de Fogo adicional\nJogadores e seus Lacaios têm {0} a {1} de Dano de Fogo adicional"
+	lang "Spanish"
+	1
+		# # "De {0} a {1} de daño de fuego agregado\nLos jugadores y sus esbirros tienen de {0} a {1} de daño de fuego agregado"
+	lang "Traditional Chinese"
+	1
+		# # "附加 {0} 至 {1} 火焰傷害\n玩家和他們的召喚物附加 {0} 至 {1} 火焰傷害"
+	lang "Simplified Chinese"
+	1
+		# # "附加 {0} 到 {1} 点火焰伤害\n玩家和他们的召唤生物附加 {0} 到 {1} 点火焰伤害"
+	lang "Thai"
+	1
+		# # "เพิ่มความเสียหาย ไฟ {0} ถึง {1}\nผู้เล่นและมีเนียนเพิ่มความเสียหาย ไฟ {0} ถึง {1}"
+
+description
+	2 player_and_minion_global_minimum_added_cold_damage player_and_minion_global_maximum_added_cold_damage
+	1
+		# # "{0} to {1} added Cold Damage\nPlayers and their Minions have {0} to {1} added Cold Damage"
+	lang "French"
+	1
+		# # "{0} à {1} Dégâts de froid supplémentaires\nLes joueurs et leurs Créatures ont {0} à {1} Dégâts de froid supplémentaires"
+	lang "Korean"
+	1
+		# # "냉기 피해 {0}~{1} 추가\n플레이어 및 소환수의 냉기 피해 {0}~{1} 추가"
+	lang "German"
+	1
+		# # "{0} bis {1} zusätzlicher Kälteschaden\nSpieler und ihre Kreaturen haben {0} bis {1} zusätzlichen Kälteschaden"
+	lang "Russian"
+	1
+		# # "Добавляет от {0} до {1} урона от холода\nИгроки и их приспешники имеют от {0} до {1} добавленного урона от холода"
+	lang "Portuguese"
+	1
+		# # "{0} a {1} de Dano de Gelo adicional\nJogadores e seus Lacaios têm {0} a {1} de Dano de Gelo adicional"
+	lang "Spanish"
+	1
+		# # "De {0} a {1} de daño de hielo agregado\nLos jugadores y sus esbirros tienen de {0} a {1} de daño de hielo agregado"
+	lang "Traditional Chinese"
+	1
+		# # "附加 {0} 至 {1} 冰冷傷害\n玩家和他們的召喚物附加 {0} 至 {1} 冰冷傷害"
+	lang "Simplified Chinese"
+	1
+		# # "附加 {0} 到 {1} 点冰霜伤害\n玩家和他们的召唤生物附加 {0} 到 {1} 点冰霜伤害"
+	lang "Thai"
+	1
+		# # "เสริมความเสียหาย น้ำแข็ง {0} ถึง {1}\nผู้เล่นกับมิเนียนของพวกเขา เสริมความเสียหาย น้ำแข็ง {0} ถึง {1}"
+
+description
+	2 player_and_minion_global_minimum_added_lightning_damage player_and_minion_global_maximum_added_lightning_damage
+	1
+		# # "{0} to {1} added Lightning Damage\nPlayers and their Minions have {0} to {1} added Lightning Damage"
+	lang "French"
+	1
+		# # "{0} à {1} Dégâts de foudre supplémentaires\nLes joueurs et leurs Créatures ont {0} à {1} Dégâts de foudre supplémentaires"
+	lang "Korean"
+	1
+		# # "번개 피해 {0}~{1} 추가\n플레이어 및 소환수의 번개 피해 {0}~{1} 추가"
+	lang "German"
+	1
+		# # "{0} bis {1} zusätzlicher Blitzschaden\nSpieler und ihre Kreaturen haben {0} bis {1} zusätzlichen Blitzschaden"
+	lang "Russian"
+	1
+		# # "Добавляет от {0} до {1} урона от молнии\nИгроки и их приспешники имеют от {0} до {1} добавленного урона от молнии"
+	lang "Portuguese"
+	1
+		# # "{0} a {1} de Dano de Raio adicional\nJogadores e seus Lacaios têm {0} a {1} de Dano de Raio adicional"
+	lang "Spanish"
+	1
+		# # "De {0} a {1} de daño de rayo agregado\nLos jugadores y sus esbirros tienen de {0} a {1} de daño de rayo agregado"
+	lang "Traditional Chinese"
+	1
+		# # "附加 {0} 至 {1} 閃電傷害\n玩家和他們的召喚物附加 {0} 至 {1} 閃電傷害"
+	lang "Simplified Chinese"
+	1
+		# # "附加 {0} 到 {1} 点闪电伤害\n玩家和他们的召唤生物附加 {0} 到 {1} 点闪电伤害"
+	lang "Thai"
+	1
+		# # "เสริมความเสียหาย สายฟ้า {0} ถึง {1}\nผู้เล่นกับมิเนียนของพวกเขา เสริมความเสียหาย สายฟ้า {0} ถึง {1}"
+
+description
+	1 critical_strike_chance_+%
+	2
+		1|# "{0}% increased Critical Strike Chance"
+		#|-1 "{0}% reduced Critical Strike Chance" negate 1
+	lang "German"
+	2
+		1|# "{0}% erhöhte kritische Trefferchance"
+		#|-1 "{0}% verringerte kritische Trefferchance" negate 1
+	lang "Spanish"
+	2
+		1|# "Probabilidad de golpe crítico aumentada un {0}%"
+		#|-1 "Probabilidad de golpe crítico reducida un {0}%" negate 1
+	lang "Traditional Chinese"
+	2
+		1|# "增加 {0}% 暴擊率"
+		#|-1 "減少 {0}% 暴擊率" negate 1
+	lang "Russian"
+	2
+		1|# "{0}% повышение шанса критического удара"
+		#|-1 "{0}% снижение шанса критического удара" negate 1
+	lang "Korean"
+	2
+		1|# "치명타 확률 {0}% 증가"
+		#|-1 "치명타 확률 {0}% 감소" negate 1
+	lang "French"
+	2
+		1|# "{0}% d'Augmentation des Chances de coup critique"
+		#|-1 "{0}% de Réduction des Chances de coup critique" negate 1
+	lang "Portuguese"
+	2
+		1|# "Chance de Golpe Crítico aumentada em {0}%"
+		#|-1 "Chance de Golpe Crítico reduzida em {0}%" negate 1
+	lang "Simplified Chinese"
+	2
+		1|# "暴击率提高 {0}%"
+		#|-1 "暴击率降低 {0}%" negate 1
+	lang "Thai"
+	2
+		1|# "เพิ่มโอกาสคริติคอล {0}%"
+		#|-1 "ลดโอกาสคริติคอล {0}%" negate 1
+
+description
+	1 player_and_minion_mana_regeneration_rate_+%
+	2
+		1|# "Players and their Minions have {0}% increased Mana Regeneration Rate"
+		#|-1 "Players and their Minions have {0}% reduced Mana Regeneration Rate" negate 1
+	lang "French"
+	2
+		1|# "Les joueurs et leurs Créatures ont {0}% d'Augmentation du Taux de Régénération de Mana"
+		#|-1 "Les joueurs et leurs Créatures ont {0}% de Réduction du Taux de Régénération de Mana" negate 1
+	lang "Korean"
+	2
+		1|# "플레이어 및 소환수의 마나 재생 속도 {0}% 증가"
+		#|-1 "플레이어 및 소환수의 마나 재생 속도 {0}% 감소" negate 1
+	lang "German"
+	2
+		1|# "Spieler und ihre Kreaturen haben {0}% erhöhte Manaregenerations-Rate"
+		#|-1 "Spieler und ihre Kreaturen haben {0}% verringerte Manaregenerations-Rate" negate 1
+	lang "Russian"
+	2
+		1|# "Игроки и их приспешники имеют {0}% повышение скорости регенерации маны"
+		#|-1 "Игроки и их приспешники имеют {0}% снижение скорости регенерации маны" negate 1
+	lang "Portuguese"
+	2
+		1|# "Jogadores e seus Lacaios têm Regeneração de Mana aumentada em {0}%"
+		#|-1 "Jogadores e seus Lacaios têm Regeneração de Mana reduzida em {0}%" negate 1
+	lang "Spanish"
+	2
+		1|# "Los jugadores y sus esbirros tienen velocidad de regeneración de maná aumentada un {0}%"
+		#|-1 "Los jugadores y sus esbirros tienen velocidad de regeneración de maná reducida un {0}%" negate 1
+	lang "Traditional Chinese"
+	2
+		1|# "玩家和他們的召喚物增加 {0}% 魔力回復率"
+		#|-1 "玩家和他們的召喚物減少 {0}% 魔力回復率" negate 1
+	lang "Simplified Chinese"
+	2
+		1|# "玩家和他们的召唤生物的魔力再生率提高 {0}%"
+		#|-1 "玩家和他们的召唤生物的魔力再生率降低 {0}%" negate 1
+	lang "Thai"
+	2
+		1|# "ผู้เล่นกับมิเนียนของพวกเขา มีอัตรา การฟื้นฟูมานา เพิ่มขึ้น {0}%"
+		#|-1 "ผู้เล่นกับมิเนียนของพวกเขา มีอัตรา การฟื้นฟูมานา ลดลง {0}%" negate 1
+
+description
+	1 player_and_minion_life_regeneration_rate_per_minute_%
+	1
+		1|# "Players and their Minions Regenerate {0}% of Life per second" per_minute_to_per_second_2dp_if_required 1
+	lang "German"
+	1
+		1|# "Spieler und ihre Kreaturen regenerieren {0}% des Lebens pro Sekunde" per_minute_to_per_second_2dp_if_required 1
+	lang "Spanish"
+	1
+		1|# "Los jugadores y sus esbirros regeneran un {0}% de vida por segundo" per_minute_to_per_second_2dp_if_required 1
+	lang "Traditional Chinese"
+	1
+		1|# "玩家和他們的召喚物每秒回復 {0}% 生命" per_minute_to_per_second_2dp_if_required 1
+	lang "French"
+	1
+		1|# "Les joueurs et leurs Créatures Régénèrent {0}% de Vie par seconde" per_minute_to_per_second_2dp_if_required 1
+	lang "Russian"
+	1
+		1|# "Игроки и их приспешники регенерируют {0}% здоровья в секунду" per_minute_to_per_second_2dp_if_required 1
+	lang "Korean"
+	1
+		1|# "플레이어 및 소환수가 1초마다 생명력의 {0}% 재생" per_minute_to_per_second_2dp_if_required 1
+	lang "Portuguese"
+	1
+		1|# "Jogadores e seus Lacaios Regeneram {0}% de Vida por segundo" per_minute_to_per_second_2dp_if_required 1
+	lang "Simplified Chinese"
+	1
+		1|# "玩家和他们的召唤生物每秒再生 {0}% 生命" per_minute_to_per_second_2dp_if_required 1
+	lang "Thai"
+	1
+		1|# "ผู้เล่นกับมิเนียนของพวกเขา ฟื้นฟูพลังชีวิต {0}% ต่อวินาที" per_minute_to_per_second_2dp_if_required 1
+
+description
+	1 projectile_attack_damage_+%
+	2
+		1|# "{0}% increased Projectile Attack Damage"
+		#|-1 "{0}% reduced Projectile Attack Damage" negate 1
+	lang "Portuguese"
+	2
+		1|# "Dano de Ataque de Projétil aumentado em {0}%"
+		#|-1 "Dano de Ataque de Projétil reduzido em {0}%" negate 1
+	lang "Simplified Chinese"
+	2
+		1|# "投射物攻击伤害提高 {0}%"
+		#|-1 "投射物攻击伤害降低 {0}%" negate 1
+	lang "Traditional Chinese"
+	2
+		1|# "增加 {0}% 攻擊投射物傷害"
+		#|-1 "減少 {0}% 攻擊投射物傷害" negate 1
+	lang "Russian"
+	2
+		1|# "{0}% увеличение урона от атак снарядами"
+		#|-1 "{0}% уменьшение урона от атак снарядами" negate 1
+	lang "Thai"
+	2
+		1|# "เพิ่มความเสียหาย โจมตี กระสุน {0}%"
+		#|-1 "ลดความเสียหาย โจมตี กระสุน {0}%" negate 1
+	lang "French"
+	2
+		1|# "{0}% d'Augmentation des Dégâts des Attaques à Projectiles"
+		#|-1 "{0}% de Réduction des Dégâts des Attaques à Projectiles" negate 1
+	lang "German"
+	2
+		1|# "{0}% erhöhter Projektil-Angriffsschaden"
+		#|-1 "{0}% verringerter Projektil-Angriffsschaden" negate 1
+	lang "Spanish"
+	2
+		1|# "Daño de Ataques de Proyectil aumentado un {0}%"
+		#|-1 "Daño de Ataques de Proyectil reducido un {0}%" negate 1
+	lang "Korean"
+	2
+		1|# "투사체 공격 피해 {0}% 증가"
+		#|-1 "투사체 공격 피해 {0}% 감소" negate 1
+
+description
+	1 charges_gained_+%
+	2
+		1|# "Players have {0}% increased Flask Charges gained"
+		#|-1 "Players have {0}% reduced Flask Charges gained" negate 1
+	lang "French"
+	2
+		1|# "Les joueurs ont {0}% d'Augmentation du nombre de Charges de Flacon gagnées"
+		#|-1 "Les joueurs ont {0}% de Réduction du nombre de Charges de Flacon gagnées" negate 1
+	lang "Korean"
+	2
+		1|# "플레이어의 플라스크 충전량 {0}% 증가"
+		#|-1 "플레이어의 플라스크 충전량 {0}% 감소" negate 1
+	lang "German"
+	2
+		1|# "Spieler erhalten {0}% erhöhte Anzahl an Fläschchenfüllungen"
+		#|-1 "Spieler erhalten {0}% verringerte Anzahl an Fläschchenfüllungen" negate 1
+	lang "Russian"
+	2
+		1|# "Игроки имеют {0}% увеличение количества получаемых зарядов флакона"
+		#|-1 "Игроки имеют {0}% уменьшение количества получаемых зарядов флакона" negate 1
+	lang "Portuguese"
+	2
+		1|# "Jogadores têm ganho de Cargas de Frascos aumentado em {0}%"
+		#|-1 "Jogadores têm ganho de Cargas de Frascos reduzido em {0}%" negate 1
+	lang "Spanish"
+	2
+		1|# "Los jugadores tienen cantidad de cargas de frascos ganadas aumentada un {0}%"
+		#|-1 "Los jugadores tienen cantidad de cargas de frascos ganadas reducida un {0}%" negate 1
+	lang "Traditional Chinese"
+	2
+		1|# "玩家增加 {0}% 獲得藥劑充能"
+		#|-1 "玩家減少 {0}% 獲得藥劑充能" negate 1
+	lang "Simplified Chinese"
+	2
+		1|# "玩家的药剂充能获取率提高 {0}%"
+		#|-1 "玩家的药剂充能获取率降低 {0}%" negate 1
+	lang "Thai"
+	2
+		1|# "ผู้เล่น ได้รับชาร์จขวดยา เพิ่มขึ้น {0}%"
+		#|-1 "ผู้เล่น ได้รับชาร์จขวดยา ลดลง {0}%" negate 1
+
+description
+	1 critical_strike_chance_+%_while_not_escaping_heist
+	2
+		1|# "{0}% increased Critical Strike Chance while area is not in Lockdown\nPlayers have {0}% increased Critical Strike Chance while area is not in Lockdown"
+		#|-1 "{0}% reduced Critical Strike Chance while area is not in Lockdown\nPlayers have {0}% reduced Critical Strike Chance while area is not in Lockdown" negate 1
+	lang "Korean"
+	2
+		1|# "지역이 폐쇄 중이 아닐 때 치명타 확률 {0}% 증가\n지역이 폐쇄 중이 아닐 때 플레이어의 치명타 확률 {0}% 증가"
+		#|-1 "지역이 폐쇄 중이 아닐 때 치명타 확률 {0}% 감소\n지역이 폐쇄 중이 아닐 때 플레이어의 치명타 확률 {0}% 감소" negate 1
+	lang "German"
+	2
+		1|# "{0}% erhöhte kritische Trefferchance, während das Gebiet nicht abgeriegelt ist\nSpieler haben {0}% erhöhte kritische Trefferchance, während das Gebiet nicht abgeriegelt ist"
+		#|-1 "{0}% verringerte kritische Trefferchance, während das Gebiet nicht abgeriegelt ist\nSpieler haben {0}% verringerte kritische Trefferchance, während das Gebiet nicht abgeriegelt ist" negate 1
+	lang "Portuguese"
+	2
+		1|# "Chance de Golpe Crítico enquanto a área não estiver sob Confinamento aumentada em {0}%\nJogadores têm Chance de Golpe Crítico aumentada em {0}% enquanto a área não estiver em Confinamento"
+		#|-1 "Chance de Golpe Crítico enquanto a área não estiver sob Confinamento reduzida em {0}%\nJogadores têm Chance de Golpe Crítico reduzida em {0}% enquanto a área não estiver em Confinamento" negate 1
+	lang "Spanish"
+	2
+		1|# "Probabilidad de golpe crítico aumentada un {0}% si aún no se activó el cierre de puertas\nLos jugadores tienen probabilidad de golpe crítico aumentada un {0}% si aún no se activó el cierre de puertas"
+		#|-1 "Probabilidad de golpe crítico reducida un {0}% si aún no se activó el cierre de puertas\nLos jugadores tienen probabilidad de golpe crítico reducida un {0}% si aún no se activó el cierre de puertas" negate 1
+	lang "French"
+	2
+		1|# "{0}% d'Augmentation des Chances de coup critique tant que la Zone n'est pas Verrouillée\nLes joueurs ont {0}% d'Augmentation des Chances de coup critique tant que la Zone n'est pas Verrouillée"
+		#|-1 "{0}% de Réduction des Chances de coup critique tant que la Zone n'est pas Verrouillée\nLes joueurs ont {0}% de Réduction des Chances de coup critique tant que la Zone n'est pas Verrouillée" negate 1
+	lang "Russian"
+	2
+		1|# "{0}% повышение шанса критического удара, пока область не изолирована\nИгроки имеют {0}% повышение шанса критического удара, пока область не изолирована"
+		#|-1 "{0}% снижение шанса критического удара, пока область не изолирована\nИгроки имеют {0}% снижение шанса критического удара, пока область не изолирована" negate 1
+	lang "Traditional Chinese"
+	2
+		1|# "區域沒有被封鎖時，增加 {0}% 暴擊率\n玩家在區域沒有被封鎖時，增加 {0}% 暴擊率"
+		#|-1 "區域沒有被封鎖時，減少 {0}% 暴擊率\n玩家在區域沒有被封鎖時，減少 {0}% 暴擊率" negate 1
+	lang "Simplified Chinese"
+	2
+		1|# "暴击率在区域未封锁时提高 {0}%\n玩家暴击率在区域未封锁时提高 {0}%"
+		#|-1 "暴击率在区域未封锁时降低 {0}%\n玩家暴击率在区域未封锁时降低 {0}%" negate 1
+	lang "Thai"
+	2
+		1|# "เพิ่มโอกาสคริติคอล {0}% ขณะที่ยังไม่เกิดการปิดกั้นสถานที่\nผู้เล่น มีโอกาสคริติคอล เพิ่มขึ้น {0}% ขณะที่ยังไม่เกิดการปิดกั้นสถานที่"
+		#|-1 "ลดโอกาสคริติคอล {0}% ขณะที่ยังไม่เกิดการปิดกั้นสถานที่\nผู้เล่น มีโอกาสคริติคอล ลดลง {0}% ขณะที่ยังไม่เกิดการปิดกั้นสถานที่" negate 1
+
+description
+	1 critical_strike_multiplier_+_while_not_escaping_heist
+	1
+		1|# "{0:+d}% to Critical Strike Multiplier while area is not in Lockdown\nPlayers have {0:+d}% to Critical Strike Multiplier while area is not in Lockdown"
+	lang "Korean"
+	1
+		1|# "지역이 폐쇄 중이 아닐 때 치명타 피해 배율 {0:+d}%\n지역이 폐쇄 중이 아닐 때 플레이어의 치명타 피해 배율 {0:+d}%"
+	lang "German"
+	1
+		1|# "{0:+d}% zu Multiplikator für kritische Treffer, während das Gebiet nicht abgeriegelt ist\nSpieler haben {0:+d}% zu Multiplikator für kritische Treffer, während das Gebiet nicht abgeriegelt ist"
+	lang "Portuguese"
+	1
+		1|# "{0:+d}% de Multiplicador de Golpes Críticos enquanto a área não estiver em Confinamento\nJogadores têm {0:+d}% de Multiplicador de Golpes Críticos enquanto a área não estiver em Confinamento"
+	lang "Spanish"
+	1
+		1|# "{0:+d}% al multiplicador de golpe crítico si aún no se activó el cierre de puertas \nLos jugadores tienen {0:+d}% al multiplicador de golpe crítico si aún no se activó el cierre de puertas"
+	lang "French"
+	1
+		1|# "{0:+d}% au Multiplicateur de critique tant que la Zone n'est pas Verrouillée\nLes joueurs ont {0:+d}% au Multiplicateur de critique tant que la Zone n'est pas Verrouillée"
+	lang "Russian"
+	1
+		1|# "{0:+d}% к множителю критического удара, пока область не изолирована\nИгроки имеют {0:+d}% к множителю критического удара, пока область не изолирована"
+	lang "Traditional Chinese"
+	1
+		1|# "區域沒有被封鎖時，{0:+d}% 暴擊加成\n玩家在區域沒有被封鎖時 {0:+d}% 暴擊加成"
+	lang "Simplified Chinese"
+	1
+		1|# "区域未封锁时，暴击伤害加成 {0:+d}%\n区域未封锁时，玩家的暴击伤害加成 {0:+d}%"
+	lang "Thai"
+	1
+		1|# "ตัวคูณคริติคอล {0:+d}% ขณะที่ยังไม่เกิดการปิดกั้นสถานที่\nผู้เล่นมี ตัวคูณคริติคอล {0:+d}% ขณะที่ยังไม่เกิดการปิดกั้นสถานที่"
+
+description
+	1 damage_+%_while_not_escaping_heist
+	2
+		1|# "{0}% increased Damage while area is not in Lockdown\nPlayers deal {0}% increased Damage while area is not in Lockdown"
+		#|-1 "{0}% reduced Damage while area is not in Lockdown\nPlayers deal {0}% reduced Damage while area is not in Lockdown" negate 1
+	lang "Korean"
+	2
+		1|# "지역이 폐쇄 중이 아닐 때 피해 {0}% 증가\n지역이 폐쇄 중이 아닐 때 플레이어가 주는 피해 {0}% 증가"
+		#|-1 "지역이 폐쇄 중이 아닐 때 피해 {0}% 감소\n지역이 폐쇄 중이 아닐 때 플레이어가 주는 피해 {0}% 감소" negate 1
+	lang "German"
+	2
+		1|# "{0}% erhöhter Schaden, während das Gebiet nicht abgeriegelt ist\nSpieler verursachen {0}% erhöhten Schaden, während das Gebiet nicht abgeriegelt ist"
+		#|-1 "{0}% verringerter Schaden, während das Gebiet nicht abgeriegelt ist\nSpieler verursachen {0}% verringerten Schaden, während das Gebiet nicht abgeriegelt ist" negate 1
+	lang "Portuguese"
+	2
+		1|# "Dano enquanto a área não estiver em Confinamento aumentado em {0}%\nJogadores causam Dano aumentado em {0}% {0}% enquanto a área não estiver em Confinamento"
+		#|-1 "Dano enquanto a área não estiver em Confinamento reduzido em {0}%\nJogadores causam Dano reduzido em {0}% {0}% enquanto a área não estiver em Confinamento" negate 1
+	lang "Spanish"
+	2
+		1|# "Daño aumentado un {0}% si aún no se activó el cierre de puertas\nLos jugadores infligen el daño aumentado un {0}% si aún no se activó el cierre de puertas"
+		#|-1 "Daño reducido un {0}% si aún no se activó el cierre de puertas\nLos jugadores infligen el daño reducido un {0}% si aún no se activó el cierre de puertas" negate 1
+	lang "French"
+	2
+		1|# "{0}% d'Augmentation de Dégâts tant que la Zone n'est pas Verrouillée\nLes joueurs ont {0}% d'Augmentation de Dégâts tant que la Zone n'est pas Verrouillée"
+		#|-1 "{0}% de Réduction de Dégâts tant que la Zone n'est pas Verrouillée\nLes joueurs ont {0}% de Réduction de Dégâts tant que la Zone n'est pas Verrouillée" negate 1
+	lang "Russian"
+	2
+		1|# "{0}% увеличение урона пока область не изолирована\nИгроки наносят увеличенный на {0}% урон пока область не изолирована"
+		#|-1 "{0}% уменьшение урона пока область не изолирована\nИгроки наносят уменьшенный на {0}% урон пока область не изолирована" negate 1
+	lang "Traditional Chinese"
+	2
+		1|# "區域沒有被封鎖時，增加 {0}% 傷害\n玩家在區域沒有被封鎖時，增加 {0}% 傷害"
+		#|-1 "區域沒有被封鎖時，減少 {0}% 傷害\n玩家在區域沒有被封鎖時，減少 {0}% 傷害" negate 1
+	lang "Simplified Chinese"
+	2
+		1|# "伤害在区域未封锁时提高 {0}%\n玩家伤害在区域未封锁时提高 {0}%"
+		#|-1 "伤害在区域未封锁时降低 {0}%\n玩家伤害在区域未封锁时降低 {0}%" negate 1
+	lang "Thai"
+	2
+		1|# "เพิ่มความเสียหาย {0}% ขณะที่ยังไม่เกิดการปิดกั้นสถานที่\nผู้เล่น สร้างความเสียหาย เพิ่มขึ้น {0}% ขณะที่ยังไม่เกิดการปิดกั้นสถานที่"
+		#|-1 "ลดความเสียหาย {0}% ขณะที่ยังไม่เกิดการปิดกั้นสถานที่ว\nผู้เล่น สร้างความเสียหาย ลดลง {0}% ขณะที่ยังไม่เกิดการปิดกั้นสถานที่" negate 1
+
+description
+	1 damage_vs_enemies_on_full_life_+%
+	2
+		1|# "{0}% increased Damage with Hits against Enemies on Full Life\nPlayers deal {0}% increased Damage with Hits against Enemies on Full Life"
+		#|-1 "{0}% reduced Damage with Hits against Enemies on Full Life\nPlayers deal {0}% reduced Damage with Hits against Enemies on Full Life" negate 1
+	lang "German"
+	2
+		1|# "{0}% erhöhter Schaden mit Treffern gegen Gegner mit vollem Leben\nSpieler verursachen {0}% erhöhten Schaden mit Treffern gegen Gegner mit vollem Leben"
+		#|-1 "{0}% verringerter Schaden mit Treffern gegen Gegner mit vollem Leben\nSpieler verursachen {0}% verringerten Schaden mit Treffern gegen Gegner mit vollem Leben" negate 1
+	lang "Korean"
+	2
+		1|# "생명력이 최대인 적 명중 시 피해 {0}% 증가\n생명력이 최대인 적 명중 시 플레이어가 주는 피해 {0}% 증가"
+		#|-1 "생명력이 최대인 적 명중 시 피해 {0}% 감소\n생명력이 최대인 적 명중 시 플레이어가 주는 피해 {0}% 감소" negate 1
+	lang "Russian"
+	2
+		1|# "{0}% увеличение урона от ударов и состояний по врагам с полным здоровьем\nИгроки наносят увеличенный на {0}% урон от ударов и состояний по врагам с полным здоровьем"
+		#|-1 "{0}% уменьшение урона от ударов и состояний по врагам с полным здоровьем\nИгроки наносят уменьшенный на {0}% урон от ударов и состояний по врагам с полным здоровьем" negate 1
+	lang "Portuguese"
+	2
+		1|# "Dano com Acertos contra Inimigos em Vida Cheia aumentado em {0}%\nJogadores causam Dano com Acertos contra Inimigos em Vida Cheia aumentado em {0}%"
+		#|-1 "Dano com Acertos contra Inimigos em Vida Cheia reduzido em {0}%\nJogadores causam Dano com Acertos contra Inimigos em Vida Cheia reduzido em {0}%" negate 1
+	lang "Spanish"
+	2
+		1|# "Daño aumentado un {0}% con golpes contra enemigos que tienen la vida llena\nLos jugadores infligen daño aumentado un {0}% con golpes contra enemigos que tienen la vida llena"
+		#|-1 "Daño reducido un {0}% con golpes contra enemigos que tienen la vida llena\nLos jugadores infligen daño reducido un {0}% con golpes contra enemigos que tienen la vida llena" negate 1
+	lang "French"
+	2
+		1|# "{0}% d'Augmentation des Dégâts au Toucher contre les Ennemis dont la Vie est Pleine\nLes joueurs ont {0}% d'Augmentation des Dégâts au Toucher contre les Ennemis dont la Vie est Pleine"
+		#|-1 "{0}% de Réduction des Dégâts au Toucher contre les Ennemis dont la Vie est Pleine\nLes joueurs ont {0}% de Réduction des Dégâts au Toucher contre les Ennemis dont la Vie est Pleine" negate 1
+	lang "Traditional Chinese"
+	2
+		1|# "滿血時對敵人增加 {0}% 擊中傷害\n玩家滿血時對敵人增加 {0}% 擊中傷害"
+		#|-1 "滿血時對敵人減少 {0}% 擊中傷害\n玩家滿血時對敵人減少 {0}% 擊中傷害" negate 1
+	lang "Simplified Chinese"
+	2
+		1|# "对抗满血敌人的击中伤害提高 {0}%\n玩家对抗满血敌人的击中伤害提高 {0}%"
+		#|-1 "对抗满血敌人的击中伤害降低 {0}%\n玩家对抗满血敌人的击中伤害降低 {0}%" negate 1
+	lang "Thai"
+	2
+		1|# "เพิ่มความเสียหาย ปะทะ {0}% ต่อศัตรูที่มี พลังชีวิตเต็ม\nผู้เล่นสร้างความเสียหาย ปะทะ เพิ่มขึ้น {0}% ต่อศัตรูที่มี พลังชีวิตเต็ม"
+		#|-1 "ลดความเสียหาย ปะทะ {0}% ต่อศัตรูที่มี พลังชีวิตเต็ม\nผู้เล่นสร้างความเสียหาย ปะทะ ลดลง {0}% ต่อศัตรูที่มี พลังชีวิตเต็ม" negate 1
+
+description
+	1 heist_blueprint_avoid_alarm_chance_%
+	1
+		1|# "{0}% chance to not Activate Lockdown in Grand Heists"
+	lang "Korean"
+	1
+		1|# "대강탈에서 {0}%의 확률로 폐쇄가 발동하지 않음"
+	lang "German"
+	1
+		1|# "{0}% Chance, in Großen Coups die Abriegelung nicht zu aktivieren"
+	lang "Portuguese"
+	1
+		1|# "{0}% de chance de não Ativar o Confinamento em Grandes Golpes"
+	lang "Spanish"
+	1
+		1|# "{0}% de probabilidad de que no se active el cierre de puertas en los Golpes"
+	lang "French"
+	1
+		1|# "{0}% de chances de ne pas activer le Verrouillage durant les Casses du siècle"
+	lang "Russian"
+	1
+		1|# "{0}% шанс не активировать процесс изоляции в Больших кражах"
+	lang "Traditional Chinese"
+	1
+		1|# "劫盜之星時有 {0}% 機率不啟動封鎖"
+	lang "Simplified Chinese"
+	1
+		1|# "大型夺宝冒险有 {0}% 的几率不激活封锁"
+	lang "Thai"
+	1
+		1|# "มีโอกาสไม่เกิด การปิดกั้นสถานที่ ใน การโจรกรรมครั้งยิ่งใหญ่ {0}%"
+
+description
+	1 heist_chests_double_blighted_maps_and_catalysts_%
+	2
+		1|# "Heist Chests have a {0}% chance to Duplicate contained Blighted Maps and Catalysts"
+		100|# "Heist Chests Duplicate contained Blighted Maps and Catalysts"
+	lang "Korean"
+	2
+		1|# "{0}%의 확률로 강탈 상자에 들어 있는 역병 걸린 지도 및 기폭제 복제"
+		100|# "강탈 상자에 들어 있는 역병 걸린 지도 및 기폭제 복제"
+	lang "German"
+	2
+		1|# "Raubüberfall-Truhen haben {0}% Chance, enthaltene befallene Karten und Katalysatoren zu duplizieren"
+		100|# "Raubüberfall-Truhen duplizieren enthaltene befallene Karten und Katalysatoren"
+	lang "Portuguese"
+	2
+		1|# "Baús Heist têm {0}% de chance de se Duplicarem contendo Mapas Arruinados e Catalisadores"
+		100|# "Baús Heist se Duplicam contendo Mapas Arruinados e Catalisadores"
+	lang "Spanish"
+	2
+		1|# "Los cofres de los atracos tienen un {0}% de probabilidad de duplicar los mapas infestados y los catalizadores que contienen"
+		100|# "Los cofres de los atracos duplican los mapas infestados y los catalizadores que contienen"
+	lang "Russian"
+	2
+		1|# "Сундуки Кражи имеют {0}% шанс удвоить содержащиеся в них зараженные карты и катализаторы"
+		100|# "Сундуки Кражи удваивают содержащиеся в них зараженные карты и катализаторы"
+	lang "French"
+	2
+		1|# "Les Coffres de Casse ont {0}% de chances de dupliquer les Cartes infestées et les Catalyseurs qu'ils contiennent"
+		100|# "Les Coffres de Casse dupliquent les Cartes infestées et les Catalyseurs qu'ils contiennent"
+	lang "Traditional Chinese"
+	2
+		1|# "劫盜保險箱有 {0}% 機率複製內含的凋落地圖和催化劑"
+		100|# "劫盜保險箱複製內含的凋落地圖和催化劑"
+	lang "Simplified Chinese"
+	2
+		1|# "珍宝箱有 {0}% 的几率复制其中的菌潮地图和催化剂"
+		100|# "珍宝箱复制其中的菌潮地图和催化剂"
+	lang "Thai"
+	2
+		1|# "หีบการโจรกรรม มีโอกาสสร้างซ้ำ แผนที่ไบล์ท และ ตัวเร่งปฏิกิริยา ที่มี {0}%"
+		100|# "หีบการโจรกรรม สร้างซ้ำ แผนที่ไบล์ท และ ตัวเร่งปฏิกิริยา ที่มี"
+
+description
+	1 heist_chests_double_breach_splinters_%
+	2
+		1|# "Heist Chests have a {0}% chance to Duplicate contained Breach Splinters"
+		100|# "Heist Chests Duplicate contained Breach Splinters"
+	lang "Korean"
+	2
+		1|# "{0}%의 확률로 강탈 상자에 들어 있는 균열 파편 복제"
+		100|# "강탈 상자에 들어 있는 균열 파편 복제"
+	lang "German"
+	2
+		1|# "Raubüberfall-Truhen haben {0}% Chance, enthaltene Riss-Splitter zu duplizieren"
+		100|# "Raubüberfall-Truhen duplizieren enthaltene Riss-Splitter"
+	lang "Portuguese"
+	2
+		1|# "Baús Heist têm {0}% de chance de se Duplicarem contendo Fragmentos de Fendas"
+		100|# "Baús Heist se Duplicam contendo Fragmentos de Fendas"
+	lang "Spanish"
+	2
+		1|# "Los cofres de los atracos tienen un {0}% de probabilidad de duplicar las astillas de fisura que contienen"
+		100|# "Los cofres de los atracos duplican las astillas de fisura que contienen"
+	lang "Russian"
+	2
+		1|# "Сундуки Кражи имеют {0}% шанс удвоить содержащиеся в них осколки Разлома"
+		100|# "Сундуки Кражи удваивают содержащиеся в них осколки Разлома"
+	lang "French"
+	2
+		1|# "Les Coffres de Casse ont {0}% de chances de dupliquer les Esquilles de Brèche qu'ils contiennent"
+		100|# "Les Coffres de Casse dupliquent les Esquilles de Brèche qu'ils contiennent"
+	lang "Traditional Chinese"
+	2
+		1|# "劫盜保險箱有 {0}% 機率複製內含的裂痕裂片"
+		100|# "劫盜保險箱複製內含的裂痕裂片"
+	lang "Simplified Chinese"
+	2
+		1|# "珍宝箱有 {0}% 的几率复制其中的裂隙碎片"
+		100|# "珍宝箱复制其中的裂隙碎片"
+	lang "Thai"
+	2
+		1|# "หีบการโจรกรรม มีโอกาสสร้างซ้ำ ชิ้นส่วนบรีช ที่มี {0}%"
+		100|# "หีบการโจรกรรม สร้างซ้ำ ชิ้นส่วนบรีช ที่มี"
+
+description
+	1 heist_chests_double_catalysts_%
+	2
+		1|# "Heist Chests have a {0}% chance to Duplicate contained Catalysts"
+		100|# "Heist Chests Duplicate contained Catalysts"
+	lang "Korean"
+	2
+		1|# "{0}%의 확률로 강탈 상자에 들어 있는 기폭제 복제"
+		100|# "강탈 상자에 들어 있는 기폭제 복제"
+	lang "German"
+	2
+		1|# "Raubüberfall-Truhen haben {0}% Chance, enthaltene Katalysatoren zu duplizieren"
+		100|# "Raubüberfall-Truhen duplizieren enthaltene Katalysatoren"
+	lang "Portuguese"
+	2
+		1|# "Baús Heist têm {0}% de chance de se Duplicarem contendo Catalisadores"
+		100|# "Baús Heist se Duplicam contendo Catalisadores"
+	lang "Spanish"
+	2
+		1|# "Los cofres de los atracos tienen un {0}% de probabilidad de duplicar los catalizadores que contienen"
+		100|# "Los cofres de los atracos duplican los catalizadores que contienen"
+	lang "Russian"
+	2
+		1|# "Сундуки Кражи имеют {0}% шанс удвоить содержащиеся в них катализаторы"
+		100|# "Сундуки Кражи удваивают содержащиеся в них катализаторы"
+	lang "French"
+	2
+		1|# "Les Coffres de Casse ont {0}% de chances de dupliquer les Catalyseurs qu'ils contiennent"
+		100|# "Les Coffres de Casse dupliquent les Catalyseurs qu'ils contiennent"
+	lang "Traditional Chinese"
+	2
+		1|# "劫盜保險箱有 {0}% 機率複製內含的催化劑"
+		100|# "劫盜保險箱複製內含的催化劑"
+	lang "Simplified Chinese"
+	2
+		1|# "珍宝箱有 {0}% 的几率复制其中的催化剂"
+		100|# "珍宝箱复制其中的催化剂"
+	lang "Thai"
+	2
+		1|# "หีบการโจรกรรม มีโอกาสสร้างซ้ำ ตัวเร่งปฏิกิริยา ที่มี {0}%"
+		100|# "หีบการโจรกรรม สร้างซ้ำ ตัวเร่งปฏิกิริยา ที่มี"
+
+description
+	1 heist_chests_double_currency_%
+	2
+		1|# "Heist Chests have a {0}% chance to Duplicate contained Basic Currency"
+		100|# "Heist Chests Duplicate contained Basic Currency"
+	lang "Korean"
+	2
+		1|# "{0}%의 확률로 강탈 상자에 들어 있는 기본 화폐 복제"
+		100|# "강탈 상자에 들어 있는 기본 화폐 복제"
+	lang "French"
+	2
+		1|# "Les Coffres de Casse ont {0}% de chances de Dupliquer les Objets monétaires basiques qu'ils contiennent"
+		100|# "Les Coffres de Casse Dupliquent les Objets monétaires basiques qu'ils contiennent"
+	lang "German"
+	2
+		1|# "Raubüberfall-Truhen haben {0}% Chance, enthaltene Basiswährung zu duplizieren"
+		100|# "Raubüberfall-Truhen duplizieren enthaltene Basiswährung"
+	lang "Russian"
+	2
+		1|# "Сундуки Кражи имеют {0}% шанс продублировать содержащуюся в них обычную валюту"
+		100|# "Сундуки Кражи дублируют содержащуюся в них обычную валюту"
+	lang "Traditional Chinese"
+	2
+		1|# "劫盜保險箱有 {0}% 機率複製內含的基礎通貨"
+		100|# "劫盜保險箱複製內含的基礎通貨"
+	lang "Portuguese"
+	2
+		1|# "Baús Heist têm {0}% de chance de Duplicarem Itens Monetários Básicos contidos"
+		100|# "Baús Heist Duplicam Itens Monetários Básicos contidos"
+	lang "Spanish"
+	2
+		1|# "Los cofres de los atracos y los golpes tienen un {0}% de probabilidad de contener el doble de objetos monetarios básicos"
+		100|# "Los cofres de los atracos y los golpes contienen el doble de objetos monetarios básicos"
+	lang "Simplified Chinese"
+	2
+		1|# "珍宝箱有 {0}% 的几率复制其中的基础通货物品"
+		100|# "珍宝箱复制其中的基础通货物品"
+	lang "Thai"
+	2
+		1|# "หีบการโจรกรรม มีโอกาสสร้างซ้ำ เงินตราพื้นฐาน ที่มี {0}%"
+		100|# "หีบการโจรกรรม สร้างซ้ำ เงินตราพื้นฐาน ที่มี"
+
+description
+	1 heist_chests_double_delirium_orbs_and_splinters_%
+	2
+		1|# "Heist Chests have a {0}% chance to Duplicate contained Delirium Orbs and Splinters"
+		100|# "Heist Chests Duplicate contained Delirium Orbs and Splinters"
+	lang "Portuguese"
+	2
+		1|# "Baús Heist têm {0}% de chance de Duplicarem os Orbes e Fragmentos do Delírio contidos"
+		100|# "Baús Heist Duplicam os Orbes e Fragmentos do Delírio contidos"
+	lang "German"
+	2
+		1|# "Raubüberfall-Truhen haben {0}% Chance, enthaltene Delirium-Sphären und -Splitter zu duplizieren"
+		100|# "Raubüberfall-Truhen duplizieren enthaltene Delirium-Sphären und -Splitter"
+	lang "Spanish"
+	2
+		1|# "Los cofres de Heist tienen un {0}% de probabilidad de duplicar los Orbes de delirio y las esquirlas que contienen"
+		100|# "Los cofres de Heist duplican los Orbes de delirio y las esquirlas que contienen"
+	lang "French"
+	2
+		1|# "Les Coffres de Casse ont {0}% de chances de dupliquer les Orbes de Délire qu'ils contiennent"
+		100|# "Les Coffres de Casse dupliquent les Orbes de Délire qu'ils contiennent"
+	lang "Korean"
+	2
+		1|# "{0}%의 확률로 강탈 상자에 들어 있는 환영의 오브 및 파편 복제"
+		100|# "강탈 상자에 들어 있는 환영의 오브 및 파편 복제"
+	lang "Russian"
+	2
+		1|# "Сундуки Кражи имеют {0}% шанс удвоить содержащиеся в них сферы Делириума и осколки"
+		100|# "Сундуки Кражи удваивают содержащиеся в них сферы Делириума и осколки"
+	lang "Traditional Chinese"
+	2
+		1|# "劫盜保險箱有 {0}% 機率複製內含的譫妄玉和裂片"
+		100|# "劫盜保險箱複製內含的譫妄玉和裂片"
+	lang "Simplified Chinese"
+	2
+		1|# "珍宝箱有 {0}% 的几率复制其中的雾魇宝珠和裂片"
+		100|# "珍宝箱复制其中的雾魇宝珠和裂片"
+	lang "Thai"
+	2
+		1|# "หีบการโจรกรรม มีโอกาสสร้างซ้ำ Delirium Orb และ ชิ้นส่วนเดลิเรียม ที่มี {0}%"
+		100|# "หีบการโจรกรรม สร้างซ้ำ Delirium Orb และ ชิ้นส่วนเดลิเรียม ที่มี"
+
+description
+	1 heist_chests_double_divination_cards_%
+	2
+		1|# "Heist Chests have a {0}% chance to Duplicate contained Divination Cards"
+		100|# "Heist Chests Duplicate contained Divination Cards"
+	lang "Korean"
+	2
+		1|# "{0}%의 확률로 강탈 상자에 들어 있는 점술 카드 복제"
+		100|# "강탈 상자에 들어 있는 점술 카드 복제"
+	lang "German"
+	2
+		1|# "Raubüberfall-Truhen haben {0}% Chance, enthaltene Weissagungskarten zu duplizieren"
+		100|# "Raubüberfall-Truhen duplizieren enthaltene Weissagungskarten"
+	lang "Portuguese"
+	2
+		1|# "Baús Heist têm {0}% de chance de se Duplicarem contendo Cartas de Adivinhação"
+		100|# "Baús Heist se Duplicam contendo Cartas de Adivinhação"
+	lang "Spanish"
+	2
+		1|# "Los cofres de los atracos tienen un {0}% de probabilidad de duplicar las cartas de adivinación que contienen"
+		100|# "Los cofres de los atracos duplican las cartas de adivinación que contienen"
+	lang "Russian"
+	2
+		1|# "Сундуки Кражи имеют {0}% шанс удвоить содержащиеся в них гадальные карты"
+		100|# "Сундуки Кражи удваивают содержащиеся в них гадальные карты"
+	lang "French"
+	2
+		1|# "Les Coffres de Casse ont {0}% de chances de dupliquer les Cartes divinatoires qu'ils contiennent"
+		100|# "Les Coffres de Casse dupliquent les Cartes divinatoires qu'ils contiennent"
+	lang "Traditional Chinese"
+	2
+		1|# "劫盜保險箱有 {0}% 機率複製內含的命運卡"
+		100|# "劫盜保險箱複製內含的命運卡"
+	lang "Simplified Chinese"
+	2
+		1|# "珍宝箱有 {0}% 的几率复制其中的命运卡"
+		100|# "珍宝箱复制其中的命运卡"
+	lang "Thai"
+	2
+		1|# "หีบการโจรกรรม มีโอกาสสร้างซ้ำ ไพ่พยากรณ์ ที่มี {0}%"
+		100|# "หีบการโจรกรรม สร้างซ้ำ ไพ่พยากรณ์ ที่มี"
+
+description
+	1 heist_chests_double_essences_%
+	2
+		1|# "Heist Chests have a {0}% chance to Duplicate contained Essences"
+		100|# "Heist Chests Duplicate contained Essences"
+	lang "Korean"
+	2
+		1|# "{0}%의 확률로 강탈 상자에 들어 있는 에센스 복제"
+		100|# "강탈 상자에 들어 있는 에센스 복제"
+	lang "German"
+	2
+		1|# "Raubüberfall-Truhen haben {0}% Chance, enthaltene Essenzen zu duplizieren"
+		100|# "Raubüberfall-Truhen duplizieren enthaltene Essenzen"
+	lang "Portuguese"
+	2
+		1|# "Baús Heist têm {0}% de chance de se Duplicarem contendo Essências"
+		100|# "Baús Heist se Duplicam contendo Essências"
+	lang "Spanish"
+	2
+		1|# "Los cofres de los atracos tienen un {0}% de probabilidad de duplicar las esencias que contienen"
+		100|# "Los cofres de los atracos duplican las esencias que contienen"
+	lang "Russian"
+	2
+		1|# "Сундуки Кражи имеют {0}% шанс удвоить содержащиеся в них Сущности"
+		100|# "Сундуки Кражи удваивают содержащиеся в них Сущности"
+	lang "French"
+	2
+		1|# "Les Coffres de Casse ont {0}% de chances de dupliquer les Essences qu'ils contiennent"
+		100|# "Les Coffres de Casse dupliquent les Essences qu'ils contiennent"
+	lang "Traditional Chinese"
+	2
+		1|# "劫盜保險箱有 {0}% 機率複製內含的精髓"
+		100|# "劫盜保險箱複製內含的精髓"
+	lang "Simplified Chinese"
+	2
+		1|# "珍宝箱有 {0}% 的几率复制其中的精华"
+		100|# "珍宝箱复制其中的精华"
+	lang "Thai"
+	2
+		1|# "หีบการโจรกรรม มีโอกาสสร้างซ้ำ เอสเซนส์ ที่มี {0}%"
+		100|# "หีบการโจรกรรม สร้างซ้ำ เอสเซนส์ ที่มี"
+
+description
+	1 heist_chests_double_jewels_%
+	2
+		1|# "Heist Chests have a {0}% chance to Duplicate contained Jewels"
+		100|# "Heist Chests Duplicate contained Jewels"
+	lang "Korean"
+	2
+		1|# "{0}%의 확률로 강탈 상자에 들어 있는 주얼 복제"
+		100|# "강탈 상자에 들어 있는 주얼 복제"
+	lang "German"
+	2
+		1|# "Raubüberfall-Truhen haben {0}% Chance, enthaltene Juwelen zu duplizieren"
+		100|# "Raubüberfall-Truhen duplizieren enthaltene Juwelen"
+	lang "Portuguese"
+	2
+		1|# "Baús Heist têm {0}% de chance de se Duplicarem contendo Joias"
+		100|# "Baús Heist se Duplicam contendo Joias"
+	lang "Spanish"
+	2
+		1|# "Los cofres de los atracos tienen un {0}% de probabilidad de duplicar las joyas que contienen"
+		100|# "Los cofres de los atracos duplican las joyas que contienen"
+	lang "Russian"
+	2
+		1|# "Сундуки Кражи имеют {0}% шанс удвоить содержащиеся в них самоцветы"
+		100|# "Сундуки Кражи удваивают содержащиеся в них самоцветы"
+	lang "French"
+	2
+		1|# "Les Coffres de Casse ont {0}% de chances de dupliquer les Joyaux qu'ils contiennent"
+		100|# "Les Coffres de Casse dupliquent les Joyaux qu'ils contiennent"
+	lang "Traditional Chinese"
+	2
+		1|# "劫盜保險箱有 {0}% 機率複製內含的珠寶"
+		100|# "劫盜保險箱複製內含的珠寶"
+	lang "Simplified Chinese"
+	2
+		1|# "珍宝箱有 {0}% 的几率复制其中的珠宝"
+		100|# "珍宝箱复制其中的珠宝"
+	lang "Thai"
+	2
+		1|# "หีบการโจรกรรม มีโอกาสสร้างซ้ำ จิวเวล ที่มี {0}%"
+		100|# "หีบการโจรกรรม สร้างซ้ำ จิวเวล ที่มี"
+
+description
+	1 heist_chests_double_legion_splinters_%
+	2
+		1|# "Heist Chests have a {0}% chance to Duplicate contained Legion Splinters"
+		100|# "Heist Chests Duplicate contained Legion Splinters"
+	lang "Korean"
+	2
+		1|# "{0}%의 확률로 강탈 상자에 들어 있는 군단 파편 복제"
+		100|# "강탈 상자에 들어 있는 군단 파편 복제"
+	lang "German"
+	2
+		1|# "Raubüberfall-Truhen haben {0}% Chance, enthaltene Legion-Splitter zu duplizieren"
+		100|# "Raubüberfall-Truhen duplizieren enthaltene Legion-Splitter"
+	lang "Portuguese"
+	2
+		1|# "Baús Heist têm {0}% de chance de se Duplicarem contendo Fragmentos Legion"
+		100|# "Baús Heist se Duplicam contendo Fragmentos Legion"
+	lang "Spanish"
+	2
+		1|# "Los cofres de los atracos tienen un {0}% de probabilidad de duplicar los fragmentos de Legion que contienen"
+		100|# "Los cofres de los atracos duplican los fragmentos de Legion que contienen"
+	lang "Russian"
+	2
+		1|# "Сундуки Кражи имеют {0}% шанс удвоить содержащиеся в них осколки Легиона"
+		100|# "Сундуки Кражи удваивают содержащиеся в них осколки Легиона"
+	lang "French"
+	2
+		1|# "Les Coffres de Casse ont {0}% de chances de dupliquer les Esquilles de Légion qu'ils contiennent"
+		100|# "Les Coffres de Casse dupliquent les Esquilles de Légion qu'ils contiennent"
+	lang "Traditional Chinese"
+	2
+		1|# "劫盜保險箱有 {0}% 機率複製內含的戰亂裂片"
+		100|# "劫盜保險箱複製內含的戰亂裂片"
+	lang "Simplified Chinese"
+	2
+		1|# "珍宝箱有 {0}% 的几率复制其中的军团裂片"
+		100|# "珍宝箱复制其中的军团裂片"
+	lang "Thai"
+	2
+		1|# "หีบการโจรกรรม มีโอกาสสร้างซ้ำ ชิ้นส่วนกองพัน ที่มี {0}%"
+		100|# "หีบการโจรกรรม สร้างซ้ำ ชิ้นส่วนกองพัน ที่มี"
+
+description
+	1 heist_chests_double_map_fragments_%
+	2
+		1|# "Heist Chests have a {0}% chance to Duplicate contained Map Fragments"
+		100|# "Heist Chests Duplicate contained Map Fragments"
+	lang "Korean"
+	2
+		1|# "{0}%의 확률로 강탈 상자에 들어 있는 지도 조각 복제"
+		100|# "강탈 상자에 들어 있는 지도 조각 복제"
+	lang "German"
+	2
+		1|# "Raubüberfall-Truhen haben {0}% Chance, enthaltene Karten-Fragmente zu duplizieren"
+		100|# "Raubüberfall-Truhen duplizieren enthaltene Karten-Fragmente"
+	lang "Portuguese"
+	2
+		1|# "Baús Heist têm {0}% de chance de se Duplicarem contendo Fragmentos de Mapas"
+		100|# "Baús Heist se Duplicam contendo Fragmentos de Mapas"
+	lang "Spanish"
+	2
+		1|# "Los cofres de los atracos tienen un {0}% de probabilidad de duplicar los fragmentos de mapa que contienen"
+		100|# "Los cofres de los atracos duplican los fragmentos de mapa que contienen"
+	lang "Russian"
+	2
+		1|# "Сундуки Кражи имеют {0}% шанс удвоить содержащиеся в них фрагменты карт"
+		100|# "Сундуки Кражи удваивают содержащиеся в них фрагменты карт"
+	lang "French"
+	2
+		1|# "Les Coffres de Casse ont {0}% de chances de dupliquer les Fragments qu'ils contiennent"
+		100|# "Les Coffres de Casse dupliquent les Fragments qu'ils contiennent"
+	lang "Traditional Chinese"
+	2
+		1|# "劫盜保險箱有 {0}% 機率複製內含的地圖碎片"
+		100|# "劫盜保險箱複製內含的地圖碎片"
+	lang "Simplified Chinese"
+	2
+		1|# "珍宝箱有 {0}% 的几率复制其中的地图碎片"
+		100|# "珍宝箱复制其中的地图碎片"
+	lang "Thai"
+	2
+		1|# "หีบการโจรกรรม มีโอกาสสร้างซ้ำ ชิ้นส่วนแผนที่ ที่มี {0}%"
+		100|# "หีบการโจรกรรม สร้างซ้ำ ชิ้นส่วนแผนที่ ที่มี"
+
+description
+	1 heist_chests_double_maps_%
+	2
+		1|# "Heist Chests have a {0}% chance to Duplicate contained Maps"
+		100|# "Heist Chests Duplicate contained Maps"
+	lang "Korean"
+	2
+		1|# "{0}%의 확률로 강탈 상자에 들어 있는 지도 복제"
+		100|# "강탈 상자에 들어 있는 지도 복제"
+	lang "German"
+	2
+		1|# "Raubüberfall-Truhen haben {0}% Chance, enthaltene Karten zu duplizieren"
+		100|# "Raubüberfall-Truhen duplizieren enthaltene Karten"
+	lang "Portuguese"
+	2
+		1|# "Baús Heist têm {0}% de chance de se Duplicarem contendo Mapas"
+		100|# "Baús Heist se Duplicam contendo Mapas"
+	lang "Spanish"
+	2
+		1|# "Los cofres de los atracos tienen un {0}% de probabilidad de duplicar los mapas que contienen"
+		100|# "Los cofres de los atracos duplican los mapas que contienen"
+	lang "Russian"
+	2
+		1|# "Сундуки Кражи имеют {0}% шанс удвоить содержащиеся в них карты"
+		100|# "Сундуки Кражи удваивают содержащиеся в них карты"
+	lang "French"
+	2
+		1|# "Les Coffres de Casse ont {0}% de chances de dupliquer les Cartes qu'ils contiennent"
+		100|# "Les Coffres de Casse dupliquent les Cartes qu'ils contiennent"
+	lang "Traditional Chinese"
+	2
+		1|# "劫盜保險箱有 {0}% 機率複製內含的地圖"
+		100|# "劫盜保險箱複製內含的地圖"
+	lang "Simplified Chinese"
+	2
+		1|# "珍宝箱有 {0}% 的几率复制其中的地图"
+		100|# "珍宝箱复制其中的地图"
+	lang "Thai"
+	2
+		1|# "หีบการโจรกรรม มีโอกาสสร้างซ้ำ แผนที่ ที่มี {0}%"
+		100|# "หีบการโจรกรรม สร้างซ้ำ แผนที่ ที่มี"
+
+description
+	1 heist_chests_double_oils_%
+	2
+		1|# "Heist Chests have a {0}% chance to Duplicate contained Oils"
+		100|# "Heist Chests Duplicate contained Oils"
+	lang "Korean"
+	2
+		1|# "{0}%의 확률로 강탈 상자에 들어 있는 성유 복제"
+		100|# "강탈 상자에 들어 있는 성유 복제"
+	lang "German"
+	2
+		1|# "Raubüberfall-Truhen haben {0}% Chance, enthaltene Öle zu duplizieren"
+		100|# "Raubüberfall-Truhen duplizieren enthaltene Öle"
+	lang "Portuguese"
+	2
+		1|# "Baús Heist têm {0}% de chance de se Duplicarem contendo Óleos"
+		100|# "Baús Heist se Duplicam contendo Óleos"
+	lang "Spanish"
+	2
+		1|# "Los cofres de los atracos tienen un {0}% de probabilidad de duplicar los aceites que contienen"
+		100|# "Los cofres de los atracos duplican los aceites que contienen"
+	lang "Russian"
+	2
+		1|# "Сундуки Кражи имеют {0}% шанс удвоить содержащиеся в них масла"
+		100|# "Сундуки Кражи удваивают содержащиеся в них масла"
+	lang "French"
+	2
+		1|# "Les Coffres de Casse ont {0}% de chances de dupliquer les Huiles qu'ils contiennent"
+		100|# "Les Coffres de Casse dupliquent les Huiles qu'ils contiennent"
+	lang "Traditional Chinese"
+	2
+		1|# "劫盜保險箱有 {0}% 機率複製內含的油瓶"
+		100|# "劫盜保險箱複製內含的油瓶"
+	lang "Simplified Chinese"
+	2
+		1|# "珍宝箱有 {0}% 的几率复制其中的圣油"
+		100|# "珍宝箱复制其中的圣油"
+	lang "Thai"
+	2
+		1|# "หีบการโจรกรรม มีโอกาสสร้างซ้ำ น้ำมัน ที่มี {0}%"
+		100|# "หีบการโจรกรรม สร้างซ้ำ น้ำมัน ที่มี"
+
+description
+	1 heist_chests_double_scarabs_%
+	2
+		1|# "Heist Chests have a {0}% chance to Duplicate contained Scarabs"
+		100|# "Heist Chests Duplicate contained Scarabs"
+	lang "Korean"
+	2
+		1|# "{0}%의 확률로 강탈 상자에 들어 있는 갑충석 복제"
+		100|# "강탈 상자에 들어 있는 갑충석 복제"
+	lang "German"
+	2
+		1|# "Raubüberfall-Truhen haben {0}% Chance, enthaltene Skarabäen zu duplizieren"
+		100|# "Raubüberfall-Truhen duplizieren enthaltene Skarabäen"
+	lang "Portuguese"
+	2
+		1|# "Baús Heist têm {0}% de chance de se Duplicarem contendo Escaravelhos"
+		100|# "Baús Heist se Duplicam contendo Escaravelhos"
+	lang "Spanish"
+	2
+		1|# "Los cofres de los atracos tienen un {0}% de probabilidad de duplicar los escarabajos que contienen"
+		100|# "Los cofres de los atracos duplican los escarabajos que contienen"
+	lang "Russian"
+	2
+		1|# "Сундуки Кражи имеют {0}% шанс удвоить содержащихся в них скарабеев"
+		100|# "Сундуки Кражи удваивают содержащихся в них скарабеев"
+	lang "French"
+	2
+		1|# "Les Coffres de Casse ont {0}% de chances de dupliquer les Scarabées qu'ils contiennent"
+		100|# "Les Coffres de Casse dupliquent les Scarabées qu'ils contiennent"
+	lang "Traditional Chinese"
+	2
+		1|# "劫盜保險箱有 {0}% 機率複製內含的聖甲蟲"
+		100|# "劫盜保險箱複製內含的聖甲蟲"
+	lang "Simplified Chinese"
+	2
+		1|# "珍宝箱有 {0}% 的几率复制其中的圣甲虫"
+		100|# "珍宝箱复制其中的圣甲虫"
+	lang "Thai"
+	2
+		1|# "หีบการโจรกรรม มีโอกาสสร้างซ้ำ ซแคแร็บ ที่มี {0}%"
+		100|# "หีบการโจรกรรม สร้างซ้ำ ซแคแร็บ ที่มี"
+
+description
+	1 heist_chests_double_sextants_%
+	2
+		1|# "Heist Chests have a {0}% chance to Duplicate contained Sextants"
+		100|# "Heist Chests duplicate contained Sextants"
+	lang "Korean"
+	2
+		1|# "{0}%의 확률로 강탈 상자에 들어 있는 육분의 복제"
+		100|# "강탈 상자에 들어 있는 육분의 복제"
+	lang "German"
+	2
+		1|# "Raubüberfall-Truhen haben {0}% Chance, enthaltene Sextanten zu duplizieren"
+		100|# "Raubüberfall-Truhen duplizieren enthaltene Sextanten"
+	lang "Portuguese"
+	2
+		1|# "Baús Heist têm {0}% de chance de se Duplicarem contendo Sextantes"
+		100|# "Baús Heist se Duplicam contendo Sextantes"
+	lang "Spanish"
+	2
+		1|# "Los cofres de los atracos tienen un {0}% de probabilidad de duplicar los sextantes que contienen"
+		100|# "Los cofres de los atracos duplican los sextantes que contienen"
+	lang "Russian"
+	2
+		1|# "Сундуки Кражи имеют {0}% шанс удвоить содержащиеся в них секстанты"
+		100|# "Сундуки Кражи удваивают содержащиеся в них секстанты"
+	lang "French"
+	2
+		1|# "Les Coffres de Casse ont {0}% de chances de dupliquer les Sextants qu'ils contiennent"
+		100|# "Les Coffres de Casse dupliquent les Sextants qu'ils contiennent"
+	lang "Traditional Chinese"
+	2
+		1|# "劫盜保險箱有 {0}% 機率複製內含的六分儀"
+		100|# "劫盜保險箱複製內含的六分儀"
+	lang "Simplified Chinese"
+	2
+		1|# "珍宝箱有 {0}% 的几率复制其中的六分仪"
+		100|# "珍宝箱复制其中的六分仪"
+	lang "Thai"
+	2
+		1|# "หีบการโจรกรรม มีโอกาสสร้างซ้ำ Sextant ที่มี {0}%"
+		100|# "หีบการโจรกรรม สร้างซ้ำ Sextant ที่มี"
+
+description
+	1 heist_chests_double_uniques_%
+	2
+		1|# "Heist Chests have a {0}% chance to contain twice as many Uniques"
+		#|-1 "Heist Chests contain twice as many Uniques" negate 1
+	lang "Korean"
+	2
+		1|# "{0}%의 확률로 강탈 상자에 들어 있는 고유 아이템 2배로 증가"
+		#|-1 "강탈 상자에 들어 있는 고유 아이템 2배로 증가" negate 1
+	lang "German"
+	2
+		1|# "Raubüberfall-Truhen haben {0}% Chance, doppelt so viele einzigartige Gegenstände zu enthalten"
+		#|-1 "Raubüberfall-Truhen enthalten doppelt so viele einzigartige Gegenstände" negate 1
+	lang "Portuguese"
+	2
+		1|# "Baús Heist têm {0}% de chance de se Duplicarem contendo o dobro de Únicos"
+		100|# "Baús Heist se Duplicam contendo o dobro de Únicos" negate 1
+	lang "Spanish"
+	2
+		1|# "Los cofres de los atracos tienen un {0}% de probabilidad de contener el doble de objetos únicos"
+		#|-1 "Los cofres de los atracos contienen el doble de objetos únicos" negate 1
+	lang "Russian"
+	2
+		1|# "Сундуки Кражи имеют {0}% шанс содержать в два раза больше уникальных предметов"
+		100|# "Сундуки Кражи содержат в два раза больше уникальных предметов"
+	lang "French"
+	2
+		1|# "Les Coffres de Casse ont {0}% de chances de contenir deux fois plus d'Objets Uniques"
+		100|# "Les Coffres de Casse contiennent deux fois plus d'Objets Uniques"
+	lang "Traditional Chinese"
+	2
+		1|# "劫盜保險箱有 {0}% 機率內含 2 倍傳奇"
+		100|# "劫盜保險箱複製內含 2 倍傳奇"
+	lang "Simplified Chinese"
+	2
+		1|# "珍宝箱有 {0}% 的几率使其中的传奇物品翻倍"
+		#|-1 "珍宝箱使其中的传奇物品翻倍" negate 1
+	lang "Thai"
+	2
+		1|# "หีบการโจรกรรม มีโอกาสมี ไอเทมยูนิค เป็นสองเท่า {0}%"
+		#|-1 "หีบการโจรกรรม มีไอเทมยูนิค เป็นสองเท่า" negate 1
+
+description
+	1 heist_coins_dropped_by_monsters_double_%
+	2
+		1|# "Monsters have {0}% chance to Duplicate dropped Rogue's Marker"
+		100|# "Monsters Duplicate dropped Rogue's Marker"
+	lang "Korean"
+	2
+		1|# "{0}%의 확률로 몬스터가 떨어지는 도둑의 증표 복제"
+		100|# "몬스터가 떨어지는 도둑의 증표 복제"
+	lang "German"
+	2
+		1|# "Monster haben {0}% Chance, fallen gelassene Signa der Abtrünnigen zu duplizieren"
+		100|# "Monster duplizieren fallen gelassene Signa der Abtrünnigen"
+	lang "Portuguese"
+	2
+		1|# "Monstros têm {0}% de chance de Duplicar as Insígnias do Renegado derrubadas"
+		100|# "Monstros Duplicam as Insígnias do Renegado derrubadas"
+	lang "Spanish"
+	2
+		1|# "Los monstruos tienen {0}% de probabilidad de duplicar las Monedas del renegado arrojadas"
+		100|# "Los monstruos duplican las Monedas del renegado arrojadas"
+	lang "Russian"
+	2
+		1|# "Выпадающие из монстров разбойничьи жетоны имеют {0}% шанс удвоиться"
+		100|# "Выпадающие из монстров разбойничьи жетоны удваиваются"
+	lang "French"
+	2
+		1|# "Les Monstres ont {0}% de chances de dupliquer les Pièces marquées qu'ils cèdent"
+		100|# "Les Monstres dupliquent les Pièces marquées qu'ils cèdent"
+	lang "Traditional Chinese"
+	2
+		1|# "怪物有 {0}% 機率複製掉落的盜賊之印"
+		100|# "怪物複製掉落的盜賊之印"
+	lang "Simplified Chinese"
+	2
+		1|# "怪物有 {0}% 的几率复制掉落的赏金猎人印记"
+		100|# "怪物复制掉落的赏金猎人印记"
+	lang "Thai"
+	2
+		1|# "มอนสเตอร์ มีโอกาสสร้างซ้ำ เหรียญกองโจร ที่ดรอป {0}%"
+		100|# "มอนสเตอร์ สร้างซ้ำ เหรียญกองโจร ที่ดรอป"
+
+description
+	1 heist_contract_additional_whakano_intelligence_chance_on_completion_%
+	1
+		1|# "{0}% chance on completing a Heist to generate an additional Reveal with Whakano"
+	lang "Korean"
+	1
+		1|# "강탈 완료 시 {0}%의 확률로 와카노에게서 드러내기 1개 추가 생성"
+	lang "German"
+	1
+		1|# "{0}% Chance, beim Abschluss eines Raubüberfalls von Whakano eine zusätzliche Aufdeckung zu erhalten"
+	lang "Portuguese"
+	1
+		1|# "{0}% de chance ao completar um Golpe para gerar uma Revelação adicional com Whakano"
+	lang "Spanish"
+	1
+		1|# "{0}% de probabilidad de completar un atraco para generar una revelación adicional con Whakano"
+	lang "French"
+	1
+		1|# "Lorsque vous complétez un Casse, vous avez {0}% de chances que Whakano Révèle une information supplémentaire"
+	lang "Russian"
+	1
+		1|# "{0}% шанс сделать дополнительное открытие с помощью Вакано при удачном завершении Кражи"
+	lang "Traditional Chinese"
+	1
+		1|# "和華卡諾完成劫盜有 {0}% 機率產生額外的揭露"
+	lang "Simplified Chinese"
+	1
+		1|# "和瓦卡诺一同完成夺宝冒险时有 {0}% 的几率产生一次额外破解"
+	lang "Thai"
+	1
+		1|# "หลังการโจรกรรมเสร็จสิ้น มีโอกาสเกิดการเผยเพิ่มเติม 1 ครั้งจาก วาคาโน {0}%"
+
+description
+	1 heist_contract_alert_level_from_chests_+%
+	2
+		1|# "{0}% increased raising of Alert Level from opening Chests"
+		#|-1 "{0}% reduced raising of Alert Level from opening Chests" negate 1
+	lang "German"
+	2
+		1|# "{0}% erhöhter Anstieg der Alarmstufe durch das Öffnen von Truhen"
+		#|-1 "{0}% verringerter Anstieg der Alarmstufe durch das Öffnen von Truhen" negate 1
+	lang "Spanish"
+	2
+		1|# "Incremento del nivel de alerta por abrir cofres aumentado un {0}%"
+		#|-1 "Incremento del nivel de alerta por abrir cofres reducido un {0}%" negate 1
+	lang "Traditional Chinese"
+	2
+		1|# "開啟保險箱增加 {0}% 提升警戒等級"
+		#|-1 "開啟保險箱減少 {0}% 提升警戒等級" negate 1
+	lang "French"
+	2
+		1|# "{0}% d'Augmentation de la montée du Niveau d'alerte en cas d'ouverture de coffres"
+		#|-1 "{0}% de Réduction de la montée du Niveau d'alerte en cas d'ouverture de coffres" negate 1
+	lang "Russian"
+	2
+		1|# "{0}% увеличение поднимаемого из-за открытия сундуков уровня тревоги"
+		#|-1 "{0}% уменьшение поднимаемого из-за открытия сундуков уровня тревоги" negate 1
+	lang "Korean"
+	2
+		1|# "상자를 열었을 때의 경보 레벨 상승률 {0}% 증가"
+		#|-1 "상자를 열었을 때의 경보 레벨 상승률 {0}% 감소" negate 1
+	lang "Portuguese"
+	2
+		1|# "Elevação do Nível de Alerta ao abrir Baús aumentada em {0}%"
+		#|-1 "Elevação do Nível de Alerta ao abrir Baús reduzida em {0}%" negate 1
+	lang "Thai"
+	2
+		1|# "เพิ่มการขึ้นของ ระดับการรู้ตัว {0}% จากการ เปิดหีบ"
+		#|-1 "ลดการขึ้นของ ระดับการรู้ตัว {0}% จากการ เปิดหีบ" negate 1
+	lang "Simplified Chinese"
+	2
+		1|# "开箱导致警报等级提升的速度加快 {0}%"
+		#|-1 "开箱导致警报等级提升的速度减慢 {0}%" negate 1
+
+description
+	1 heist_contract_alert_level_from_guards_+%
+	2
+		1|# "{0}% increased Alert Level from killing Guards"
+		#|-1 "{0}% reduced Alert Level from killing Guards" negate 1
+	lang "German"
+	2
+		1|# "{0}% erhöhte Alarmstufe durch das Töten von Monstern"
+		#|-1 "{0}% verringerte Alarmstufe durch das Töten von Monstern" negate 1
+	lang "Portuguese"
+	2
+		1|# "Nível de Alerta aumentado em {0}% ao matar Guardas"
+		#|-1 "Nível de Alerta reduzido em {0}% ao matar Guardas" negate 1
+	lang "Spanish"
+	2
+		1|# "Nivel de alerta aumentado un {0}% por matar guardias"
+		#|-1 "Nivel de alerta reducido un {0}% por matar guardias" negate 1
+	lang "French"
+	2
+		1|# "{0}% d'Augmentation du Niveau d'alerte lorsque vous tuez des Gardes"
+		#|-1 "{0}% de Réduction du Niveau d'alerte lorsque vous tuez des Gardes" negate 1
+	lang "Korean"
+	2
+		1|# "경비 처치 시의 경보 레벨 상승률 {0}% 증가"
+		#|-1 "경비 처치 시의 경보 레벨 상승률 {0}% 감소" negate 1
+	lang "Russian"
+	2
+		1|# "{0}% увеличение уровня тревоги из-за убийства охранников"
+		#|-1 "{0}% уменьшение уровня тревоги из-за убийства охранников" negate 1
+	lang "Traditional Chinese"
+	2
+		1|# "擊殺守衛增加 {0}% 警戒等級"
+		#|-1 "擊殺守衛減少 {0}% 警戒等級" negate 1
+	lang "Simplified Chinese"
+	2
+		1|# "击败守卫使警报等级提高 {0}%"
+		#|-1 "击败守卫使警报等级降低 {0}%" negate 1
+	lang "Thai"
+	2
+		1|# "เพิ่มการขึ้นของ ระดับการรู้ตัว {0}% จากการ สังหารยามรักษาการณ์"
+		#|-1 "ลดการขึ้นของ ระดับการรู้ตัว {0}% จากการ สังหารยามรักษาการณ์" negate 1
+
+description
+	1 heist_contract_alert_level_from_monsters_+%
+	2
+		1|# "{0}% increased raising of Alert Level from Killing Monsters"
+		#|-1 "{0}% reduced raising of Alert Level from Killing Monsters" negate 1
+	lang "German"
+	2
+		1|# "{0}% erhöhter Anstieg der Alarmstufe durch das Töten von Monstern"
+		#|-1 "{0}% verringerter Anstieg der Alarmstufe durch das Töten von Monstern" negate 1
+	lang "Spanish"
+	2
+		1|# "Incremento del nivel de alerta por matar monstruos aumentado un {0}%"
+		#|-1 "Incremento del nivel de alerta por matar monstruos reducido un {0}%" negate 1
+	lang "Traditional Chinese"
+	2
+		1|# "擊殺怪物增加 {0}% 提升警戒等級"
+		#|-1 "擊殺怪物減少 {0}% 提升警戒等級" negate 1
+	lang "French"
+	2
+		1|# "{0}% d'Augmentation de la montée du Niveau d'alerte lorsque vous Tuez des Monstres"
+		#|-1 "{0}% de Réduction de la montée du Niveau d'alerte lorsque vous Tuez des Monstres" negate 1
+	lang "Russian"
+	2
+		1|# "{0}% увеличение поднимаемого из-за убийства монстров уровня тревоги"
+		#|-1 "{0}% уменьшение поднимаемого из-за убийства монстров уровня тревоги" negate 1
+	lang "Korean"
+	2
+		1|# "몬스터 처치 시의 경보 레벨 상승률 {0}% 증가"
+		#|-1 "몬스터 처치 시의 경보 레벨 상승률 {0}% 감소" negate 1
+	lang "Portuguese"
+	2
+		1|# "Elevação do Nível de Alerta ao Matar Monstros aumentada em {0}%"
+		#|-1 "Elevação do Nível de Alerta ao Matar Monstros reduzida em {0}%" negate 1
+	lang "Thai"
+	2
+		1|# "เพิ่มการขึ้นของ ระดับการรู้ตัว {0}% จากการ สังหารมอนสเตอร์"
+		#|-1 "ลดการขึ้นของ ระดับการรู้ตัว {0}% จากการ สังหารมอนสเตอร์" negate 1
+	lang "Simplified Chinese"
+	2
+		1|# "击败怪物警报等级提升的速度加快 {0}%"
+		#|-1 "击败怪物警报等级提升的速度减慢 {0}%" negate 1
+
+description
+	1 heist_contract_alert_level_from_patrols_+%
+	2
+		1|# "{0}% increased Alert Level from killing Patrol Packs"
+		#|-1 "{0}% reduced Alert Level from killing Patrol Packs" negate 1
+	lang "German"
+	2
+		1|# "{0}% erhöhte Alarmstufe durch das Töten von Patrouillegruppen"
+		#|-1 "{0}% verringerte Alarmstufe durch das Töten von Patrouillegruppen" negate 1
+	lang "Portuguese"
+	2
+		1|# "Nível de Alerta aumentado em {0}% ao matar Grupos de Patrulha"
+		#|-1 "Nível de Alerta reduzido em {0}% ao matar Grupos de Patrulha" negate 1
+	lang "Spanish"
+	2
+		1|# "Nivel de alerta aumentado un {0}% por matar grupos de patrullas"
+		#|-1 "Nivel de alerta reducido un {0}% por matar grupos de patrullas" negate 1
+	lang "French"
+	2
+		1|# "{0}% d'Augmentation du Niveau d'alerte lorsque vous tuez des Patrouilles"
+		#|-1 "{0}% de Réduction du Niveau d'alerte lorsque vous tuez des Patrouilles" negate 1
+	lang "Korean"
+	2
+		1|# "순찰 무리 처치 시의 경보 레벨 상승률 {0}% 증가"
+		#|-1 "순찰 무리 처치 시의 경보 레벨 상승률 {0}% 감소" negate 1
+	lang "Russian"
+	2
+		1|# "{0}% увеличение уровня тревоги из-за убийства групп патрулей"
+		#|-1 "{0}% уменьшение уровня тревоги из-за убийства групп патрулей" negate 1
+	lang "Traditional Chinese"
+	2
+		1|# "擊殺巡守群增加 {0}% 警戒等級"
+		#|-1 "擊殺巡守群減少 {0}% 警戒等級" negate 1
+	lang "Simplified Chinese"
+	2
+		1|# "击败巡逻队使警报等级提高 {0}%"
+		#|-1 "击败巡逻队使警报等级降低 {0}%" negate 1
+	lang "Thai"
+	2
+		1|# "เพิ่มการขึ้นของ ระดับการรู้ตัว {0}% จากการสังหาร กองลาดตระเวน"
+		#|-1 "ลดการขึ้นของ ระดับการรู้ตัว {0}% จากการสังหาร กองลาดตระเวน" negate 1
+
+description
+	1 heist_contract_alert_level_+%
+	2
+		1|# "{0}% increased raising of Alert Level"
+		#|-1 "{0}% reduced raising of Alert Level" negate 1
+	lang "German"
+	2
+		1|# "{0}% erhöhter Anstieg der Alarmstufe"
+		#|-1 "{0}% verringerter Anstieg der Alarmstufe" negate 1
+	lang "Spanish"
+	2
+		1|# "Incremento del nivel de alerta aumentado un {0}%"
+		#|-1 "Incremento del nivel de alerta reducido un {0}%" negate 1
+	lang "Traditional Chinese"
+	2
+		1|# "增加 {0}% 提升警戒等級"
+		#|-1 "減少 {0}% 提升警戒等級" negate 1
+	lang "French"
+	2
+		1|# "{0}% d'Augmentation de la montée du Niveau d'alerte"
+		#|-1 "{0}% de Réduction de la montée du Niveau d'alerte" negate 1
+	lang "Russian"
+	2
+		1|# "{0}% увеличение поднимаемого уровня тревоги"
+		#|-1 "{0}% уменьшение поднимаемого уровня тревоги" negate 1
+	lang "Korean"
+	2
+		1|# "경보 레벨 상승률 {0}% 증가"
+		#|-1 "경보 레벨 상승률 {0}% 감소" negate 1
+	lang "Portuguese"
+	2
+		1|# "Elevação do Nível de Alerta aumentada em {0}%"
+		#|-1 "Elevação do Nível de Alerta reduzida em {0}%" negate 1
+	lang "Thai"
+	2
+		1|# "เพิ่มการขึ้นของ ระดับการรู้ตัว {0}%"
+		#|-1 "ลดการขึ้นของ ระดับการรู้ตัว {0}%" negate 1
+	lang "Simplified Chinese"
+	2
+		1|# "警报等级提升的速度加快 {0}%"
+		#|-1 "警报等级提升的速度减慢 {0}%" negate 1
+
+description
+	1 heist_contract_alert_level_+%_final
+	2
+		1|# "{0}% more raising of Alert Level"
+		#|-1 "{0}% less raising of Alert Level" negate 1
+	lang "Russian"
+	2
+		1|# "На {0}% больше поднимаемого уровня тревоги"
+		#|-1 "На {0}% меньше поднимаемого уровня тревоги" negate 1
+	lang "French"
+	2
+		1|# "{0}% Davantage de progression du Niveau d'alerte"
+		#|-1 "{0}% de Perte de progression du Niveau d'alerte" negate 1
+	lang "German"
+	2
+		1|# "{0}% mehr Anstieg der Alarmstufe"
+		#|-1 "{0}% weniger Anstieg der Alarmstufe" negate 1
+	lang "Portuguese"
+	2
+		1|# "{0}% mais elevação do Nível de Alerta"
+		#|-1 "{0}% menos elevação do Nível de Alerta" negate 1
+	lang "Spanish"
+	2
+		1|# "{0}% más de incremento del nivel de alerta"
+		#|-1 "{0}% menos de incremento del nivel de alerta" negate 1
+	lang "Traditional Chinese"
+	2
+		1|# "提升 {0}% 更多警戒等級"
+		#|-1 "提升 {0}% 更少警戒等級" negate 1
+	lang "Simplified Chinese"
+	2
+		1|# "警报等级提升的总速度额外加快 {0}%"
+		#|-1 "警报等级提升的总速度额外减慢 {0}%" negate 1
+	lang "Korean"
+	2
+		1|# "경보 레벨 상승률 {0}% 증폭"
+		#|-1 "경보 레벨 상승률 {0}% 감폭" negate 1
+	lang "Thai"
+	2
+		1|# "เพิ่มการขึ้นของ ระดับการรู้ตัว อีก {0}%"
+		#|-1 "ลดการขึ้นของ ระดับการรู้ตัว อีก {0}%" negate 1
+
+description
+	1 heist_contract_avoid_alarm_chance_%_on_kill
+	1
+		1|# "{0}% chance on killing an Enemy to not generate Alert Level"
+	lang "Korean"
+	1
+		1|# "적 처치 시 {0}%의 확률로 경보 레벨이 상승하지 않음"
+	lang "German"
+	1
+		1|# "{0}% Chance, dass das Töten eines Gegners nicht die Alarmstufe erhöht"
+	lang "Portuguese"
+	1
+		1|# "{0}% de chance de, ao matar um Inimigo, não gerar Nível de Alerta"
+	lang "Spanish"
+	1
+		1|# "{0}% de probabilidad de que matar a un enemigo no genere nivel de alerta"
+	lang "French"
+	1
+		1|# "{0}% de chances de ne pas augmenter le Niveau d'alerte lorsque vous Tuez un Ennemi"
+	lang "Russian"
+	1
+		1|# "{0}% шанс не поднять уровень тревоги при убийстве врага"
+	lang "Traditional Chinese"
+	1
+		1|# "擊殺擊人時有 {0}% 機率不產生警戒等級"
+	lang "Simplified Chinese"
+	1
+		1|# "击败敌人有 {0}% 的几率不产生警报等级"
+	lang "Thai"
+	1
+		1|# "มีโอกาสไม่เพิ่ม ระดับการรู้ตัว {0}% เมื่อสังหารศัตรู"
+
+description
+	1 heist_contract_avoid_alarm_chance_%_on_open_chest
+	1
+		1|# "{0}% chance on opening a Chest to not generate Alert Level"
+	lang "Korean"
+	1
+		1|# "상자를 열었을 때 {0}%의 확률로 경보 레벨이 상승하지 않음"
+	lang "German"
+	1
+		1|# "{0}% Chance, dass das Öffnen einer Truhe nicht die Alarmstufe erhöht"
+	lang "Portuguese"
+	1
+		1|# "{0}% de chance de, ao abrir um Baú, não gerar Nível de Alerta"
+	lang "Spanish"
+	1
+		1|# "{0}% de probabilidad de que abrir un cofre no genere nivel de alerta"
+	lang "French"
+	1
+		1|# "{0}% de chances de ne pas augmenter le Niveau d'alerte lorsque vous ouvrez un coffre"
+	lang "Russian"
+	1
+		1|# "{0}% шанс не поднять уровень тревоги при открытии сундука"
+	lang "Traditional Chinese"
+	1
+		1|# "開啟保險箱時有 {0}% 機率不產生警戒等級"
+	lang "Simplified Chinese"
+	1
+		1|# "开启宝箱有 {0}% 的几率不产生警报等级"
+	lang "Thai"
+	1
+		1|# "มีโอกาสไม่เพิ่ม ระดับการรู้ตัว {0}% เมื่อเปิดหีบ"
+
+description
+	1 heist_contract_detect_patrol_radius_when_no_alert
+	1
+		# "Can detect enemy Patrols up to {0} Units Away when Heist is not in Lockdown"
+	lang "Korean"
+	1
+		# "강탈이 폐쇄 중이 아닐 때 최대 {0}유닛 거리에 있는 적 순찰대 감지 가능"
+	lang "German"
+	1
+		# "Kann gegnerische Patrouillen aus bis zu {0} Einheiten Entfernung entdecken, wenn das Gebäude nicht abgeriegelt ist"
+	lang "Portuguese"
+	1
+		# "Pode detectar Patrulhas em até {0} Unidades Adiante quando o Golpe não estiver em Confinamento"
+	lang "Spanish"
+	1
+		# "Puede detectar patrullas enemigas que estén hasta a {0} unidades de distancia si aún no se activó el cierre de puertas"
+	lang "French"
+	1
+		# "Peut détecter les Patrouilles jusqu'à {0} unités de distance tant que le complexe n'est pas Verrouillé"
+	lang "Russian"
+	1
+		# "Может обнаруживать вражеские патрули в радиусе {0} во время краж, если территория не изолирована"
+	lang "Thai"
+	1
+		# "สามารถตรวจสอบ กองลาดตระเวนของศัตรู ที่อยู่ห่างออกไป {0} หน่วยได้ หากยังไม่เกิดการปิดกั้นสถานที่"
+	lang "Traditional Chinese"
+	1
+		# "劫盜沒有封鎖時，可以偵測至多 {0} 單位遠的巡守敵人"
+	lang "Simplified Chinese"
+	1
+		# "夺宝冒险未封锁时，可以侦察最多 {0} 格远的巡逻队"
+
+description
+	1 heist_contract_gang_cost_+%
+	2
+		1|# "The Ring's Cut increased by {0}%"
+		#|-1 "The Ring's Cut reduced by {0}%" negate 1
+	lang "German"
+	2
+		1|# "Der Anteil des Rings ist um {0}% erhöht"
+		#|-1 "Der Anteil des Rings ist um {0}% verringert" negate 1
+	lang "Spanish"
+	2
+		1|# "Comisión del Círculo aumentada un {0}%"
+		#|-1 "Comisión del Círculo reducida un {0}%" negate 1
+	lang "Traditional Chinese"
+	2
+		1|# "邪戒抽成增加 {0}%"
+		#|-1 "邪戒抽成減少 {0}%" negate 1
+	lang "French"
+	2
+		1|# "{0}% d'Augmentation de la Part du Cercle"
+		#|-1 "{0}% de Réduction de la Part du Cercle" negate 1
+	lang "Russian"
+	2
+		1|# "Доля Круга в добыче увеличивается на {0}%"
+		#|-1 "Доля Круга в добыче уменьшается на {0}%" negate 1
+	lang "Korean"
+	2
+		1|# "강탈단 세금 {0}% 증가"
+		#|-1 "강탈단 세금 {0}% 감소" negate 1
+	lang "Portuguese"
+	2
+		1|# "Cota do Círculo aumentada em {0}%"
+		#|-1 "Cota do Círculo reduzida em {0}%" negate 1
+	lang "Simplified Chinese"
+	2
+		1|# "秘环抽成提高至 {0}%"
+		#|-1 "秘环抽成降低至 {0}%" negate 1
+	lang "Thai"
+	2
+		1|# "ส่วนแบ่งของ วิฬาร์ภาคี เพิ่มขึ้น {0}%"
+		#|-1 "ส่วนแบ่งของ วิฬาร์ภาคี ลดลง {0}%" negate 1
+
+description
+	1 heist_contract_lockdown_timer_+
+	1
+		# "{0:+d} seconds to Lockdown Timer" milliseconds_to_seconds 1
+	lang "German"
+	1
+		# "{0:+d} Sekunden zum Abriegelungs-Timer" milliseconds_to_seconds 1
+	lang "Korean"
+	1
+		# "폐쇄까지 남은 시간 {0:+d}초" milliseconds_to_seconds 1
+	lang "Russian"
+	1
+		# "{0:+d} секунд(-ы) к времени до изоляции" milliseconds_to_seconds 1
+	lang "Portuguese"
+	1
+		# "{0:+d} segundos ao Contador de Confinamento" milliseconds_to_seconds 1
+	lang "Spanish"
+	1
+		# "{0:+d} segundos al temporizador del cierre de puertas" milliseconds_to_seconds 1
+	lang "French"
+	1
+		# "{0:+d} secondes au compte à rebours avant le Verrouillage" milliseconds_to_seconds 1
+	lang "Traditional Chinese"
+	1
+		# "{0:+d} 秒封鎖計時" milliseconds_to_seconds 1
+	lang "Thai"
+	1
+		# "ระยะเวลาการปิดกั้นสถานที่ {0:+d} วินาที" milliseconds_to_seconds 1
+	lang "Simplified Chinese"
+	1
+		# "封锁计时 {0:+d} 秒" milliseconds_to_seconds 1
+
+description
+	1 heist_contract_lockdown_timer_+_halved
+	1
+		# "{0:+d} seconds to Lockdown Timer" milliseconds_to_seconds_halved 1
+	lang "German"
+	1
+		# "{0:+d} Sekunden zum Abriegelungs-Timer" milliseconds_to_seconds_halved 1
+	lang "Korean"
+	1
+		# "폐쇄까지 남은 시간 {0:+d}초" milliseconds_to_seconds_halved 1
+	lang "Russian"
+	1
+		# "{0:+d} секунд(-ы) к времени до изоляции" milliseconds_to_seconds_halved 1
+	lang "Portuguese"
+	1
+		# "{0:+d} segundos ao Contador de Confinamento" milliseconds_to_seconds_halved 1
+	lang "Spanish"
+	1
+		# "{0:+d} segundos al temporizador del cierre de puertas" milliseconds_to_seconds_halved 1
+	lang "French"
+	1
+		# "{0:+d} secondes au compte à rebours avant le Verrouillage" milliseconds_to_seconds_halved 1
+	lang "Traditional Chinese"
+	1
+		# "{0:+d} 秒封鎖計時" milliseconds_to_seconds_halved 1
+	lang "Thai"
+	1
+		# "ระยะเวลาการปิดกั้นสถานที่ {0:+d} วินาที" milliseconds_to_seconds_halved 1
+	lang "Simplified Chinese"
+	1
+		# "封锁计时 {0:+d} 秒" milliseconds_to_seconds_halved 1
+
+description
+	1 heist_contract_lockdown_timer_+%
+	2
+		1|# "{0}% increased time before Lockdown"
+		#|-1 "{0}% reduced time before Lockdown" negate 1
+	lang "German"
+	2
+		1|# "{0}% erhöhte Zeit vor der Abriegelung"
+		#|-1 "{0}% verringerte Zeit vor der Abriegelung" negate 1
+	lang "Spanish"
+	2
+		1|# "Tiempo restante hasta el cierre de puertas aumentado un {0}%"
+		#|-1 "Tiempo restante hasta el cierre de puertas reducido un {0}%" negate 1
+	lang "Traditional Chinese"
+	2
+		1|# "增加 {0}% 封鎖前的時間"
+		#|-1 "減少 {0}% 封鎖前的時間" negate 1
+	lang "French"
+	2
+		1|# "{0}% d'Augmentation du temps avant le Verrouillage"
+		#|-1 "{0}% de Réduction du temps avant le Verrouillage" negate 1
+	lang "Russian"
+	2
+		1|# "{0}% увеличение времени до изоляции"
+		#|-1 "{0}% уменьшение времени до изоляции" negate 1
+	lang "Korean"
+	2
+		1|# "폐쇄까지 남은 시간 {0}% 증가"
+		#|-1 "폐쇄까지 남은 시간 {0}% 감소" negate 1
+	lang "Portuguese"
+	2
+		1|# "Tempo antes do Confinamento aumentado em {0}%"
+		#|-1 "Tempo antes do Confinamento reduzido em {0}%" negate 1
+	lang "Thai"
+	2
+		1|# "เพิ่มระยะเวลาก่อนการปิดกั้นสถานที่ {0}%"
+		#|-1 "ลดระยะเวลาก่อนการปิดกั้นสถานที่ {0}%" negate 1
+	lang "Simplified Chinese"
+	2
+		1|# "封锁前的时间增加 {0}%"
+		#|-1 "封锁前的时间减少 {0}%" negate 1
+
+description
+	1 heist_contract_lockdown_timer_+%_halved
+	2
+		1|# "{0}% increased time before Lockdown" divide_by_two_0dp 1
+		#|-1 "{0}% reduced time before Lockdown" negate 1 divide_by_two_0dp 1
+	lang "German"
+	2
+		1|# "{0}% erhöhte Zeit vor der Abriegelung" divide_by_two_0dp 1
+		#|-1 "{0}% verringerte Zeit vor der Abriegelung" negate 1 divide_by_two_0dp 1
+	lang "Spanish"
+	2
+		1|# "Tiempo restante hasta el cierre de puertas aumentado un {0}%" divide_by_two_0dp 1
+		#|-1 "Tiempo restante hasta el cierre de puertas reducido un {0}%" negate 1 divide_by_two_0dp 1
+	lang "Traditional Chinese"
+	2
+		1|# "增加 {0}% 封鎖前的時間" divide_by_two_0dp 1
+		#|-1 "減少 {0}% 封鎖前的時間" negate 1 divide_by_two_0dp 1
+	lang "French"
+	2
+		1|# "{0}% d'Augmentation du temps avant le Verrouillage" divide_by_two_0dp 1
+		#|-1 "{0}% de Réduction du temps avant le Verrouillage" negate 1 divide_by_two_0dp 1
+	lang "Russian"
+	2
+		1|# "{0}% увеличение времени до изоляции" divide_by_two_0dp 1
+		#|-1 "{0}% уменьшение времени до изоляции" negate 1 divide_by_two_0dp 1
+	lang "Korean"
+	2
+		1|# "폐쇄까지 남은 시간 {0}% 증가" divide_by_two_0dp 1
+		#|-1 "폐쇄까지 남은 시간 {0}% 감소" negate 1 divide_by_two_0dp 1
+	lang "Portuguese"
+	2
+		1|# "Tempo antes do Confinamento aumentado em {0}%" divide_by_two_0dp 1
+		#|-1 "Tempo antes do Confinamento reduzido em {0}%" negate 1 divide_by_two_0dp 1
+	lang "Thai"
+	2
+		1|# "เพิ่มระยะเวลาก่อนการปิดกั้นสถานที่ {0}%" divide_by_two_0dp 1
+		#|-1 "ลดระยะเวลาก่อนการปิดกั้นสถานที่ {0}%" negate 1 divide_by_two_0dp 1
+	lang "Simplified Chinese"
+	2
+		1|# "封锁前的时间增加 {0}%" divide_by_two_0dp 1
+		#|-1 "封锁前的时间减少 {0}%" negate 1 divide_by_two_0dp 1
+
+description
+	1 heist_contract_npc_agility_cost_+%
+	2
+		1|# "{0}% increased Hiring Fee for Agility Jobs"
+		#|-1 "{0}% reduced Hiring Fee for Agility Jobs" negate 1
+	lang "Korean"
+	2
+		1|# "민첩함 작업의 고용 비용 {0}% 증가"
+		#|-1 "민첩함 작업의 고용 비용 {0}% 감소" negate 1
+	lang "German"
+	2
+		1|# "{0}% erhöhte Rekrutierungskosten für Agilität-Jobs"
+		#|-1 "{0}% verringerte Rekrutierungskosten für Agilität-Jobs" negate 1
+	lang "Portuguese"
+	2
+		1|# "Custo de Contratação para Serviços de Agilidade aumentado em {0}%"
+		#|-1 "Custo de Contratação para Serviços de Agilidade reduzido em {0}%" negate 1
+	lang "Spanish"
+	2
+		1|# "Costo de contratación aumentado un {0}% para los trabajos de agilidad"
+		#|-1 "Costo de contratación reducido un {0}% para los trabajos de agilidad" negate 1
+	lang "French"
+	2
+		1|# "{0}% d'Augmentation de la Rémunération des Malfaiteurs faisant appel à la Compétence Agilité"
+		#|-1 "{0}% de Réduction de la Rémunération des Malfaiteurs faisant appel à la Compétence Agilité" negate 1
+	lang "Russian"
+	2
+		1|# "{0}% повышение стоимости найма для навыка Проворство"
+		#|-1 "{0}% снижение стоимости найма для навыка Проворство" negate 1
+	lang "Traditional Chinese"
+	2
+		1|# "靈敏職位增加 {0}% 僱用費"
+		#|-1 "靈敏職位減少 {0}% 僱用費" negate 1
+	lang "Simplified Chinese"
+	2
+		1|# "灵敏任务的招募费用提高 {0}%"
+		#|-1 "灵敏任务的招募费用降低 {0}%" negate 1
+	lang "Thai"
+	2
+		1|# "เพิ่มค่าจ้างสำหรับทักษะ ความคล่องตัว {0}%"
+		#|-1 "ลดค่าจ้างสำหรับทักษะ ความคล่องตัว {0}%" negate 1
+
+description
+	1 heist_contract_npc_agility_experience_gain_+%
+	2
+		1|# "{0}% increased Agility Experience gained"
+		#|-1 "{0}% reduced Agility Experience gained" negate 1
+	lang "German"
+	2
+		1|# "{0}% erhöhter Erfahrungsgewinn für Agilität"
+		#|-1 "{0}% verringerter Erfahrungsgewinn für Agilität" negate 1
+	lang "Portuguese"
+	2
+		1|# "Experiência de Agilidade ganha aumentada em {0}%"
+		#|-1 "Experiência de Agilidade ganha reduzida em {0}%" negate 1
+	lang "Spanish"
+	2
+		1|# "Experiencia en agilidad aumentada un {0}%"
+		#|-1 "Experiencia en agilidad reducida un {0}%" negate 1
+	lang "French"
+	2
+		1|# "{0}% d'Augmentation du gain d'expérience de la Compétence Agilité"
+		#|-1 "{0}% de Réduction du gain d'expérience de la Compétence Agilité" negate 1
+	lang "Korean"
+	2
+		1|# "민첩함 경험치 획득량 {0}% 증가"
+		#|-1 "민첩함 경험치 획득량 {0}% 감소" negate 1
+	lang "Russian"
+	2
+		1|# "{0}% увеличение получаемого Проворством опыта"
+		#|-1 "{0}% уменьшение получаемого Проворством опыта" negate 1
+	lang "Traditional Chinese"
+	2
+		1|# "增加 {0}% 獲得靈敏經驗值"
+		#|-1 "增加 {0}% 獲得靈敏經驗值" negate 1
+	lang "Simplified Chinese"
+	2
+		1|# "灵敏获得的经验提高 {0}%"
+		#|-1 "灵敏获得的经验降低 {0}%" negate 1
+	lang "Thai"
+	2
+		1|# "เพิ่ม ค่าประสบการณ์ ที่ได้รับจาก ความคล่องตัว {0}%"
+		#|-1 "ลด ค่าประสบการณ์ ที่ได้รับจาก ความคล่องตัว {0}%" negate 1
+
+description
+	1 heist_contract_npc_brute_force_cost_+%
+	2
+		1|# "{0}% increased Hiring Fee for Brute Force Jobs"
+		#|-1 "{0}% reduced Hiring Fee for Brute Force Jobs" negate 1
+	lang "Korean"
+	2
+		1|# "완력 작업의 고용 비용 {0}% 증가"
+		#|-1 "완력 작업의 고용 비용 {0}% 감소" negate 1
+	lang "German"
+	2
+		1|# "{0}% erhöhte Rekrutierungskosten für Brachialgewalt-Jobs"
+		#|-1 "{0}% verringerte Rekrutierungskosten für Brachialgewalt-Jobs" negate 1
+	lang "Portuguese"
+	2
+		1|# "Custo de Contratação de Serviços de Força Bruta aumentado em {0}%"
+		#|-1 "Custo de Contratação de Serviços de Força Bruta reduzido em {0}%" negate 1
+	lang "Spanish"
+	2
+		1|# "Costo de contratación aumentado un {0}% para los trabajos de fuerza bruta"
+		#|-1 "Costo de contratación reducido un {0}% para los trabajos de fuerza bruta" negate 1
+	lang "French"
+	2
+		1|# "{0}% d'Augmentation de la Rémunération des Malfaiteurs faisant appel à la Compétence Force brute"
+		#|-1 "{0}% de Réduction de la Rémunération des Malfaiteurs faisant appel à la Compétence Force brute" negate 1
+	lang "Russian"
+	2
+		1|# "{0}% повышение стоимости найма для навыка Грубая сила"
+		#|-1 "{0}% снижение стоимости найма для навыка Грубая сила" negate 1
+	lang "Traditional Chinese"
+	2
+		1|# "蠻力職位增加 {0}% 僱用費"
+		#|-1 "蠻力職位減少 {0}% 僱用費" negate 1
+	lang "Simplified Chinese"
+	2
+		1|# "凶蛮之力任务的招募费用提高 {0}%"
+		#|-1 "凶蛮之力任务的招募费用降低 {0}%" negate 1
+	lang "Thai"
+	2
+		1|# "เพิ่มค่าจ้างสำหรับทักษะ เอากำลังเข้าแลก {0}%"
+		#|-1 "ลดค่าจ้างสำหรับทักษะ เอากำลังเข้าแลก {0}%" negate 1
+
+description
+	1 heist_contract_npc_brute_force_experience_gain_+%
+	2
+		1|# "{0}% increased Brute Force Experience gained"
+		#|-1 "{0}% reduced Brute Force Experience gained" negate 1
+	lang "German"
+	2
+		1|# "{0}% erhöhter Erfahrungsgewinn für Brachialgewalt"
+		#|-1 "{0}% verringerter Erfahrungsgewinn für Brachialgewalt" negate 1
+	lang "Portuguese"
+	2
+		1|# "Experiência de Força Bruta ganha aumentada em {0}%"
+		#|-1 "Experiência de Força Bruta ganha reduzida em {0}%" negate 1
+	lang "Spanish"
+	2
+		1|# "Experiencia en fuerza bruta aumentada un {0}%"
+		#|-1 "Experiencia en fuerza bruta reducida un {0}%" negate 1
+	lang "French"
+	2
+		1|# "{0}% d'Augmentation du gain d'expérience de la Compétence Force brute"
+		#|-1 "{0}% de Réduction du gain d'expérience de la Compétence Force brute" negate 1
+	lang "Korean"
+	2
+		1|# "완력 경험치 획득량 {0}% 증가"
+		#|-1 "완력 경험치 획득량 {0}% 감소" negate 1
+	lang "Russian"
+	2
+		1|# "{0}% увеличение получаемого Грубой силой опыта"
+		#|-1 "{0}% уменьшение получаемого Грубой силой опыта" negate 1
+	lang "Traditional Chinese"
+	2
+		1|# "增加 {0}% 獲得蠻力經驗值"
+		#|-1 "減少 {0}% 獲得蠻力經驗值" negate 1
+	lang "Simplified Chinese"
+	2
+		1|# "凶蛮之力获得的经验提高 {0}%"
+		#|-1 "凶蛮之力获得的经验降低 {0}%" negate 1
+	lang "Thai"
+	2
+		1|# "เพิ่ม ค่าประสบการณ์ ที่ได้รับจาก เอากำลังเข้าแลก {0}%"
+		#|-1 "ลด ค่าประสบการณ์ ที่ได้รับจาก เอากำลังเข้าแลก {0}%" negate 1
+
+description
+	1 heist_contract_npc_cost_+%
+	2
+		1|# "{0}% increased Hiring Fee"
+		#|-1 "{0}% reduced Hiring Fee" negate 1
+	lang "German"
+	2
+		1|# "{0}% erhöhte Rekrutierungskosten"
+		#|-1 "{0}% verringerte Rekrutierungskosten" negate 1
+	lang "Spanish"
+	2
+		1|# "Costo de contratación aumentado un {0}%"
+		#|-1 "Costo de contratación reducido un {0}%" negate 1
+	lang "Traditional Chinese"
+	2
+		1|# "增加 {0}% 僱用費"
+		#|-1 "減少 {0}% 僱用費" negate 1
+	lang "French"
+	2
+		1|# "{0}% d'Augmentation du Salaire des Malfaiteurs"
+		#|-1 "{0}% de Réduction du Salaire des Malfaiteurs" negate 1
+	lang "Russian"
+	2
+		1|# "{0}% увеличение стоимости найма"
+		#|-1 "{0}% уменьшение стоимости найма" negate 1
+	lang "Korean"
+	2
+		1|# "고용 비용 {0}% 증가"
+		#|-1 "고용 비용 {0}% 감소" negate 1
+	lang "Portuguese"
+	2
+		1|# "Custo de Contratação aumentada em {0}%"
+		#|-1 "Custo de Contratação reduzida em {0}%" negate 1
+	lang "Simplified Chinese"
+	2
+		1|# "招募费用增加 {0}%"
+		#|-1 "招募费用减少 {0}%" negate 1
+	lang "Thai"
+	2
+		1|# "เพิ่มค่าจ้าง {0}%"
+		#|-1 "ลดค่าจ้าง {0}%" negate 1
+
+description
+	1 heist_contract_npc_counter_thaumaturgy_cost_+%
+	2
+		1|# "{0}% increased Hiring Fee for Counter-Thaumaturgy Jobs"
+		#|-1 "{0}% reduced Hiring Fee for Counter-Thaumaturgy Jobs" negate 1
+	lang "Korean"
+	2
+		1|# "반-마석학 작업의 고용 비용 {0}% 증가"
+		#|-1 "반-마석학 작업의 고용 비용 {0}% 감소" negate 1
+	lang "German"
+	2
+		1|# "{0}% erhöhte Rekrutierungskosten für Thaumaturgie-Abwehr-Jobs"
+		#|-1 "{0}% verringerte Rekrutierungskosten für Thaumaturgie-Abwehr-Jobs" negate 1
+	lang "Portuguese"
+	2
+		1|# "Custo de Contratação de Serviços de Contra-Taumaturgia aumentado em {0}%"
+		#|-1 "Custo de Contratação de Serviços de Contra-Taumaturgia reduzido em {0}%" negate 1
+	lang "Spanish"
+	2
+		1|# "Costo de contratación aumentado un {0}% para los trabajos de antitaumaturgia"
+		#|-1 "Costo de contratación reducido un {0}% para los trabajos de antitaumaturgia" negate 1
+	lang "French"
+	2
+		1|# "{0}% d'Augmentation de la Rémunération des Malfaiteurs faisant appel à la Compétence Anti-thaumaturgie"
+		#|-1 "{0}% de Réduction de la Rémunération des Malfaiteurs faisant appel à la Compétence Anti-thaumaturgie" negate 1
+	lang "Russian"
+	2
+		1|# "{0}% повышение стоимости найма для навыка Контрмагия"
+		#|-1 "{0}% снижение стоимости найма для навыка Контрмагия" negate 1
+	lang "Traditional Chinese"
+	2
+		1|# "解咒師職位增加 {0}% 僱用費"
+		#|-1 "解咒師職位減少 {0}% 僱用費" negate 1
+	lang "Simplified Chinese"
+	2
+		1|# "逆向奇术任务的招募费用提高 {0}%"
+		#|-1 "逆向奇术任务的招募费用降低 {0}%" negate 1
+	lang "Thai"
+	2
+		1|# "เพิ่มค่าจ้างสำหรับทักษะ โต้มนต์ดำ {0}%"
+		#|-1 "ลดค่าจ้างสำหรับทักษะ โต้มนต์ดำ {0}%" negate 1
+
+description
+	1 heist_contract_npc_counter_thaumaturgy_experience_gain_+%
+	2
+		1|# "{0}% increased Counter-Thaumaturgy Experience gained"
+		#|-1 "{0}% reduced Counter-Thaumaturgy Experience gained" negate 1
+	lang "German"
+	2
+		1|# "{0}% erhöhter Erfahrungsgewinn für Thaumaturgie-Abwehr"
+		#|-1 "{0}% verringerter Erfahrungsgewinn für Thaumaturgie-Abwehr" negate 1
+	lang "Portuguese"
+	2
+		1|# "Experiência de Contra-Taumaturgia ganha aumentada em {0}%"
+		#|-1 "Experiência de Contra-Taumaturgia ganha reduzida em {0}%" negate 1
+	lang "Spanish"
+	2
+		1|# "Experiencia en antitaumaturgia aumentada un {0}%"
+		#|-1 "Experiencia en antitaumaturgia reducida un {0}%" negate 1
+	lang "French"
+	2
+		1|# "{0}% d'Augmentation du gain d'expérience de la Compétence Anti-thaumaturgie"
+		#|-1 "{0}% de Réduction du gain d'expérience de la Compétence Anti-thaumaturgie" negate 1
+	lang "Korean"
+	2
+		1|# "반-마석학 경험치 획득량 {0}% 증가"
+		#|-1 "반-마석학 경험치 획득량 {0}% 감소" negate 1
+	lang "Russian"
+	2
+		1|# "{0}% увеличение получаемого Контрмагией опыта"
+		#|-1 "{0}% уменьшение получаемого Контрмагией опыта" negate 1
+	lang "Traditional Chinese"
+	2
+		1|# "增加 {0}% 獲得解咒師經驗值"
+		#|-1 "減少 {0}% 獲得解咒師經驗值" negate 1
+	lang "Simplified Chinese"
+	2
+		1|# "逆向奇术获得的经验提高 {0}%"
+		#|-1 "逆向奇术获得的经验降低 {0}%" negate 1
+	lang "Thai"
+	2
+		1|# "เพิ่ม ค่าประสบการณ์ ที่ได้รับจาก โต้มนต์ดำ {0}%"
+		#|-1 "ลด ค่าประสบการณ์ ที่ได้รับจาก โต้มนต์ดำ {0}%" negate 1
+
+description
+	1 heist_contract_npc_deception_cost_+%
+	2
+		1|# "{0}% increased Hiring Fee for Deception Jobs"
+		#|-1 "{0}% reduced Hiring Fee for Deception Jobs" negate 1
+	lang "Korean"
+	2
+		1|# "기만 작업의 고용 비용 {0}% 증가"
+		#|-1 "기만 작업의 고용 비용 {0}% 감소" negate 1
+	lang "German"
+	2
+		1|# "{0}% erhöhte Rekrutierungskosten für Täuschungs-Jobs"
+		#|-1 "{0}% verringerte Rekrutierungskosten für Täuschungs-Jobs" negate 1
+	lang "Portuguese"
+	2
+		1|# "Custo de Contratação de Serviços de Enganação aumentado em {0}%"
+		#|-1 "Custo de Contratação de Serviços de Enganação reduzido em {0}%" negate 1
+	lang "Spanish"
+	2
+		1|# "Costo de contratación aumentado un {0}% para los trabajos de engaño"
+		#|-1 "Costo de contratación reducido un {0}% para los trabajos de engaño" negate 1
+	lang "French"
+	2
+		1|# "{0}% d'Augmentation de la Rémunération des Malfaiteurs faisant appel à la Compétence Duperie"
+		#|-1 "{0}% de Réduction de la Rémunération des Malfaiteurs faisant appel à la Compétence Duperie" negate 1
+	lang "Russian"
+	2
+		1|# "{0}% повышение стоимости найма для навыка Маскировка"
+		#|-1 "{0}% снижение стоимости найма для навыка Маскировка" negate 1
+	lang "Traditional Chinese"
+	2
+		1|# "詐欺職位增加 {0}% 僱用費"
+		#|-1 "詐欺職位減少 {0}% 僱用費" negate 1
+	lang "Simplified Chinese"
+	2
+		1|# "欺诈任务的招募费用提高 {0}%"
+		#|-1 "欺诈任务的招募费用降低 {0}%" negate 1
+	lang "Thai"
+	2
+		1|# "เพิ่มค่าจ้างสำหรับทักษะ กลฉ้อฉล {0}%"
+		#|-1 "ลดค่าจ้างสำหรับทักษะ กลฉ้อฉล {0}%" negate 1
+
+description
+	1 heist_contract_npc_deception_experience_gain_+%
+	2
+		1|# "{0}% increased Deception Experience gained"
+		#|-1 "{0}% reduced Deception Experience gained" negate 1
+	lang "German"
+	2
+		1|# "{0}% erhöhter Erfahrungsgewinn für Täuschung"
+		#|-1 "{0}% verringerter Erfahrungsgewinn für Täuschung" negate 1
+	lang "Portuguese"
+	2
+		1|# "Experiência de Enganação ganha aumentada em {0}%"
+		#|-1 "Experiência de Enganação ganha reduzida em {0}%" negate 1
+	lang "Spanish"
+	2
+		1|# "Experiencia en engaño aumentada un {0}%"
+		#|-1 "Experiencia en engaño reducida un {0}%" negate 1
+	lang "French"
+	2
+		1|# "{0}% d'Augmentation du gain d'expérience de la Compétence Duperie"
+		#|-1 "{0}% de Réduction du gain d'expérience de la Compétence Duperie" negate 1
+	lang "Korean"
+	2
+		1|# "기만 경험치 획득량 {0}% 증가"
+		#|-1 "기만 경험치 획득량 {0}% 감소" negate 1
+	lang "Russian"
+	2
+		1|# "{0}% увеличение получаемого Маскировкой опыта"
+		#|-1 "{0}% уменьшение получаемого Маскировкой опыта" negate 1
+	lang "Traditional Chinese"
+	2
+		1|# "增加 {0}% 獲得詐欺經驗值"
+		#|-1 "減少 {0}% 獲得詐欺經驗值" negate 1
+	lang "Simplified Chinese"
+	2
+		1|# "欺诈的获得的经验提高 {0}%"
+		#|-1 "欺诈获得的经验降低 {0}%" negate 1
+	lang "Thai"
+	2
+		1|# "เพิ่ม ค่าประสบการณ์ ที่ได้รับจาก กลฉ้อฉล {0}%"
+		#|-1 "ลด ค่าประสบการณ์ ที่ได้รับจาก กลฉ้อฉล {0}%" negate 1
+
+description
+	1 heist_contract_npc_demolition_cost_+%
+	2
+		1|# "{0}% increased Hiring Fee for Demolition Jobs"
+		#|-1 "{0}% reduced Hiring Fee for Demolition Jobs" negate 1
+	lang "Korean"
+	2
+		1|# "파괴 공작 작업의 고용 비용 {0}% 증가"
+		#|-1 "파괴 공작 작업의 고용 비용 {0}% 감소" negate 1
+	lang "German"
+	2
+		1|# "{0}% erhöhte Rekrutierungskosten für Sprengungs-Jobs"
+		#|-1 "{0}% verringerte Rekrutierungskosten für Sprengungs-Jobs" negate 1
+	lang "Portuguese"
+	2
+		1|# "Custo de Contratação de Serviços de Demolição aumentado em {0}%"
+		#|-1 "Custo de Contratação de Serviços de Demolição reduzido em {0}%" negate 1
+	lang "Spanish"
+	2
+		1|# "Costo de contratación aumentado un {0}% para los trabajos de demolición"
+		#|-1 "Costo de contratación reducido un {0}% para los trabajos de demolición" negate 1
+	lang "French"
+	2
+		1|# "{0}% d'Augmentation de la Rémunération des Malfaiteurs faisant appel à la Compétence Démolition"
+		#|-1 "{0}% de Réduction de la Rémunération des Malfaiteurs faisant appel à la Compétence Démolition" negate 1
+	lang "Russian"
+	2
+		1|# "{0}% повышение стоимости найма для навыка Взрывное дело"
+		#|-1 "{0}% снижение стоимости найма для навыка Взрывное дело" negate 1
+	lang "Traditional Chinese"
+	2
+		1|# "拆除職位增加 {0}% 僱用費"
+		#|-1 "拆除職位減少 {0}% 僱用費" negate 1
+	lang "Simplified Chinese"
+	2
+		1|# "爆破任务的招募费用提高 {0}%"
+		#|-1 "爆破任务的招募费用降低 {0}%" negate 1
+	lang "Thai"
+	2
+		1|# "เพิ่มค่าจ้างสำหรับทักษะ รื้อถอน {0}%"
+		#|-1 "ลดค่าจ้างสำหรับทักษะ รื้อถอน {0}%" negate 1
+
+description
+	1 heist_contract_npc_demolition_experience_gain_+%
+	2
+		1|# "{0}% increased Demolition Experience gained"
+		#|-1 "{0}% reduced Demolition Experience gained" negate 1
+	lang "German"
+	2
+		1|# "{0}% erhöhter Erfahrungsgewinn für Sprengung"
+		#|-1 "{0}% verringerter Erfahrungsgewinn für Sprengung" negate 1
+	lang "Portuguese"
+	2
+		1|# "Experiência de Demolição ganha aumentada em {0}%"
+		#|-1 "Experiência de Demolição ganha reduzida em {0}%" negate 1
+	lang "Spanish"
+	2
+		1|# "Experiencia en demolición aumentada un {0}%"
+		#|-1 "Experiencia en demolición reducida un {0}%" negate 1
+	lang "French"
+	2
+		1|# "{0}% d'Augmentation du gain d'expérience de la Compétence Démolition"
+		#|-1 "{0}% de Réduction du gain d'expérience de la Compétence Démolition" negate 1
+	lang "Korean"
+	2
+		1|# "파괴 공작 경험치 획득량 {0}% 증가"
+		#|-1 "파괴 공작 경험치 획득량 {0}% 감소" negate 1
+	lang "Russian"
+	2
+		1|# "{0}% увеличение получаемого Взрывным делом опыта"
+		#|-1 "{0}% уменьшение получаемого Взрывным делом опыта" negate 1
+	lang "Traditional Chinese"
+	2
+		1|# "增加 {0}% 獲得拆除經驗值"
+		#|-1 "減少 {0}% 獲得拆除經驗值" negate 1
+	lang "Simplified Chinese"
+	2
+		1|# "爆破获得的经验提高 {0}%"
+		#|-1 "爆破获得的经验降低 {0}%" negate 1
+	lang "Thai"
+	2
+		1|# "เพิ่ม ค่าประสบการณ์ ที่ได้รับจาก รื้อถอน {0}%"
+		#|-1 "ลด ค่าประสบการณ์ ที่ได้รับจาก รื้อถอน {0}%" negate 1
+
+description
+	1 heist_contract_npc_engineering_cost_+%
+	2
+		1|# "{0}% increased Hiring Fee for Engineering Jobs"
+		#|-1 "{0}% reduced Hiring Fee for Engineering Jobs" negate 1
+	lang "Korean"
+	2
+		1|# "공학 작업의 고용 비용 {0}% 증가"
+		#|-1 "공학 작업의 고용 비용 {0}% 감소" negate 1
+	lang "German"
+	2
+		1|# "{0}% erhöhte Rekrutierungskosten für Ingenieurwesen-Jobs"
+		#|-1 "{0}% verringerte Rekrutierungskosten für Ingenieurwesen-Jobs" negate 1
+	lang "Portuguese"
+	2
+		1|# "Custo de Contratação de Serviços de Engenharia aumentado em {0}%"
+		#|-1 "Custo de Contratação de Serviços de Engenharia reduzido em {0}%" negate 1
+	lang "Spanish"
+	2
+		1|# "Costo de contratación aumentado un {0}% para los trabajos de ingeniería"
+		#|-1 "Costo de contratación reducido un {0}% para los trabajos de ingeniería" negate 1
+	lang "French"
+	2
+		1|# "{0}% d'Augmentation de la Rémunération des Malfaiteurs faisant appel à la Compétence Ingénierie"
+		#|-1 "{0}% de Réduction de la Rémunération des Malfaiteurs faisant appel à la Compétence Ingénierie" negate 1
+	lang "Russian"
+	2
+		1|# "{0}% повышение стоимости найма для навыка Инженерное дело"
+		#|-1 "{0}% снижение стоимости найма для навыка Инженерное дело" negate 1
+	lang "Traditional Chinese"
+	2
+		1|# "工程職位增加 {0}% 僱用費"
+		#|-1 "工程職位減少 {0}% 僱用費" negate 1
+	lang "Simplified Chinese"
+	2
+		1|# "工程学任务的招募费用提高 {0}%"
+		#|-1 "工程学任务的招募费用降低 {0}%" negate 1
+	lang "Thai"
+	2
+		1|# "เพิ่มค่าจ้างสำหรับทักษะ งานช่าง {0}%"
+		#|-1 "ลดค่าจ้างสำหรับทักษะ งานช่าง {0}%" negate 1
+
+description
+	1 heist_contract_npc_engineering_experience_gain_+%
+	2
+		1|# "{0}% increased Engineering Experience gained"
+		#|-1 "{0}% reduced Engineering Experience gained" negate 1
+	lang "German"
+	2
+		1|# "{0}% erhöhter Erfahrungsgewinn für Ingenieurwesen"
+		#|-1 "{0}% verringerter Erfahrungsgewinn für Ingenieurwesen" negate 1
+	lang "Portuguese"
+	2
+		1|# "Experiência de Engenharia ganha aumentada em {0}%"
+		#|-1 "Experiência de Engenharia ganha reduzida em {0}%" negate 1
+	lang "French"
+	2
+		1|# "{0}% d'Augmentation du gain d'expérience de la Compétence Ingénierie"
+		#|-1 "{0}% de Réduction du gain d'expérience de la Compétence Ingénierie" negate 1
+	lang "Korean"
+	2
+		1|# "공학 경험치 획득량 {0}% 증가"
+		#|-1 "공학 경험치 획득량 {0}% 감소" negate 1
+	lang "Russian"
+	2
+		1|# "{0}% увеличение получаемого Инженерным делом опыта"
+		#|-1 "{0}% уменьшение получаемого Инженерным делом опыта" negate 1
+	lang "Spanish"
+	2
+		1|# "Experiencia en ingeniería aumentada un {0}%"
+		#|-1 "Experiencia en ingeniería reducida un {0}%" negate 1
+	lang "Traditional Chinese"
+	2
+		1|# "增加 {0}% 獲得工程經驗值"
+		#|-1 "減少 {0}% 獲得工程經驗值" negate 1
+	lang "Simplified Chinese"
+	2
+		1|# "工程学获得的经验提高 {0}%"
+		#|-1 "工程学获得的经验降低 {0}%" negate 1
+	lang "Thai"
+	2
+		1|# "เพิ่ม ค่าประสบการณ์ ที่ได้รับจาก งานช่าง {0}%"
+		#|-1 "ลด ค่าประสบการณ์ ที่ได้รับจาก งานช่าง {0}%" negate 1
+
+description
+	1 heist_contract_npc_experience_gain_+%
+	2
+		1|# "{0}% increased Job Experience gain"
+		#|-1 "{0}% reduced Job Experience gain" negate 1
+	lang "German"
+	2
+		1|# "{0}% erhöhter Job-Erfahrungsgewinn"
+		#|-1 "{0}% verringerter Job-Erfahrungsgewinn" negate 1
+	lang "Spanish"
+	2
+		1|# "Experiencia de trabajo ganada aumentada un {0}%"
+		#|-1 "Experiencia de trabajo ganada reducida un {0}%" negate 1
+	lang "Traditional Chinese"
+	2
+		1|# "增加 {0}% 獲取職務經驗值"
+		#|-1 "減少 {0}% 獲取職務經驗值" negate 1
+	lang "French"
+	2
+		1|# "{0}% d'Augmentation du gain d'expérience des Malfaiteurs"
+		#|-1 "{0}% de Réduction du gain d'expérience des Malfaiteurs" negate 1
+	lang "Russian"
+	2
+		1|# "{0}% увеличение получаемого в делах опыта наёмников"
+		#|-1 "{0}% уменьшение получаемого в делах опыта наёмников" negate 1
+	lang "Korean"
+	2
+		1|# "획득하는 임무 경험치 {0}% 증가"
+		#|-1 "획득하는 임무 경험치 {0}% 감소" negate 1
+	lang "Portuguese"
+	2
+		1|# "Experiência de Serviço ganha aumentada em {0}%"
+		#|-1 "Experiência de Serviço ganha reduzida em {0}%" negate 1
+	lang "Simplified Chinese"
+	2
+		1|# "任务经验获取率提高 {0}%"
+		#|-1 "任务经验获取率降低 {0}%" negate 1
+	lang "Thai"
+	2
+		1|# "เพิ่ม ค่าประสบการณ์ ที่ได้รับจาก ทุกทักษะ {0}%"
+		#|-1 "ลด ค่าประสบการณ์ ที่ได้รับจาก ทุกทักษะ {0}%" negate 1
+
+description
+	1 heist_contract_npc_level_+
+	1
+		# "{0:+d} to Character Level"
+	lang "Korean"
+	1
+		# "캐릭터 레벨 {0:+d}"
+	lang "French"
+	1
+		# "{0:+d} au Niveau de Personnage"
+	lang "Spanish"
+	1
+		# "{0:+d} al nivel del personaje"
+	lang "German"
+	1
+		# "{0:+d} zur Charakterstufe"
+	lang "Portuguese"
+	1
+		# "{0:+d} ao Nível do Personagem"
+	lang "Simplified Chinese"
+	1
+		# "角色等级 {0:+d}"
+	lang "Traditional Chinese"
+	1
+		# "角色等級 {0:+d}"
+	lang "Russian"
+	1
+		# "{0:+d} к уровню наёмника"
+	lang "Thai"
+	1
+		# "เลเวลตัวละคร {0:+d}"
+
+description
+	1 heist_contract_npc_lockpicking_cost_+%
+	2
+		1|# "{0}% increased Hiring Fee for Lockpicking Jobs"
+		#|-1 "{0}% reduced Hiring Fee for Lockpicking Jobs" negate 1
+	lang "Korean"
+	2
+		1|# "자물쇠 따기 작업의 고용 비용 {0}% 증가"
+		#|-1 "자물쇠 따기 작업의 고용 비용 {0}% 감소" negate 1
+	lang "German"
+	2
+		1|# "{0}% erhöhte Rekrutierungskosten für Schlossknacken-Jobs"
+		#|-1 "{0}% verringerte Rekrutierungskosten für Schlossknacken-Jobs" negate 1
+	lang "Portuguese"
+	2
+		1|# "Custo de Contratação de Serviços de Arrombamento aumentado em {0}%"
+		#|-1 "Custo de Contratação de Serviços de Arrombamento reduzido em {0}%" negate 1
+	lang "Spanish"
+	2
+		1|# "Costo de contratación aumentado un {0}% para los trabajos de forzar cerraduras"
+		#|-1 "Costo de contratación reducido un {0}% para los trabajos de forzar cerraduras" negate 1
+	lang "French"
+	2
+		1|# "{0}% d'Augmentation de la Rémunération des Malfaiteurs faisant appel à la Compétence Crochetage"
+		#|-1 "{0}% de Réduction de la Rémunération des Malfaiteurs faisant appel à la Compétence Crochetage" negate 1
+	lang "Russian"
+	2
+		1|# "{0}% повышение стоимости найма для навыка Взлом"
+		#|-1 "{0}% снижение стоимости найма для навыка Взлом" negate 1
+	lang "Traditional Chinese"
+	2
+		1|# "開鎖職位增加 {0}% 僱用費"
+		#|-1 "開鎖職位減少 {0}% 僱用費" negate 1
+	lang "Simplified Chinese"
+	2
+		1|# "解密术任务的招募费用提高 {0}%"
+		#|-1 "解密术任务的招募费用降低 {0}%" negate 1
+	lang "Thai"
+	2
+		1|# "เพิ่มค่าจ้างสำหรับทักษะ สะเดาะกุญแจ {0}%"
+		#|-1 "ลดค่าจ้างสำหรับทักษะ สะเดาะกุญแจ {0}%" negate 1
+
+description
+	1 heist_contract_npc_lockpicking_experience_gain_+%
+	2
+		1|# "{0}% increased Lockpicking Experience gained"
+		#|-1 "{0}% reduced Lockpicking Experience gained" negate 1
+	lang "German"
+	2
+		1|# "{0}% erhöhter Erfahrungsgewinn für Schlossknacken"
+		#|-1 "{0}% verringerter Erfahrungsgewinn für Schlossknacken" negate 1
+	lang "Portuguese"
+	2
+		1|# "Experiência de Arrombamento ganha aumentada em {0}%"
+		#|-1 "Experiência de Arrombamento ganha reduzida em {0}%" negate 1
+	lang "Spanish"
+	2
+		1|# "Experiencia en forzar cerraduras aumentada un {0}%"
+		#|-1 "Experiencia en forzar cerraduras reducida un {0}%" negate 1
+	lang "French"
+	2
+		1|# "{0}% d'Augmentation du gain d'expérience de la Compétence Crochetage"
+		#|-1 "{0}% de Réduction du gain d'expérience de la Compétence Crochetage" negate 1
+	lang "Korean"
+	2
+		1|# "자물쇠 따기 경험치 획득량 {0}% 증가"
+		#|-1 "자물쇠 따기 경험치 획득량 {0}% 감소" negate 1
+	lang "Russian"
+	2
+		1|# "{0}% увеличение получаемого Взломом опыта"
+		#|-1 "{0}% уменьшение получаемого Взломом опыта" negate 1
+	lang "Traditional Chinese"
+	2
+		1|# "增加 {0}% 獲得開鎖經驗值"
+		#|-1 "減少 {0}% 獲得開鎖經驗值" negate 1
+	lang "Simplified Chinese"
+	2
+		1|# "解密术获得的经验提高 {0}%"
+		#|-1 "解密术获得的经验降低 {0}%" negate 1
+	lang "Thai"
+	2
+		1|# "เพิ่ม ค่าประสบการณ์ ที่ได้รับจาก สะเดาะกุญแจ {0}%"
+		#|-1 "ลด ค่าประสบการณ์ ที่ได้รับจาก สะเดาะกุญแจ {0}%" negate 1
+
+description
+	1 heist_contract_npc_perception_cost_+%
+	2
+		1|# "{0}% increased Hiring Fee for Perception Jobs"
+		#|-1 "{0}% reduced Hiring Fee for Perception Jobs" negate 1
+	lang "Korean"
+	2
+		1|# "통찰력 작업의 고용 비용 {0}% 증가"
+		#|-1 "통찰력 작업의 고용 비용 {0}% 감소" negate 1
+	lang "German"
+	2
+		1|# "{0}% erhöhte Rekrutierungskosten für Wahrnehmungs-Jobs"
+		#|-1 "{0}% verringerte Rekrutierungskosten für Wahrnehmungs-Jobs" negate 1
+	lang "Portuguese"
+	2
+		1|# "Custo de Contratação de Serviços de Percepção aumentado em {0}%"
+		#|-1 "Custo de Contratação de Serviços de Percepção reduzido em {0}%" negate 1
+	lang "Spanish"
+	2
+		1|# "Costo de contratación aumentado un {0}% para los trabajos de percepción"
+		#|-1 "Costo de contratación reducido un {0}% para los trabajos de percepción" negate 1
+	lang "French"
+	2
+		1|# "{0}% d'Augmentation de la Rémunération des Malfaiteurs faisant appel à la Compétence Perception"
+		#|-1 "{0}% de Réduction de la Rémunération des Malfaiteurs faisant appel à la Compétence Perception" negate 1
+	lang "Russian"
+	2
+		1|# "{0}% повышение стоимости найма для навыка Восприятие"
+		#|-1 "{0}% снижение стоимости найма для навыка Восприятие" negate 1
+	lang "Traditional Chinese"
+	2
+		1|# "洞察力職位增加 {0}% 僱用費"
+		#|-1 "洞察力職位減少 {0}% 僱用費" negate 1
+	lang "Simplified Chinese"
+	2
+		1|# "洞察任务的招募费用提高 {0}%"
+		#|-1 "洞察任务的招募费用降低 {0}%" negate 1
+	lang "Thai"
+	2
+		1|# "เพิ่มค่าจ้างสำหรับทักษะ การรับรู้ {0}%"
+		#|-1 "ลดค่าจ้างสำหรับทักษะ การรับรู้ {0}%" negate 1
+
+description
+	1 heist_contract_npc_perception_experience_gain_+%
+	2
+		1|# "{0}% increased Perception Experience gained"
+		#|-1 "{0}% reduced Perception Experience gained" negate 1
+	lang "German"
+	2
+		1|# "{0}% erhöhter Erfahrungsgewinn für Wahrnehmung"
+		#|-1 "{0}% verringerter Erfahrungsgewinn für Wahrnehmung" negate 1
+	lang "Portuguese"
+	2
+		1|# "Experiência de Percepção ganha aumentada em {0}%"
+		#|-1 "Experiência de Percepção ganha reduzida em {0}%" negate 1
+	lang "Spanish"
+	2
+		1|# "Experiencia en percepción aumentada un {0}%"
+		#|-1 "Experiencia en percepción reducida un {0}%" negate 1
+	lang "French"
+	2
+		1|# "{0}% d'Augmentation du gain d'expérience de la Compétence Perception"
+		#|-1 "{0}% de Réduction du gain d'expérience de la Compétence Perception" negate 1
+	lang "Korean"
+	2
+		1|# "통찰력 경험치 획득량 {0}% 증가"
+		#|-1 "통찰력 경험치 획득량 {0}% 감소" negate 1
+	lang "Russian"
+	2
+		1|# "{0}% увеличение получаемого Восприятием опыта"
+		#|-1 "{0}% уменьшение получаемого Восприятием опыта" negate 1
+	lang "Traditional Chinese"
+	2
+		1|# "增加 {0}% 獲得洞察力經驗值"
+		#|-1 "減少 {0}% 獲得洞察力經驗值" negate 1
+	lang "Simplified Chinese"
+	2
+		1|# "洞察获得的经验提高 {0}%"
+		#|-1 "洞察获得的经验降低 {0}%" negate 1
+	lang "Thai"
+	2
+		1|# "เพิ่ม ค่าประสบการณ์ ที่ได้รับจาก การรับรู้ {0}%"
+		#|-1 "ลด ค่าประสบการณ์ ที่ได้รับจาก การรับรู้ {0}%" negate 1
+
+description
+	1 heist_contract_npc_trap_disarmament_cost_+%
+	2
+		1|# "{0}% increased Hiring Fee for Trap Disarmament Jobs"
+		#|-1 "{0}% reduced Hiring Fee for Trap Disarmament Jobs" negate 1
+	lang "Korean"
+	2
+		1|# "덫 해제 작업의 고용 비용 {0}% 증가"
+		#|-1 "덫 해제 작업의 고용 비용 {0}% 감소" negate 1
+	lang "German"
+	2
+		1|# "{0}% erhöhte Rekrutierungskosten für Fallenentschärfungs-Jobs"
+		#|-1 "{0}% verringerte Rekrutierungskosten für Fallenentschärfungs-Jobs" negate 1
+	lang "Portuguese"
+	2
+		1|# "Custo de Contratação de Serviços de Desarmamento de Armadilhas aumentado em {0}%"
+		#|-1 "Custo de Contratação de Serviços de Desarmamento de Armadilhas reduzido em {0}%" negate 1
+	lang "Spanish"
+	2
+		1|# "Costo de contratación aumentado un {0}% para los trabajos de desarme de trampas"
+		#|-1 "Costo de contratación reducido un {0}% para los trabajos de desarme de trampas" negate 1
+	lang "French"
+	2
+		1|# "{0}% d'Augmentation de la Rémunération des Malfaiteurs faisant appel à la Compétence Désamorçage de pièges"
+		#|-1 "{0}% de Réduction de la Rémunération des Malfaiteurs faisant appel à la Compétence Désamorçage de pièges" negate 1
+	lang "Russian"
+	2
+		1|# "{0}% повышение стоимости найма для навыка Разминирование"
+		#|-1 "{0}% снижение стоимости найма для навыка Разминирование" negate 1
+	lang "Traditional Chinese"
+	2
+		1|# "陷阱解除職位增加 {0}% 僱用費"
+		#|-1 "陷阱解除職位減少 {0}% 僱用費" negate 1
+	lang "Simplified Chinese"
+	2
+		1|# "解除陷阱任务的招募费用提高 {0}%"
+		#|-1 "解除陷阱任务的招募费用降低 {0}%" negate 1
+	lang "Thai"
+	2
+		1|# "เพิ่มค่าจ้างสำหรับทักษะ ปลดกับดัก {0}%"
+		#|-1 "ลดค่าจ้างสำหรับทักษะ ปลดกับดัก {0}%" negate 1
+
+description
+	1 heist_contract_npc_trap_disarmament_experience_gain_+%
+	2
+		1|# "{0}% increased Trap Disarmament Experience gained"
+		#|-1 "{0}% reduced Trap Disarmament Experience gained" negate 1
+	lang "German"
+	2
+		1|# "{0}% erhöhter Erfahrungsgewinn für Fallenentschärfung"
+		#|-1 "{0}% verringerter Erfahrungsgewinn für Fallenentschärfung" negate 1
+	lang "Portuguese"
+	2
+		1|# "Experiência de Desarmamento de Armadilhas ganha aumentada em {0}%"
+		#|-1 "Experiência de Desarmamento de Armadilhas ganha reduzida em {0}%" negate 1
+	lang "Spanish"
+	2
+		1|# "Experiencia en desarme de trampas aumentada un {0}%"
+		#|-1 "Experiencia en desarme de trampas reducida un {0}%" negate 1
+	lang "French"
+	2
+		1|# "{0}% d'Augmentation du gain d'expérience de la Compétence Désamorçage de pièges"
+		#|-1 "{0}% de Réduction du gain d'expérience de la Compétence Désamorçage de pièges" negate 1
+	lang "Korean"
+	2
+		1|# "덫 해제 경험치 획득량 {0}% 증가"
+		#|-1 "덫 해제 경험치 획득량 {0}% 감소" negate 1
+	lang "Russian"
+	2
+		1|# "{0}% увеличение получаемого Разминированием опыта"
+		#|-1 "{0}% уменьшение получаемого Разминированием опыта" negate 1
+	lang "Traditional Chinese"
+	2
+		1|# "增加 {0}% 獲得陷阱解除經驗值"
+		#|-1 "減少 {0}% 獲得陷阱解除經驗值" negate 1
+	lang "Simplified Chinese"
+	2
+		1|# "解除陷阱获得的经验提高 {0}%"
+		#|-1 "解除陷阱获得的经验降低 {0}%" negate 1
+	lang "Thai"
+	2
+		1|# "เพิ่ม ค่าประสบการณ์ ที่ได้รับจาก ปลดกับดัก {0}%"
+		#|-1 "ลด ค่าประสบการณ์ ที่ได้รับจาก ปลดกับดัก {0}%" negate 1
+
+description
+	1 heist_contract_objective_completion_time_+%
+	2
+		1|# "{0}% increased Job speed"
+		#|-1 "{0}% reduced Job speed" negate 1
+	lang "Korean"
+	2
+		1|# "작업 속도 {0}% 증가"
+		#|-1 "작업 속도 {0}% 감소" negate 1
+	lang "German"
+	2
+		1|# "{0}% erhöhte Job-Geschwindigkeit"
+		#|-1 "{0}% verringerte Job-Geschwindigkeit" negate 1
+	lang "Portuguese"
+	2
+		1|# "Velocidade do Serviço aumentada em {0}%"
+		#|-1 "Velocidade do Serviço reduzida em {0}%" negate 1
+	lang "Spanish"
+	2
+		1|# "Velocidad de los trabajos aumentada un {0}%"
+		#|-1 "Velocidad de los trabajos reducida un {0}%" negate 1
+	lang "French"
+	2
+		1|# "{0}% d'Augmentation de la Vitesse des Compétences"
+		#|-1 "{0}% de Réduction de la Vitesse des Compétences" negate 1
+	lang "Russian"
+	2
+		1|# "{0}% повышение скорости использования навыка"
+		#|-1 "{0}% снижение скорости использования навыка" negate 1
+	lang "Traditional Chinese"
+	2
+		1|# "增加 {0}% 工作速度"
+		#|-1 "減少 {0}% 工作速度" negate 1
+	lang "Simplified Chinese"
+	2
+		1|# "任务速度加快 {0}%"
+		#|-1 "任务速度减慢 {0}%" negate 1
+	lang "Thai"
+	2
+		1|# "เพิ่มความเร็วในการใช้ทักษะ {0}%"
+		#|-1 "ลดความเร็วในการใช้ทักษะ {0}%" negate 1
+
+description
+	1 heist_contract_primary_target_value_+%
+	2
+		1|# "{0}% increased Rogue's Marker value of primary Heist Target"
+		#|-1 "{0}% reduced Rogue's Marker value of primary Heist Target" negate 1
+	lang "Korean"
+	2
+		1|# "주요 강탈 대상의 도둑의 증표 가치 {0}% 증가"
+		#|-1 "주요 강탈 대상의 도둑의 증표 가치 {0}% 감소" negate 1
+	lang "German"
+	2
+		1|# "Primäres Auftragsziel bringt {0}% erhöhten Wert für Signa der Abtrünnigen ein"
+		#|-1 "Primäres Auftragsziel bringt {0}% verringerten Wert für Signa der Abtrünnigen ein" negate 1
+	lang "Portuguese"
+	2
+		1|# "Valor das Insígnias de Renegado para o Alvo Primário do Golpe aumentado em {0}%"
+		#|-1 "Valor das Insígnias de Renegado para o Alvo Primário do Golpe reduzido em {0}%" negate 1
+	lang "Spanish"
+	2
+		1|# "Valor del objetivo principal del atraco en Monedas del renegado aumentado un {0}%"
+		#|-1 "Valor del objetivo principal del atraco en Monedas del renegado reducido un {0}%" negate 1
+	lang "French"
+	2
+		1|# "{0}% d'Augmentation de la valeur en Pièces marquées de votre Objectif de Casse principal"
+		#|-1 "{0}% de Réduction de la valeur en Pièces marquées de votre Objectif de Casse principal" negate 1
+	lang "Russian"
+	2
+		1|# "{0}% повышение ценности в разбойничьих жетонах для главной цели Кражи"
+		#|-1 "{0}% снижение ценности в разбойничьих жетонах для главной цели Кражи" negate 1
+	lang "Traditional Chinese"
+	2
+		1|# "增加 {0}% 主要劫盜目標的盜賊之印價值"
+		#|-1 "減少 {0}% 主要劫盜目標的盜賊之印價值" negate 1
+	lang "Simplified Chinese"
+	2
+		1|# "主要赏金目标的赏金猎人印记价值提高 {0}%"
+		#|-1 "主要赏金目标的赏金猎人印记价值降低 {0}%" negate 1
+	lang "Thai"
+	2
+		1|# "เพิ่มมูลค่าของ เหรียญกองโจร สำหรับเป้าหมายโจรกรรมหลัก {0}%"
+		#|-1 "ลดมูลค่าของ เหรียญกองโจร สำหรับเป้าหมายโจรกรรมหลัก {0}%" negate 1
+
+description
+	1 heist_contract_travel_cost_+%
+	2
+		1|# "{0}% increased Travel Fee"
+		#|-1 "{0}% reduced Travel Fee" negate 1
+	lang "Korean"
+	2
+		1|# "이동 비용 {0}% 증가"
+		#|-1 "이동 비용 {0}% 감소" negate 1
+	lang "German"
+	2
+		1|# "{0}% erhöhte Reisekosten"
+		#|-1 "{0}% verringerte Reisekosten" negate 1
+	lang "Portuguese"
+	2
+		1|# "Custo do Deslocamento aumentado em {0}%"
+		#|-1 "Custo do Deslocamento reduzido em {0}%" negate 1
+	lang "Spanish"
+	2
+		1|# "Costo de viaje aumentado un {0}%"
+		#|-1 "Costo de viaje reducido un {0}%" negate 1
+	lang "French"
+	2
+		1|# "{0}% d'Augmentation des Frais de trajet"
+		#|-1 "{0}% de Réduction des Frais de trajet" negate 1
+	lang "Russian"
+	2
+		1|# "{0}% повышение стоимости перемещения"
+		#|-1 "{0}% снижение стоимости перемещения" negate 1
+	lang "Traditional Chinese"
+	2
+		1|# "增加 {0}% 旅費"
+		#|-1 "減少 {0}% 旅費" negate 1
+	lang "Simplified Chinese"
+	2
+		1|# "旅行报酬提高 {0}%"
+		#|-1 "旅行报酬降低 {0}%" negate 1
+	lang "Thai"
+	2
+		1|# "เพิ่มค่าเดินทาง {0}%"
+		#|-1 "ลดค่าเดินทาง {0}%" negate 1
+
+description
+	1 heist_interruption_resistance_%
+	1
+		1|# "{0}% chance to Avoid being Interrupted"
+	lang "Korean"
+	1
+		1|# "{0}%의 확률로 방해 회피"
+	lang "German"
+	1
+		1|# "{0}% Chance, Unterbrechung zu vermeiden"
+	lang "Portuguese"
+	1
+		1|# "{0}% de chance de Evitar ser Interrompido"
+	lang "Spanish"
+	1
+		1|# "{0}% de probabilidad de evitar ser interrumpido"
+	lang "French"
+	1
+		1|# "{0}% de chances de ne pas subir d'Interruption"
+	lang "Russian"
+	1
+		1|# "{0}% шанс избежать прерывания"
+	lang "Traditional Chinese"
+	1
+		1|# "{0}% 機率避免被干擾"
+	lang "Simplified Chinese"
+	1
+		1|# "有 {0}% 的几率避免被打断"
+	lang "Thai"
+	1
+		1|# "มีโอกาสหลีกเลี่ยงการรบกวน {0}%"
+
+description
+	1 heist_item_quantity_+%
+	2
+		1|# "{0}% increased Quantity of Items dropped in Heists"
+		#|-1 "{0}% reduced Quantity of Items dropped in Heists" negate 1
+	lang "German"
+	2
+		1|# "{0}% erhöhte Menge fallen gelassener Gegenstände in Raubüberfällen"
+		#|-1 "{0}% verringerte Menge fallen gelassener Gegenstände in Raubüberfällen" negate 1
+	lang "Korean"
+	2
+		1|# "강탈에서 떨어지는 아이템 수량 {0}% 증가"
+		#|-1 "강탈에서 떨어지는 아이템 수량 {0}% 감소" negate 1
+	lang "Traditional Chinese"
+	2
+		1|# "劫盜時增加 {0}% 物品掉落數量"
+		#|-1 "劫盜時減少 {0}% 物品掉落數量" negate 1
+	lang "Spanish"
+	2
+		1|# "Cantidad de objetos que caen en los atracos aumentada un {0}%"
+		#|-1 "Cantidad de objetos que caen en los atracos reducida un {0}%" negate 1
+	lang "Portuguese"
+	2
+		1|# "Quantidade de Itens derrubados em Golpes aumentada em {0}%"
+		#|-1 "Quantidade de Itens derrubados em Golpes reduzida em {0}%" negate 1
+	lang "Russian"
+	2
+		1|# "{0}% увеличение количества предметов, выпадающих во время краж"
+		#|-1 "{0}% уменьшение количества предметов, выпадающих во время краж" negate 1
+	lang "French"
+	2
+		1|# "{0}% d'Augmentation de la Quantité d'Objets cédés pendant les Casses"
+		#|-1 "{0}% de Réduction de la Quantité d'Objets cédés pendant les Casses" negate 1
+	lang "Simplified Chinese"
+	2
+		1|# "夺宝冒险中掉落的物品数量提高 {0}%"
+		#|-1 "夺宝冒险中掉落的物品数量降低 {0}%" negate 1
+	lang "Thai"
+	2
+		1|# "เพิ่มจำนวนของ ไอเทมที่ดรอปใน การโจรกรรม {0}%"
+		#|-1 "ลดจำนวนของ ไอเทมที่ดรอปใน การโจรกรรม {0}%" negate 1
+
+description
+	1 heist_item_rarity_+%
+	2
+		1|# "{0}% increased Rarity of Items dropped in Heists"
+		#|-1 "{0}% reduced Rarity of Items dropped in Heists" negate 1
+	lang "German"
+	2
+		1|# "{0}% erhöhte Seltenheit fallen gelassener Gegenstände in Raubüberfällen"
+		#|-1 "{0}% verringerte Seltenheit fallen gelassener Gegenstände in Raubüberfällen" negate 1
+	lang "Korean"
+	2
+		1|# "강탈에서 떨어지는 아이템 희귀도 {0}% 증가"
+		#|-1 "강탈에서 떨어지는 아이템 희귀도 {0}% 감소" negate 1
+	lang "Traditional Chinese"
+	2
+		1|# "劫盜時增加 {0}% 物品掉落稀有度"
+		#|-1 "劫盜時減少 {0}% 物品掉落稀有度" negate 1
+	lang "Spanish"
+	2
+		1|# "Rareza de los objetos que caen en los atracos aumentada un {0}%"
+		#|-1 "Rareza de los objetos que caen en los atracos reducida un {0}%" negate 1
+	lang "Portuguese"
+	2
+		1|# "Raridade de Itens derrubados em Golpes aumentada em {0}%"
+		#|-1 "Raridade de Itens derrubados em Golpes reduzida em {0}%" negate 1
+	lang "Russian"
+	2
+		1|# "{0}% повышение редкости предметов, выпадающих во время краж"
+		#|-1 "{0}% снижение редкости предметов, выпадающих во время краж" negate 1
+	lang "French"
+	2
+		1|# "{0}% d'Augmentation de la Rareté des Objets cédés pendant les Casses"
+		#|-1 "{0}% de Réduction de la Rareté des Objets cédés pendant les Casses" negate 1
+	lang "Simplified Chinese"
+	2
+		1|# "夺宝冒险中掉落的物品稀有度提高 {0}%"
+		#|-1 "夺宝冒险中掉落的物品稀有度降低 {0}%" negate 1
+	lang "Thai"
+	2
+		1|# "เพิ่มระดับความหายากของ ไอเทมที่ดรอปใน การโจรกรรม {0}%"
+		#|-1 "ลดระดับความหายากของ ไอเทมที่ดรอปใน การโจรกรรม {0}%" negate 1
+
+description
+	1 heist_job_agility_avoid_alarm_chance_%_on_open_chest
+	1
+		1|# "{0}% chance to not generate Alert Level on opening a Chest using Agility"
+	lang "Korean"
+	1
+		1|# "민첩함으로 상자를 열었을 때 {0}%의 확률로 경보 레벨이 상승하지 않음"
+	lang "German"
+	1
+		1|# "{0}% Chance, dass sich durch das Öffnen einer Truhe mittels Agilität nicht die Alarmstufe erhöht"
+	lang "Portuguese"
+	1
+		1|# "{0}% de chance de não gerar Nível de Alerta ao abrir um Baú usando Agilidade"
+	lang "Spanish"
+	1
+		1|# "{0}% de probabilidad de no generar nivel de alerta al abrir un cofre usando agilidad"
+	lang "French"
+	1
+		1|# "{0}% de chances de ne pas augmenter le Niveau d'alerte lorsque vous ouvrez un coffre en faisant appel à l'Agilité"
+	lang "Russian"
+	1
+		1|# "{0}% шанс не поднять уровень угрозы при открытии сундука с помощью Проворства"
+	lang "Traditional Chinese"
+	1
+		1|# "使用靈巧開啟保險箱時有 {0}% 機率不產生警戒等級"
+	lang "Simplified Chinese"
+	1
+		1|# "使用灵敏开启宝箱有 {0}% 的几率不产生警报等级"
+	lang "Thai"
+	1
+		1|# "มีโอกาสไม่เพิ่ม ระดับการรู้ตัว {0}% เมื่อเปิดหีบด้วย ความคล่องตัว"
+
+description
+	1 heist_job_agility_level_+
+	1
+		1|# "+{0} to Agility Level for Heists"
+	lang "Korean"
+	1
+		1|# "강탈의 민첩함 레벨 +{0}"
+	lang "German"
+	1
+		1|# "+{0} zur Stufe von Agilität für Raubüberfälle"
+	lang "Portuguese"
+	1
+		1|# "+{0} ao Nível de Agilidade em Golpes"
+	lang "Spanish"
+	1
+		1|# "+{0} al nivel de Agilidad para los atracos y los golpes"
+	lang "Traditional Chinese"
+	1
+		1|# "為劫盜 +{0} 靈巧等級"
+	lang "Russian"
+	1
+		1|# "+{0} к уровню Проворства в Кражах"
+	lang "French"
+	1
+		1|# "+{0} au niveau d'Agilité lors des Casses"
+	lang "Simplified Chinese"
+	1
+		1|# "夺宝奇兵的灵敏等级 +{0}"
+	lang "Thai"
+	1
+		1|# "ระดับความคล่องตัว +{0} สำหรับการโจรกรรม"
+
+description
+	1 heist_job_agility_speed_+%
+	2
+		1|# "{0}% increased Agility speed"
+		#|-1 "{0}% reduced Agility speed" negate 1
+	lang "Korean"
+	2
+		1|# "민첩함 속도 {0}% 증가"
+		#|-1 "민첩함 속도 {0}% 감소" negate 1
+	lang "German"
+	2
+		1|# "{0}% erhöhte Geschwindigkeit von Agilität"
+		#|-1 "{0}% verringerte Geschwindigkeit von Agilität" negate 1
+	lang "Portuguese"
+	2
+		1|# "Velocidade da Agilidade aumentada em {0}%"
+		#|-1 "Velocidade da Agilidade reduzida em {0}%" negate 1
+	lang "Spanish"
+	2
+		1|# "Velocidad de los trabajos de agilidad aumentada un {0}%"
+		#|-1 "Velocidad de los trabajos de agilidad reducida un {0}%" negate 1
+	lang "French"
+	2
+		1|# "{0}% d'Augmentation de la Vitesse de l'Agilité"
+		#|-1 "{0}% de Réduction de la Vitesse de l'Agilité" negate 1
+	lang "Russian"
+	2
+		1|# "{0}% повышение скорости использования Проворства"
+		#|-1 "{0}% снижение скорости использования Проворства" negate 1
+	lang "Traditional Chinese"
+	2
+		1|# "增加 {0}% 靈巧速度"
+		#|-1 "減少 {0}% 靈巧速度" negate 1
+	lang "Simplified Chinese"
+	2
+		1|# "灵敏速度加快 {0}%"
+		#|-1 "灵敏速度减慢 {0}%" negate 1
+	lang "Thai"
+	2
+		1|# "เพิ่มความเร็ว ความคล่องตัว {0}%"
+		#|-1 "ลดความเร็ว ความคล่องตัว {0}%" negate 1
+
+description
+	1 heist_job_brute_force_avoid_alarm_chance_%_on_open_chest
+	1
+		1|# "{0}% chance to not generate Alert Level on opening a Chest using Brute Force"
+	lang "Korean"
+	1
+		1|# "완력으로 상자를 열었을 때 {0}%의 확률로 경보 레벨이 상승하지 않음"
+	lang "German"
+	1
+		1|# "{0}% Chance, dass sich durch das Öffnen einer Truhe mittels Brachialgewalt nicht die Alarmstufe erhöht"
+	lang "Portuguese"
+	1
+		1|# "{0}% de chance de não gerar Nível de Alerta ao abrir um Baú usando Força Bruta"
+	lang "Spanish"
+	1
+		1|# "{0}% de probabilidad de no generar nivel de alerta al abrir un cofre usando fuerza bruta"
+	lang "French"
+	1
+		1|# "{0}% de chances de ne pas augmenter le Niveau d'alerte lorsque vous ouvrez un coffre en faisant appel à la Force brute"
+	lang "Russian"
+	1
+		1|# "{0}% шанс не поднять уровень тревоги при открытии сундука с помощью Грубой силы"
+	lang "Traditional Chinese"
+	1
+		1|# "使用蠻力開啟保險箱時有 {0}% 機率不產生警戒等級"
+	lang "Simplified Chinese"
+	1
+		1|# "使用凶蛮之力开启宝箱有 {0}% 的几率不产生警报等级"
+	lang "Thai"
+	1
+		1|# "มีโอกาสไม่เพิ่ม ระดับการรู้ตัว {0}% เมื่อเปิดหีบด้วย เอากำลังเข้าแลก"
+
+description
+	1 heist_job_brute_force_level_+
+	1
+		1|# "+{0} to Brute Force Level for Heists"
+	lang "Korean"
+	1
+		1|# "강탈의 완력 레벨 +{0}"
+	lang "German"
+	1
+		1|# "+{0} zur Stufe von Brachialgewalt für Raubüberfälle"
+	lang "Portuguese"
+	1
+		1|# "+{0} ao Nível de Força Bruta em Golpes"
+	lang "Spanish"
+	1
+		1|# "+{0} al nivel de Fuerza bruta en los atracos y los golpes"
+	lang "Traditional Chinese"
+	1
+		1|# "為劫盜 +{0} 蠻力等級"
+	lang "Russian"
+	1
+		1|# "+{0} к уровню Грубой силы в Кражах"
+	lang "French"
+	1
+		1|# "+{0} au niveau de Force brute lors des Casses"
+	lang "Simplified Chinese"
+	1
+		1|# "夺宝奇兵的凶蛮之力等级 +{0}"
+	lang "Thai"
+	1
+		1|# "ระดับเอากำลังเข้าแลก +{0} สำหรับการโจรกรรม"
+
+description
+	1 heist_job_brute_force_no_alert_multiplier
+	1
+		1|# "Performing Brute Force during Lockdown doesn't take additional time"
+	lang "Korean"
+	1
+		1|# "폐쇄 중에 완력 사용 시 추가 시간이 소요되지 않음"
+	lang "German"
+	1
+		1|# "Der Einsatz von Brachialgewalt während der Abriegelung erfordert keine zusätzliche Zeit"
+	lang "Portuguese"
+	1
+		1|# "Executar Força Bruta durante o Confinamento não leva tempo adicional"
+	lang "Spanish"
+	1
+		1|# "Ejecutar trabajos de fuerza bruta después del cierre de puertas no consume tiempo adicional"
+	lang "French"
+	1
+		1|# "Utiliser la Force brute pendant le Verrouillage ne prends pas plus de temps"
+	lang "Russian"
+	1
+		1|# "Применение Грубой силы во время изоляции не требует дополнительного времени"
+	lang "Thai"
+	1
+		1|# "การใช้ทักษะ เอากำลังเข้าแลก ขณะกำลังปิดกั้นสถานที่จะไม่ใช้เวลาเพิ่มเติม"
+	lang "Traditional Chinese"
+	1
+		1|# "在封鎖期間使用蠻力不花費額外時間"
+	lang "Simplified Chinese"
+	1
+		1|# "封锁期间施行凶蛮之力不产生额外时间"
+
+description
+	1 heist_job_brute_force_speed_+%
+	2
+		1|# "{0}% increased Brute Force speed"
+		#|-1 "{0}% reduced Brute Force speed" negate 1
+	lang "Korean"
+	2
+		1|# "완력 속도 {0}% 증가"
+		#|-1 "완력 속도 {0}% 감소" negate 1
+	lang "German"
+	2
+		1|# "{0}% erhöhte Geschwindigkeit von Brachialgewalt"
+		#|-1 "{0}% verringerte Geschwindigkeit von Brachialgewalt" negate 1
+	lang "Portuguese"
+	2
+		1|# "Velocidade da Força Bruta aumentada em {0}%"
+		#|-1 "Velocidade da Força Bruta reduzida em {0}%" negate 1
+	lang "Spanish"
+	2
+		1|# "Velocidad de los trabajos de fuerza bruta aumentada un {0}%"
+		#|-1 "Velocidad de los trabajos de fuerza bruta reducida un {0}%" negate 1
+	lang "French"
+	2
+		1|# "{0}% d'Augmentation de la Vitesse de la Force brute"
+		#|-1 "{0}% de Réduction de la Vitesse de la Force brute" negate 1
+	lang "Russian"
+	2
+		1|# "{0}% повышение скорости использования Грубой силы"
+		#|-1 "{0}% снижение скорости использования Грубой силы" negate 1
+	lang "Traditional Chinese"
+	2
+		1|# "增加 {0}% 蠻力速度"
+		#|-1 "減少 {0}% 蠻力速度" negate 1
+	lang "Simplified Chinese"
+	2
+		1|# "凶蛮之力速度加快 {0}%"
+		#|-1 "凶蛮之力速度减慢 {0}%" negate 1
+	lang "Thai"
+	2
+		1|# "เพิ่มความเร็ว เอากำลังเข้าแลก {0}%"
+		#|-1 "ลดความเร็ว เอากำลังเข้าแลก {0}%" negate 1
+
+description
+	1 heist_job_counter_thaumaturgy_avoid_alarm_chance_%_on_open_chest
+	1
+		1|# "{0}% chance to not generate Alert Level on opening a Chest using Counter-Thaumaturgy"
+	lang "Korean"
+	1
+		1|# "반-마석학으로 상자를 열었을 때 {0}%의 확률로 경보 레벨이 상승하지 않음"
+	lang "German"
+	1
+		1|# "{0}% Chance, dass sich durch das Öffnen einer Truhe mittels Thaumaturgie-Abwehr nicht die Alarmstufe erhöht"
+	lang "Portuguese"
+	1
+		1|# "{0}% de chance de não gerar Nível de Alerta ao abrir um Baú usando Contra-Taumaturgia"
+	lang "Spanish"
+	1
+		1|# "{0}% de probabilidad de no generar nivel de alerta al abrir un cofre usando antitaumaturgia"
+	lang "French"
+	1
+		1|# "{0}% de chances de ne pas augmenter le Niveau d'alerte lorsque vous ouvrez un coffre en faisant appel à l'Anti-thaumaturgie"
+	lang "Russian"
+	1
+		1|# "{0}% шанс не поднять уровень тревоги при открытии сундука с помощью Контрмагии"
+	lang "Traditional Chinese"
+	1
+		1|# "使用解咒師開啟保險箱時有 {0}% 機率不產生警戒等級"
+	lang "Simplified Chinese"
+	1
+		1|# "使用逆向奇术开启宝箱有 {0}% 的几率不产生警报等级"
+	lang "Thai"
+	1
+		1|# "มีโอกาสไม่เพิ่ม ระดับการรู้ตัว {0}% เมื่อเปิดหีบด้วย โต้มนต์ดำ"
+
+description
+	1 heist_job_counter_thaumaturgy_level_+
+	1
+		1|# "+{0} to Counter-Thaumaturgy Level for Heists"
+	lang "Korean"
+	1
+		1|# "강탈의 반-마석학 레벨 +{0}"
+	lang "German"
+	1
+		1|# "+{0} zur Stufe von Thaumaturgie-Abwehr für Raubüberfälle"
+	lang "Portuguese"
+	1
+		1|# "+{0} ao Nível de Contra-Taumaturgia em Golpes"
+	lang "Spanish"
+	1
+		1|# "+{0} al nivel de Antitaumaturgia para los atracos y los golpes"
+	lang "Traditional Chinese"
+	1
+		1|# "為劫盜 +{0} 解咒師等級"
+	lang "Russian"
+	1
+		1|# "+{0} к уровню Контрмагии в Кражах"
+	lang "French"
+	1
+		1|# "+{0} au niveau d'Anti-thaumaturgie lors des Casses"
+	lang "Simplified Chinese"
+	1
+		1|# "夺宝奇兵的逆向奇术等级 +{0}"
+	lang "Thai"
+	1
+		1|# "ระดับโต้มนต์ดำ +{0} สำหรับการโจรกรรม"
+
+description
+	1 heist_job_counter_thaumaturgy_no_alert_multiplier
+	1
+		1|# "Performing Counter-Thaumaturgy during Lockdown doesn't take additional time"
+	lang "Korean"
+	1
+		1|# "폐쇄 중에 반-마석학 사용 시 추가 시간이 소요되지 않음"
+	lang "German"
+	1
+		1|# "Der Einsatz von Thaumaturgie-Abwehr während der Abriegelung erfordert keine zusätzliche Zeit"
+	lang "Portuguese"
+	1
+		1|# "Executar Contra-Taumaturgia durante o Confinamento não leva tempo adicional"
+	lang "Spanish"
+	1
+		1|# "Ejecutar trabajos de antitaumaturgia después del cierre de puertas no consume tiempo adicional"
+	lang "French"
+	1
+		1|# "Utiliser l'Anti-thaumaturgie pendant le Verrouillage ne prends pas plus de temps"
+	lang "Russian"
+	1
+		1|# "Применение Контрмагии во время изоляции не требует дополнительного времени"
+	lang "Thai"
+	1
+		1|# "การใช้ทักษะ โต้มนต์ดำ ขณะกำลังปิดกั้นสถานที่จะไม่ใช้เวลาเพิ่มเติม"
+	lang "Traditional Chinese"
+	1
+		1|# "在封鎖期間使用解咒師不花費額外時間"
+	lang "Simplified Chinese"
+	1
+		1|# "封锁期间施行逆向奇术不产生额外时间"
+
+description
+	1 heist_job_counter_thaumaturgy_speed_+%
+	2
+		1|# "{0}% increased Counter-Thaumaturgy speed"
+		#|-1 "{0}% reduced Counter-Thaumaturgy speed" negate 1
+	lang "Korean"
+	2
+		1|# "반-마석학 속도 {0}% 증가"
+		#|-1 "반-마석학 속도 {0}% 감소" negate 1
+	lang "German"
+	2
+		1|# "{0}% erhöhte Geschwindigkeit von Thaumaturgie-Abwehr"
+		#|-1 "{0}% verringerte Geschwindigkeit von Thaumaturgie-Abwehr" negate 1
+	lang "Portuguese"
+	2
+		1|# "Velocidade da Contra-Taumaturgia aumentada em {0}%"
+		#|-1 "Velocidade da Contra-Taumaturgia reduzida em {0}%" negate 1
+	lang "Spanish"
+	2
+		1|# "Velocidad de los trabajos de antitaumaturgia aumentada un {0}%"
+		#|-1 "Velocidad de los trabajos de antitaumaturgia reducida un {0}%" negate 1
+	lang "French"
+	2
+		1|# "{0}% d'Augmentation de la Vitesse de l'Anti-thaumaturgie"
+		#|-1 "{0}% de Réduction de la Vitesse de l'Anti-thaumaturgie" negate 1
+	lang "Russian"
+	2
+		1|# "{0}% повышение скорости использования Контрмагии"
+		#|-1 "{0}% снижение скорости использования Контрмагии" negate 1
+	lang "Traditional Chinese"
+	2
+		1|# "增加 {0}% 解咒師速度"
+		#|-1 "減少 {0}% 解咒師速度" negate 1
+	lang "Simplified Chinese"
+	2
+		1|# "逆向奇术速度加快 {0}%"
+		#|-1 "逆向奇术速度减慢 {0}%" negate 1
+	lang "Thai"
+	2
+		1|# "เพิ่มความเร็ว โต้มนต์ดำ {0}%"
+		#|-1 "ลดความเร็ว โต้มนต์ดำ {0}%" negate 1
+
+description
+	1 heist_job_deception_avoid_alarm_chance_%_on_open_chest
+	1
+		1|# "{0}% chance to not generate Alert Level on opening a Chest using Deception"
+	lang "Korean"
+	1
+		1|# "기만으로 상자를 열었을 때 {0}%의 확률로 경보 레벨이 상승하지 않음"
+	lang "German"
+	1
+		1|# "{0}% Chance, dass sich durch das Öffnen einer Truhe mittels Täuschung nicht die Alarmstufe erhöht"
+	lang "Portuguese"
+	1
+		1|# "{0}% de chance de não gerar Nível de Alerta ao abrir um Baú usando Enganação"
+	lang "Spanish"
+	1
+		1|# "{0}% de probabilidad de no generar nivel de alerta al abrir un cofre usando engaño"
+	lang "French"
+	1
+		1|# "{0}% de chances de ne pas augmenter le Niveau d'alerte lorsque vous ouvrez un coffre en faisant appel à la Duperie"
+	lang "Russian"
+	1
+		1|# "{0}% шанс не поднять уровень тревоги при открытии сундука с помощью Маскировки"
+	lang "Traditional Chinese"
+	1
+		1|# "使用詐欺開啟保險箱時有 {0}% 機率不產生警戒等級"
+	lang "Simplified Chinese"
+	1
+		1|# "用欺诈开启宝箱有 {0}% 的几率不产生警报等级"
+	lang "Thai"
+	1
+		1|# "มีโอกาสไม่เพิ่ม ระดับการรู้ตัว {0}% เมื่อเปิดหีบด้วย กลฉ้อฉล"
+
+description
+	1 heist_job_deception_level_+
+	1
+		1|# "+{0} to Deception Level for Heists"
+	lang "Korean"
+	1
+		1|# "강탈의 기만 레벨 +{0}"
+	lang "German"
+	1
+		1|# "+{0} zur Stufe von Täuschung für Raubüberfälle"
+	lang "Portuguese"
+	1
+		1|# "+{0} ao Nível de Enganação em Golpes"
+	lang "Spanish"
+	1
+		1|# "+{0} al nivel de Engaño en los atracos y los golpes"
+	lang "Traditional Chinese"
+	1
+		1|# "為劫盜 +{0} 詐欺等級"
+	lang "Russian"
+	1
+		1|# "+{0} к уровню Маскировки в Кражах"
+	lang "French"
+	1
+		1|# "+{0} au niveau de Duperie lors des Casses"
+	lang "Simplified Chinese"
+	1
+		1|# "夺宝奇兵的欺诈等级 +{0}"
+	lang "Thai"
+	1
+		1|# "ระดับกลฉ้อฉล +{0} สำหรับการโจรกรรม"
+
+description
+	1 heist_job_deception_speed_+%
+	2
+		1|# "{0}% increased Deception speed"
+		#|-1 "{0}% reduced Deception speed" negate 1
+	lang "Korean"
+	2
+		1|# "기만 속도 {0}% 증가"
+		#|-1 "기만 속도 {0}% 감소" negate 1
+	lang "German"
+	2
+		1|# "{0}% erhöhte Geschwindigkeit von Täuschung"
+		#|-1 "{0}% verringerte Geschwindigkeit von Täuschung" negate 1
+	lang "Portuguese"
+	2
+		1|# "Velocidade da Enganação aumentada em {0}%"
+		#|-1 "Velocidade da Enganação reduzida em {0}%" negate 1
+	lang "Spanish"
+	2
+		1|# "Velocidad de los trabajos de demolición aumentada un {0}%"
+		#|-1 "Velocidad de los trabajos de demolición reducida un {0}%" negate 1
+	lang "French"
+	2
+		1|# "{0}% d'Augmentation de la Vitesse de la Duperie"
+		#|-1 "{0}% de Réduction de la Vitesse de la Duperie" negate 1
+	lang "Russian"
+	2
+		1|# "{0}% повышение скорости использования Маскировки"
+		#|-1 "{0}% снижение скорости использования Маскировки" negate 1
+	lang "Traditional Chinese"
+	2
+		1|# "增加 {0}% 詐欺速度"
+		#|-1 "減少 {0}% 詐欺速度" negate 1
+	lang "Simplified Chinese"
+	2
+		1|# "欺诈速度加快 {0}%"
+		#|-1 "欺诈速度减慢 {0}%" negate 1
+	lang "Thai"
+	2
+		1|# "เพิ่มความเร็ว กลฉ้อฉล {0}%"
+		#|-1 "ลดความเร็ว กลฉ้อฉล {0}%" negate 1
+
+description
+	1 heist_job_demolition_avoid_alarm_chance_%_on_open_chest
+	1
+		1|# "{0}% chance to not generate Alert Level on opening a Chest using Demolition"
+	lang "Korean"
+	1
+		1|# "파괴 공작으로 상자를 열었을 때 {0}%의 확률로 경보 레벨이 상승하지 않음"
+	lang "German"
+	1
+		1|# "{0}% Chance, dass sich durch das Öffnen einer Truhe mittels Sprengung nicht die Alarmstufe erhöht"
+	lang "Portuguese"
+	1
+		1|# "{0}% de chance de não gerar Nível de Alerta ao abrir um Baú usando Demolição"
+	lang "Spanish"
+	1
+		1|# "{0}% de probabilidad de no generar nivel de alerta al abrir un cofre usando demolición"
+	lang "French"
+	1
+		1|# "{0}% de chances de ne pas augmenter le Niveau d'alerte lorsque vous ouvrez un coffre en faisant appel à la Démolition"
+	lang "Russian"
+	1
+		1|# "{0}% шанс не поднять уровень тревоги при открытии сундука с помощью Взрывного дела"
+	lang "Traditional Chinese"
+	1
+		1|# "使用拆除開啟保險箱時有 {0}% 機率不產生警戒等級"
+	lang "Simplified Chinese"
+	1
+		1|# "使用爆破开启宝箱有 {0}% 的几率不产生警报等级"
+	lang "Thai"
+	1
+		1|# "มีโอกาสไม่เพิ่ม ระดับการรู้ตัว {0}% เมื่อเปิดหีบด้วย รื้อถอน"
+
+description
+	1 heist_job_demolition_level_+
+	1
+		1|# "+{0} to Demolition Level for Heists"
+	lang "Korean"
+	1
+		1|# "강탈의 파괴 공작 레벨 +{0}"
+	lang "German"
+	1
+		1|# "+{0} zur Stufe von Sprengung für Raubüberfälle"
+	lang "Portuguese"
+	1
+		1|# "+{0} ao Nível de Demolição em Golpes"
+	lang "Spanish"
+	1
+		1|# "+{0} al nivel de Demolición en los atracos y los golpes"
+	lang "Traditional Chinese"
+	1
+		1|# "為劫盜 +{0} 拆除等級"
+	lang "Russian"
+	1
+		1|# "+{0} к уровню Взрывного дела в Кражах"
+	lang "French"
+	1
+		1|# "+{0} au niveau de Démolition lors des Casses"
+	lang "Simplified Chinese"
+	1
+		1|# "夺宝奇兵的爆破等级 +{0}"
+	lang "Thai"
+	1
+		1|# "ระดับรื้อถอน +{0} สำหรับการโจรกรรม"
+
+description
+	1 heist_job_demolition_no_alert_multiplier
+	1
+		1|# "Performing Demolition during Lockdown doesn't take additional time"
+	lang "Korean"
+	1
+		1|# "폐쇄 중에 파괴 공작 사용 시 추가 시간이 소요되지 않음"
+	lang "German"
+	1
+		1|# "Der Einsatz von Sprengung während der Abriegelung erfordert keine zusätzliche Zeit"
+	lang "Portuguese"
+	1
+		1|# "Executar Demolição durante o Confinamento não leva tempo adicional"
+	lang "Spanish"
+	1
+		1|# "Ejecutar trabajos de demolición después del cierre de puertas no consume tiempo adicional"
+	lang "French"
+	1
+		1|# "Utiliser la Démolition pendant le Verrouillage ne prends pas plus de temps"
+	lang "Russian"
+	1
+		1|# "Применение Взрывного дела во время изоляции не требует дополнительного времени"
+	lang "Thai"
+	1
+		1|# "การใช้ทักษะ รื้อถอน ขณะกำลังปิดกั้นสถานที่จะไม่ใช้เวลาเพิ่มเติม"
+	lang "Traditional Chinese"
+	1
+		1|# "在封鎖期間使用拆除不花費額外時間"
+	lang "Simplified Chinese"
+	1
+		1|# "封锁期间施行爆破不产生额外时间"
+
+description
+	1 heist_job_demolition_speed_+%
+	2
+		1|# "{0}% increased Demolition speed"
+		#|-1 "{0}% reduced Demolition speed" negate 1
+	lang "Korean"
+	2
+		1|# "파괴 공작 속도 {0}% 증가"
+		#|-1 "파괴 공작 속도 {0}% 감소" negate 1
+	lang "German"
+	2
+		1|# "{0}% erhöhte Geschwindigkeit von Sprengung"
+		#|-1 "{0}% verringerte Geschwindigkeit von Sprengung" negate 1
+	lang "Portuguese"
+	2
+		1|# "Velocidade da Demolição aumentada em {0}%"
+		#|-1 "Velocidade da Demolição reduzida em {0}%" negate 1
+	lang "Spanish"
+	2
+		1|# "Velocidad de los trabajos de demolición aumentada un {0}%"
+		#|-1 "Velocidad de los trabajos de demolición reducida un {0}%" negate 1
+	lang "French"
+	2
+		1|# "{0}% d'Augmentation de la Vitesse de la Démolition"
+		#|-1 "{0}% de Réduction de la Vitesse de la Démolition" negate 1
+	lang "Russian"
+	2
+		1|# "{0}% повышение скорости использования Взрывного дела"
+		#|-1 "{0}% снижение скорости использования Взрывного дела" negate 1
+	lang "Traditional Chinese"
+	2
+		1|# "增加 {0}% 拆除速度"
+		#|-1 "減少 {0}% 拆除速度" negate 1
+	lang "Simplified Chinese"
+	2
+		1|# "爆破速度加快 {0}%"
+		#|-1 "爆破速度减慢 {0}%" negate 1
+	lang "Thai"
+	2
+		1|# "เพิ่มความเร็ว รื้อถอน {0}%"
+		#|-1 "ลดความเร็ว รื้อถอน {0}%" negate 1
+
+description
+	1 heist_job_engineering_avoid_alarm_chance_%_on_open_chest
+	1
+		1|# "{0}% chance to not generate Alert Level on opening a Chest using Engineering"
+	lang "Korean"
+	1
+		1|# "공학으로 상자를 열었을 때 {0}%의 확률로 경보 레벨이 상승하지 않음"
+	lang "German"
+	1
+		1|# "{0}% Chance, dass sich durch das Öffnen einer Truhe mittels Ingenieurwesen nicht die Alarmstufe erhöht"
+	lang "Portuguese"
+	1
+		1|# "{0}% de chance de não gerar Nível de Alerta ao abrir um Baú usando Engenharia"
+	lang "Spanish"
+	1
+		1|# "{0}% de probabilidad de no generar nivel de alerta al abrir un cofre usando ingeniería"
+	lang "French"
+	1
+		1|# "{0}% de chances de ne pas augmenter le Niveau d'alerte lorsque vous ouvrez un coffre en faisant appel à l'Ingénierie"
+	lang "Russian"
+	1
+		1|# "{0}% шанс не поднять уровень тревоги при открытии сундука с помощью Инженерного дела"
+	lang "Traditional Chinese"
+	1
+		1|# "使用工程開啟保險箱時有 {0}% 機率不產生警戒等級"
+	lang "Simplified Chinese"
+	1
+		1|# "使用工程学开启宝箱有 {0}% 的几率不产生警报等级"
+	lang "Thai"
+	1
+		1|# "มีโอกาสไม่เพิ่ม ระดับการรู้ตัว {0}% เมื่อเปิดหีบด้วย งานช่าง"
+
+description
+	1 heist_job_engineering_level_+
+	1
+		1|# "+{0} to Engineering Level for Heists"
+	lang "Korean"
+	1
+		1|# "강탈의 공학 레벨 +{0}"
+	lang "German"
+	1
+		1|# "+{0} zur Stufe von Ingenieurwesen für Raubüberfälle"
+	lang "Portuguese"
+	1
+		1|# "+{0} ao Nível de Engenharia em Golpes"
+	lang "Spanish"
+	1
+		1|# "+{0} al nivel de Ingeniería en los atracos y los golpes"
+	lang "Traditional Chinese"
+	1
+		1|# "為劫盜 +{0} 工程等級"
+	lang "Russian"
+	1
+		1|# "+{0} к уровню Инженерного дела в Кражах"
+	lang "French"
+	1
+		1|# "+{0} au niveau d'Ingénierie lors des Casses"
+	lang "Simplified Chinese"
+	1
+		1|# "夺宝奇兵的工程学等级 +{0}"
+	lang "Thai"
+	1
+		1|# "ระดับงานช่าง +{0} สำหรับการโจรกรรม"
+
+description
+	1 heist_job_engineering_no_alert_multiplier
+	1
+		1|# "Performing Engineering during Lockdown doesn't take additional time"
+	lang "Korean"
+	1
+		1|# "폐쇄 중에 공학 사용 시 추가 시간이 소요되지 않음"
+	lang "German"
+	1
+		1|# "Der Einsatz von Ingenieurwesen während der Abriegelung erfordert keine zusätzliche Zeit"
+	lang "Portuguese"
+	1
+		1|# "Executar Engenharia durante o Confinamento não leva tempo adicional"
+	lang "Spanish"
+	1
+		1|# "Ejecutar trabajos de ingeniería después del cierre de puertas no consume tiempo adicional"
+	lang "French"
+	1
+		1|# "Utiliser l'Ingénierie pendant le Verrouillage ne prends pas plus de temps"
+	lang "Russian"
+	1
+		1|# "Применение Инженерного дела во время изоляции не требует дополнительного времени"
+	lang "Thai"
+	1
+		1|# "การใช้ทักษะ งานช่าง ขณะกำลังปิดกั้นสถานที่จะไม่ใช้เวลาเพิ่มเติม"
+	lang "Traditional Chinese"
+	1
+		1|# "在封鎖期間使用工程不花費額外時間"
+	lang "Simplified Chinese"
+	1
+		1|# "封锁期间施行工程学不产生额外时间"
+
+description
+	1 heist_job_engineering_speed_+%
+	2
+		1|# "{0}% increased Engineering speed"
+		#|-1 "{0}% reduced Engineering speed" negate 1
+	lang "Korean"
+	2
+		1|# "공학 속도 {0}% 증가"
+		#|-1 "공학 속도 {0}% 감소" negate 1
+	lang "German"
+	2
+		1|# "{0}% erhöhte Geschwindigkeit von Ingenieurwesen"
+		#|-1 "{0}% verringerte Geschwindigkeit von Ingenieurwesen" negate 1
+	lang "Portuguese"
+	2
+		1|# "Velocidade da Engenharia aumentada em {0}%"
+		#|-1 "Velocidade da Engenharia reduzida em {0}%" negate 1
+	lang "Spanish"
+	2
+		1|# "Velocidad de los trabajos de ingeniería aumentada un {0}%"
+		#|-1 "Velocidad de los trabajos de ingeniería reducida un {0}%" negate 1
+	lang "French"
+	2
+		1|# "{0}% d'Augmentation de la Vitesse de l'Ingénierie"
+		#|-1 "{0}% de Réduction de la Vitesse de l'Ingénierie" negate 1
+	lang "Russian"
+	2
+		1|# "{0}% повышение скорости использования Инженерного дела"
+		#|-1 "{0}% снижение скорости использования Инженерного дела" negate 1
+	lang "Traditional Chinese"
+	2
+		1|# "增加 {0}% 工程速度"
+		#|-1 "減少 {0}% 工程速度" negate 1
+	lang "Simplified Chinese"
+	2
+		1|# "工程学速度加快 {0}%"
+		#|-1 "工程学速度减慢 {0}%" negate 1
+	lang "Thai"
+	2
+		1|# "เพิ่มความเร็ว งานช่าง {0}%"
+		#|-1 "ลดความเร็ว งานช่าง {0}%" negate 1
+
+description
+	1 heist_job_level_+
+	1
+		1|# "+{0} to Level of all Jobs for Heists"
+	lang "Korean"
+	1
+		1|# "강탈의 모든 작업 레벨 +{0}"
+	lang "German"
+	1
+		1|# "+{0} zur Stufe aller Jobs für Raubüberfälle"
+	lang "Portuguese"
+	1
+		1|# "+{0} ao Nível de todas as Tarefas em Golpes"
+	lang "Spanish"
+	1
+		1|# "+{0} al nivel de todos los trabajos en los atracos y los golpes"
+	lang "Traditional Chinese"
+	1
+		1|# "為劫盜 +{0} 全部工作等級"
+	lang "Russian"
+	1
+		1|# "+{0} к уровню всех навыков в Кражах"
+	lang "French"
+	1
+		1|# "+{0} au niveau de toutes les Compétences lors des Casses"
+	lang "Simplified Chinese"
+	1
+		1|# "夺宝奇兵的所有任务等级 +{0}"
+	lang "Thai"
+	1
+		1|# "ระดับทักษะทั้งหมด +{0} สำหรับการโจรกรรม"
+
+description
+	1 heist_job_lockpicking_avoid_alarm_chance_%_on_open_chest
+	1
+		1|# "{0}% chance to not generate Alert Level on opening a Chest using Lockpicking"
+	lang "Korean"
+	1
+		1|# "자물쇠 따기로 상자를 열었을 때 {0}%의 확률로 경보 레벨이 상승하지 않음"
+	lang "German"
+	1
+		1|# "{0}% Chance, dass sich durch das Öffnen einer Truhe mittels Schlossknacken nicht die Alarmstufe erhöht"
+	lang "Portuguese"
+	1
+		1|# "{0}% de chance de não gerar Nível de Alerta ao abrir um Baú usando Arrombamento"
+	lang "Spanish"
+	1
+		1|# "{0}% de probabilidad de no generar nivel de alerta al abrir un cofre usando forzar cerraduras"
+	lang "French"
+	1
+		1|# "{0}% de chances de ne pas augmenter le Niveau d'alerte lorsque vous ouvrez un coffre en faisant appel au Crochetage"
+	lang "Russian"
+	1
+		1|# "{0}% шанс не поднять уровень тревоги при открытии сундука с помощью Взлома"
+	lang "Traditional Chinese"
+	1
+		1|# "使用開鎖開啟保險箱時有 {0}% 機率不會產生警戒等級"
+	lang "Simplified Chinese"
+	1
+		1|# "使用解密术开启宝箱有 {0}% 的几率不产生警报等级"
+	lang "Thai"
+	1
+		1|# "มีโอกาสไม่เพิ่ม ระดับการรู้ตัว {0}% เมื่อเปิดหีบด้วย สะเดาะกุญแจ"
+
+description
+	1 heist_job_lockpicking_level_+
+	1
+		1|# "+{0} to Lockpicking Level for Heists"
+	lang "Korean"
+	1
+		1|# "강탈의 자물쇠 따기 레벨 +{0}"
+	lang "German"
+	1
+		1|# "+{0} zur Stufe von Schlossknacken für Raubüberfälle"
+	lang "Portuguese"
+	1
+		1|# "+{0} ao Nível de Arrombamento em Golpes"
+	lang "Spanish"
+	1
+		1|# "+{0} al nivel de Forzar cerraduras en los atracos y los golpes"
+	lang "Traditional Chinese"
+	1
+		1|# "為劫盜 +{0} 開鎖等級"
+	lang "Russian"
+	1
+		1|# "+{0} к уровню Взлома в Кражах"
+	lang "French"
+	1
+		1|# "+{0} au niveau de Crochetage lors des Casses"
+	lang "Simplified Chinese"
+	1
+		1|# "夺宝奇兵的解密术等级 +{0}"
+	lang "Thai"
+	1
+		1|# "ระดับสะเดาะกุญแจ +{0} สำหรับการโจรกรรม"
+
+description
+	1 heist_job_lockpicking_no_alert_multiplier
+	1
+		1|# "Performing Lockpicking during Lockdown doesn't take additional time"
+	lang "Korean"
+	1
+		1|# "폐쇄 중에 자물쇠 따기 사용 시 추가 시간이 소요되지 않음"
+	lang "German"
+	1
+		1|# "Der Einsatz von Schlossknacken während der Abriegelung erfordert keine zusätzliche Zeit"
+	lang "Portuguese"
+	1
+		1|# "Executar Arrombamento durante o Confinamento não leva tempo adicional"
+	lang "Spanish"
+	1
+		1|# "Ejecutar trabajos de forzar cerraduras después del cierre de puertas no consume tiempo adicional"
+	lang "French"
+	1
+		1|# "Utiliser le Crochetage pendant le Verrouillage ne prends pas plus de temps"
+	lang "Russian"
+	1
+		1|# "Применение Взлома во время изоляции не требует дополнительного времени"
+	lang "Thai"
+	1
+		1|# "การใช้ทักษะ สะเดาะกุญแจ ขณะกำลังปิดกั้นสถานที่จะไม่ใช้เวลาเพิ่มเติม"
+	lang "Traditional Chinese"
+	1
+		1|# "在封鎖期間使用開鎖不花費額外時間"
+	lang "Simplified Chinese"
+	1
+		1|# "封锁期间施行解密术不产生额外时间"
+
+description
+	1 heist_job_lockpicking_speed_+%
+	2
+		1|# "{0}% increased Lockpicking speed"
+		#|-1 "{0}% reduced Lockpicking speed" negate 1
+	lang "Korean"
+	2
+		1|# "자물쇠 따기 속도 {0}% 증가"
+		#|-1 "자물쇠 따기 속도 {0}% 감소" negate 1
+	lang "German"
+	2
+		1|# "{0}% erhöhte Geschwindigkeit von Schlossknacken"
+		#|-1 "{0}% verringerte Geschwindigkeit von Schlossknacken" negate 1
+	lang "Portuguese"
+	2
+		1|# "Velocidade do Arrombamento aumentada em {0}%"
+		#|-1 "Velocidade do Arrombamento reduzida em {0}%" negate 1
+	lang "Spanish"
+	2
+		1|# "Velocidad de los trabajos de forzar cerraduras aumentada un {0}%"
+		#|-1 "Velocidad de los trabajos de forzar cerraduras reducida un {0}%" negate 1
+	lang "French"
+	2
+		1|# "{0}% d'Augmentation de la Vitesse du Crochetage"
+		#|-1 "{0}% de Réduction de la Vitesse du Crochetage" negate 1
+	lang "Russian"
+	2
+		1|# "{0}% повышение скорости использования Взлома"
+		#|-1 "{0}% снижение скорости использования Взлома" negate 1
+	lang "Traditional Chinese"
+	2
+		1|# "增加 {0}% 開鎖速度"
+		#|-1 "減少 {0}% 開鎖速度" negate 1
+	lang "Simplified Chinese"
+	2
+		1|# "解密术速度加快 {0}%"
+		#|-1 "解密术速度减慢 {0}%" negate 1
+	lang "Thai"
+	2
+		1|# "เพิ่มความเร็ว สะเดาะกุญแจ {0}%"
+		#|-1 "ลดความเร็ว สะเดาะกุญแจ {0}%" negate 1
+
+description
+	1 heist_job_perception_avoid_alarm_chance_%_on_open_chest
+	1
+		1|# "{0}% chance to not generate Alert Level on opening a Chest using Perception"
+	lang "Korean"
+	1
+		1|# "통찰력으로 상자를 열었을 때 {0}%의 확률로 경보 레벨이 상승하지 않음"
+	lang "German"
+	1
+		1|# "{0}% Chance, dass sich durch das Öffnen einer Truhe mittels Wahrnehmung nicht die Alarmstufe erhöht"
+	lang "Portuguese"
+	1
+		1|# "{0}% de chance de não gerar Nível de Alerta ao abrir um Baú usando Percepção"
+	lang "Spanish"
+	1
+		1|# "{0}% de probabilidad de no generar nivel de alerta al abrir un cofre usando percepción"
+	lang "French"
+	1
+		1|# "{0}% de chances de ne pas augmenter le Niveau d'alerte lorsque vous ouvrez un coffre en faisant appel à la Perception"
+	lang "Russian"
+	1
+		1|# "{0}% шанс не поднять уровень тревоги при открытии сундука с помощью Восприятия"
+	lang "Traditional Chinese"
+	1
+		1|# "使用洞察力開啟保險箱時有 {0}% 機率不產生警戒等級"
+	lang "Simplified Chinese"
+	1
+		1|# "使用洞察开启宝箱有 {0}% 的几率不产生警报等级"
+	lang "Thai"
+	1
+		1|# "มีโอกาสไม่เพิ่ม ระดับการรู้ตัว {0}% เมื่อเปิดหีบด้วย การรับรู้"
+
+description
+	1 heist_job_perception_level_+
+	1
+		1|# "+{0} to Perception Level for Heists"
+	lang "Korean"
+	1
+		1|# "강탈의 통찰력 레벨 +{0}"
+	lang "German"
+	1
+		1|# "+{0} zur Stufe von Wahrnehmung für Raubüberfälle"
+	lang "Portuguese"
+	1
+		1|# "+{0} ao Nível de Percepção em Golpes"
+	lang "Spanish"
+	1
+		1|# "+{0} al nivel de Percepción en los atracos y los golpes"
+	lang "Traditional Chinese"
+	1
+		1|# "為劫盜 +{0} 洞察力等級"
+	lang "Russian"
+	1
+		1|# "+{0} к уровню Восприятия в Кражах"
+	lang "French"
+	1
+		1|# "+{0} au niveau de Perception lors des Casses"
+	lang "Simplified Chinese"
+	1
+		1|# "夺宝奇兵的洞察等级 +{0}"
+	lang "Thai"
+	1
+		1|# "ระดับการรับรู้ +{0} สำหรับการโจรกรรม"
+
+description
+	1 heist_job_perception_speed_+%
+	2
+		1|# "{0}% increased Perception speed"
+		#|-1 "{0}% reduced Perception speed" negate 1
+	lang "Korean"
+	2
+		1|# "통찰력 속도 {0}% 증가"
+		#|-1 "통찰력 속도 {0}% 감소" negate 1
+	lang "German"
+	2
+		1|# "{0}% erhöhte Geschwindigkeit von Wahrnehmung"
+		#|-1 "{0}% verringerte Geschwindigkeit von Wahrnehmung" negate 1
+	lang "Spanish"
+	2
+		1|# "Velocidad de los trabajos de percepción aumentada un {0}%"
+		#|-1 "Velocidad de los trabajos de percepción reducida un {0}%" negate 1
+	lang "French"
+	2
+		1|# "{0}% d'Augmentation de la Vitesse de la Perception"
+		#|-1 "{0}% de Réduction de la Vitesse de la Perception" negate 1
+	lang "Russian"
+	2
+		1|# "{0}% повышение скорости использования Восприятия"
+		#|-1 "{0}% снижение скорости использования Восприятия" negate 1
+	lang "Portuguese"
+	2
+		1|# "Velocidade da Percepção aumentada em {0}%"
+		#|-1 "Velocidade da Percepção reduzida em {0}%" negate 1
+	lang "Traditional Chinese"
+	2
+		1|# "增加 {0}% 洞察力速度"
+		#|-1 "減少 {0}% 洞察力速度" negate 1
+	lang "Simplified Chinese"
+	2
+		1|# "洞察速度加快 {0}%"
+		#|-1 "洞察速度减慢 {0}%" negate 1
+	lang "Thai"
+	2
+		1|# "เพิ่มความเร็ว การรับรู้ {0}%"
+		#|-1 "ลดความเร็ว การรับรู้ {0}%" negate 1
+
+description
+	1 heist_job_trap_disarmament_avoid_alarm_chance_%_on_open_chest
+	1
+		1|# "{0}% chance to not generate Alert Level on opening a Chest using Trap Disarmament"
+	lang "Korean"
+	1
+		1|# "덫 해제로 상자를 열었을 때 {0}%의 확률로 경보 레벨이 상승하지 않음"
+	lang "German"
+	1
+		1|# "{0}% Chance, dass sich durch das Öffnen einer Truhe mittels Fallenentschärfung nicht die Alarmstufe erhöht"
+	lang "Portuguese"
+	1
+		1|# "{0}% de chance de não gerar Nível de Alerta ao abrir um Baú usando Desarmamento"
+	lang "Spanish"
+	1
+		1|# "{0}% de probabilidad de no generar nivel de alerta al abrir un cofre usando desarme de trampas"
+	lang "French"
+	1
+		1|# "{0}% de chances de ne pas augmenter le Niveau d'alerte lorsque vous ouvrez un coffre en faisant appel au Désamorçage de pièges"
+	lang "Russian"
+	1
+		1|# "{0}% шанс не поднять уровень тревоги при открытии сундука с помощью Разминирования"
+	lang "Traditional Chinese"
+	1
+		1|# "使用陷阱解除開啟保險箱時有 {0}% 機率不會產生警戒等級"
+	lang "Simplified Chinese"
+	1
+		1|# "使用解除陷阱开启宝箱有 {0}% 的几率不产生警报等级"
+	lang "Thai"
+	1
+		1|# "มีโอกาสไม่เพิ่ม ระดับการรู้ตัว {0}% เมื่อเปิดหีบด้วย ปลดกับดัก"
+
+description
+	1 heist_job_trap_disarmament_level_+
+	1
+		1|# "+{0} to Trap Disarmament Level for Heists"
+	lang "Korean"
+	1
+		1|# "강탈의 덫 해제 레벨 +{0}"
+	lang "German"
+	1
+		1|# "+{0} zur Stufe von Fallenentschärfung für Raubüberfälle"
+	lang "Portuguese"
+	1
+		1|# "+{0} ao Nível de Desarmamento de Armadilhas em Golpes"
+	lang "Spanish"
+	1
+		1|# "+{0} al nivel de Desarme de trampas para los atracos y los golpes"
+	lang "Traditional Chinese"
+	1
+		1|# "為劫盜 +{0} 陷阱解除等級"
+	lang "Russian"
+	1
+		1|# "+{0} к уровню Разминирования в Кражах"
+	lang "French"
+	1
+		1|# "+{0} au niveau de Désamorçage de pièges lors des Casses"
+	lang "Simplified Chinese"
+	1
+		1|# "夺宝奇兵的解除陷阱 +{0}"
+	lang "Thai"
+	1
+		1|# "ระดับปลดกับดัก +{0} สำหรับการโจรกรรม"
+
+description
+	1 heist_job_trap_disarmament_speed_+%
+	2
+		1|# "{0}% increased Trap Disarmament speed"
+		#|-1 "{0}% reduced Trap Disarmament speed" negate 1
+	lang "Korean"
+	2
+		1|# "덫 해제 속도 {0}% 증가"
+		#|-1 "덫 해제 속도 {0}% 감소" negate 1
+	lang "German"
+	2
+		1|# "{0}% erhöhte Geschwindigkeit von Fallenentschärfung"
+		#|-1 "{0}% verringerte Geschwindigkeit von Fallenentschärfung" negate 1
+	lang "Portuguese"
+	2
+		1|# "Velocidade de Desarmamento de Armadilhas aumentada em {0}%"
+		#|-1 "Velocidade de Desarmamento de Armadilhas reduzida em {0}%" negate 1
+	lang "Spanish"
+	2
+		1|# "Velocidad de los trabajos de desarme de trampas aumentada un {0}%"
+		#|-1 "Velocidad de los trabajos de desarme de trampas reducida un {0}%" negate 1
+	lang "French"
+	2
+		1|# "{0}% d'Augmentation de la Vitesse du Désamorçage de pièges"
+		#|-1 "{0}% de Réduction de la Vitesse du Désamorçage de pièges" negate 1
+	lang "Russian"
+	2
+		1|# "{0}% повышение скорости использования Разминирования"
+		#|-1 "{0}% снижение скорости использования Разминирования" negate 1
+	lang "Traditional Chinese"
+	2
+		1|# "增加 {0}% 解除陷阱速度"
+		#|-1 "減少 {0}% 解除陷阱速度" negate 1
+	lang "Simplified Chinese"
+	2
+		1|# "解除陷阱速度加快 {0}%"
+		#|-1 "解除陷阱速度减慢 {0}%" negate 1
+	lang "Thai"
+	2
+		1|# "เพิ่มความเร็ว ปลดกับดัก {0}%"
+		#|-1 "ลดความเร็ว ปลดกับดัก {0}%" negate 1
+
+description
+	1 heist_npc_uses_level_x_anger_aura
+	1
+		# "Grants Level {0} Anger Skill"
+	lang "Korean"
+	1
+		# "{0}레벨 분노 스킬 사용 가능"
+	lang "German"
+	1
+		# "Gewährt die Fertigkeit 'Wut' Stufe {0}"
+	lang "Portuguese"
+	1
+		# "Concede a Habilidade Cólera Nível {0}"
+	lang "Spanish"
+	1
+		# "Otorga la habilidad Rabia de nivel {0}"
+	lang "French"
+	1
+		# "Octroie l'Aptitude Colère (Niveau {0})"
+	lang "Russian"
+	1
+		# "Дарует умение Жгучая злоба {0} уровня"
+	lang "Thai"
+	1
+		# "ได้รับสกิล โทสะ เลเวล {0}"
+	lang "Traditional Chinese"
+	1
+		# "獲得等級 {0} 的憤怒技能"
+	lang "Simplified Chinese"
+	1
+		# "提供 {0} 级愤怒"
+
+description
+	1 heist_npc_uses_level_x_cold_resist_aura
+	1
+		# "Grants Level {0} Purity of Ice Skill"
+	lang "Korean"
+	1
+		# "{0}레벨 얼음의 순수함 스킬 사용 가능"
+	lang "German"
+	1
+		# "Gewährt die Fertigkeit 'Reinheit des Eises' Stufe {0}"
+	lang "Portuguese"
+	1
+		# "Concede a Habilidade Pureza do Gelo Nível {0}"
+	lang "Spanish"
+	1
+		# "Otorga la habilidad Pureza de hielo de nivel {0}"
+	lang "French"
+	1
+		# "Octroie l'Aptitude Pureté de la glace (Niveau {0})"
+	lang "Russian"
+	1
+		# "Дарует умение Спасение от холода {0} уровня"
+	lang "Thai"
+	1
+		# "ได้รับสกิล บริสุทธิ์น้ำแข็ง เลเวล {0}"
+	lang "Traditional Chinese"
+	1
+		# "獲得等級 {0} 的冰霜淨化技能"
+	lang "Simplified Chinese"
+	1
+		# "提供 {0} 级冰霜净化"
+
+description
+	1 heist_npc_uses_level_x_determination_aura
+	1
+		# "Grants Level {0} Determination Skill"
+	lang "Korean"
+	1
+		# "{0}레벨 결의 스킬 사용 가능"
+	lang "German"
+	1
+		# "Gewährt die Fertigkeit 'Entschlossenheit' Stufe {0}"
+	lang "Portuguese"
+	1
+		# "Concede a Habilidade Determinação Nível {0}"
+	lang "Spanish"
+	1
+		# "Otorga la habilidad Determinación de nivel {0}"
+	lang "French"
+	1
+		# "Octroie l'Aptitude Détermination (Niveau {0})"
+	lang "Russian"
+	1
+		# "Дарует умение Решимость {0} уровня"
+	lang "Thai"
+	1
+		# "ได้รับสกิล ปณิธาน เลเวล {0}"
+	lang "Traditional Chinese"
+	1
+		# "獲得等級 {0} 的堅定技能"
+	lang "Simplified Chinese"
+	1
+		# "提供 {0} 级坚定"
+
+description
+	1 heist_npc_uses_level_x_discipline_aura
+	1
+		# "Grants Level {0} Discipline Skill"
+	lang "Korean"
+	1
+		# "{0}레벨 단련 스킬 사용 가능"
+	lang "German"
+	1
+		# "Gewährt die Fertigkeit 'Disziplin' Stufe {0}"
+	lang "Portuguese"
+	1
+		# "Concede a Habilidade Disciplina Nível {0}"
+	lang "Spanish"
+	1
+		# "Otorga la habilidad Disciplina de nivel {0}"
+	lang "French"
+	1
+		# "Octroie l'Aptitude Discipline (Niveau {0})"
+	lang "Russian"
+	1
+		# "Дарует умение Дисциплина {0} уровня"
+	lang "Thai"
+	1
+		# "ได้รับสกิล วินัย เลเวล {0}"
+	lang "Traditional Chinese"
+	1
+		# "獲得等級 {0} 的紀律技能"
+	lang "Simplified Chinese"
+	1
+		# "提供 {0} 级纪律"
+
+description
+	1 heist_npc_uses_level_x_fire_resist_aura
+	1
+		# "Grants Level {0} Purity of Fire Skill"
+	lang "Korean"
+	1
+		# "{0}레벨 불의 순수함 스킬 사용 가능"
+	lang "German"
+	1
+		# "Gewährt die Fertigkeit 'Reinheit des Feuers' Stufe {0}"
+	lang "Portuguese"
+	1
+		# "Concede a Habilidade Pureza do Fogo Nível {0}"
+	lang "Spanish"
+	1
+		# "Otorga la habilidad Pureza de fuego de nivel {0}"
+	lang "French"
+	1
+		# "Octroie l'Aptitude Pureté du feu (Niveau {0})"
+	lang "Russian"
+	1
+		# "Дарует умение Спасение от огня {0} уровня"
+	lang "Thai"
+	1
+		# "ได้รับสกิล บริสุทธิ์ไฟ เลเวล {0}"
+	lang "Traditional Chinese"
+	1
+		# "獲得等級 {0} 的火焰淨化技能"
+	lang "Simplified Chinese"
+	1
+		# "提供 {0} 级火焰净化"
+
+description
+	1 heist_npc_uses_level_x_grace_aura
+	1
+		# "Grants Level {0} Grace Skill"
+	lang "Korean"
+	1
+		# "{0}레벨 은총 스킬 사용 가능"
+	lang "German"
+	1
+		# "Gewährt die Fertigkeit 'Anmut' Stufe {0}"
+	lang "Portuguese"
+	1
+		# "Concede a Habilidade Graça Nível {0}"
+	lang "Spanish"
+	1
+		# "Otorga la habilidad Gracia de nivel {0}"
+	lang "French"
+	1
+		# "Octroie l'Aptitude Grâce (Niveau {0})"
+	lang "Russian"
+	1
+		# "Дарует умение Грация {0} уровня"
+	lang "Thai"
+	1
+		# "ได้รับสกิล สง่างาม เลเวล {0}"
+	lang "Traditional Chinese"
+	1
+		# "獲得等級 {0} 的優雅技能"
+	lang "Simplified Chinese"
+	1
+		# "提供 {0} 级优雅"
+
+description
+	1 heist_npc_uses_level_x_haste_aura
+	1
+		# "Grants Level {0} Haste Skill"
+	lang "Korean"
+	1
+		# "{0}레벨 가속 스킬 사용 가능"
+	lang "French"
+	1
+		# "Octroie l'Aptitude Hâte (Niveau {0})"
+	lang "German"
+	1
+		# "Gewährt die Fertigkeit 'Hast' Stufe {0}"
+	lang "Spanish"
+	1
+		# "Otorga la habilidad Celeridad de nivel {0}"
+	lang "Russian"
+	1
+		# "Дарует умение Спешка {0} уровня"
+	lang "Thai"
+	1
+		# "ได้รับสกิล ว่องไว เลเวล {0}"
+	lang "Portuguese"
+	1
+		# "Concede a Habilidade Ímpeto Nível {0}"
+	lang "Traditional Chinese"
+	1
+		# "獲得等級 {0} 的迅捷技能"
+	lang "Simplified Chinese"
+	1
+		# "提供 {0} 级迅捷"
+
+description
+	1 heist_npc_uses_level_x_hatred_aura
+	1
+		# "Grants Level {0} Hatred Skill"
+	lang "Korean"
+	1
+		# "{0}레벨 증오 스킬 사용 가능"
+	lang "German"
+	1
+		# "Gewährt die Fertigkeit 'Hass' Stufe {0}"
+	lang "Portuguese"
+	1
+		# "Concede a Habilidade Ódio Nível {0}"
+	lang "Spanish"
+	1
+		# "Otorga la habilidad Odio de nivel {0}"
+	lang "French"
+	1
+		# "Octroie l'Aptitude Haine (Niveau {0})"
+	lang "Russian"
+	1
+		# "Дарует умение Холодная ненависть {0} уровня"
+	lang "Thai"
+	1
+		# "ได้รับสกิล เทวศ เลเวล {0}"
+	lang "Traditional Chinese"
+	1
+		# "獲得等級 {0} 的憎恨技能"
+	lang "Simplified Chinese"
+	1
+		# "提供 {0} 级憎恨"
+
+description
+	1 heist_npc_uses_level_x_lightning_resist_aura
+	1
+		# "Grants Level {0} Purity of Lightning Skill"
+	lang "Korean"
+	1
+		# "{0}레벨 번개의 순수함 스킬 사용 가능"
+	lang "German"
+	1
+		# "Gewährt die Fertigkeit 'Reinheit des Blitzes' Stufe {0}"
+	lang "Portuguese"
+	1
+		# "Concede a Habilidade Pureza do Raio Nível {0}"
+	lang "Spanish"
+	1
+		# "Otorga la habilidad Pureza de rayo de nivel {0}"
+	lang "French"
+	1
+		# "Octroie l'Aptitude Pureté de la foudre (Niveau {0})"
+	lang "Russian"
+	1
+		# "Дарует умение Спасение от молнии {0} уровня"
+	lang "Thai"
+	1
+		# "ได้รับสกิล บริสุทธิ์สายฟ้า เลเวล {0}"
+	lang "Traditional Chinese"
+	1
+		# "獲得等級 {0} 的閃電淨化技能"
+	lang "Simplified Chinese"
+	1
+		# "提供 {0} 级闪电净化"
+
+description
+	1 heist_npc_uses_level_x_malevolence_aura
+	1
+		# "Grants Level {0} Malevolence Skill"
+	lang "Korean"
+	1
+		# "{0}레벨 악의 스킬 사용 가능"
+	lang "German"
+	1
+		# "Gewährt die Fertigkeit 'Boshaftigkeit' Stufe {0}"
+	lang "Portuguese"
+	1
+		# "Concede a Habilidade Malevolência Nível {0}"
+	lang "Spanish"
+	1
+		# "Otorga la habilidad Malevolencia de nivel {0}"
+	lang "French"
+	1
+		# "Octroie l'Aptitude Malfaisance (Niveau {0})"
+	lang "Russian"
+	1
+		# "Дарует умение Злорадство {0} уровня"
+	lang "Thai"
+	1
+		# "ได้รับสกิล หิงสา เลเวล {0}"
+	lang "Traditional Chinese"
+	1
+		# "獲得等級 {0} 的惡意技能"
+	lang "Simplified Chinese"
+	1
+		# "提供 {0} 级怨毒光环"
+
+description
+	1 heist_npc_uses_level_x_pride_aura
+	1
+		# "Grants Level {0} Pride Skill"
+	lang "Korean"
+	1
+		# "{0}레벨 자부심 스킬 사용 가능"
+	lang "German"
+	1
+		# "Gewährt die Fertigkeit 'Stolz' Stufe {0}"
+	lang "Portuguese"
+	1
+		# "Concede a Habilidade Orgulho Nível {0}"
+	lang "Spanish"
+	1
+		# "Otorga la habilidad Orgullo de nivel {0}"
+	lang "French"
+	1
+		# "Octroie l'Aptitude Fierté (Niveau {0})"
+	lang "Russian"
+	1
+		# "Дарует умение Гордость {0} уровня"
+	lang "Thai"
+	1
+		# "ได้รับสกิล โอหัง เลเวล {0}"
+	lang "Traditional Chinese"
+	1
+		# "獲得等級 {0} 的驕傲技能"
+	lang "Simplified Chinese"
+	1
+		# "提供 {0} 级尊严"
+
+description
+	1 heist_npc_uses_level_x_wrath_aura
+	1
+		# "Grants Level {0} Wrath Skill"
+	lang "Korean"
+	1
+		# "{0}레벨 진노 스킬 사용 가능"
+	lang "German"
+	1
+		# "Gewährt die Fertigkeit 'Zorn' Stufe {0}"
+	lang "Portuguese"
+	1
+		# "Concede a Habilidade Ira Nível {0}"
+	lang "Spanish"
+	1
+		# "Otorga la habilidad Cólera de nivel {0}"
+	lang "French"
+	1
+		# "Octroie l'Aptitude Fureur (Niveau {0})"
+	lang "Russian"
+	1
+		# "Дарует умение Грозный гнев {0} уровня"
+	lang "Thai"
+	1
+		# "ได้รับสกิล พิโรธ เลเวล {0}"
+	lang "Traditional Chinese"
+	1
+		# "獲得等級 {0} 的雷霆技能"
+	lang "Simplified Chinese"
+	1
+		# "提供 {0} 级雷霆"
+
+description
+	1 heist_npc_uses_level_x_zealotry_aura
+	1
+		# "Grants Level {0} Zealotry Skill"
+	lang "Korean"
+	1
+		# "{0}레벨 열광 스킬 사용 가능"
+	lang "German"
+	1
+		# "Gewährt die Fertigkeit 'Glaubenseifer' Stufe {0}"
+	lang "Portuguese"
+	1
+		# "Concede a Habilidade Fanatismo Nível {0}"
+	lang "Spanish"
+	1
+		# "Otorga la habilidad Exaltación de nivel {0}"
+	lang "French"
+	1
+		# "Octroie l'Aptitude Fanatisme (Niveau {0})"
+	lang "Russian"
+	1
+		# "Дарует умение Фанатизм {0} уровня"
+	lang "Thai"
+	1
+		# "ได้รับสกิล คลั่งศาสนา เลเวล {0}"
+	lang "Traditional Chinese"
+	1
+		# "獲得等級 {0} 的狂熱技能"
+	lang "Simplified Chinese"
+	1
+		# "提供 {0} 级奋锐光环"
+
+description
+	1 local_item_sell_price_doubled
+	1
+		# "Item sells for much more to vendors"
+	lang "German"
+	1
+		# "Gegenstand erzielt beim Händler einen viel höheren Gegenwert"
+	lang "Russian"
+	1
+		# "Торговцы покупают предмет гораздо дороже"
+	lang "Spanish"
+	1
+		# "El objeto se vende mucho más caro a los vendedores"
+	lang "Traditional Chinese"
+	1
+		# "物品販售給商人更有價值"
+	lang "Thai"
+	1
+		# "ไอเทมขายให้ร้านค้าได้ค่าตอบแทนมากขึ้นเยอะ"
+	lang "French"
+	1
+		# "L'Objet se vend pour beaucoup plus cher"
+	lang "Simplified Chinese"
+	1
+		# "物品卖的钱更多"
+	lang "Portuguese"
+	1
+		# "Item é vendido por muito mais para os vendedores"
+	lang "Korean"
+	1
+		# "상인에게 더 비싸게 아이템 판매"
+
+description
+	1 movement_speed_+%_while_not_escaping_heist
+	2
+		1|# "{0}% increased Movement Speed while area is not in Lockdown\nPlayers have {0}% increased Movement Speed while area is not in Lockdown"
+		#|-1 "{0}% reduced Movement Speed while area is not in Lockdown\nPlayers have {0}% reduced Movement Speed while area is not in Lockdown" negate 1
+	lang "Korean"
+	2
+		1|# "지역이 폐쇄 중이 아닐 때 이동 속도 {0}% 증가\n지역이 폐쇄 중이 아닐 때 플레이어의 이동 속도 {0}% 증가"
+		#|-1 "지역이 폐쇄 중이 아닐 때 이동 속도 {0}% 감소\n지역이 폐쇄 중이 아닐 때 플레이어의 이동 속도 {0}% 감소" negate 1
+	lang "German"
+	2
+		1|# "{0}% erhöhte Bewegungsgeschwindigkeit, während das Gebiet nicht abgeriegelt ist\nSpieler haben {0}% erhöhte Bewegungsgeschwindigkeit, während das Gebiet nicht abgeriegelt ist"
+		#|-1 "{0}% verringerte Bewegungsgeschwindigkeit, während das Gebiet nicht abgeriegelt ist\nSpieler haben {0}% verringerte Bewegungsgeschwindigkeit, während das Gebiet nicht abgeriegelt ist" negate 1
+	lang "Portuguese"
+	2
+		1|# "Velocidade de Movimento enquanto a área não estiver em Confinamento aumentada em {0}%\Jogadores têm Velocidade de Movimento aumentada em {0}% enquanto a área não estiver em Confinamento"
+		#|-1 "Velocidade de Movimento enquanto a área não estiver em Confinamento reduzida em {0}%\Jogadores têm Velocidade de Movimento reduzida em {0}% enquanto a área não estiver em Confinamento" negate 1
+	lang "Spanish"
+	2
+		1|# "Velocidad de movimiento aumentada un {0}% si aún no se activó el cierre de puertas\nLos jugadores tienen velocidad de movimiento aumentada un {0}% si aún no se activó el cierre de puertas"
+		#|-1 "Velocidad de movimiento reducido un {0}% si aún no se activó el cierre de puertas\nLos jugadores tienen velocidad de movimiento reducida un {0}% si aún no se activó el cierre de puertas" negate 1
+	lang "French"
+	2
+		1|# "{0}% d'Augmentation de la Vitesse de déplacement tant que la Zone n'est pas Verrouillée\nLes joueurs ont {0}% d'Augmentation de la Vitesse de déplacement tant que la Zone n'est pas Verrouillée"
+		#|-1 "{0}% de Réduction de la Vitesse de déplacement tant que la Zone n'est pas Verrouillée\nLes joueurs ont {0}% de Réduction de la Vitesse de déplacement tant que la Zone n'est pas Verrouillée" negate 1
+	lang "Russian"
+	2
+		1|# "{0}% повышение скорости передвижения пока область не изолирована\nИгроки имеют {0}% повышение скорости передвижения пока область не изолирована"
+		#|-1 "{0}% снижение скорости передвижения пока область не изолирована\nИгроки имеют {0}% снижение скорости передвижения пока область не изолирована" negate 1
+	lang "Traditional Chinese"
+	2
+		1|# "區域沒有被封鎖時，增加 {0}% 移動速度\n玩家在區域沒有被封鎖時，增加 {0}% 移動速度"
+		#|-1 "區域沒有被封鎖時，減少 {0}% 移動速度\n玩家在區域沒有被封鎖時，減少 {0}% 移動速度" negate 1
+	lang "Simplified Chinese"
+	2
+		1|# "移动速度在区域未封锁时加快 {0}%\n玩家移动速度在区域未封锁时加快 {0}%"
+		#|-1 "移动速度在区域未封锁时减慢 {0}%\n玩家移动速度在区域未封锁时减慢 {0}%" negate 1
+	lang "Thai"
+	2
+		1|# "เพิ่มความเร็วในการเคลื่อนที่ {0}% ขณะที่ยังไม่เกิดการปิดกั้นสถานที่\nผู้เล่น มีความเร็วในการเคลื่อนที่ เพิ่มขึ้น {0}% ขณะที่ยังไม่เกิดการปิดกั้นสถานที่"
+		#|-1 "ลดความเร็วในการเคลื่อนที่ {0}% ขณะที่ยังไม่เกิดการปิดกั้นสถานที่\nผู้เล่น มีความเร็วในการเคลื่อนที่ ลดลง {0}% ขณะที่ยังไม่เกิดการปิดกั้นสถานที่" negate 1
+

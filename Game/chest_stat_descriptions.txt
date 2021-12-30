@@ -1,0 +1,2164 @@
+﻿﻿include "Metadata/StatDescriptions/stat_descriptions.txt"
+		
+no_description chest_hidden_item_quantity_+%		
+no_description chest_hidden_item_rarity_+%		
+		
+
+description
+	1 chest_item_quantity_+%
+	2
+		1|# "{0}% increased Quantity of Contained Items"
+		#|-1 "{0}% reduced Quantity of Contained Items" negate 1
+	lang "Portuguese"
+	2
+		1|# "Quantidade dos Itens Contidos aumentada em {0}%"
+		#|-1 "Quantidade dos Itens Contidos reduzida em {0}%" negate 1
+	lang "Traditional Chinese"
+	2
+		1|# "增加 {0}% 內含物品數量"
+		#|-1 "減少 {0}% 內含物品數量" negate 1
+	lang "Simplified Chinese"
+	2
+		1|# "内含物品的数量提高 {0}%"
+		#|-1 "内含物品的数量降低 {0}%" negate 1
+	lang "Thai"
+	2
+		1|# "เพิ่มจำนวนของ ไอเทมภายใน {0}%"
+		#|-1 "ลดจำนวนของ ไอเทมภายใน {0}%" negate 1
+	lang "Russian"
+	2
+		1|# "{0}% увеличение количества предметов внутри"
+		#|-1 "{0}% уменьшение количества предметов внутри" negate 1
+	lang "French"
+	2
+		1|# "{0}% d'Augmentation de la Quantité des Objets contenus"
+		#|-1 "{0}% de Réduction de la Quantité des Objets contenus" negate 1
+	lang "German"
+	2
+		1|# "{0}% erhöhte Menge enthaltener Gegenstände"
+		#|-1 "{0}% verringerte Menge enthaltener Gegenstände" negate 1
+	lang "Spanish"
+	2
+		1|# "Cantidad de Objetos Contenidos aumentada un {0}%"
+		#|-1 "Cantidad de Objetos Contenidos reducida un {0}%" negate 1
+	lang "Korean"
+	2
+		1|# "들어있는 아이템 수량 {0}% 증가"
+		#|-1 "들어있는 아이템 수량 {0}% 감소" negate 1
+
+description
+	1 chest_item_rarity_+%
+	2
+		1|# "{0}% increased Rarity of Contained Items"
+		#|-1 "{0}% reduced Rarity of Contained Items" negate 1
+	lang "Portuguese"
+	2
+		1|# "Raridade dos Itens Contidos aumentada em {0}%"
+		#|-1 "Raridade dos Itens Contidos reduzida em {0}%" negate 1
+	lang "Traditional Chinese"
+	2
+		1|# "增加 {0}% 其中包含物品的稀有度"
+		#|-1 "減少 {0}% 其中包含物品的稀有度" negate 1
+	lang "Simplified Chinese"
+	2
+		1|# "内含物品的稀有度提高 {0}%"
+		#|-1 "内含物品的稀有度降低 {0}%" negate 1
+	lang "Thai"
+	2
+		1|# "เพิ่มระดับความหายากของ ไอเทมภายใน {0}%"
+		#|-1 "ลดระดับความหายากของ ไอเทมภายใน {0}%" negate 1
+	lang "Russian"
+	2
+		1|# "{0}% повышение редкости содержащихся предметов"
+		#|-1 "{0}% снижение редкости содержащихся предметов" negate 1
+	lang "French"
+	2
+		1|# "{0}% d'Augmentation de la Rareté des Objets contenus"
+		#|-1 "{0}% de Réduction de la Rareté des Objets contenus" negate 1
+	lang "German"
+	2
+		1|# "{0}% erhöhte Seltenheit enthaltener Gegenstände"
+		#|-1 "{0}% verringerte Seltenheit enthaltener Gegenstände" negate 1
+	lang "Spanish"
+	2
+		1|# "Rareza de Objetos Contenidos aumentada un {0}%"
+		#|-1 "Rareza de Objetos Contenidos reducida un {0}%" negate 1
+	lang "Korean"
+	2
+		1|# "들어있는 아이템 희귀도 {0}% 증가"
+		#|-1 "들어있는 아이템 희귀도 {0}% 감소" negate 1
+
+description
+	1 chest_item_rarity_+%_final_from_mod
+	2
+		1|# "{0}% more Rarity of Contained Items"
+		#|-1 "{0}% less Rarity of Contained Items" negate 1
+	lang "German"
+	2
+		1|# "{0}% mehr Seltenheit enthaltener Gegenstände"
+		#|-1 "{0}% weniger Seltenheit enthaltener Gegenstände" negate 1
+	lang "Thai"
+	2
+		1|# "เพิ่มระดับความหายากของ ไอเทมภายใน อีก {0}%"
+		#|-1 "ลดระดับความหายากของ ไอเทมภายใน อีก {0}%" negate 1
+	lang "Korean"
+	2
+		1|# "들어있는 아이템 희귀도 {0}% 증폭"
+		#|-1 "들어있는 아이템 희귀도 {0}% 감폭" negate 1
+	lang "Russian"
+	2
+		1|# "На {0}% больше редкости содержащихся предметов"
+		#|-1 "На {0}% меньше редкости содержащихся предметов" negate 1
+	lang "Simplified Chinese"
+	2
+		1|# "内含物品的稀有度总增 {0}%"
+		#|-1 "内含物品的稀有度总降 {0}%" negate 1
+	lang "Portuguese"
+	2
+		1|# "{0}% mais Raridade dos Itens Contidos"
+		#|-1 "{0}% menos Raridade dos Itens Contidos" negate 1
+	lang "French"
+	2
+		1|# "{0}% Davantage de Rareté des Objets à l'intérieur"
+		#|-1 "{0}% de Perte de Rareté des Objets à l'intérieur" negate 1
+	lang "Spanish"
+	2
+		1|# "Los objetos contenidos tienen un {0}% más de rareza"
+		#|-1 "Los objetos contenidos tienen un {0}% menos de rareza" negate 1
+	lang "Traditional Chinese"
+	2
+		1|# "{0}% 更多內含物的稀有度"
+		#|-1 "{0}% 更少內含物的稀有度" negate 1
+
+description
+	1 chest_drop_additional_unqiue_items
+	2
+		1 "Contains an additional Unique Item"
+		# "Contains {0} additional Unique Items"
+	lang "Portuguese"
+	2
+		1 "Contém um Item Único adicional"
+		# "Contém {0} Itens Únicos adicionais"
+	lang "Traditional Chinese"
+	1
+		# "內含 {0} 個額外傳奇物品"
+	lang "Simplified Chinese"
+	2
+		1 "内含 1 个额外的传奇物品"
+		# "内含 {0} 个额外的传奇物品"
+	lang "Thai"
+	2
+		1 "มี ไอเทมยูนิค เพิ่มเติม 1 ชิ้น"
+		# "มี ไอเทมยูนิค เพิ่มเติม {0} ชิ้น"
+	lang "Russian"
+	2
+		1 "Содержит дополнительный уникальный предмет"
+		# "Содержит дополнительных уникальных предметов: {0}"
+	lang "French"
+	2
+		1 "Contient un Objet Unique supplémentaire"
+		# "Contient {0} Objets Uniques supplémentaires"
+	lang "German"
+	2
+		1 "Enthält einen zusätzlichen einzigartigen Gegenstand"
+		# "Enthält {0} zusätzliche einzigartige Gegenstände"
+	lang "Spanish"
+	2
+		1 "Contiene un Objeto Único adicional"
+		# "Contiene {0} Objetos Únicos adicionales"
+	lang "Korean"
+	2
+		1 "고유 아이템 1개 추가 등장"
+		# "고유 아이템 {0}개 추가 등장"
+
+description
+	1 chest_display_summons_skeletons
+	1
+		# "Summons Skeletons"
+	lang "Portuguese"
+	1
+		# "Convoca Esqueletos"
+	lang "Traditional Chinese"
+	1
+		# "召喚骷髏"
+	lang "Simplified Chinese"
+	1
+		# "召唤魔侍"
+	lang "Thai"
+	1
+		# "เรียกโครงกระดูก"
+	lang "Russian"
+	1
+		# "Призывает скелетов"
+	lang "French"
+	1
+		# "Invoque des Squelettes"
+	lang "German"
+	1
+		# "Beschwört Skelette"
+	lang "Spanish"
+	1
+		# "Invoca Esqueletos"
+	lang "Korean"
+	1
+		# "해골 소환"
+
+description
+	1 chest_display_ice_nova
+	1
+		# "Casts Ice Nova"
+	lang "Portuguese"
+	1
+		# "Conjura Explosão de Gelo"
+	lang "Traditional Chinese"
+	1
+		# "施放冰霜新星"
+	lang "Simplified Chinese"
+	1
+		# "施放冰霜新星"
+	lang "Thai"
+	1
+		# "ร่าย Ice Nova"
+	lang "Russian"
+	1
+		# "Использует кольцо льда"
+	lang "French"
+	1
+		# "Lance Nova de glace"
+	lang "German"
+	1
+		# "Zaubert Eisnova"
+	lang "Spanish"
+	1
+		# "Lanza Nova de Hielo"
+	lang "Korean"
+	1
+		# "얼음 폭발 시전"
+
+description
+	1 chest_display_freeze
+	1
+		# "Freezes you when activated"
+	lang "Portuguese"
+	1
+		# "Congela você quando ativado"
+	lang "Traditional Chinese"
+	1
+		# "開啟時對你造成冰凍"
+	lang "Simplified Chinese"
+	1
+		# "开启后将你冰冻"
+	lang "Thai"
+	1
+		# "สร้างสถานะ แช่แข็ง ต่อตัวคุณเมื่อถูกใช้งาน"
+	lang "Russian"
+	1
+		# "Замораживает при активации"
+	lang "French"
+	1
+		# "Vous gèle à l'activation"
+	lang "German"
+	1
+		# "Friert Euch bei Öffnung ein"
+	lang "Spanish"
+	1
+		# "Te congela cuando se activa"
+	lang "Korean"
+	1
+		# "활성화 시 동결됨"
+
+description
+	3 number_of_packs_to_summon number_of_monsters_to_summon summoned_monster_rarity
+	12
+		0 1 1 "Guarded by a Magic Monster"
+		0 2|# 1 "Guarded by {1} Magic Monsters"
+		0 1 2 "Guarded by a Rare Monster"
+		0 2|# 2 "Guarded by {1} Rare Monsters"
+		0 1 # "Guarded by a Monster"
+		0 2|# # "Guarded by {1} Monsters"
+		1 # 1 "Guarded by a pack of Magic Monsters"
+		2|# # 1 "Guarded by {0} packs of Magic Monsters"
+		1 # 2 "Guarded by a pack of Rare Monsters"
+		2|# # 2 "Guarded by {0} packs of Rare Monsters"
+		1 # # "Guarded by a pack of Monsters"
+		2|# # # "Guarded by {0} packs of Monsters"
+	lang "Portuguese"
+	12
+		0 1 1 "Protegido por um Monstro Mágico"
+		0 2|# 1 "Protegido por {1} Monstros Mágicos"
+		0 1 2 "Protegido por um Monstro Raro"
+		0 2|# 2 "Protegido por {1} Monstros Raros"
+		0 1 # "Protegido por um Monstro"
+		0 2|# # "Protegido por {1} Monstros"
+		1 # 1 "Protegido por um grupo de Monstros Mágicos"
+		2|# # 1 "Protegido por {0} grupos de Monstros Mágicos"
+		1 # 2 "Protegido por um grupo de Monstros Raros"
+		2|# # 2 "Protegido por {0} grupos de Monstros Raros"
+		1 # # "Protegido por um grupo de Monstros"
+		2|# # # "Protegido por {0} grupos de Monstros"
+	lang "Traditional Chinese"
+	6
+		0 1|# 1 "被 {1} 個魔法怪物守衛著"
+		0 1|# 2 "被 {1} 個稀有怪物守衛著"
+		0 1|# # "被 {1} 個怪物守衛著"
+		1|# # 1 "被 {0} 群魔法怪物守衛著"
+		1|# # 2 "被 {0} 群稀有怪物守衛著"
+		1|# # # "被 {0} 群怪物守衛著"
+	lang "Simplified Chinese"
+	12
+		0 1 1 "被 1 个魔法怪物守护"
+		0 2|# 1 "被 {1} 个魔法怪物守护"
+		0 1 2 "被 1 个稀有怪物守护"
+		0 2|# 2 "被 {1} 个稀有怪物守护"
+		0 1 # "被 1 个怪物守护"
+		0 2|# # "被 {1} 个怪物守护"
+		1 # 1 "被 1 群魔法怪物守护"
+		2|# # 1 "被 {0} 群魔法怪物守护"
+		1 # 2 "被 1 群稀有怪物守护"
+		2|# # 2 "被 {0} 群稀有怪物守护"
+		1 # # "被 1 群怪物守护"
+		2|# # # "被 {0} 群怪物守护"
+	lang "Thai"
+	12
+		0 1 1 "พิทักษ์โดย มอนสเตอร์เมจิก 1 ตัว"
+		0 2|# 1 "พิทักษ์โดย มอนสเตอร์เมจิก {1} ตัว"
+		0 1 2 "พิทักษ์โดย มอนสเตอร์แรร์ 1 ตัว"
+		0 2|# 2 "พิทักษ์โดย มอนสเตอร์แรร์ {1} ตัว"
+		0 1 # "พิทักษ์โดย มอนสเตอร์ 1 ตัว"
+		0 2|# # "พิทักษ์โดย มอนสเตอร์ {1} ตัว"
+		1 # 1 "พิทักษ์โดย มอนสเตอร์เมจิก 1 กอง"
+		2|# # 1 "พิทักษ์โดย มอนสเตอร์เมจิก {0} กอง"
+		1 # 2 "พิทักษ์โดย มอนสเตอร์แรร์ 1 กอง"
+		2|# # 2 "พิทักษ์โดย มอนสเตอร์แรร์ {0} กอง"
+		1 # # "พิทักษ์โดย มอนสเตอร์ 1 กอง"
+		2|# # # "พิทักษ์โดย มอนสเตอร์ {0} กอง"
+	lang "Russian"
+	12
+		0 1 1 "Ларец охраняет магический монстр"
+		0 2|# 1 "Магических монстров охраняет ларец: {1}"
+		0 1 2 "Ларец охраняет редкий монстр"
+		0 2|# 2 "Редких монстров охраняет ларец {1}"
+		0 1 # "Ларец охраняет монстр"
+		0 2|# # "Монстров охраняет ларец: {1}"
+		1 # 1 "Ларец охраняет группа магических монстров"
+		2|# # 1 "Групп магических монстров охраняет ларец: {0}"
+		1 # 2 "Ларец охраняет группа редких монстров"
+		2|# # 2 "Групп редких монстров охраняет ларец: {0}"
+		1 # # "Ларец охраняет группа монстров"
+		2|# # # "Групп монстров охраняет ларец: {0}"
+	lang "French"
+	12
+		0 1 1 "Gardé par un Monstre Magique"
+		0 2|# 1 "Gardé par {1} Monstres Magiques"
+		0 1 2 "Gardé par un Monstre Rare"
+		0 2|# 2 "Gardé par {1} Monstres Rares"
+		0 1 # "Gardé par un Monstre"
+		0 2|# # "Gardé par {1} Monstres"
+		1 # 1 "Gardé par un Groupe de Monstres Magiques"
+		2|# # 1 "Gardé par {0} Groupes de Monstres Magiques"
+		1 # 2 "Gardé par un Groupe de Monstres Rares"
+		2|# # 2 "Gardé par {0} Groupes de Monstres Rares"
+		1 # # "Gardé par un Groupe de Monstres"
+		2|# # # "Gardé par {0} Groupes de Monstres"
+	lang "German"
+	12
+		0 1 1 "Bewacht von einem magischen Monster"
+		0 2|# 1 "Bewacht von {1} magischen Monstern"
+		0 1 2 "Bewacht von einem seltenen Monster"
+		0 2|# 2 "Bewacht von {1} seltenen Monstern"
+		0 1 # "Bewacht von einem Monster"
+		0 2|# # "Bewacht von {1} Monstern"
+		1 # 1 "Bewacht von einer Gruppe magischer Monster"
+		2|# # 1 "Bewacht von {0} Gruppen magischer Monster"
+		1 # 2 "Bewacht von einer Gruppe seltener Monster"
+		2|# # 2 "Bewacht von {0} Gruppen seltener Monster"
+		1 # # "Bewacht von einer Gruppe Monstern"
+		2|# # # "Bewacht von {0} Gruppen Monstern"
+	lang "Spanish"
+	12
+		0 1 1 "Protegido por un Monstruo Mágico"
+		0 2|# 1 "Protegido por {1} Monstruos Mágicos"
+		0 1 2 "Protegido por un Monstruo Raro"
+		0 2|# 2 "Protegido por {1} Monstruos Raros"
+		0 1 # "Protegido por un Monstruo"
+		0 2|# # "Protegido por {1} Monstruos"
+		1 # 1 "Protegido por un grupo de Monstruos Mágicos"
+		2|# # 1 "Protegido por {0} grupos de Monstruos Mágicos"
+		1 # 2 "Protegido por un grupo de Monstruos Raros"
+		2|# # 2 "Protegido por {0} grupos de Monstruos Raros"
+		1 # # "Protegido por un grupo de Monstruos"
+		2|# # # "Protegido por {0} grupos de Monstruos"
+	lang "Korean"
+	12
+		0 1 1 "마법 몬스터 1마리가 방어"
+		0 2|# 1 "마법 몬스터 {1}마리가 방어"
+		0 1 2 "희귀 몬스터 1마리가 방어"
+		0 2|# 2 "희귀 몬스터 {1}마리가 방어"
+		0 1 # "몬스터 1마리가 방어"
+		0 2|# # "몬스터 {1}마리가 방어"
+		1 # 1 "마법 몬스터 무리 1개가 방어"
+		2|# # 1 "마법 몬스터 무리 {0}개가 방어"
+		1 # 2 "희귀 몬스터 무리 1개가 방어"
+		2|# # 2 "희귀 몬스터 무리 {0}개가 방어"
+		1 # # "몬스터 무리 1개가 방어"
+		2|# # # "몬스터 무리 {0}개가 방어"
+
+description
+	1 chest_gems_drop_with_experience
+	1
+		# "Contained Gems have Experience"
+	lang "Portuguese"
+	1
+		# "Gemas contidas possuem Experiência"
+	lang "Traditional Chinese"
+	1
+		# "內含的寶石有經驗值"
+	lang "Simplified Chinese"
+	1
+		# "内含高等级的技能宝石"
+	lang "Thai"
+	1
+		# "หินสกิลภายใน มีค่าประสบการณ์"
+	lang "Russian"
+	1
+		# "Содержит камни с опытом"
+	lang "French"
+	1
+		# "Les Gemmes contenues ont de l'Expérience"
+	lang "German"
+	1
+		# "Enthaltene Gemmen haben Erfahrung"
+	lang "Spanish"
+	1
+		# "Las Gemas contenidas poseen Experiencia"
+	lang "Korean"
+	1
+		# "경험치를 가진 젬 포함"
+
+description
+	1 chest_drops_additional_utility_flasks
+	1
+		# "Contains additional Utility Flasks"
+	lang "Portuguese"
+	1
+		# "Contém Frascos de Utilidade adicionais"
+	lang "Traditional Chinese"
+	1
+		# "內含額外輔助藥劑"
+	lang "Simplified Chinese"
+	1
+		# "内含额外的非回复类药剂"
+	lang "Thai"
+	1
+		# "มี ขวดยาช่วยเหลือ เพิ่มเติม"
+	lang "Russian"
+	1
+		# "Содержит дополнительные особые флаконы"
+	lang "French"
+	1
+		# "Contient des Flacons utilitaires supplémentaires"
+	lang "German"
+	1
+		# "Enthält zusätzliche Hilfsfläschchen"
+	lang "Spanish"
+	1
+		# "Contiene Frascos de Utilidad adicionales"
+	lang "Korean"
+	1
+		# "특수 플라스크 추가"
+
+description
+	1 chest_drop_additional_rare_maraketh_weapons
+	2
+		1 "Contains an additional Rare Maraketh Weapon"
+		# "Contains {0} additional Rare Maraketh Weapons"
+	lang "Portuguese"
+	2
+		1 "Contêm uma Arma Maraketh Rara adicional"
+		# "Contêm {0} Armas Maraketh Raras adicionais"
+	lang "Russian"
+	2
+		1 "Содержит дополнительное оружие маракетов"
+		# "Содержит дополнительного оружия маракетов: {0}"
+	lang "Traditional Chinese"
+	2
+		1 "內含 1 個額外稀有馬拉克斯武器"
+		# "內含 {0} 個額外稀有馬拉克斯武器"
+	lang "Simplified Chinese"
+	2
+		1 "内含 1 个额外的稀有马拉克斯武器"
+		# "内含 {0} 个额外的稀有马拉克斯武器"
+	lang "Thai"
+	2
+		1 "มี อาวุธแรร์มาราเค็ท เพิ่มเติม 1 ชิ้น"
+		# "มี อาวุธแรร์มาราเค็ท แรร์ เพิ่มเติม {0} ชิ้น"
+	lang "German"
+	2
+		1 "Enthält eine zusätzliche seltene Maraketh-Waffe"
+		# "Enthält {0} zusätzliche seltene Maraketh-Waffen"
+	lang "French"
+	2
+		1 "Contient une arme Maraketh Rare supplémentaire"
+		# "Contient {0} armes Maraketh Rares supplémentaires"
+	lang "Spanish"
+	2
+		1 "Contiene un Arma Maraketh Rara adicional"
+		# "Contiene {0} Armas Maraketh Raras adicionales"
+	lang "Korean"
+	2
+		1 "희귀 마라케스 무기 1개 추가"
+		# "희귀 마라케스 무기 {0}개 추가"
+
+description
+	1 chest_items_drop_identified
+	1
+		# "Contains Identified Items"
+	lang "Portuguese"
+	1
+		# "Contém Itens Identificados"
+	lang "Traditional Chinese"
+	1
+		# "內含已鑑定物品"
+	lang "Simplified Chinese"
+	1
+		# "内含已鉴定物品"
+	lang "Thai"
+	1
+		# "มีไอเทมที่ ถูกตรวจสอบ"
+	lang "Russian"
+	1
+		# "Содержит опознанные предметы"
+	lang "French"
+	1
+		# "Contient des Objets identifiés"
+	lang "German"
+	1
+		# "Enthält identifizierte Gegenstände"
+	lang "Spanish"
+	1
+		# "Contiene Objetos Identificados"
+	lang "Korean"
+	1
+		# "식별된 아이템 포함"
+
+description
+	1 chest_drop_additional_normal_items_up_to
+	2
+		1 "Contains {0} additional Item"
+		# "Contains {0} additional Items"
+	lang "Portuguese"
+	2
+		1 "Contém {0} Item adicional"
+		# "Contém {0} Itens adicionais"
+	lang "Traditional Chinese"
+	1
+		# "內含 {0} 個額外物品"
+	lang "Simplified Chinese"
+	2
+		1 "内含 {0} 个额外物品"
+		# "内含 {0} 个额外物品"
+	lang "Thai"
+	2
+		1 "มี ไอเทม เพิ่มเติม {0} ชิ้น"
+		# "มี ไอเทม เพิ่มเติม {0} ชิ้น"
+	lang "Russian"
+	2
+		1 "Содержит дополнительных предметов: {0}"
+		# "Содержит дополнительных предметов: {0}"
+	lang "French"
+	2
+		1 "Contient {0} Objet supplémentaire"
+		# "Contient {0} Objets supplémentaires"
+	lang "German"
+	2
+		1 "Enthält {0} zusätzlichen Gegenstand"
+		# "Enthält {0} zusätzliche Gegenstände"
+	lang "Spanish"
+	2
+		1 "Contiene {0} Objeto adicional"
+		# "Contiene {0} Objetos adicionales"
+	lang "Korean"
+	2
+		1 "아이템 {0}개 추가"
+		# "아이템 {0}개 추가"
+
+description
+	1 chest_drop_additional_magic_items_up_to
+	2
+		1 "Contains {0} additional Magic Item"
+		# "Contains {0} additional Magic Items"
+	lang "Portuguese"
+	2
+		1 "Contém {0} Item Mágico adicional"
+		# "Contém {0} Itens Mágicos adicionais"
+	lang "Traditional Chinese"
+	1
+		# "內含 {0} 個額外魔法物品"
+	lang "Simplified Chinese"
+	2
+		1 "内含 {0} 个额外魔法物品"
+		# "内含 {0} 个额外魔法物品"
+	lang "Thai"
+	2
+		1 "มี ไอเทมเมจิก เพิ่มเติม {0} ชิ้น"
+		# "มี ไอเทมเมจิก เพิ่มเติม {0} ชิ้น"
+	lang "Russian"
+	2
+		1 "Содержит дополнительный волшебный предмет"
+		# "Содержит дополнительных волшебных предметов: {0}"
+	lang "French"
+	2
+		1 "Contient {0} Objet Magique supplémentaire"
+		# "Contient {0} Objets Magiques supplémentaires"
+	lang "German"
+	2
+		1 "Enthält {0} einen zusätzlichen magischen Gegenstand"
+		# "Enthält {0} zusätzliche magische Gegenstände"
+	lang "Spanish"
+	2
+		1 "Contiene {0} Objeto Mágico adicional"
+		# "Contiene {0} Objetos Mágicos adicionales"
+	lang "Korean"
+	2
+		1 "마법 아이템 {0}개 추가"
+		# "마법 아이템 {0}개 추가"
+
+description
+	1 chest_drop_additional_rare_items_up_to
+	2
+		1 "Contains {0} additional Rare Item"
+		# "Contains {0} additional Rare Items"
+	lang "Portuguese"
+	2
+		1 "Contém {0} Item Raro adicional"
+		# "Contém {0} Itens Raros adicionais"
+	lang "Traditional Chinese"
+	1
+		# "內含 {0} 個額外稀有物品"
+	lang "Simplified Chinese"
+	2
+		1 "内含 1 个额外稀有物品"
+		# "内含 {0} 个额外稀有物品"
+	lang "Thai"
+	2
+		1 "มี ไอเทมแรร์ เพิ่มเติม {0} ชิ้น"
+		# "มี ไอเทมแรร์ เพิ่มเติม {0} ชิ้น"
+	lang "Russian"
+	2
+		1 "Содержит {0} дополнительный редкий предмет"
+		# "Содержит дополнительных редких предметов: {0}"
+	lang "French"
+	2
+		1 "Contient {0} Objet Rare supplémentaire"
+		# "Contient {0} Objets Rares supplémentaires"
+	lang "German"
+	2
+		1 "Enthält {0} einen zusätzlichen seltenen Gegenstand"
+		# "Enthält {0} zusätzliche seltene Gegenstände"
+	lang "Spanish"
+	2
+		1 "Contiene {0} Objeto Raro adicional"
+		# "Contiene {0} Objetos Raros adicionales"
+	lang "Korean"
+	2
+		1 "희귀 아이템 {0}개 추가"
+		# "희귀 아이템 {0}개 추가"
+
+description
+	1 chest_dropped_items_have_quality_%
+	1
+		# "Contained Items have {0}% Quality"
+	lang "Portuguese"
+	1
+		# "Itens contidos possuem {0}% de Qualidade"
+	lang "Traditional Chinese"
+	1
+		# "內含物品有 {0}% 品質"
+	lang "Simplified Chinese"
+	1
+		# "内含的物品具有 {0}% 的品质"
+	lang "Thai"
+	1
+		# "ไอเทมภายใน มีค่าคุณภาพ {0}%"
+	lang "Russian"
+	1
+		# "Качество предметов внутри: {0}%"
+	lang "French"
+	1
+		# "Les Objets contenus ont {0}% de Qualité"
+	lang "German"
+	1
+		# "Enthaltene Gegenstände haben {0}% Qualität"
+	lang "Spanish"
+	1
+		# "Los Objetos contenidos poseen {0}% de Calidad"
+	lang "Korean"
+	1
+		# "퀄리티가 {0}%인 아이템 포함"
+
+description
+	1 dropped_items_have_additional_sockets
+	2
+		1 "Contained Items have an additional Socket"
+		# "Contained Items have {0} additional Sockets"
+	lang "Portuguese"
+	2
+		1 "Itens contidos possuem um Encaixe adicional"
+		# "Itens contidos possuem {0} Encaixes adicionais"
+	lang "Traditional Chinese"
+	2
+		1 "內含物品有 1 個額外插槽"
+		# "內含物品有 {0} 個額外插槽"
+	lang "Simplified Chinese"
+	2
+		1 "内含的物品拥有 1 个额外插槽"
+		# "内含的物品拥有 {0} 个额外插槽"
+	lang "Thai"
+	2
+		1 "ไอเทมภายใน มี รู เพิ่มเติม 1 รู"
+		# "ไอเทมภายใน มี รู เพิ่มเติม {0} รู"
+	lang "Russian"
+	2
+		# "Предметы внутри имеют 1 дополнительное гнездо"
+		# "Предметы внутри имеют дополнительных гнезд: {0}"
+	lang "French"
+	2
+		1 "Les Objets contenus ont une Châsse supplémentaire"
+		# "Les Objets contenus ont {0} Châsses supplémentaires"
+	lang "German"
+	2
+		1 "Enthaltene Gegenstände haben eine zusätzliche Fassung"
+		# "Enthaltene Gegenstände haben {0} zusätzliche Fassungen"
+	lang "Spanish"
+	2
+		1 "Los Objetos contenidos tienen un Engarce adicional"
+		# "Los Objetos contenidos tienen {0} Engarces adicionales"
+	lang "Korean"
+	2
+		1 "홈 1개 추가된 아이템 포함"
+		# "홈 {0}개 추가된 아이템 포함"
+
+description
+	1 dropped_items_are_fully_linked
+	1
+		# "Contained Items are fully Linked"
+	lang "Portuguese"
+	1
+		# "Itens contidos estão completamente Conectados"
+	lang "Traditional Chinese"
+	1
+		# "內含物品有最大連線"
+	lang "Simplified Chinese"
+	1
+		# "内含物品的所有插槽已全部连接"
+	lang "Thai"
+	1
+		# "ไอเทมภายใน จะเชื่อมรูเต็ม"
+	lang "Russian"
+	1
+		# "Все гнёзда предметов внутри соединены"
+	lang "French"
+	1
+		# "Les Objets contenus ont leurs Châsses reliées"
+	lang "German"
+	1
+		# "Enthaltene Gegenstände sind vollständig verbunden"
+	lang "Spanish"
+	1
+		# "Los Objetos contenidos están completamente Vinculados"
+	lang "Korean"
+	1
+		# "완전히 연결된 아이템 포함"
+
+description
+	1 chest_dropped_item_level_+
+	1
+		# "+{0} Chest level"
+	lang "Portuguese"
+	1
+		# "+{0} ao Nível do Baú"
+	lang "Traditional Chinese"
+	1
+		# "增加 {0} 箱子等級"
+	lang "Simplified Chinese"
+	1
+		# "+{0} 宝箱等级"
+	lang "Thai"
+	1
+		# "เลเวลหีบ +{0}"
+	lang "Russian"
+	1
+		# "+{0} к уровню сундука"
+	lang "French"
+	1
+		# "+{0} au Niveau du coffre"
+	lang "German"
+	1
+		# "+{0} zu Tresor-Stufe"
+	lang "Spanish"
+	1
+		# "+{0} al nivel del Cofre"
+	lang "Korean"
+	1
+		# "상자 레벨 +{0}"
+
+description
+	1 dropped_items_are_duplicated
+	1
+		# "Contains Mirrored Items"
+	lang "Portuguese"
+	1
+		# "Contém Itens Espelhados"
+	lang "Traditional Chinese"
+	1
+		# "內含複製物品"
+	lang "Simplified Chinese"
+	1
+		# "内含镜像复制品"
+	lang "Thai"
+	1
+		# "มี ไอเทมภาพสะท้อน"
+	lang "Russian"
+	1
+		# "Содержит отражённые предметы"
+	lang "French"
+	1
+		# "Contient des Objets reflétés"
+	lang "German"
+	1
+		# "Enthält gespiegelte Gegenstände"
+	lang "Spanish"
+	1
+		# "Contiene Objetos Reflejados"
+	lang "Korean"
+	1
+		# "복제 아이템 포함"
+
+description
+	1 chest_spawn_rogue_exiles
+	2
+		1 "Guarded by a Rogue Exile"
+		2|# "Guarded by {0} Rogue Exiles"
+	lang "Portuguese"
+	2
+		1 "Protegido por um Exilado Renegado"
+		2|# "Protegido por {0} Exilados Renegados"
+	lang "Traditional Chinese"
+	1
+		# "被 {0} 位盜賊流放者守衛著"
+	lang "Simplified Chinese"
+	2
+		1 "被 1 个【盗贼流放者】守护"
+		2|# "被 {0} 个【盗贼流放者】守护"
+	lang "Thai"
+	2
+		1 "พิทักษ์โดย เอ็กไซล์อันธพาล 1 คน"
+		2|# "พิทักษ์โดย เอ็กไซล์อันธพาล {0} คน"
+	lang "Russian"
+	2
+		1 "Ларец охраняет бродячий изгнанник"
+		2|# "Бродячих изгнанников, охраняющих ларец: {0}"
+	lang "French"
+	2
+		1 "Gardé par un Exilé renégat"
+		2|# "Gardé par {0} Exilés renégat"
+	lang "German"
+	2
+		1 "Bewacht von einem abtrünnigen Verbannten"
+		2|# "Bewacht von {0} abtrünnigen Verbannten"
+	lang "Spanish"
+	2
+		1 "Custodiado por un Exiliado Renegado"
+		2|# "Custodiado por {0} Exiliados Renegados"
+	lang "Korean"
+	2
+		1 "탈주 유배자 1명이 방어"
+		2|# "탈주 유배자 {0}명이 방어"
+
+description
+	1 chest_display_revive_nearby_monsters
+	1
+		# "Revives nearby dead Monsters with Onslaught"
+	lang "Portuguese"
+	1
+		# "Revive Monstros mortos próximos com Agressividade"
+	lang "Traditional Chinese"
+	1
+		# "復活附近死亡怪物並帶有猛攻"
+	lang "Simplified Chinese"
+	1
+		# "开启时复活附近已死亡的怪物，并使它们带有猛攻效果"
+	lang "Thai"
+	1
+		# "คืนชีพมอนสเตอร์ที่ตายที่อยู่ใกล้ พร้อมให้สถานะ Onslaught"
+	lang "Russian"
+	1
+		# "Воскрешает ближайших мёртвых монстров с эффектом Боевой раж"
+	lang "French"
+	1
+		# "Ressuscite les Monstres morts à proximité et leur octroie Assaut"
+	lang "German"
+	1
+		# "Belebt tote Monster im Umkreis mit Ansturm"
+	lang "Spanish"
+	1
+		# "Revive Monstruos cercanos muertos con Fervor"
+	lang "Korean"
+	1
+		# "주변의 죽은 몬스터를 맹공 상태로 부활"
+
+description
+	1 chest_display_spawns_monsters_continuously
+	1
+		# "Guarded by a stream of Monsters"
+	lang "Portuguese"
+	1
+		# "Protegido por um fluxo de Monstros"
+	lang "Traditional Chinese"
+	1
+		# "被一連串怪物守衛著"
+	lang "Simplified Chinese"
+	1
+		# "被一大群怪物守护"
+	lang "Thai"
+	1
+		# "พิทักษ์โดย มอนสเตอร์ กลุ่มใหญ่"
+	lang "Russian"
+	1
+		# "Ларец охраняют несколько волн монстров"
+	lang "French"
+	1
+		# "Gardé par un flux de Monstres"
+	lang "German"
+	1
+		# "Bewacht von einem Strom Monstern"
+	lang "Spanish"
+	1
+		# "Custodiado por una marea de Monstruos"
+	lang "Korean"
+	1
+		# "몬스터 무리 1개가 방어"
+
+description
+	1 chest_display_spawns_torment_spirits_continuously
+	1
+		# "Guarded by a stream of Tormented Spirits"
+	lang "Portuguese"
+	1
+		# "Guardado por um fluxo de Espíritos Atormentados"
+	lang "Russian"
+	1
+		# "Ларец охраняют несколько волн страдающих духов"
+	lang "Traditional Chinese"
+	1
+		# "被一連串罪魂守衛著"
+	lang "Simplified Chinese"
+	1
+		# "被一群【罪魂】守护"
+	lang "Thai"
+	1
+		# "พิทักษ์โดย วิญญาณที่ถูกทรมาน กลุ่มใหญ่"
+	lang "German"
+	1
+		# "Bewacht von einem Strom gequälter Seelen"
+	lang "French"
+	1
+		# "Gardé par un flux d'Esprits tourmentés"
+	lang "Spanish"
+	1
+		# "Custodiado por una marea de Espíritus Atormentados"
+	lang "Korean"
+	1
+		# "고통받는 혼백 무리 1개가 방어"
+
+description
+	1 chest_display_explodes_corpses
+	1
+		# "Detonates nearby corpses"
+	lang "Portuguese"
+	1
+		# "Detona Cadáveres próximos"
+	lang "Traditional Chinese"
+	1
+		# "引爆附近屍體"
+	lang "Simplified Chinese"
+	1
+		# "引爆附近的灵柩"
+	lang "Thai"
+	1
+		# "ระเบิดศพที่อยู่ใกล้"
+	lang "Russian"
+	1
+		# "Взрывает трупы рядом с ларцом"
+	lang "French"
+	1
+		# "Fait exploser les Cadavres à proximité"
+	lang "German"
+	1
+		# "Lässt Leichen im Umkreis explodieren"
+	lang "Spanish"
+	1
+		# "Detona Cadáveres cercanos"
+	lang "Korean"
+	1
+		# "주변의 시신 폭발"
+
+description
+	1 chest_camoflaged
+	1
+		# "Guarded by camoflaged Monsters"
+	lang "Portuguese"
+	1
+		# "Protegido por Monstros camuflados"
+	lang "Traditional Chinese"
+	1
+		# "被偽裝的怪物守衛著"
+	lang "Simplified Chinese"
+	1
+		# "被【伪装的怪物】守护"
+	lang "Thai"
+	1
+		# "พิทักษ์โดย มอนสเตอร์ที่พรางตัว"
+	lang "Russian"
+	1
+		# "Ларец охраняют замаскированные монстры"
+	lang "French"
+	1
+		# "Gardé par des Monstres camouflés"
+	lang "German"
+	1
+		# "Bewacht von getarnten Monstern"
+	lang "Spanish"
+	1
+		# "Custodiado por Monstruos camuflados"
+	lang "Korean"
+	1
+		# "위장한 몬스터가 방어"
+
+description
+	1 chest_display_summons_fire_warband
+	1
+		# "Guarded by a Redblade Warband"
+	lang "Portuguese"
+	1
+		# "Guardado por Bandoleiros da Lâmina Vermelha"
+	lang "Russian"
+	1
+		# "Ларец охраняет отряд Красных сабель"
+	lang "Traditional Chinese"
+	1
+		# "被紅刃軍團守衛著"
+	lang "Simplified Chinese"
+	1
+		# "被【红刃军团】守护"
+	lang "Thai"
+	1
+		# "พิทักษ์โดย กองศึก Redblade 1 กอง"
+	lang "German"
+	1
+		# "Bewacht von einer Rotklingen-Kriegshorde"
+	lang "French"
+	1
+		# "Gardé par un Bataillon Rougelame"
+	lang "Spanish"
+	1
+		# "Custodiado por una Banda de Guerra Cuchilla Roja"
+	lang "Korean"
+	1
+		# "적검단 군벌이 방어"
+
+description
+	1 chest_display_summons_cold_warband
+	1
+		# "Guarded by a Mutewind Warband"
+	lang "Portuguese"
+	1
+		# "Guardado por Bandoleiros do Vento Mudo"
+	lang "Russian"
+	1
+		# "Ларец охраняет отряд Немого ветра"
+	lang "Traditional Chinese"
+	1
+		# "被啞風軍團守衛著"
+	lang "Simplified Chinese"
+	1
+		# "被【哑风军团】守护"
+	lang "Thai"
+	1
+		# "พิทักษ์โดย กองศึก Mutewind 1 กอง"
+	lang "German"
+	1
+		# "Bewacht von einer Stummwind-Kriegshorde"
+	lang "French"
+	1
+		# "Gardé par un Bataillon Ventmuet"
+	lang "Spanish"
+	1
+		# "Custodiado por una Banda de Guerra del Viento Mudo"
+	lang "Korean"
+	1
+		# "고요한 바람단 군벌이 방어"
+
+description
+	1 chest_display_summons_lightning_warband
+	1
+		# "Guarded by a Brinerot Warband"
+	lang "Portuguese"
+	1
+		# "Guardado por Bandoleiros da Salmoura Podre"
+	lang "Russian"
+	1
+		# "Ларец охраняет отряд Морской гнили"
+	lang "Traditional Chinese"
+	1
+		# "被布琳洛特軍團守衛著"
+	lang "Simplified Chinese"
+	1
+		# "被【布琳洛特军团】守护"
+	lang "Thai"
+	1
+		# "พิทักษ์โดย กองศึก Brinerot 1 กอง"
+	lang "German"
+	1
+		# "Bewacht von einer Gischtfäulnis-Kriegshorde"
+	lang "French"
+	1
+		# "Gardé par un Bataillon Selrance"
+	lang "Spanish"
+	1
+		# "Custodiado por una Banda de Guerra de la Salmuera Putrefacta"
+	lang "Korean"
+	1
+		# "부패한 염수단 군벌이 방어"
+
+description
+	1 chest_display_summons_chaos_warband
+	1
+		# "Guarded by a Renegade Warband"
+	lang "Portuguese"
+	1
+		# "Guardado por Bandoleiros Renegados"
+	lang "Russian"
+	1
+		# "Ларец охраняет отряд ренегатов"
+	lang "Traditional Chinese"
+	1
+		# "被混沌軍團守衛著"
+	lang "Simplified Chinese"
+	1
+		# "被【混沌军团】守护"
+	lang "Thai"
+	1
+		# "พิทักษ์โดย กองศึก Renegade 1 กอง"
+	lang "German"
+	1
+		# "Bewacht von einer Abtrünnigen-Kriegshorde"
+	lang "French"
+	1
+		# "Gardé par un Bataillon de Déserteurs"
+	lang "Spanish"
+	1
+		# "Custodiado por una Banda de Guerra Renegada"
+	lang "Korean"
+	1
+		# "탈주자 군벌이 방어"
+
+description
+	1 chest_display_cast_random_curse
+	1
+		# "Casts a random Hex Curse Spell when activated"
+	lang "German"
+	1
+		# "Zaubert bei Aktivierung einen zufälligen Verhexungs-Fluchzauber"
+	lang "Korean"
+	1
+		# "활성화 시 사술 저주 주문 1개 무작위로 시전"
+	lang "Russian"
+	1
+		# "Накладывает случайную порчу при активации"
+	lang "French"
+	1
+		# "Lance une Calamité aléatoire à l'activation"
+	lang "Portuguese"
+	1
+		# "Conjura uma Magia de Feitiço Maldição aleatória quando ativado"
+	lang "Spanish"
+	1
+		# "Lanza un hechizo de maldición de maleficio aleatorio cuando se activa"
+	lang "Traditional Chinese"
+	1
+		# "開啟時施放 1 個隨機咒術詛咒法術"
+	lang "Thai"
+	1
+		# "ร่ายเวท สาปสะกด แบบสุ่มเมื่อถูกใช้งาน"
+	lang "Simplified Chinese"
+	1
+		# "启动时施放一种随机魔蛊"
+
+description
+	1 chest_display_ignite
+	1
+		# "Ignites you when activated" reminderstring ReminderTextIgnite
+	lang "Portuguese"
+	1
+		# "Incendeia você quando ativado" reminderstring ReminderTextIgnite
+	lang "Traditional Chinese"
+	1
+		# "開啟時對你造成點燃" reminderstring ReminderTextIgnite
+	lang "Simplified Chinese"
+	1
+		# "开启后将你点燃" reminderstring ReminderTextIgnite
+	lang "Thai"
+	1
+		# "สร้างสถานะ ลุกไหม้ ต่อตัวคุณเมื่อใช้งาน" reminderstring ReminderTextIgnite
+	lang "Russian"
+	1
+		# "Поджигает при активации" reminderstring ReminderTextIgnite
+	lang "French"
+	1
+		# "Vous Embrase à l'activation" reminderstring ReminderTextIgnite
+	lang "German"
+	1
+		# "Entzündet Euch bei Öffnung" reminderstring ReminderTextIgnite
+	lang "Spanish"
+	1
+		# "Te quema al activarse" reminderstring ReminderTextIgnite
+	lang "Korean"
+	1
+		# "활성화 시 점화됨" reminderstring ReminderTextIgnite
+
+description
+	1 chest_display_fire_storm
+	2
+		1 "Casts Firestorm"
+		2 "Casts Lightning Storm"
+	lang "Portuguese"
+	2
+		1 "Conjura Tempestade de Fogo"
+		2 "Conjura Tempestade de Raios"
+	lang "Traditional Chinese"
+	2
+		1 "施放烈炎風暴"
+		2 "施放閃電風暴"
+	lang "Simplified Chinese"
+	2
+		1 "施放烈炎风暴"
+		2 "施放闪电风暴"
+	lang "Thai"
+	2
+		1 "ร่าย Firestorm"
+		2 "ร่าย Lightning Storm"
+	lang "Russian"
+	2
+		1 "Использует огненный шторм"
+		2 "Использует шторм молний"
+	lang "French"
+	2
+		1 "Lance Tempête de feu"
+		2 "Lance Tempête de foudre"
+	lang "German"
+	2
+		1 "Zaubert Feuersturm"
+		2 "Zaubert Blitzsturm"
+	lang "Spanish"
+	2
+		1 "Lanza Tormenta de Fuego"
+		2 "Lanza Tormenta de Rayos"
+	lang "Korean"
+	2
+		1 "화염 폭풍 시전"
+		2 "번개 폭풍 시전"
+
+description
+	1 chest_display_caustic_clouds
+	1
+		# "Spreads Caustic Ground"
+	lang "Russian"
+	1
+		# "Оставляет едкую землю"
+	lang "Spanish"
+	1
+		# "Esparce Suelo Cáustico"
+	lang "Portuguese"
+	1
+		# "Espalha Solo Cáustico"
+	lang "Traditional Chinese"
+	1
+		# "擴散腐蝕地面"
+	lang "German"
+	1
+		# "Verbreitet ätzenden Boden"
+	lang "French"
+	1
+		# "Répand du Sol caustique"
+	lang "Simplified Chinese"
+	1
+		# "释放腐蚀地面"
+	lang "Thai"
+	1
+		# "สร้าง พื้นพิษ"
+	lang "Korean"
+	1
+		# "부식성 지대 확산"
+
+description
+	1 chest_display_explosion
+	1
+		# "Explodes"
+	lang "Portuguese"
+	1
+		# "Explode"
+	lang "Traditional Chinese"
+	1
+		# "爆炸"
+	lang "Simplified Chinese"
+	1
+		# "爆炸"
+	lang "Thai"
+	1
+		# "ระเบิด"
+	lang "Russian"
+	1
+		# "Взрывается"
+	lang "French"
+	1
+		# "Explose"
+	lang "German"
+	1
+		# "Explodiert"
+	lang "Spanish"
+	1
+		# "Explota"
+	lang "Korean"
+	1
+		# "폭발"
+
+description
+	1 chest_drops_only_hybrid_flasks
+	1
+		# "Only contains Hybrid Flasks"
+	lang "Portuguese"
+	1
+		# "Contém apenas Frascos Híbridos"
+	lang "Traditional Chinese"
+	1
+		# "只掉落混合藥劑"
+	lang "Simplified Chinese"
+	1
+		# "只掉落复合药剂"
+	lang "Thai"
+	1
+		# "มีเพียงขวดยา Hybrid เท่านั้น"
+	lang "Russian"
+	1
+		# "Содержит только флаконы равновесия"
+	lang "French"
+	1
+		# "Contient uniquement des Flacons hybrides"
+	lang "German"
+	1
+		# "Enthält ausschließlich Hybridfläschchen"
+	lang "Spanish"
+	1
+		# "Solo contiene Frascos Híbridos"
+	lang "Korean"
+	1
+		# "하이브리드 플라스크만 포함"
+
+description
+	1 chest_drops_only_support_gems
+	1
+		# "Only contains Support Gems"
+	lang "Portuguese"
+	1
+		# "Contém apenas Gemas de Suporte"
+	lang "Traditional Chinese"
+	1
+		# "只掉落輔助技能寶石"
+	lang "Simplified Chinese"
+	1
+		# "只内含辅助宝石"
+	lang "Thai"
+	1
+		# "มีเพียงหินสกิลเสริมเท่านั้น"
+	lang "Russian"
+	1
+		# "Содержит только камни поддержки"
+	lang "French"
+	1
+		# "Contient uniquement des Gemmes de soutien"
+	lang "German"
+	1
+		# "Enthält ausschließlich Unterstützungsgemmen"
+	lang "Spanish"
+	1
+		# "Solo contiene Gemas de Asistencia"
+	lang "Korean"
+	1
+		# "보조 젬만 포함"
+
+description
+	1 chest_drops_extra_vaal_gems
+	2
+		1 "Contains an extra Vaal Gem"
+		2|# "Contains {0} extra Vaal Gems"
+	lang "Portuguese"
+	2
+		1 "Contém uma Gema Vaal extra"
+		2|# "Contém {0} Gemas Vaal extras"
+	lang "Traditional Chinese"
+	1
+		# "內含 {0} 個額外瓦爾寶石"
+	lang "Simplified Chinese"
+	2
+		1 "内含 1 个额外的瓦尔技能宝石"
+		2|# "内含 {0} 个额外的瓦尔技能宝石"
+	lang "Thai"
+	2
+		1 "มี หินสกิลวาล์ เพิ่มเติม 1 เม็ด"
+		2|# "มี หินสกิลวาล์ เพิ่มเติม {0} เม็ด"
+	lang "Russian"
+	2
+		1 "Содержит камней ваал: {0}"
+		2|# "Содержит камней ваал: {0}"
+	lang "French"
+	2
+		1 "Contient une Gemme vaal supplémentaire"
+		2|# "Contient {0} Gemmes vaal supplémentaires"
+	lang "German"
+	2
+		1 "Enthält eine zusätzliche Vaal-Gemme"
+		2|# "Enthält {0} zusätzliche Vaal-Gemmen"
+	lang "Spanish"
+	2
+		1 "Contiene una Gema Vaal extra"
+		2|# "Contiene {0} Gemas Vaal extra"
+	lang "Korean"
+	2
+		1 "바알 젬 1개 추가"
+		2|# "바알 젬 {0}개 추가"
+
+description
+	1 chest_drop_additional_number_of_uniques_of_drop_pool_types
+	2
+		1 "Contains an additional Unique Item"
+		# "Contains {0} additional Unique Items"
+	lang "Portuguese"
+	2
+		1 "Contém um Item Único adicional"
+		# "Contém {0} Itens Únicos adicionais"
+	lang "Traditional Chinese"
+	1
+		# "內含 {0} 個額外傳奇物品"
+	lang "Simplified Chinese"
+	2
+		1 "内含 1 个额外的传奇物品"
+		# "内含 {0} 个额外的传奇物品"
+	lang "Thai"
+	2
+		1 "มี ไอเทมยูนิค เพิ่มเติม 1 ชิ้น"
+		# "มี ไอเทมยูนิค เพิ่มเติม {0} ชิ้น"
+	lang "Russian"
+	2
+		1 "Содержит дополнительный уникальный предмет"
+		# "Содержит дополнительных уникальных предметов: {0}"
+	lang "French"
+	2
+		1 "Contient un Objet Unique supplémentaire"
+		# "Contient {0} Objets Uniques supplémentaires"
+	lang "German"
+	2
+		1 "Enthält einen zusätzlichen einzigartigen Gegenstand"
+		# "Enthält {0} zusätzliche einzigartige Gegenstände"
+	lang "Spanish"
+	2
+		1 "Contiene un Objeto Único adicional"
+		# "Contiene {0} Objetos Únicos adicionales"
+	lang "Korean"
+	2
+		1 "고유 아이템 1개 추가 등장"
+		# "고유 아이템 {0}개 추가 등장"
+
+description
+	1 chest_drop_additional_unique_maps
+	2
+		1 "Contains an additional Unique Map"
+		# "Contains {0} additional Unique Maps"
+	lang "Portuguese"
+	2
+		1 "Contém um Mapa Único adicional"
+		# "Contém {0} Mapas Únicos adicionais"
+	lang "Traditional Chinese"
+	1
+		# "內含 {0} 個額外傳奇地圖"
+	lang "Simplified Chinese"
+	2
+		1 "内含 1 张额外的传奇地图"
+		# "内含 {0} 张额外的传奇地图"
+	lang "Thai"
+	2
+		1 "มี แผนที่ยูนิค เพิ่มเติม 1 ชิ้น"
+		# "มี แผนที่ยูนิค เพิ่มเติม {0} ชิ้น"
+	lang "Russian"
+	2
+		1 "Содержит дополнительную уникальную карту"
+		# "Содержит дополнительных уникальных карт: {0}"
+	lang "French"
+	2
+		1 "Contient une Carte unique supplémentaire"
+		# "Contient {0} Cartes uniques supplémentaires"
+	lang "German"
+	2
+		1 "Enthält eine zusätzliche einzigartige Karte"
+		# "Enthält {0} zusätzliche einzigartige Karten"
+	lang "Spanish"
+	2
+		1 "Contiene un Mapa Único adicional"
+		# "Contiene {0} Mapas Únicos adicionales"
+	lang "Korean"
+	2
+		1 "고유 지도 1개 추가 등장"
+		# "고유 지도 {0}개 추가 등장"
+
+description
+	1 chest_drop_additional_fire_warband_uniques
+	2
+		1 "Contains an additional Redblade Unique Item"
+		# "Contains {0} additional Redblade Unique Items"
+	lang "Portuguese"
+	2
+		1 "Contêm um Item Único da Lâmina Vermelha adicional"
+		# "Contêm {0} Itens Únicos da Lâmina Vermelha adicionais"
+	lang "Russian"
+	2
+		1 "Содержит дополнительный уникальный предмет Красных сабель"
+		# "Содержит дополнительных уникальных предметов Красных сабель: {0}"
+	lang "Traditional Chinese"
+	2
+		1 "內含 1 個額外紅刃傳奇物品"
+		# "內含 {0} 個額外紅刃傳奇物品"
+	lang "Simplified Chinese"
+	2
+		1 "内含 1 个额外的红刃传奇物品"
+		# "内含 {0} 个额外的红刃传奇物品"
+	lang "Thai"
+	2
+		1 "มี ไอเทมยูนิคเรดเบลด เพิ่มเติม 1 ชิ้น"
+		# "มี ไอเทมยูนิคเรดเบลด เพิ่มเติม {0} ชิ้น"
+	lang "German"
+	2
+		1 "Enthält einen zusätzlichen einzigartigen Rotklingen-Gegenstand"
+		# "Enthält {0} zusätzliche einzigartige Rotklingen-Gegenstände"
+	lang "French"
+	2
+		1 "Contient un Objet Unique Rougelame supplémentaire"
+		# "Contient {0} Objets Uniques Rougelame supplémentaires"
+	lang "Spanish"
+	2
+		1 "Contiene un Objeto Único de Espada Roja adicional"
+		# "Contiene {0} Objetos Únicos de Espada Roja adicionales"
+	lang "Korean"
+	2
+		1 "적검단 고유 아이템 1개 추가"
+		# "적검단 고유 아이템 {0}개 추가"
+
+description
+	1 chest_drop_additional_cold_warband_uniques
+	2
+		1 "Contains an additional Mutewind Unique Item"
+		# "Contains {0} additional Mutewind Unique Items"
+	lang "Portuguese"
+	2
+		1 "Contêm um Item Único do Vento Mudo adicional"
+		# "Contêm {0} Itens Únicos do Vento Mudo adicionais"
+	lang "Russian"
+	2
+		1 "Содержит дополнительный уникальный предмет Немого ветра"
+		# "Содержит дополнительных уникальных предметов Немого ветра: {0}"
+	lang "Traditional Chinese"
+	2
+		1 "內含 1 個額外啞風傳奇物品"
+		# "內含 {0} 個額外啞風傳奇物品"
+	lang "Simplified Chinese"
+	2
+		1 "内含 1 个额外的哑风传奇物品"
+		# "内含 {0} 个额外的哑风传奇物品"
+	lang "Thai"
+	2
+		1 "มี ไอเทมยูนิคมิ้วท์วิน เพิ่มเติม 1 ชิ้น"
+		# "มี ไอเทมยูนิคมิ้วท์วิน เพิ่มเติม {0} ชิ้น"
+	lang "German"
+	2
+		1 "Enthält einen zusätzlichen einzigartigen Stummwind-Gegenstand"
+		# "Enthält {0} zusätzliche einzigartige Stummwind-Gegenstände"
+	lang "French"
+	2
+		1 "Contient un Objet Unique Ventmuet supplémentaire"
+		# "Contient {0} Objets Uniques Ventmuet supplémentaires"
+	lang "Spanish"
+	2
+		1 "Contiene un Objeto Único de Viento Mudo adicional"
+		# "Contiene {0} Objetos Únicos de Viento Mudo adicionales"
+	lang "Korean"
+	2
+		1 "고요한 바람단 고유 아이템 1개 추가"
+		# "고요한 바람단 고유 아이템 {0}개 추가"
+
+description
+	1 chest_drop_additional_lightning_warband_uniques
+	2
+		1 "Contains an additional Brinerot Unique Item"
+		# "Contains {0} additional Brinerot Unique Items"
+	lang "Portuguese"
+	2
+		1 "Contêm um Item Único da Salmoura Podre adicional"
+		# "Contêm {0} Itens Únicos da Salmoura Podre adicionais"
+	lang "Russian"
+	2
+		1 "Содержит дополнительный уникальный предмет Морской гнили"
+		# "Содержит дополнительных уникальных предметов Морской гнили: {0}"
+	lang "Traditional Chinese"
+	2
+		1 "內含 1 個額外布琳洛特傳奇物品"
+		# "內含 {0} 個額外布琳洛特傳奇物品"
+	lang "Simplified Chinese"
+	2
+		1 "内含 1 个额外的布琳洛特传奇物品"
+		# "内含 {0} 个额外的布琳洛特传奇物品"
+	lang "Thai"
+	2
+		1 "มี ไอเทมยูนิคไบรน์ร็อท เพิ่มเติม 1 ชิ้น"
+		# "มี ไอเทมยูนิคไบรน์ร็อท เพิ่มเติม {0} ชิ้น"
+	lang "German"
+	2
+		1 "Enthält einen zusätzlichen einzigartigen Gischtfäulnis-Gegenstand"
+		# "Enthält {0} zusätzliche einzigartige Gischtfäulnis-Gegenstände"
+	lang "French"
+	2
+		1 "Contient un Objet Unique Selrance supplémentaire"
+		# "Contient {0} Objets Uniques Selrance supplémentaires"
+	lang "Spanish"
+	2
+		1 "Contiene un Objeto Único de Salmuera Putrefacta adicional"
+		# "Contiene {0} Objetos Únicos de Salmuera Putrefacta adicionales"
+	lang "Korean"
+	2
+		1 "부패한 염수단 고유 아이템 1개 추가"
+		# "부패한 염수단 고유 아이템 {0}개 추가"
+
+description
+	1 chest_drop_additional_chaos_warband_uniques
+	2
+		1 "Contains an additional Renegade Unique Item"
+		# "Contains {0} additional Renegade Unique Items"
+	lang "Portuguese"
+	2
+		1 "Contêm um Item Único do Renegado adicional"
+		# "Contêm {0} Itens Únicos do Renegado adicionais"
+	lang "Russian"
+	2
+		1 "Содержит дополнительный уникальный предмет ренегатов"
+		# "Содержит дополнительных уникальных предметов ренегатов: {0}"
+	lang "Traditional Chinese"
+	2
+		1 "內含 1 個額外混沌軍團傳奇物品"
+		# "內含 {0} 個額外混沌軍團傳奇物品"
+	lang "Simplified Chinese"
+	2
+		1 "内含 1 个额外的混沌军团传奇物品"
+		# "内含 {0} 个额外的混沌军团传奇物品"
+	lang "Thai"
+	2
+		1 "มี ไอเทมยูนิคเรเนเกด เพิ่มเติม 1 ชิ้น"
+		# "มี ไอเทมยูนิคเรเนเกด เพิ่มเติม {0} ชิ้น"
+	lang "German"
+	2
+		1 "Enthält einen zusätzlichen einzigartigen Abtrünnigen-Gegenstand"
+		# "Enthält {0} zusätzliche einzigartige Abtrünnigen-Gegenstände"
+	lang "French"
+	2
+		1 "Contient un Objet Unique des Déserteurs supplémentaire"
+		# "Contient {0} Objets Uniques des Déserteurs supplémentaires"
+	lang "Spanish"
+	2
+		1 "Contiene un Objeto Único de Renegado adicional"
+		# "Contiene {0} Objetos Únicos de Renegado adicionales"
+	lang "Korean"
+	2
+		1 "탈주자 고유 아이템 1개 추가"
+		# "탈주자 고유 아이템 {0}개 추가"
+
+description
+	1 chest_drop_additional_deshret_uniques
+	2
+		1 "Contains an additional Deshret Item"
+		# "Contains {0} additional Deshret Items"
+	lang "Portuguese"
+	2
+		1 "Contêm um Item de Deshret adicional"
+		# "Contêm {0} Itens de Deshret adicionais"
+	lang "Russian"
+	2
+		1 "Содержит дополнительный уникальный предмет Дешрет"
+		# "Содержит дополнительных уникальных предметов Дешрет: {0}"
+	lang "Traditional Chinese"
+	2
+		1 "內含 1 個額外迪虛瑞特傳奇物品"
+		# "內含 {0} 個額外迪虛瑞特傳奇物品"
+	lang "Simplified Chinese"
+	2
+		1 "内含 1 个额外的迪虚瑞特传奇物品"
+		# "内含 {0} 个额外的迪虚瑞特传奇物品"
+	lang "Thai"
+	2
+		1 "มี ไอเทมเดสเชรท เพิ่มเติม 1 ชิ้น"
+		# "มี ไอเทมเดสเชรท เพิ่มเติม {0} ชิ้น"
+	lang "German"
+	2
+		1 "Enthält einen zusätzlichen Deshret-Gegenstand"
+		# "Enthält {0} zusätzliche Deshret-Gegenstände"
+	lang "French"
+	2
+		1 "Contient un Objet de Deshret supplémentaire"
+		# "Contient {0} Objets de Deshret supplémentaires"
+	lang "Spanish"
+	2
+		1 "Contiene un Objeto de Deshret adicional"
+		# "Contiene {0} Objetos de Deshret adicionales"
+	lang "Korean"
+	2
+		1 "데쉬렛 아이템 1개 추가"
+		# "데쉬렛 아이템 {0}개 추가"
+
+description
+	1 chest_number_of_additional_kaom_uniques_to_drop
+	2
+		1 "Contains an additional Kaom Item"
+		# "Contains {0} additional Kaom Items"
+	lang "Portuguese"
+	2
+		1 "Contém um Item Kaom adicional"
+		# "Contém {0} Itens Kaom adicionais"
+	lang "Traditional Chinese"
+	1
+		# "內含 {0} 個額外岡姆物品"
+	lang "Simplified Chinese"
+	2
+		1 "内含 1 个额外的冈姆传奇物品"
+		# "内含 {0} 个额外的冈姆传奇物品"
+	lang "Thai"
+	2
+		1 "มี ไอเทมคอมม์ เพิ่มเติม 1 ชิ้น"
+		# "มี ไอเทมคอมม์ เพิ่มเติม {0} ชิ้น"
+	lang "Russian"
+	2
+		1 "Содержит дополнительный предмет Каома"
+		# "Содержит дополнительных предметов Каома: {0}"
+	lang "French"
+	2
+		1 "Contient un Objet de Kaom supplémentaire"
+		# "Contient {0} Objets de Kaom supplémentaires"
+	lang "German"
+	2
+		1 "Enthält einen zusätzlichen Kaom-Gegenstand"
+		# "Enthält {0} zusätzliche Kaom-Gegenstände"
+	lang "Spanish"
+	2
+		1 "Contiene un Objeto de Kaom adicional"
+		# "Contiene {0} Objetos de Kaom adicionales"
+	lang "Korean"
+	2
+		1 "카옴 아이템 1개 추가"
+		# "카옴 아이템 {0}개 추가"
+
+description
+	1 chest_display_kaom_totems
+	1
+		# "Guarded by the Ancestors' Power"
+	lang "Portuguese"
+	1
+		# "Protegido pelo Poder dos Ancestrais"
+	lang "Traditional Chinese"
+	1
+		# "被先祖之力守衛著"
+	lang "Simplified Chinese"
+	1
+		# "被卡鲁族图腾守护"
+	lang "Thai"
+	1
+		# "พิทักษ์โดย พลังของบรรพชน"
+	lang "Russian"
+	1
+		# "Защищён силой предков"
+	lang "French"
+	1
+		# "Gardé par le pouvoir des ancêtres"
+	lang "German"
+	1
+		# "Bewacht von der Macht der Ahnen"
+	lang "Spanish"
+	1
+		# "Custodiado por el Poder de los Ancestros"
+	lang "Korean"
+	1
+		# "선조들의 힘이 방어"
+
+description
+	1 chest_drops_extra_vaal_fragments
+	2
+		1 "Contains an extra Vaal Fragment"
+		2|# "Contains {0} extra Vaal Fragments"
+	lang "Portuguese"
+	2
+		1 "Contém um Fragmento Vaal extra"
+		2|# "Contém {0} Fragmentos Vaal extras"
+	lang "Traditional Chinese"
+	1
+		# "內含 {0} 個額外的瓦爾地圖碎片"
+	lang "Simplified Chinese"
+	2
+		1 "内含 1 个额外的瓦尔地图碎片"
+		2|# "内含 {0} 个个额外的瓦尔地图碎片"
+	lang "Thai"
+	2
+		1 "มี ชิ้นส่วนวาล์ เพิ่มเติม 1 ชิ้น"
+		2|# "มี ชิ้นส่วนวาล์ เพิ่มเติม {0} ชิ้น"
+	lang "Russian"
+	2
+		1 "Содержит дополнительный фрагмент ваал"
+		2|# "Содержит дополнительных фрагментов ваал: {0}"
+	lang "French"
+	2
+		1 "Contient un Fragment vaal supplémentaire"
+		2|# "Contient {0} Fragments vaal supplémentaires"
+	lang "German"
+	2
+		1 "Enthält ein zusätzliches Vaalfragment"
+		2|# "Enthält {0} zusätzliche Vaalfragmente"
+	lang "Spanish"
+	2
+		1 "Contiene un Fragmento Vaal extra"
+		2|# "Contiene {0} Fragmentos Vaal extra"
+	lang "Korean"
+	2
+		1 "바알 조각 1개 추가"
+		2|# "바알 조각 {0}개 추가"
+
+description
+	1 chest_drops_extra_rare_items_of_same_base_type
+	2
+		1 "Contains {0} additional Rare Item"
+		# "Contains {0} additional Rare Items of the same type"
+	lang "Portuguese"
+	2
+		1 "Contém {0} Item Raro adicional"
+		# "Contém {0} Itens Raros adicionais do mesmo tipo"
+	lang "Traditional Chinese"
+	2
+		1 "內含 {0} 個額外的稀有物品"
+		# "內含 {0} 個額外的同種類稀有物品"
+	lang "Simplified Chinese"
+	2
+		1 "内含 {0} 个额外的稀有物品"
+		# "内含 {0} 个相同种类的额外稀有物品"
+	lang "Thai"
+	2
+		1 "มี ไอเทมแรร์ เพิ่มเติม {0} ชิ้น"
+		# "มี ไอเทมแรร์ ชนิดเดียวกัน เพิ่มเติม {0} ชิ้น"
+	lang "Russian"
+	2
+		1 "Содержит дополнительных редких предметов: {0}"
+		# "Содержит дополнительных редких предметов одного типа: {0}"
+	lang "French"
+	2
+		1 "Contient {0} Objet Rare supplémentaire"
+		# "Contient {0}  Objets Rares supplémentaires du même type"
+	lang "German"
+	2
+		1 "Enthält {0} einen zusätzlichen seltenen Gegenstand"
+		# "Enthält {0} zusätzliche seltene Gegenstände derselben Art"
+	lang "Spanish"
+	2
+		1 "Contiene {0} Objeto Raro adicional"
+		# "Contiene {0} Objetos Raros adicionales del mismo tipo"
+	lang "Korean"
+	2
+		1 "희귀 아이템 {0}개 추가"
+		# "동일한 유형의 희귀 아이템 {0}개 추가"
+
+description
+	1 chest_drop_additional_prophecy_coins
+	2
+		1 "Contains {0} additional Silver Coin"
+		# "Contains {0} additional Silver Coins"
+	lang "Portuguese"
+	2
+		1 "Contém {0} Moeda de Prata adicional"
+		# "Contém {0} Moedas de Prata adicionais"
+	lang "Simplified Chinese"
+	2
+		1 "内含 {0} 枚额外银币"
+		# "内含 {0} 枚额外银币"
+	lang "Traditional Chinese"
+	2
+		1 "包含額外 {0} 枚銀幣"
+		# "包含額外 {0} 枚銀幣"
+	lang "Russian"
+	2
+		1 "Содержит {0} дополнительную серебряную монету"
+		# "Содержит дополнительных серебряных монет: {0}"
+	lang "Thai"
+	2
+		1 "มี เหรียญเงิน เพิ่มเติม {0} เหรียญ"
+		# "มี เหรียญเงิน เพิ่มเติม {0} เหรียญ"
+	lang "French"
+	2
+		1 "Contient {0} Pièce d'argent supplémentaire"
+		# "Contient {0} Pièces d'argent supplémentaires"
+	lang "German"
+	2
+		1 "Enthält {0} zusätzliche Silbermünze"
+		# "Enthält {0} zusätzliche Silbermünzen"
+	lang "Spanish"
+	2
+		1 "Contiene {0} Moneda de Plata adicional"
+		# "Contiene {0} Monedas de Plata adicionales"
+	lang "Korean"
+	2
+		1 "실버 코인 {0}개 추가"
+		# "실버 코인 {0}개 추가"
+
+description
+	1 weapons_drop_animated
+	1
+		# "Contained Weapons are Animated"
+	lang "Portuguese"
+	1
+		# "Armas contidas são Animadas"
+	lang "Russian"
+	1
+		# "Содержит оживлённые оружия"
+	lang "Traditional Chinese"
+	1
+		# "內含的武器自動幻化"
+	lang "Simplified Chinese"
+	1
+		# "内含的武器会自动幻化"
+	lang "Thai"
+	1
+		# "อาวุธภายในถูกปลุกเสก"
+	lang "German"
+	1
+		# "Enthaltene Waffen sind beseelt"
+	lang "French"
+	1
+		# "Les armes contenues sont animées"
+	lang "Spanish"
+	1
+		# "Las Armas contenidas son Animadas"
+	lang "Korean"
+	1
+		# "기동된 무기 포함"
+
+description
+	2 chest_drop_X_divination_cards chest_drop_divination_cards_with_full_stack_number_X
+	2
+		1 # "Contains {0} Divination Card that has a Full Stack number of {1}"
+		2|# # "Contains {0} Divination Cards that have a Full Stack number of {1}"
+	lang "Russian"
+	2
+		1 # "Содержит {0} гадальную карту из колод размером в {1} карт(-ы)"
+		2|# # "Содержит {0} гадальных карт(-ы) из колод размером в {1} карт(-ы)"
+	lang "Traditional Chinese"
+	2
+		1 # "內含 {0} 張命運卡，堆疊層數為 {1}"
+		2|# # "內含 {0} 張命運卡，堆疊層數為 {1}"
+	lang "Spanish"
+	2
+		1 # "Contiene {0} Carta de Adivinación cuya Baraja es de {1}"
+		2|# # "Contiene {0} Cartas de Adivinación cuya Baraja es de {1}"
+	lang "German"
+	2
+		1 # "Enthält {0} Weissagungskarte, deren Stapelanzahl {1} beträgt"
+		2|# # "Enthält {0} Weissagungskarten, deren Stapelanzahl {1} beträgt"
+	lang "Simplified Chinese"
+	2
+		1 # "掉落 {0} 张全套卡数为 {1} 的命运卡"
+		2|# # "掉落 {0} 张全套卡数为 {1} 的命运卡"
+	lang "French"
+	2
+		1 # "Contient {0} Carte divinatoire dont le Jeu complet se compose de {1} cartes"
+		2|# # "Contient {0} Cartes divinatoires dont le Jeu complet se compose de {1} cartes"
+	lang "Thai"
+	2
+		1 # "มี ไพ่พยากรณ์ เพิ่มเติม {0} ชิ้น ที่มีจำนวนกองเต็มอยู่ที่ {1}"
+		2|# # "มี ไพ่พยากรณ์ เพิ่มเติม {0} ชิ้น ที่มีจำนวนกองเต็มอยู่ที่ {1}"
+	lang "Portuguese"
+	2
+		1 # "Contêm {0} Carta de Adivinhação cujo Número do Baralho completo é {1}"
+		2|# # "Contêm {0} Cartas de Adivinhação cujo Número do Baralho completo é {1}"
+	lang "Korean"
+	2
+		1 # "{1}세트가 포함된 점술 카드 {0}장을 포함"
+		2|# # "{1}세트가 포함된 점술 카드 {0}장을 포함"
+
+description
+	1 chest_no_regular_drops
+	1
+		# "Contains no other Items"
+	lang "Portuguese"
+	1
+		# "Não contém outros Itens"
+	lang "Traditional Chinese"
+	1
+		# "沒有其他內含物品"
+	lang "Simplified Chinese"
+	1
+		# "没有其他物品"
+	lang "Thai"
+	1
+		# "ไม่มีไอเทมอื่นเพิ่มเติม"
+	lang "Russian"
+	1
+		# "Не содержит других предметов"
+	lang "French"
+	1
+		# "Ne contient pas d'autres Objets"
+	lang "German"
+	1
+		# "Enthält keine weiteren Gegenstände"
+	lang "Spanish"
+	1
+		# "No contiene ningún otro Objeto"
+	lang "Korean"
+	1
+		# "다른 아이템을 포함하지 않음"
+
+description
+	1 chest_display_guarded_by_dario
+	1
+		# "Guarded by Dario, the Living Void\nGuarded by waves of Void Constructs"
+	lang "Russian"
+	1
+		# "Охраняется Дарием, Ожившей пустотой\nОхраняется волнами Механизмов пустоты"
+	lang "Traditional Chinese"
+	1
+		# "由虛空行者達里歐守護\n由幾波虛空創造物守護"
+	lang "Spanish"
+	1
+		# "Custodiado por Dario, el Vacío Viviente\nCustodiado por oleadas de Constructos de Vacío"
+	lang "German"
+	1
+		# "Bewacht von Dario die lebendige Leere\nBewacht von Wellen von Leerenkonstrukten"
+	lang "Simplified Chinese"
+	1
+		# "由【达瑞尔·虚空之灵】守护\n由几群【虚空造物】守护"
+	lang "French"
+	1
+		# "Gardé par Dario, le Néant personnifié\nGardé par des vagues de Constructions du Néant"
+	lang "Thai"
+	1
+		# "พิทักษ์โดย ดาริโอ ความว่างเปล่ามีชีวิต\nพิทักษ์โดย Void Construct หลายชุด"
+	lang "Portuguese"
+	1
+		# "Guardado por Dario, o Vazio Vivo\nGuardado por ondas de Construtos do Vazio"
+	lang "Korean"
+	1
+		# "살아있는 공허 다리오가 방어\n공허 구조물의 웨이브가 방어"
+
+description
+	1 chest_display_guarded_by_hooded_architect
+	1
+		# "Guarded by Ixtolatl, Artisan of Sacrifice\nGuarded by waves of Vaal Monsters"
+	lang "German"
+	1
+		# "Bewacht von Ixtolatl, Meister der Opferung\nBewacht von Wellen von Vaal-Monstern"
+	lang "Russian"
+	1
+		# "Охраняется Иштолатлем, мастером жертвоприношения\nОхраняется волнами монстров ваал"
+	lang "Spanish"
+	1
+		# "Custodiado por Ixtolatl, Artesano de Sacrificio\nCustodiado por oleadas de monstruos vaal"
+	lang "Simplified Chinese"
+	1
+		# "被献祭大师伊克多拉丢守卫\n被大量瓦尔怪物守卫"
+	lang "Traditional Chinese"
+	1
+		# "由獻祭匠師伊斯特拉特守護\n由幾波瓦爾怪物守護"
+	lang "Korean"
+	1
+		# "희생의 장인 익스톨라틀이 방어\n바알 몬스터 웨이브가 방어"
+	lang "Thai"
+	1
+		# "พิทักษ์โดย อิกโทลาตล์ ช่างฝีมือแห่งการบวงสรวง\nพิทักษ์โดย มอนสเตอร์วาล์ หลายชุด"
+	lang "Portuguese"
+	1
+		# "Guardado por Ixtolatl, Artesão do Sacrifício\nGuardado por ondas de Monstros Vaal"
+	lang "French"
+	1
+		# "Gardé par Ixtolatl, Artisan du Sacrifice\nGardé par des vagues de Monstres vaal"
+
+description
+	1 chest_display_guarded_by_hooded_architect_mortal
+	1
+		# "Guarded by Mahuatzi, Artisan of Desire\nGuarded by waves of Vaal Monsters"
+	lang "German"
+	1
+		# "Bewacht von Mahuatzi, Meister der Sehnsüchte\nBewacht von Wellen von Vaal-Monstern"
+	lang "Russian"
+	1
+		# "Охраняется Махватзи, мастером вожделения\nОхраняется волнами монстров ваал"
+	lang "Spanish"
+	1
+		# "Custodiado por Mahuatzi, Artesano de Deseo\nCustodiado por oleadas de monstruos vaal"
+	lang "Simplified Chinese"
+	1
+		# "被欲望大师马胡兹守卫\n被大量瓦尔怪物守卫"
+	lang "Traditional Chinese"
+	1
+		# "由慾望匠師瑪瓦希茲守護\n由幾波瓦爾怪物守護"
+	lang "Korean"
+	1
+		# "갈망의 장인 마후앗지가 방어\n바알 몬스터 웨이브가 방어"
+	lang "Thai"
+	1
+		# "พิทักษ์โดย มาฮวตซี ช่างฝีมือแห่งปรารถนา\nพิทักษ์โดย มอนสเตอร์วาล์ หลายชุด"
+	lang "Portuguese"
+	1
+		# "Guardado por Mahuatzi, Artesão do Desejo\nGuardado por ondas de Monstros Vaal"
+	lang "French"
+	1
+		# "Gardé par Mahuatzi, Artisan du Désir\nGardé par des vagues de Monstres vaal"
+
+description
+	1 chest_display_weylams_war
+	1
+		# "Guarded by a stream of Ghost Pirates\nGuarded by the Maiden of the Black Crest"
+	lang "Russian"
+	1
+		# "Охраняется группой Призрачных пиратов\nОхраняется Девой с Чёрного гребня"
+	lang "Portuguese"
+	1
+		# "Protegido por um fluxo de Piratas Fantasmas\nProtegido pela Donzela do Brasão Negro"
+	lang "Thai"
+	1
+		# "พิทักษ์โดย ผีโจรสลัด กลุ่มใหญ่\nพิทักษ์โดย แม่ย่านางแห่งแบล็คเครสต์"
+	lang "French"
+	1
+		# "Protégé par un flux de Pirates fantômes\nProtégé par la Jouvencelle de la Crête noire"
+	lang "German"
+	1
+		# "Bewacht von einer Welle von Piratengeistern\nBewacht von der Jungfer der Schwarzen Woge"
+	lang "Spanish"
+	1
+		# "Custodiado por una marea de Piratas Fantasma\nCustodiado por la Doncella de la Cima Negra"
+	lang "Traditional Chinese"
+	1
+		# "被一群幽靈海盜守衛\n被黑峰少女守衛"
+	lang "Simplified Chinese"
+	1
+		# "被一大群【怨灵海盗】守护\n被【黑冠号的仆从】守护"
+	lang "Korean"
+	1
+		# "유령 해적 한 무리가 방어\n검은 물마루 호의 처녀가 방어"
+

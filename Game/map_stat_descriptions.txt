@@ -1,0 +1,756 @@
+﻿﻿description
+	2 map_tempest_display_prefix map_tempest_display_suffix
+	1
+		# # "{0} {1}" tempest_mod_text 1 tempest_mod_text 2
+	lang "Simplified Chinese"
+	1
+		# # "{0} {1}" tempest_mod_text 1 tempest_mod_text 2
+	lang "Portuguese"
+	1
+		# # "{0} {1}" tempest_mod_text 1 tempest_mod_text 2
+	lang "Russian"
+	1
+		# # "{0} {1}" tempest_mod_text 1 tempest_mod_text 2
+	lang "Thai"
+	1
+		# # "{0} {1}" tempest_mod_text 1 tempest_mod_text 2
+	lang "Traditional Chinese"
+	1
+		# # "{0} {1}" tempest_mod_text 1 tempest_mod_text 2
+	lang "German"
+	1
+		# # "{0} {1}" tempest_mod_text 1 tempest_mod_text 2
+	lang "Spanish"
+	1
+		# # "{0} {1}" tempest_mod_text 1 tempest_mod_text 2
+	lang "French"
+	1
+		# # "{0} {1}" tempest_mod_text 1 tempest_mod_text 2
+	lang "Korean"
+	1
+		# # "{0} {1}" tempest_mod_text 1 tempest_mod_text 2
+
+include "Metadata/StatDescriptions/stat_descriptions.txt"
+
+no_description map_summon_exploding_buff_storms
+no_description map_tempest_base_ground_fire_damage_to_deal_per_minute
+no_description map_tempest_ground_ice
+no_description map_tempest_ground_lightning
+no_description map_tempest_base_ground_desecration_damage_to_deal_per_minute
+no_description map_storm_duration_+%_final
+no_description map_storm_delay_+%_final
+no_description map_storm_area_of_effect_+%
+no_description map_storm_buff_duration_+%
+no_description map_tempest_random_monster_drops_unique
+no_description map_tempest_random_monster_drops_map
+no_description map_tempest_random_monster_drops_vaal_fragment
+no_description map_tempest_fish_school_size_+%
+no_description map_tempest_ground_effect_patches_per_100_tiles
+no_description map_storm_buff_duration_+%_on_low_life_target
+no_description map_tempest_ground_effect_radius
+no_description map_hidden_experience_gain_+%
+no_description map_hidden_pack_size_+%
+no_description map_hidden_rare_monsters_have_nemesis_mod
+no_description map_hidden_spawn_extra_exiles
+no_description map_hidden_spawn_extra_torment_spirits
+no_description map_hidden_magic_pack_mod_rules
+no_description map_hidden_monsters_additional_fire_resistance
+no_description map_hidden_monsters_additional_cold_resistance
+no_description map_hidden_monsters_additional_lightning_resistance
+no_description map_hidden_monsters_poison_on_hit
+no_description map_hidden_monsters_%_physical_damage_to_add_as_fire
+no_description map_hidden_monsters_%_physical_damage_to_add_as_cold
+no_description map_hidden_monsters_%_physical_damage_to_add_as_lightning
+no_description map_hidden_monsters_%_physical_damage_to_add_as_chaos
+no_description map_hidden_packs_are_totems
+no_description map_unidentified_maps_item_quantity_+%
+no_description map_contains_x_additional_rare_packs_if_rare
+no_description map_contains_x_additional_magic_packs_if_magic
+no_description map_corrupted_bosses_drop_x_additional_vaal_items
+no_description local_extra_max_charges
+no_description map_adds_X_extra_synthesis_mods
+no_description map_adds_X_extra_synthesis_special_mods
+no_description map_doesnt_consume_sextant_use
+no_description map_random_zana_mod
+no_description heist_npc_blueprint_reveal_cost_+%
+no_description heist_npc_display_huck_combat
+no_description heist_contract_no_travel_cost
+no_description heist_contract_npc_cost_+%
+no_description heist_contract_gang_cost_+%
+no_description heist_contract_travel_cost_+%
+no_description heist_contract_gang_takes_no_cut
+no_description heist_contract_total_cost_+%_final
+description
+	1 map_item_drop_quantity_+%
+	2
+		1|# "{0}% increased Quantity of Items found in this Area"
+		#|-1 "{0}% reduced Quantity of Items found in this Area" negate 1
+	lang "Portuguese"
+	2
+		1|# "Quantidade de Itens encontrados nesta Área aumentada em {0}%"
+		#|-1 "Quantidade de Itens encontrados nesta Área reduzida em {0}%" negate 1
+	lang "Russian"
+	2
+		1|# "{0}% увеличение количества найденных предметов в этой области"
+		#|-1 "{0}% уменьшение количества найденных предметов в этой области" negate 1
+	lang "Thai"
+	2
+		1|# "เพิ่มจำนวนของ ไอเทมที่พบในด่านนี้ {0}%"
+		#|-1 "ลดจำนวนของ ไอเทมที่พบในด่านนี้ {0}%" negate 1
+	lang "Traditional Chinese"
+	2
+		1|# "增加 {0}% 此區域物品數量"
+		#|-1 "減少 {0}% 此區域物品數量" negate 1
+	lang "Simplified Chinese"
+	2
+		1|# "该区域物品掉落数量提高 {0}%"
+		#|-1 "该区域物品掉落数量降低 {0}%" negate 1
+	lang "German"
+	2
+		1|# "{0}% erhöhte Menge gefundener Gegenstände im Gebiet"
+		#|-1 "{0}% verringerte Menge gefundener Gegenstände im Gebiet" negate 1
+	lang "Spanish"
+	2
+		1|# "Cantidad de Objetos encontrados en esta Área aumentada un {0}%"
+		#|-1 "Cantidad de Objetos encontrados en esta Área reducida un {0}%" negate 1
+	lang "French"
+	2
+		1|# "{0}% d'Augmentation de la Quantité d'Objets cédés dans cette Zone"
+		#|-1 "{0}% de Réduction de la Quantité d'Objets cédés dans cette Zone" negate 1
+	lang "Korean"
+	2
+		1|# "이 지역에서 발견하는 아이템 수량 {0}% 증가"
+		#|-1 "이 지역에서 발견하는 아이템 수량 {0}% 감소" negate 1
+
+description
+	1 map_item_drop_rarity_+%
+	2
+		1|# "{0}% increased Rarity of Items found in this Area"
+		#|-1 "{0}% reduced Rarity of Items found in this Area" negate 1
+	lang "Portuguese"
+	2
+		1|# "Raridade de Itens encontrados nessa Área aumentada em {0}%"
+		#|-1 "Raridade de Itens encontrados nessa Área reduzida em {0}%" negate 1
+	lang "Traditional Chinese"
+	2
+		1|# "此地圖增加 {0}% 物品稀有度"
+		#|-1 "此地圖減少 {0}% 物品稀有度" negate 1
+	lang "Simplified Chinese"
+	2
+		1|# "该地图的物品稀有度提高 {0}%"
+		#|-1 "该地图的物品稀有度降低 {0}%" negate 1
+	lang "Thai"
+	2
+		1|# "เพิ่มระดับความหายากของ ไอเทมที่พบในด่านนี้ {0}%"
+		#|-1 "ลดระดับความหายากของ ไอเทมที่พบในด่านนี้ {0}%" negate 1
+	lang "Russian"
+	2
+		1|# "{0}% повышение редкости найденных предметов в этой области"
+		#|-1 "{0}% снижение редкости найденных предметов в этой области" negate 1
+	lang "French"
+	2
+		1|# "{0}% d'Augmentation de la Rareté des Objets cédés dans cette Zone"
+		#|-1 "{0}% de Réduction de la Rareté des Objets cédés dans cette Zone" negate 1
+	lang "German"
+	2
+		1|# "{0}% erhöhte Seltenheit gefundener Gegenstände im Gebiet"
+		#|-1 "{0}% verringerte Seltenheit gefundener Gegenstände im Gebiet" negate 1
+	lang "Spanish"
+	2
+		1|# "Rareza de Objetos encontrados en esta Área aumentada un {0}%"
+		#|-1 "Rareza de Objetos encontrados en esta Área reducida un {0}%" negate 1
+	lang "Korean"
+	2
+		1|# "이 지역에서 발견하는 아이템 희귀도 {0}% 증가"
+		#|-1 "이 지역에서 발견하는 아이템 희귀도 {0}% 감소" negate 1
+
+description
+	1 modifiers_to_map_item_drop_quantity_also_apply_to_map_item_drop_rarity
+	1
+		# "This Area's Modifiers to Quantity of Items found also apply to Rarity"
+	lang "Portuguese"
+	1
+		# "Modificadores de Quantidade de Itens Encontrados desta Área também são aplicados à Raridade"
+	lang "Traditional Chinese"
+	1
+		# "此區域的物品數量加成同時套用在物品稀有度上"
+	lang "Simplified Chinese"
+	1
+		# "该区域的物品数量加成也套用于物品稀有度"
+	lang "Russian"
+	1
+		# "Модификаторы количества найденных предметов в этой области также применяются к редкости"
+	lang "Thai"
+	1
+		# "ม็อดที่ส่งผลต่อ จำนวนของ ไอเทมที่พบ ของด่านนี้จะส่งผลต่อ ระดับความหายาก เช่นกัน"
+	lang "German"
+	1
+		# "Die Modifikatoren zur Menge gefundener Gegenstände im Gebiet gelten auch für deren Seltenheit"
+	lang "Spanish"
+	1
+		# "Los Modificadores a la Cantidad de Objetos encontrados en esta Área también se aplican a la Rareza"
+	lang "French"
+	1
+		# "Dans cette Zone, les modificateurs à la Quantité d'Objets cédés s'appliquent aussi à la Rareté"
+	lang "Korean"
+	1
+		# "이 지역의 아이템 수량 속성 부여를 아이템 희귀도에도 적용"
+
+description
+	1 map_pack_size_+%
+	2
+		1|# "{0}% increased Pack size"
+		#|-1 "{0}% reduced Pack size" negate 1
+	lang "Traditional Chinese"
+	2
+		1|# "增加 {0}% 怪物群大小"
+		#|-1 "減少 {0}% 怪物群大小" negate 1
+	lang "Simplified Chinese"
+	2
+		1|# "怪物群规模扩大 {0}%"
+		#|-1 "怪物群规模缩小 {0}%" negate 1
+	lang "Spanish"
+	2
+		1|# "Tamaño de los grupos de monstruos aumentado un {0}%"
+		#|-1 "Tamaño de los grupos de monstruos reducido un {0}%" negate 1
+	lang "Russian"
+	2
+		1|# "{0}% увеличение размера групп монстров"
+		#|-1 "{0}% уменьшение размера групп монстров" negate 1
+	lang "Korean"
+	2
+		1|# "무리 규모 {0}% 증가"
+		#|-1 "무리 규모 {0}% 감소" negate 1
+	lang "German"
+	2
+		1|# "{0}% erhöhte Gruppengröße"
+		#|-1 "{0}% verringerte Gruppengröße" negate 1
+	lang "French"
+	2
+		1|# "{0}% d'Augmentation de la Taille des Groupes de Monstres"
+		#|-1 "{0}% de Réduction de la Taille des Groupes de Monstres" negate 1
+	lang "Portuguese"
+	2
+		1|# "Tamanho do Grupo aumentado em {0}%"
+		#|-1 "Tamanho do Grupo reduzido em {0}%" negate 1
+	lang "Thai"
+	2
+		1|# "เพิ่มขนาดของ กองมอนสเตอร์ {0}%"
+		#|-1 "ลดขนาดของ กองมอนสเตอร์ {0}%" negate 1
+
+description
+	1 map_is_unidentified
+	1
+		# "Area is unidentified"
+	lang "Portuguese"
+	1
+		# "Área não identificada"
+	lang "Traditional Chinese"
+	1
+		# "未鑑定的地圖"
+	lang "Simplified Chinese"
+	1
+		# "未鉴定的区域"
+	lang "Thai"
+	1
+		# "ด่าน ยังไม่ได้ตรวจสอบ"
+	lang "Russian"
+	1
+		# "Область не опознана"
+	lang "French"
+	1
+		# "La Zone n'est pas identifée"
+	lang "German"
+	1
+		# "Gebiet ist nicht identifiziert"
+	lang "Spanish"
+	1
+		# "El Área no está identificada"
+	lang "Korean"
+	1
+		# "미확인 지역"
+
+description
+	1 map_is_corrupted
+	1
+		# "Area is corrupted"
+	lang "Portuguese"
+	1
+		# "Área corrompida"
+	lang "Traditional Chinese"
+	1
+		# "區域已被汙染"
+	lang "Simplified Chinese"
+	1
+		# "区域已被腐化"
+	lang "Thai"
+	1
+		# "ด่าน มีมลทิน"
+	lang "Russian"
+	1
+		# "Область осквернена"
+	lang "French"
+	1
+		# "La Zone est corrompue"
+	lang "German"
+	1
+		# "Gebiet ist verderbt"
+	lang "Spanish"
+	1
+		# "El área está corrupta"
+	lang "Korean"
+	1
+		# "타락한 지역"
+
+description
+	1 metamorphosis_boss_damage_+%_final_permyriad
+	2
+		1|# "{0}% more Damage" divide_by_one_hundred 1
+		#|-1 "{0}% less Damage" negate 1 divide_by_one_hundred 1
+	lang "German"
+	2
+		1|# "{0}% mehr Schaden" divide_by_one_hundred 1
+		#|-1 "{0}% weniger Schaden" negate 1 divide_by_one_hundred 1
+	lang "Korean"
+	2
+		1|# "피해 {0}% 증폭" divide_by_one_hundred 1
+		#|-1 "피해 {0}% 감폭" negate 1 divide_by_one_hundred 1
+	lang "Portuguese"
+	2
+		1|# "{0}% mais Dano" divide_by_one_hundred 1
+		#|-1 "{0}% menos Dano" negate 1 divide_by_one_hundred 1
+	lang "Russian"
+	2
+		1|# "На {0}% больше урона" divide_by_one_hundred 1
+		#|-1 "На {0}% меньше урона" negate 1 divide_by_one_hundred 1
+	lang "Spanish"
+	2
+		1|# "{0}% más de daño" divide_by_one_hundred 1
+		#|-1 "{0}% menos de daño" negate 1 divide_by_one_hundred 1
+	lang "Traditional Chinese"
+	2
+		1|# "{0}% 更多傷害" divide_by_one_hundred 1
+		#|-1 "{0}% 更少傷害" negate 1 divide_by_one_hundred 1
+	lang "Thai"
+	2
+		1|# "เพิ่มความเสียหาย อีก {0}%" divide_by_one_hundred 1
+		#|-1 "ลดความเสียหาย อีก {0}%" negate 1 divide_by_one_hundred 1
+	lang "French"
+	2
+		1|# "{0}% Davantage de Dégâts" divide_by_one_hundred 1
+		#|-1 "{0}% de Perte de Dégâts" negate 1 divide_by_one_hundred 1
+	lang "Simplified Chinese"
+	2
+		1|# "伤害总增 {0}%" divide_by_one_hundred 1
+		#|-1 "伤害总降 {0}%" negate 1 divide_by_one_hundred 1
+
+description
+	1 metamorphosis_boss_life_+%_final_permyriad
+	2
+		1|# "{0}% more maximum Life" divide_by_one_hundred 1
+		#|-1 "{0}% less maximum Life" negate 1 divide_by_one_hundred 1
+	lang "German"
+	2
+		1|# "{0}% mehr maximales Leben" divide_by_one_hundred 1
+		#|-1 "{0}% weniger maximales Leben" negate 1 divide_by_one_hundred 1
+	lang "Korean"
+	2
+		1|# "최대 생명력 {0}% 증폭" divide_by_one_hundred 1
+		#|-1 "최대 생명력 {0}% 감폭" negate 1 divide_by_one_hundred 1
+	lang "Portuguese"
+	2
+		1|# "{0}% mais Vida máxima" divide_by_one_hundred 1
+		#|-1 "{0}% menos Vida máxima" negate 1 divide_by_one_hundred 1
+	lang "Russian"
+	2
+		1|# "На {0}% больше максимума здоровья" divide_by_one_hundred 1
+		#|-1 "На {0}% меньше максимума здоровья" negate 1 divide_by_one_hundred 1
+	lang "Spanish"
+	2
+		1|# "{0}% más de vida máxima" divide_by_one_hundred 1
+		#|-1 "{0}% menos de vida máxima" negate 1 divide_by_one_hundred 1
+	lang "Traditional Chinese"
+	2
+		1|# "{0}% 更多最大生命" divide_by_one_hundred 1
+		#|-1 "{0}% 更少最大生命" negate 1 divide_by_one_hundred 1
+	lang "Thai"
+	2
+		1|# "เพิ่มพลังชีวิตสูงสุด อีก {0}%" divide_by_one_hundred 1
+		#|-1 "ลดพลังชีวิตสูงสุด อีก {0}%" negate 1 divide_by_one_hundred 1
+	lang "French"
+	2
+		1|# "{0}% Davantage de Vie maximale" divide_by_one_hundred 1
+		#|-1 "{0}% de Perte de Vie maximale" negate 1 divide_by_one_hundred 1
+	lang "Simplified Chinese"
+	2
+		1|# "最大生命总增 {0}%" divide_by_one_hundred 1
+		#|-1 "最大生命总降 {0}%" negate 1 divide_by_one_hundred 1
+
+description
+	1 metamorphosis_boss_actor_scale_+%_permyriad
+	2
+		1|# "{0}% increased Character Size" divide_by_one_hundred 1
+		#|-1 "{0}% reduced Character Size" negate 1 divide_by_one_hundred 1
+	lang "German"
+	2
+		1|# "{0}% erhöhte Charaktergröße" divide_by_one_hundred 1
+		#|-1 "{0}% verringerte Charaktergröße" negate 1 divide_by_one_hundred 1
+	lang "Korean"
+	2
+		1|# "캐릭터 크기 {0}% 증가" divide_by_one_hundred 1
+		#|-1 "캐릭터 크기 {0}% 감소" negate 1 divide_by_one_hundred 1
+	lang "Portuguese"
+	2
+		1|# "Tamanho do Personagem aumentado em {0}%" divide_by_one_hundred 1
+		#|-1 "Tamanho do Personagem reduzido em {0}%" negate 1 divide_by_one_hundred 1
+	lang "Russian"
+	2
+		1|# "{0}% увеличение размера персонажа" divide_by_one_hundred 1
+		#|-1 "{0}% уменьшение размера персонажа" negate 1 divide_by_one_hundred 1
+	lang "Spanish"
+	2
+		1|# "Tamaño del personaje aumentado un {0}%" divide_by_one_hundred 1
+		#|-1 "Tamaño del personaje reducido un {0}%" negate 1 divide_by_one_hundred 1
+	lang "Traditional Chinese"
+	2
+		1|# "增加 {0}% 角色體型" divide_by_one_hundred 1
+		#|-1 "減少 {0}% 角色體型" negate 1 divide_by_one_hundred 1
+	lang "Thai"
+	2
+		1|# "เพิ่มขนาดตัวละคร {0}%" divide_by_one_hundred 1
+		#|-1 "ลดขนาดตัวละคร {0}%" negate 1 divide_by_one_hundred 1
+	lang "French"
+	2
+		1|# "{0}% d'Augmentation de la Taille du personnage" divide_by_one_hundred 1
+		#|-1 "{0}% de Réduction de la Taille du personnage" negate 1 divide_by_one_hundred 1
+	lang "Simplified Chinese"
+	2
+		1|# "角色尺寸增大 {0}%" divide_by_one_hundred 1
+		#|-1 "角色尺寸缩小 {0}%" negate 1 divide_by_one_hundred 1
+
+description
+	1 metamorphosis_boss_attack_speed_+%_final_permyriad
+	2
+		1|# "{0}% more Attack Speed" divide_by_one_hundred 1
+		#|-1 "{0}% less Attack Speed" negate 1 divide_by_one_hundred 1
+	lang "German"
+	2
+		1|# "{0}% mehr Angriffsgeschwindigkeit" divide_by_one_hundred 1
+		#|-1 "{0}% weniger Angriffsgeschwindigkeit" negate 1 divide_by_one_hundred 1
+	lang "Korean"
+	2
+		1|# "공격 속도 {0}% 증폭" divide_by_one_hundred 1
+		#|-1 "공격 속도 {0}% 감폭" negate 1 divide_by_one_hundred 1
+	lang "Portuguese"
+	2
+		1|# "{0}% mais Velocidade de Ataque" divide_by_one_hundred 1
+		#|-1 "{0}% menos Velocidade de Ataque" negate 1 divide_by_one_hundred 1
+	lang "Russian"
+	2
+		1|# "На {0}% больше скорости атаки" divide_by_one_hundred 1
+		#|-1 "На {0}% меньше скорости атаки" negate 1 divide_by_one_hundred 1
+	lang "Spanish"
+	2
+		1|# "{0}% más de velocidad de ataque" divide_by_one_hundred 1
+		#|-1 "{0}% menos de velocidad de ataque" negate 1 divide_by_one_hundred 1
+	lang "Traditional Chinese"
+	2
+		1|# "{0}% 更多攻擊速度" divide_by_one_hundred 1
+		#|-1 "{0}% 更少攻擊速度" negate 1 divide_by_one_hundred 1
+	lang "Thai"
+	2
+		1|# "เพิ่มความเร็วในการโจมตี อีก {0}%" divide_by_one_hundred 1
+		#|-1 "ลดความเร็วในการโจมตี อีก {0}%" negate 1 divide_by_one_hundred 1
+	lang "French"
+	2
+		1|# "{0}% Davantage de Vitesse d'attaque" divide_by_one_hundred 1
+		#|-1 "{0}% de Perte de Vitesse d'attaque" negate 1 divide_by_one_hundred 1
+	lang "Simplified Chinese"
+	2
+		1|# "攻击速度总增 {0}%" divide_by_one_hundred 1
+		#|-1 "攻击速度总降 {0}%" negate 1 divide_by_one_hundred 1
+
+description
+	1 metamorphosis_boss_cast_speed_+%_final_permyriad
+	2
+		1|# "{0}% more Cast Speed" divide_by_one_hundred 1
+		#|-1 "{0}% less Cast Speed" negate 1 divide_by_one_hundred 1
+	lang "German"
+	2
+		1|# "{0}% mehr Zaubergeschwindigkeit" divide_by_one_hundred 1
+		#|-1 "{0}% weniger Zaubergeschwindigkeit" negate 1 divide_by_one_hundred 1
+	lang "Korean"
+	2
+		1|# "시전 속도 {0}% 증폭" divide_by_one_hundred 1
+		#|-1 "시전 속도 {0}% 감폭" negate 1 divide_by_one_hundred 1
+	lang "Portuguese"
+	2
+		1|# "{0}% mais Velocidade de Conjuração" divide_by_one_hundred 1
+		#|-1 "{0}% menos Velocidade de Conjuração" negate 1 divide_by_one_hundred 1
+	lang "Russian"
+	2
+		1|# "На {0}% больше скорости сотворения чар" divide_by_one_hundred 1
+		#|-1 "На {0}% меньше скорости сотворения чар" negate 1 divide_by_one_hundred 1
+	lang "Spanish"
+	2
+		1|# "{0}% más de velocidad de lanzamiento de hechizos" divide_by_one_hundred 1
+		#|-1 "{0}% menos de velocidad de lanzamiento de hechizos" negate 1 divide_by_one_hundred 1
+	lang "Traditional Chinese"
+	2
+		1|# "{0}% 更多施放速度" divide_by_one_hundred 1
+		#|-1 "{0}% 更少施放速度" negate 1 divide_by_one_hundred 1
+	lang "Thai"
+	2
+		1|# "เพิ่มความเร็วในการร่าย อีก {0}%" divide_by_one_hundred 1
+		#|-1 "ลดความเร็วในการร่าย อีก {0}%" negate 1 divide_by_one_hundred 1
+	lang "French"
+	2
+		1|# "{0}% Davantage de Vitesse d'incantation" divide_by_one_hundred 1
+		#|-1 "{0}% de Perte de Vitesse d'incantation" negate 1 divide_by_one_hundred 1
+	lang "Simplified Chinese"
+	2
+		1|# "总施法速度总增 {0}%" divide_by_one_hundred 1
+		#|-1 "总施法速度总降 {0}%" negate 1 divide_by_one_hundred 1
+
+description
+	1 metamorphosis_boss_move_speed_+%_final_permyriad
+	2
+		1|# "{0}% more Movement Speed" divide_by_one_hundred 1
+		#|-1 "{0}% less Movement Speed" negate 1 divide_by_one_hundred 1
+	lang "German"
+	2
+		1|# "{0}% mehr Bewegungsgeschwindigkeit" divide_by_one_hundred 1
+		#|-1 "{0}% weniger Bewegungsgeschwindigkeit" negate 1 divide_by_one_hundred 1
+	lang "Korean"
+	2
+		1|# "이동 속도 {0}% 증폭" divide_by_one_hundred 1
+		#|-1 "이동 속도 {0}% 감폭" negate 1 divide_by_one_hundred 1
+	lang "Portuguese"
+	2
+		1|# "{0}% mais Velocidade de Movimento" divide_by_one_hundred 1
+		#|-1 "{0}% Menos Velocidade de Movimento" negate 1 divide_by_one_hundred 1
+	lang "Russian"
+	2
+		1|# "На {0}% больше скорости передвижения" divide_by_one_hundred 1
+		#|-1 "На {0}% меньше скорости передвижения" negate 1 divide_by_one_hundred 1
+	lang "Spanish"
+	2
+		1|# "{0}% más de velocidad de movimiento" divide_by_one_hundred 1
+		#|-1 "{0}% menos de velocidad de movimiento" negate 1 divide_by_one_hundred 1
+	lang "Traditional Chinese"
+	2
+		1|# "{0}% 更多移動速度" divide_by_one_hundred 1
+		#|-1 "{0}% 更少移動速度" negate 1 divide_by_one_hundred 1
+	lang "Thai"
+	2
+		1|# "เพิ่มความเร็วในการเคลื่อนที่ อีก {0}%" divide_by_one_hundred 1
+		#|-1 "ลดความเร็วในการเคลื่อนที่ อีก {0}%" negate 1 divide_by_one_hundred 1
+	lang "French"
+	2
+		1|# "{0}% Davantage de Vitesse de déplacement" divide_by_one_hundred 1
+		#|-1 "{0}% de Perte de Vitesse de déplacement" negate 1 divide_by_one_hundred 1
+	lang "Simplified Chinese"
+	2
+		1|# "移动速度总增 {0}%" divide_by_one_hundred 1
+		#|-1 "移动速度总降 {0}%" negate 1 divide_by_one_hundred 1
+
+description
+	1 metamorphosis_boss_item_quantity_+%_final_permyriad
+	2
+		1|# "{0}% more Item Quantity" divide_by_one_hundred 1
+		#|-1 "{0}% less Item Quantity" negate 1 divide_by_one_hundred 1
+	lang "German"
+	2
+		1|# "{0}% mehr Gegenstandsmenge" divide_by_one_hundred 1
+		#|-1 "{0}% weniger Gegenstandsmenge" negate 1 divide_by_one_hundred 1
+	lang "Korean"
+	2
+		1|# "아이템 수량 {0}% 증폭" divide_by_one_hundred 1
+		#|-1 "아이템 수량 {0}% 감폭" negate 1 divide_by_one_hundred 1
+	lang "Portuguese"
+	2
+		1|# "{0}% mais Quantidade de Itens" divide_by_one_hundred 1
+		#|-1 "{0}% menos Quantidade de Itens" negate 1 divide_by_one_hundred 1
+	lang "Russian"
+	2
+		1|# "На {0}% больше предметов" divide_by_one_hundred 1
+		#|-1 "На {0}% меньше предметов" negate 1 divide_by_one_hundred 1
+	lang "Spanish"
+	2
+		1|# "{0}% más de cantidad de objetos" divide_by_one_hundred 1
+		#|-1 "{0}% menos de cantidad de objetos" negate 1 divide_by_one_hundred 1
+	lang "Traditional Chinese"
+	2
+		1|# "{0}% 更多物品數量" divide_by_one_hundred 1
+		#|-1 "{0}% 更少物品數量" negate 1 divide_by_one_hundred 1
+	lang "Thai"
+	2
+		1|# "เพิ่มจำนวนไอเทมที่ดรอป อีก {0}%" divide_by_one_hundred 1
+		#|-1 "ลดจำนวนไอเทมที่ดรอป อีก {0}%" negate 1 divide_by_one_hundred 1
+	lang "French"
+	2
+		1|# "{0}% Davantage de Quantité d'Objets" divide_by_one_hundred 1
+		#|-1 "{0}% de Perte de Quantité d'Objets" negate 1 divide_by_one_hundred 1
+	lang "Simplified Chinese"
+	2
+		1|# "总物品数量总增 {0}%" divide_by_one_hundred 1
+		#|-1 "总物品数量总降 {0}%" negate 1 divide_by_one_hundred 1
+
+description
+	1 metamorphosis_boss_item_rarity_+%_final_permyriad
+	2
+		1|# "{0}% more Item Rarity" divide_by_one_hundred 1
+		#|-1 "{0}% less Item Rarity" negate 1 divide_by_one_hundred 1
+	lang "German"
+	2
+		1|# "{0}% mehr Gegenstandsseltenheit" divide_by_one_hundred 1
+		#|-1 "{0}% weniger Gegenstandsseltenheit" negate 1 divide_by_one_hundred 1
+	lang "Korean"
+	2
+		1|# "아이템 희귀도 {0}% 증폭" divide_by_one_hundred 1
+		#|-1 "아이템 희귀도 {0}% 감폭" negate 1 divide_by_one_hundred 1
+	lang "Portuguese"
+	2
+		1|# "{0}% mais Raridade de Itens" divide_by_one_hundred 1
+		#|-1 "{0}% menos Raridade de Itens" negate 1 divide_by_one_hundred 1
+	lang "Russian"
+	2
+		1|# "На {0}% больше редкости предметов" divide_by_one_hundred 1
+		#|-1 "На {0}% меньше редкости предметов" negate 1 divide_by_one_hundred 1
+	lang "Spanish"
+	2
+		1|# "{0}% más de rareza de objetos" divide_by_one_hundred 1
+		#|-1 "{0}% menos de rareza de objetos" negate 1 divide_by_one_hundred 1
+	lang "Traditional Chinese"
+	2
+		1|# "{0}% 更多物品稀有度" divide_by_one_hundred 1
+		#|-1 "{0}% 更少物品稀有度" negate 1 divide_by_one_hundred 1
+	lang "Thai"
+	2
+		1|# "เพิ่มความหายากของไอเทมที่ดรอป อีก {0}%" divide_by_one_hundred 1
+		#|-1 "ลดความหายากของไอเทมที่ดรอป อีก {0}%" negate 1 divide_by_one_hundred 1
+	lang "French"
+	2
+		1|# "{0}% Davantage de Rareté des Objets" divide_by_one_hundred 1
+		#|-1 "{0}% de Perte de Rareté des Objets" negate 1 divide_by_one_hundred 1
+	lang "Simplified Chinese"
+	2
+		1|# "总物品稀有度总增 {0}%" divide_by_one_hundred 1
+		#|-1 "总物品稀有度总降 {0}%" negate 1 divide_by_one_hundred 1
+
+description
+	1 metamorphosis_boss_extra_reward_%_chance_permyriad
+	1
+		# "{0}% chance for Double Rewards" divide_by_one_hundred 1
+	lang "Korean"
+	1
+		# "{0}%의 확률로 보상 2배" divide_by_one_hundred 1
+	lang "German"
+	1
+		# "{0}% Chance auf doppelte Belohnungen" divide_by_one_hundred 1
+	lang "Russian"
+	1
+		# "{0}% шанс двойной награды" divide_by_one_hundred 1
+	lang "Spanish"
+	1
+		# "{0}% de probabilidad de obtener recompensas dobles" divide_by_one_hundred 1
+	lang "Portuguese"
+	1
+		# "{0}% de chance de recompensas dobradas" divide_by_one_hundred 1
+	lang "Thai"
+	1
+		# "มีโอกาสได้รับ ของรางวัล เป็นสองเท่า {0}%" divide_by_one_hundred 1
+	lang "Traditional Chinese"
+	1
+		# "{0}% 機率 2 倍獎勵" divide_by_one_hundred 1
+	lang "French"
+	1
+		# "{0}% de chances d'obtenir des récompenses doublées" divide_by_one_hundred 1
+	lang "Simplified Chinese"
+	1
+		# "有 {0}% 的几率奖励翻倍" divide_by_one_hundred 1
+
+description
+	1 map_abyssal_troves_contain_additional_abyssal_jewel_%_chance
+	2
+		1|99 "Abyssal Troves in Areas have a {0}% chance to contain an additional Abyssal Jewel"
+		100|# "Abyssal Troves in Areas contain an additional Abyssal Jewel"
+	lang "Korean"
+	2
+		1|99 "지역 내 심연의 발견물에서 {0}%의 확률로 심연 주얼 1개 추가 등장"
+		100|# "지역 내 심연의 발견물에서 심연 주얼 1개 추가 등장"
+	lang "French"
+	2
+		1|99 "Dans les Zones, les Trésors abyssaux ont {0}% de chances de contenir un Joyau abyssal supplémentaire"
+		100|# "Dans les Zones, les Trésors abyssaux contiennent un Joyau abyssal supplémentaire"
+	lang "German"
+	2
+		1|99 "Truhen aus der Tiefe in Gebieten haben {0}% Chance, ein zusätzliches Abgrund-Juwel zu enthalten"
+		100|# "Truhen aus der Tiefe in Gebieten enthalten ein zusätzliches Abgrund-Juwel"
+	lang "Portuguese"
+	2
+		1|99 "Tesouros Abissais nas Áreas possuem {0}% de chance de conter uma Joia Abissal adicional"
+		100|# "Tesouros Abissais nas Áreas contêm uma Joia Abissal adicional"
+	lang "Spanish"
+	2
+		1|99 "Los tesoros abisales de las áreas tienen un {0}% de probabilidad de contener una joya abisal adicional"
+		100|# "Los tesoros abisales de las áreas contienen una joya abisal adicional"
+	lang "Simplified Chinese"
+	2
+		1|99 "区域内有 {0}% 的几率额外有一个深渊保险箱"
+		100|# "区域内有一个额外的深渊保险箱"
+	lang "Russian"
+	2
+		1|99 "Клады Бездны с {0}% шансом могут содержать дополнительный самоцвет Бездны"
+		100|# "Клады Бездны содержат дополнительный самоцвет Бездны"
+	lang "Traditional Chinese"
+	2
+		1|99 "區域中的深淵保險箱有 {0}% 機率含有 1 個額外深淵珠寶"
+		100|# "區域中的深淵保險箱含有 1 個額外深淵珠寶"
+	lang "Thai"
+	2
+		1|99 "ขุมทรัพย์อะบิส ในด่าน มีโอกาสมี จิวเวลอะบิส เพิ่มเติม 1 ชิ้น {0}%"
+		100|# "ขุมทรัพย์อะบิส ในด่าน มี จิวเวลอะบิส เพิ่มเติม 1 ชิ้ิน"
+
+description
+	1 map_blight_chest_%_chance_for_additional_drop
+	2
+		1|99 "{0}% chance for Blight Chests to contain an additional Reward"
+		100|# "Blight Chests contain an additional Reward"
+	lang "Simplified Chinese"
+	2
+		1|99 "菌潮宝箱有 {0}% 的几率有一个额外奖励"
+		100|# "菌潮宝箱有一个额外奖励"
+	lang "German"
+	2
+		1|99 "Blight-Truhen haben {0}% Chance, eine zusätzliche Belohnung fallen zu lassen"
+		100|# "Blight-Truhen lassen eine zusätzliche Belohnung fallen"
+	lang "Russian"
+	2
+		1|99 "{0}% шанс выпадения дополнительной награды из сундуков Скверны"
+		100|# "Из сундуков Скверны выпадает дополнительная награда"
+	lang "French"
+	2
+		1|99 "{0}% de chances que les Coffres infestés cèdent une Récompense supplémentaire"
+		100|# "Les Coffres infestés cèdent une Récompense supplémentaire"
+	lang "Portuguese"
+	2
+		1|99 "{0}% de chance dos Baús Blight derrubarem uma Recompensa adicional"
+		100|# "Baús Blight derrubam uma Recompensa adicional"
+	lang "Korean"
+	2
+		1|99 "역병 상자에서 {0}% 확률로 보상 1개 추가 등장"
+		100|# "역병 상자에서 보상 1개 추가 등장"
+	lang "Thai"
+	2
+		1|99 "หีบสมบัติไบล์ท มีโอกาสมี ของรางวัล เพิ่มเติม 1 ชิ้น {0}%"
+		100|# "หีบสมบัติไบล์ท มี ของรางวัล เพิ่มเติม 1 ชิ้น"
+	lang "Traditional Chinese"
+	2
+		1|99 "凋落保險箱有 {0}% 機率掉落 1 個額外獎勵"
+		100|# "凋落保險箱掉落 1 個額外獎勵"
+	lang "Spanish"
+	2
+		1|99 "{0}% de probabilidad de que los cofres de Blight arrojen una recompensa adicional"
+		100|# "Los cofres de Blight arrojan una recompensa adicional"
+
