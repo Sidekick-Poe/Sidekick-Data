@@ -3,6 +3,7 @@ name: Update Data
 on:
   push:
     branches: [main]
+  workflow_dispatch:
 
 jobs:
   release:
@@ -28,4 +29,17 @@ jobs:
       - name: .NET - Publish
         shell: bash
         run: |
-          dotnet build src/Sidekick.Data/Sidekick.Data.csproj -c Release -r linux-x64
+          dotnet build src/Sidekick.Data/Sidekick.Data.csproj -c Release -r linux-x64 -o ./build
+          chmod +x ./build
+
+      - name: .NET - Execute
+        shell: bash
+        run: |
+          ./build --folder ./data
+
+      - name: Commit data to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@3.7.1
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BRANCH: gh-pages
+          FOLDER: data
