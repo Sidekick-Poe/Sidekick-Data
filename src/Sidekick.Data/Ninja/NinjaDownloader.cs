@@ -2,10 +2,16 @@
 using System.Text.Json;
 using System.Text.Json.Serialization;
 using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Options;
+using Sidekick.Data.Files;
+using Sidekick.Data.Options;
 
 namespace Sidekick.Data.Ninja;
 
-internal class NinjaDownloader(ILogger<NinjaDownloader> logger)
+internal class NinjaDownloader(
+    ILogger<NinjaDownloader> logger,
+    DataFileWriter dataFileWriter,
+    IOptions<DataOptions> options)
 {
     private static readonly List<NinjaPage> Poe1Pages =
     [
@@ -75,27 +81,27 @@ internal class NinjaDownloader(ILogger<NinjaDownloader> logger)
         Converters = { new JsonStringEnumConverter(JsonNamingPolicy.CamelCase) }
     };
 
-    public async Task DownloadAll(CommandOptions commandOptions)
+    public async Task DownloadAll()
     {
-        if (string.IsNullOrWhiteSpace(commandOptions.DataFolder))
+        if (string.IsNullOrWhiteSpace(options.Value.DataFolder))
         {
             throw new ArgumentException("Data folder cannot be null for download.");
         }
 
-        if (string.IsNullOrWhiteSpace(commandOptions.Poe1League) &&
-            string.IsNullOrWhiteSpace(commandOptions.Poe2League))
+        if (string.IsNullOrWhiteSpace(options.Value.Poe1League) &&
+            string.IsNullOrWhiteSpace(options.Value.Poe2League))
         {
             throw new ArgumentException("At least one of --poe1 or --poe2 must be provided for download-ninja.");
         }
 
-        if (!string.IsNullOrWhiteSpace(commandOptions.Poe1League))
+        if (!string.IsNullOrWhiteSpace(options.Value.Poe1League))
         {
-            await DownloadForGame(game: "poe1", commandOptions.Poe1League);
+            await DownloadForGame(game: "poe1", options.Value.Poe1League);
         }
 
-        if (!string.IsNullOrWhiteSpace(commandOptions.Poe2League))
+        if (!string.IsNullOrWhiteSpace(options.Value.Poe2League))
         {
-            await DownloadForGame(game: "poe2", commandOptions.Poe2League);
+            await DownloadForGame(game: "poe2", options.Value.Poe2League);
         }
 
         return;
@@ -146,7 +152,7 @@ internal class NinjaDownloader(ILogger<NinjaDownloader> logger)
                 }
             }));
 
-            await SaveJson(commandOptions, GetFileName(game, "exchange"), exchangeItems);
+            await dataFileWriter.Write(GetFileName(game, "exchange"), exchangeItems);
         }
 
         async Task DownloadStash(string game, string league)
@@ -191,20 +197,10 @@ internal class NinjaDownloader(ILogger<NinjaDownloader> logger)
                 }
             }));
 
-            await SaveJson(commandOptions, GetFileName(game, "stash"), stashItems);
+            await dataFileWriter.Write(GetFileName(game, "stash"), stashItems);
         }
     }
 
-    private static async Task SaveJson(CommandOptions commandOptions, string fileName, object data)
-    {
-        var path = Path.Combine(commandOptions.DataFolder, fileName);
-        Directory.CreateDirectory(Path.GetDirectoryName(path)!);
-        await using var fs = new FileStream(path, FileMode.Create, FileAccess.Write, FileShare.None);
-        await JsonSerializer.SerializeAsync(fs, data, JsonOptions);
-        Console.WriteLine($"[Ninja] Saved {fileName}");
-    }
-
-    // Minimal response models
     private sealed record ApiExchangeOverview(ApiOverviewCore? Core, List<ApiExchangeItem> Items);
 
     private sealed record ApiOverviewCore(string? Primary);

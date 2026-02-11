@@ -29,13 +29,13 @@ jobs:
       - name: .NET - Publish
         shell: bash
         run: |
-          dotnet publish src/Sidekick.Data/Sidekick.Data.csproj -c Release -r linux-x64 -o ./build --self-contained
+          dotnet publish src/Sidekick.Data/Sidekick.Data.csproj -c Release -r linux-x64 -o ./build --self-contained true
           chmod +x ./build
 
       - name: .NET - Execute
         shell: bash
         run: |
-          ./build --folder ./data
+          ./build --folder ./data --poe1 Keepers --poe2 "Fate of the Vaal"
 
       - name: Commit data to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@3.7.1

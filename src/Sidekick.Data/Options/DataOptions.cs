@@ -1,6 +1,6 @@
-﻿namespace Sidekick.Data;
+﻿namespace Sidekick.Data.Options;
 
-public class CommandOptions
+public class DataOptions
 {
     public string DataFolder { get; set; } = string.Empty;
     public string? Poe1League { get; set; }

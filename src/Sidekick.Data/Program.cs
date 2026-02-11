@@ -1,7 +1,10 @@
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Sidekick.Data;
+using Sidekick.Data.Files;
 using Sidekick.Data.Ninja;
+using Sidekick.Data.Options;
+using Sidekick.Data.Trade;
 
 #region Services
 
@@ -16,6 +19,37 @@ services.AddLogging(o =>
 
 services.AddSingleton<CommandExecutor>();
 services.AddSingleton<NinjaDownloader>();
+services.AddSingleton<TradeDownloader>();
+services.AddSingleton<DataFileWriter>();
+
+services.Configure<DataOptions>(opt =>
+{
+    for (var i = 0; i < args.Length; i++)
+    {
+        var a = args[i];
+        switch (a)
+        {
+            case "--folder" when i + 1 < args.Length:
+                opt.DataFolder = args[++i];
+                break;
+            case "--poe1" when i + 1 < args.Length:
+                opt.Poe1League = args[++i];
+                break;
+            case "--poe2" when i + 1 < args.Length:
+                opt.Poe2League = args[++i];
+                break;
+            case "--languages" when i + 1 < args.Length:
+                opt.LanguageCodes = args[++i].Split(',').Select(x => x.Trim()).Where(x => x.Length > 0).ToList();
+                break;
+            case "--paths" when i + 1 < args.Length:
+                opt.TradePaths = args[++i].Split(',').Select(x => x.Trim()).Where(x => x.Length > 0).ToList();
+                break;
+            case "--timeout" when i + 1 < args.Length && int.TryParse(args[++i], out var t):
+                opt.TimeoutSeconds = t;
+                break;
+        }
+    }
+});
 
 #endregion
 
