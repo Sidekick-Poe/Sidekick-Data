@@ -1,0 +1,31 @@
+name: Update Data
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Git - Checkout
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
+      - name: Version
+        id: version
+        uses: reecetech/version-increment@2024.4.4
+        with:
+          scheme: calver
+          release_branch: main
+
+      - name: .NET - Setup
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 10.x
+
+      - name: .NET - Publish
+        shell: bash
+        run: |
+          dotnet build src/Sidekick.Data/Sidekick.Data.csproj -c Release -r linux-x64

@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sidekick.Data", "src\Sidekick.Data\Sidekick.Data.csproj", "{2D91D747-B542-4FAE-99B2-FD57782BCFFE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_Configuration", "_Configuration", "{E761881A-6C14-4611-AAFF-321E9A341782}"
+	ProjectSection(SolutionItems) = preProject
+		.gitattributes = .gitattributes
+		.gitignore = .gitignore
+		LICENSE = LICENSE
+		README.md = README.md
+		.github\workflows\update-data.yml = .github\workflows\update-data.yml
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2D91D747-B542-4FAE-99B2-FD57782BCFFE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D91D747-B542-4FAE-99B2-FD57782BCFFE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2D91D747-B542-4FAE-99B2-FD57782BCFFE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2D91D747-B542-4FAE-99B2-FD57782BCFFE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
