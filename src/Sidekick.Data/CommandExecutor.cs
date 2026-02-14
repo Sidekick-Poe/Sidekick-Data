@@ -29,8 +29,8 @@ internal sealed class CommandExecutor(
                 Directory.CreateDirectory(options.Value.DataFolder);
             }
 
-            // await ninjaDownloader.DownloadAll();
-            // await tradeDownloader.DownloadAll();
+            await ninjaDownloader.DownloadAll();
+            await tradeDownloader.DownloadAll();
             await repoeDownloader.DownloadAll();
 
             Console.WriteLine("Done.");
