@@ -2,6 +2,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Sidekick.Data;
 using Sidekick.Data.Files;
+using Sidekick.Data.Game;
 using Sidekick.Data.Ninja;
 using Sidekick.Data.Options;
 using Sidekick.Data.Trade;
@@ -20,6 +21,7 @@ services.AddLogging(o =>
 services.AddSingleton<CommandExecutor>();
 services.AddSingleton<NinjaDownloader>();
 services.AddSingleton<TradeDownloader>();
+services.AddSingleton<RepoeDownloader>();
 services.AddSingleton<DataFileWriter>();
 
 services.Configure<DataOptions>(opt =>
@@ -37,12 +39,6 @@ services.Configure<DataOptions>(opt =>
                 break;
             case "--poe2" when i + 1 < args.Length:
                 opt.Poe2League = args[++i];
-                break;
-            case "--languages" when i + 1 < args.Length:
-                opt.LanguageCodes = args[++i].Split(',').Select(x => x.Trim()).Where(x => x.Length > 0).ToList();
-                break;
-            case "--paths" when i + 1 < args.Length:
-                opt.TradePaths = args[++i].Split(',').Select(x => x.Trim()).Where(x => x.Length > 0).ToList();
                 break;
             case "--timeout" when i + 1 < args.Length && int.TryParse(args[++i], out var t):
                 opt.TimeoutSeconds = t;

@@ -11,7 +11,9 @@ internal class TradeDownloader(
     DataFileWriter dataFileWriter,
     IOptions<DataOptions> options)
 {
-    private static readonly List<LanguageInfo> Languages = new()
+    private sealed record TradeLanguageInfo(string Code, string Poe1Api, string Poe2Api);
+
+    private static readonly List<TradeLanguageInfo> Languages = new()
     {
         new("en",
             Poe1Api: "https://www.pathofexile.com/api/trade/",
@@ -45,8 +47,8 @@ internal class TradeDownloader(
             Poe2Api: "http://www.pathofexile.tw/api/trade2/"),
     };
 
-    private static string GetFileName(string game, string langCode, string path)
-        => $"{game}.{langCode}.{path}.json";
+    private static string GetFileName(string langCode, string path)
+        => $"{path}.{langCode}.json";
 
     private static string GetApiBase(string langCode, string game)
     {
@@ -61,45 +63,37 @@ internal class TradeDownloader(
         http.DefaultRequestHeaders.UserAgent.Add(new ProductInfoHeaderValue("Sidekick.Data", "1.0"));
         http.DefaultRequestHeaders.TryAddWithoutValidation("X-Powered-By", "Sidekick");
 
+        List<string> paths = ["items", "stats", "static", "filters"];
+
         foreach (var game in new[] { "poe1", "poe2" })
         {
             // Download leagues once (English, invariant)
             var leaguesUrl = GetApiBase("en", game) + "data/leagues";
-            await DownloadToFile(http, leaguesUrl, GetFileName(game, "en", "leagues"));
+            await DownloadToFile(http, leaguesUrl, game, GetFileName("en", "leagues"));
 
-            foreach (var code in options.Value.LanguageCodes)
+            foreach (var language in Languages)
             {
-                var lang = Languages.FirstOrDefault(x => x.Code == code);
-                if (lang == null)
+                foreach (var path in paths)
                 {
-                    logger.LogWarning($"[Trade] Skipping unsupported language code '{code}'.");
-                    continue;
-                }
-
-                foreach (var path in options.Value.TradePaths)
-                {
-                    var url = GetApiBase(lang.Code, game) + "data/" + path;
-                    await DownloadToFile(http, url, GetFileName(game, lang.Code, path));
+                    var url = GetApiBase(language.Code, game) + "data/" + path;
+                    await DownloadToFile(http, url, game, GetFileName(language.Code, path));
                 }
             }
         }
     }
 
-    private async Task DownloadToFile(HttpClient http, string url, string fileName)
+    private async Task DownloadToFile(HttpClient http, string url, string game, string fileName)
     {
         try
         {
-            logger.LogInformation($"[Trade] GET {url}");
+            logger.LogInformation($"GET {url}");
             using var response = await http.GetAsync(url, HttpCompletionOption.ResponseHeadersRead);
             response.EnsureSuccessStatusCode();
-            await dataFileWriter.Write(fileName, await response.Content.ReadAsStreamAsync());
+            await dataFileWriter.Write(game, "trade", fileName, await response.Content.ReadAsStreamAsync());
         }
         catch (Exception ex)
         {
-            logger.LogError(ex, $"[Trade] Failed for {url}: {ex.Message}");
+            logger.LogError(ex, $"Failed for {url}: {ex.Message}");
         }
     }
-
-    private sealed record LanguageInfo(string Code, string Poe1Api, string Poe2Api);
-
 }

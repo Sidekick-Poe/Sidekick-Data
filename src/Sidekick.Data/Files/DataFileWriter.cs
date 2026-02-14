@@ -17,28 +17,28 @@ public class DataFileWriter(
         Converters = { new JsonStringEnumConverter(JsonNamingPolicy.CamelCase) }
     };
 
-    public async Task Write(string fileName, object data)
+    public async Task Write(string game, string source, string fileName, object data)
     {
         if (string.IsNullOrWhiteSpace(options.Value.DataFolder))
         {
             throw new ArgumentException("Data folder cannot be null for writing.");
         }
 
-        var path = Path.Combine(options.Value.DataFolder, fileName);
+        var path = Path.Combine(options.Value.DataFolder, game, source, fileName);
         Directory.CreateDirectory(Path.GetDirectoryName(path)!);
         await using var fs = new FileStream(path, FileMode.Create, FileAccess.Write, FileShare.None);
         await JsonSerializer.SerializeAsync(fs, data, JsonOptions);
         logger.LogInformation($"Saved {fileName}");
     }
 
-    public async Task Write(string fileName, Stream stream)
+    public async Task Write(string game, string source, string fileName, Stream stream)
     {
         if (string.IsNullOrWhiteSpace(options.Value.DataFolder))
         {
             throw new ArgumentException("Data folder cannot be null for writing.");
         }
 
-        var path = Path.Combine(options.Value.DataFolder, fileName);
+        var path = Path.Combine(options.Value.DataFolder, game, source, fileName);
         Directory.CreateDirectory(Path.GetDirectoryName(path)!);
         await using var fs = new FileStream(path, FileMode.Create, FileAccess.Write, FileShare.None);
         await stream.CopyToAsync(fs);

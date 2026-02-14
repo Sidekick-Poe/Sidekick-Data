@@ -67,12 +67,7 @@ internal class NinjaDownloader(
         new("Breach", "breach-catalyst", true, false)
     ];
 
-    private static string GetFileName(string game, string type) => game switch
-    {
-        "poe1" => $"poe1.ninja.{type}.json",
-        "poe2" => $"poe2.ninja.{type}.json",
-        _ => throw new ArgumentOutOfRangeException(nameof(game))
-    };
+    private static string GetFileName(string type) => $"{type}.json";
 
     private static readonly JsonSerializerOptions JsonOptions = new()
     {
@@ -129,7 +124,7 @@ internal class NinjaDownloader(
                     http.DefaultRequestHeaders.UserAgent.Add(new ProductInfoHeaderValue("Sidekick", "1.0"));
                     http.DefaultRequestHeaders.TryAddWithoutValidation("X-Powered-By", "Sidekick");
 
-                    logger.LogInformation($"[Ninja] GET {url}");
+                    logger.LogInformation($"GET {url}");
                     using var response = await http.GetAsync(url);
                     response.EnsureSuccessStatusCode();
                     await using var s = await response.Content.ReadAsStreamAsync();
@@ -148,11 +143,11 @@ internal class NinjaDownloader(
                 }
                 catch (Exception ex)
                 {
-                    logger.LogError(ex, $"[Ninja] Failed exchange {url}");
+                    logger.LogError(ex, $"Failed exchange {url}");
                 }
             }));
 
-            await dataFileWriter.Write(GetFileName(game, "exchange"), exchangeItems);
+            await dataFileWriter.Write(game, "ninja", GetFileName("exchange"), exchangeItems);
         }
 
         async Task DownloadStash(string game, string league)
@@ -172,7 +167,7 @@ internal class NinjaDownloader(
                     http.DefaultRequestHeaders.UserAgent.Add(new ProductInfoHeaderValue("Sidekick", "1.0"));
                     http.DefaultRequestHeaders.TryAddWithoutValidation("X-Powered-By", "Sidekick");
 
-                    logger.LogInformation($"[Ninja] GET {url}");
+                    logger.LogInformation($"GET {url}");
                     using var response = await http.GetAsync(url);
                     response.EnsureSuccessStatusCode();
                     await using var s = await response.Content.ReadAsStreamAsync();
@@ -193,11 +188,11 @@ internal class NinjaDownloader(
                 }
                 catch (Exception ex)
                 {
-                    logger.LogError(ex, $"[Ninja] Failed stash {url}");
+                    logger.LogError(ex, $"Failed stash {url}");
                 }
             }));
 
-            await dataFileWriter.Write(GetFileName(game, "stash"), stashItems);
+            await dataFileWriter.Write(game, "ninja", GetFileName("stash"), stashItems);
         }
     }
 

@@ -1,5 +1,6 @@
 ﻿using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
+using Sidekick.Data.Game;
 using Sidekick.Data.Ninja;
 using Sidekick.Data.Options;
 using Sidekick.Data.Trade;
@@ -10,6 +11,7 @@ internal sealed class CommandExecutor(
     ILogger<CommandExecutor> logger,
     NinjaDownloader ninjaDownloader,
     TradeDownloader tradeDownloader,
+    RepoeDownloader repoeDownloader,
     IOptions<DataOptions> options)
 {
     public async Task<int> Execute(string[] args)
@@ -27,8 +29,9 @@ internal sealed class CommandExecutor(
                 Directory.CreateDirectory(options.Value.DataFolder);
             }
 
-            await ninjaDownloader.DownloadAll();
-            await tradeDownloader.DownloadAll();
+            // await ninjaDownloader.DownloadAll();
+            // await tradeDownloader.DownloadAll();
+            await repoeDownloader.DownloadAll();
 
             Console.WriteLine("Done.");
             return 0;
