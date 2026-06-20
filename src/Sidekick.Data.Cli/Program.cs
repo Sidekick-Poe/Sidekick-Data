@@ -2,6 +2,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
 using Microsoft.Extensions.Logging;
 using Sidekick.Common;
+using Sidekick.Data;
 using Sidekick.Data.Cli;
 using Sidekick.Data.Cli.ItemClasses;
 using Sidekick.Data.Cli.ItemDefinitions;
@@ -25,6 +26,7 @@ services.AddLogging(o =>
 });
 
 services.AddSidekickCommon(SidekickApplicationType.DataBuilder);
+services.AddSidekickData();
 
 services.TryAddSingleton<LeagueBuilder>();
 services.TryAddSingleton<NinjaDownloader>();

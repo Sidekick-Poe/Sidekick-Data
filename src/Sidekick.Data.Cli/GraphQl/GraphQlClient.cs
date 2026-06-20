@@ -14,7 +14,6 @@ public class GraphQlClient(ILogger<GraphQlClient> logger)
         PropertyNameCaseInsensitive = true,
     };
 
-
     public async Task<T?> QueryAsync<T>(string query, object? variables = null) where T : class
     {
         var requestBody = new Dictionary<string, object> { ["query"] = query };
@@ -32,11 +31,14 @@ public class GraphQlClient(ILogger<GraphQlClient> logger)
             var responseJson = await response.Content.ReadAsStringAsync();
             var result = JsonSerializer.Deserialize<GraphQlResponse<T>>(responseJson, JsonOptions);
 
-            if (result?.Errors?.Length > 0)
-                foreach (var error in result.Errors)
-                    logger.LogError("[GraphQL] {Message}", error.Message);
+            if (!(result?.Errors?.Length > 0)) return result?.Data;
 
-            return result?.Data;
+            foreach (var error in result.Errors)
+            {
+                logger.LogError("[GraphQL] {Message}", error.Message);
+            }
+
+            return result.Data;
         }
         catch (HttpRequestException ex)
         {
@@ -46,6 +48,21 @@ public class GraphQlClient(ILogger<GraphQlClient> logger)
                 "Ensure the GraphQL API is running before building data.", ex);
         }
     }
+
+    public static string GetLanguageName(string code) => code switch
+    {
+        "en" => "English",
+        "de" => "German",
+        "es" => "Spanish",
+        "fr" => "French",
+        "ja" => "Japanese",
+        "ko" => "Korean",
+        "pt" => "Portuguese",
+        "ru" => "Russian",
+        "th" => "Thai",
+        "zh" => "Traditional Chinese",
+        _ => "English",
+    };
 
     private sealed class GraphQlResponse<T> where T : class
     {

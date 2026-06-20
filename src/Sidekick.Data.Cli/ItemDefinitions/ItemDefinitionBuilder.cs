@@ -21,24 +21,24 @@ public class ItemDefinitionBuilder(
 {
     private static readonly Dictionary<string, string> BaseItemToTradeItemMappings = new()
     {
-        { "Metadata/Items/Maps/MapKeyTier1", "Metadata/Items/TradeProxy/MapKey" },
-        { "Metadata/Items/Maps/MapKeyTier2", "Metadata/Items/TradeProxy/MapKey" },
-        { "Metadata/Items/Maps/MapKeyTier3", "Metadata/Items/TradeProxy/MapKey" },
-        { "Metadata/Items/Maps/MapKeyTier4", "Metadata/Items/TradeProxy/MapKey" },
-        { "Metadata/Items/Maps/MapKeyTier5", "Metadata/Items/TradeProxy/MapKey" },
-        { "Metadata/Items/Maps/MapKeyTier6", "Metadata/Items/TradeProxy/MapKey" },
-        { "Metadata/Items/Maps/MapKeyTier7", "Metadata/Items/TradeProxy/MapKey" },
-        { "Metadata/Items/Maps/MapKeyTier8", "Metadata/Items/TradeProxy/MapKey" },
-        { "Metadata/Items/Maps/MapKeyTier9", "Metadata/Items/TradeProxy/MapKey" },
-        { "Metadata/Items/Maps/MapKeyTier10", "Metadata/Items/TradeProxy/MapKey" },
-        { "Metadata/Items/Maps/MapKeyTier11", "Metadata/Items/TradeProxy/MapKey" },
-        { "Metadata/Items/Maps/MapKeyTier12", "Metadata/Items/TradeProxy/MapKey" },
-        { "Metadata/Items/Maps/MapKeyTier13", "Metadata/Items/TradeProxy/MapKey" },
-        { "Metadata/Items/Maps/MapKeyTier14", "Metadata/Items/TradeProxy/MapKey" },
-        { "Metadata/Items/Maps/MapKeyTier15", "Metadata/Items/TradeProxy/MapKey" },
-        { "Metadata/Items/Maps/MapKeyTier16", "Metadata/Items/TradeProxy/MapKey" },
-        { "Metadata/Items/TradeProxy/BlightedMap", "Metadata/Items/TradeProxy/MapKey" },
-        { "Metadata/Items/TradeProxy/UberBlightedMap", "Metadata/Items/TradeProxy/MapKey" },
+        { "Metadata/Items/Maps/MapKeyTier1", "Metadata/Items/TradeProxy/MapKey" }, // (PoE1) Maps are not on the trade, we map them to the main Map item.
+        { "Metadata/Items/Maps/MapKeyTier2", "Metadata/Items/TradeProxy/MapKey" }, // (PoE1) Maps are not on the trade, we map them to the main Map item.
+        { "Metadata/Items/Maps/MapKeyTier3", "Metadata/Items/TradeProxy/MapKey" }, // (PoE1) Maps are not on the trade, we map them to the main Map item.
+        { "Metadata/Items/Maps/MapKeyTier4", "Metadata/Items/TradeProxy/MapKey" }, // (PoE1) Maps are not on the trade, we map them to the main Map item.
+        { "Metadata/Items/Maps/MapKeyTier5", "Metadata/Items/TradeProxy/MapKey" }, // (PoE1) Maps are not on the trade, we map them to the main Map item.
+        { "Metadata/Items/Maps/MapKeyTier6", "Metadata/Items/TradeProxy/MapKey" }, // (PoE1) Maps are not on the trade, we map them to the main Map item.
+        { "Metadata/Items/Maps/MapKeyTier7", "Metadata/Items/TradeProxy/MapKey" }, // (PoE1) Maps are not on the trade, we map them to the main Map item.
+        { "Metadata/Items/Maps/MapKeyTier8", "Metadata/Items/TradeProxy/MapKey" }, // (PoE1) Maps are not on the trade, we map them to the main Map item.
+        { "Metadata/Items/Maps/MapKeyTier9", "Metadata/Items/TradeProxy/MapKey" }, // (PoE1) Maps are not on the trade, we map them to the main Map item.
+        { "Metadata/Items/Maps/MapKeyTier10", "Metadata/Items/TradeProxy/MapKey" }, // (PoE1) Maps are not on the trade, we map them to the main Map item.
+        { "Metadata/Items/Maps/MapKeyTier11", "Metadata/Items/TradeProxy/MapKey" }, // (PoE1) Maps are not on the trade, we map them to the main Map item.
+        { "Metadata/Items/Maps/MapKeyTier12", "Metadata/Items/TradeProxy/MapKey" }, // (PoE1) Maps are not on the trade, we map them to the main Map item.
+        { "Metadata/Items/Maps/MapKeyTier13", "Metadata/Items/TradeProxy/MapKey" }, // (PoE1) Maps are not on the trade, we map them to the main Map item.
+        { "Metadata/Items/Maps/MapKeyTier14", "Metadata/Items/TradeProxy/MapKey" }, // (PoE1) Maps are not on the trade, we map them to the main Map item.
+        { "Metadata/Items/Maps/MapKeyTier15", "Metadata/Items/TradeProxy/MapKey" }, // (PoE1) Maps are not on the trade, we map them to the main Map item.
+        { "Metadata/Items/Maps/MapKeyTier16", "Metadata/Items/TradeProxy/MapKey" }, // (PoE1) Maps are not on the trade, we map them to the main Map item.
+        { "Metadata/Items/TradeProxy/BlightedMap", "Metadata/Items/TradeProxy/MapKey" }, // (PoE1) Maps are not on the trade, we map them to the main Map item.
+        { "Metadata/Items/TradeProxy/UberBlightedMap", "Metadata/Items/TradeProxy/MapKey" }, // (PoE1) Maps are not on the trade, we map them to the main Map item.
     };
 
     public async Task Build(IGameLanguage language)

@@ -33,7 +33,7 @@ public class ItemClassBuilder(
 
     private async Task BuildForGame(GameType game, IGameLanguage language)
     {
-        var lang = GetLanguageName(language.Code);
+        var lang = GraphQlClient.GetLanguageName(language.Code);
         var prefix = game == GameType.PathOfExile1 ? "poe1" : "poe2";
         var query = $"query {{ {prefix}_itemClasses(lang: \"{lang}\") {{ id name }} }}";
         var result = await graphQlClient.QueryAsync<ItemClassesResponse>(query);
@@ -57,10 +57,4 @@ public class ItemClassBuilder(
         await dataProvider.Write(game, DataType.ItemClasses, language, defs);
     }
 
-    private static string GetLanguageName(string code) => code switch
-    {
-        "en" => "English", "de" => "German", "es" => "Spanish", "fr" => "French",
-        "ja" => "Japanese", "ko" => "Korean", "pt" => "Portuguese", "ru" => "Russian",
-        "th" => "Thai", "zh" => "Traditional Chinese", _ => "English",
-    };
 }
