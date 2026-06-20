@@ -5,7 +5,6 @@ using Sidekick.Data.Cli.StatsInvariant;
 using Sidekick.Data.Cli.Trade.Models;
 using Sidekick.Data.Extensions;
 using Sidekick.Data.Languages;
-using Sidekick.Data.StatsInvariant;
 using Sidekick.Data.Trade;
 
 namespace Sidekick.Data.Cli.Trade;
@@ -36,7 +35,6 @@ public class TradeStatBuilder(
     private async Task BuildForGame(GameType game, IGameLanguage language)
     {
         var apiCategories = await dataProvider.Read<RawTradeResult<List<RawTradeStatCategory>>>(game, DataType.RawTradeStats, language);
-        var invariantStats = await dataProvider.Read<StatsInvariantDetails>(game, DataType.StatsInvariant);
 
         var stats = new List<TradeStatDefinition>();
 
@@ -46,7 +44,6 @@ public class TradeStatBuilder(
 
             foreach (var entry in apiCategory.Entries)
             {
-                if (invariantStats.IgnoreStatIds.Contains(entry.Id)) continue;
                 if (string.IsNullOrEmpty(entry.Id)) continue;
 
                 stats.AddRange(BuildStat(entry));

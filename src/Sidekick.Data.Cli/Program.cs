@@ -4,6 +4,7 @@ using Microsoft.Extensions.Logging;
 using Sidekick.Common;
 using Sidekick.Data;
 using Sidekick.Data.Cli;
+using Sidekick.Data.Cli.GraphQl;
 using Sidekick.Data.Cli.ItemClasses;
 using Sidekick.Data.Cli.ItemDefinitions;
 using Sidekick.Data.Cli.Leagues;
@@ -28,6 +29,7 @@ services.AddLogging(o =>
 services.AddSidekickCommon(SidekickApplicationType.DataBuilder);
 services.AddSidekickData();
 
+services.TryAddSingleton<GraphQlClient>();
 services.TryAddSingleton<LeagueBuilder>();
 services.TryAddSingleton<NinjaDownloader>();
 services.TryAddSingleton<PseudoBuilder>();
@@ -39,10 +41,19 @@ services.TryAddSingleton<ItemDefinitionBuilder>();
 services.TryAddSingleton<StatsInvariantBuilder>();
 services.TryAddSingleton<TradeFilterBuilder>();
 services.TryAddSingleton<RawDataProvider>();
-services.TryAddSingleton<DataBuilder>();
 
 var serviceProvider = services.BuildServiceProvider();
-var dataBuilder = serviceProvider.GetRequiredService<DataBuilder>();
+var logger = serviceProvider.GetRequiredService<ILogger<Program>>();
+var leagueBuilder = serviceProvider.GetRequiredService<LeagueBuilder>();
+var ninjaDownloader = serviceProvider.GetRequiredService<NinjaDownloader>();
+var statBuilder = serviceProvider.GetRequiredService<StatBuilder>();
+var pseudoBuilder = serviceProvider.GetRequiredService<PseudoBuilder>();
+var tradeDownloader = serviceProvider.GetRequiredService<TradeDownloader>();
+var itemDefinitionBuilder = serviceProvider.GetRequiredService<ItemDefinitionBuilder>();
+var itemClassBuilder = serviceProvider.GetRequiredService<ItemClassBuilder>();
+var statsInvariantBuilder = serviceProvider.GetRequiredService<StatsInvariantBuilder>();
+var tradeFilterBuilder = serviceProvider.GetRequiredService<TradeFilterBuilder>();
+var tradeStatBuilder = serviceProvider.GetRequiredService<TradeStatBuilder>();
 var gameLanguageProvider = serviceProvider.GetRequiredService<IGameLanguageProvider>();
 
 #endregion
@@ -108,19 +119,50 @@ if (!string.IsNullOrEmpty(runLanguage))
 
 foreach (var language in languages)
 {
-    if (download)
+    if (download && runTrade)
     {
-        await dataBuilder.DownloadRawFiles(language,
-                                           trade: runTrade,
-                                           ninja: runNinja);
+        logger.LogInformation($"Downloading {language.Code} trade data.");
+        await leagueBuilder.Build(language);
+        await tradeDownloader.Download(language);
+        logger.LogInformation($"Downloaded {language.Code} trade data.");
     }
 
-    if (build)
+    if (build && runTrade)
     {
-        await dataBuilder.BuildDataFiles(language,
-                                         items: runItems,
-                                         stats: runStats,
-                                         trade: runTrade,
-                                         pseudo: runPseudo);
+        logger.LogInformation($"Building {language.Code} trade data.");
+        await tradeFilterBuilder.Build(language);
+        await tradeStatBuilder.Build(language);
+        await statsInvariantBuilder.Build(language);
+        logger.LogInformation($"Built {language.Code} trade data.");
+    }
+
+    if (build && runItems)
+    {
+        logger.LogInformation($"Building {language.Code} items data.");
+        await itemClassBuilder.Build(language);
+        await itemDefinitionBuilder.Build(language);
+        logger.LogInformation($"Built {language.Code} items data.");
+    }
+
+    if (build && runPseudo)
+    {
+        logger.LogInformation($"Building {language.Code} pseudo data.");
+        await pseudoBuilder.Build(language);
+        logger.LogInformation($"Built {language.Code} pseudo data.");
+    }
+
+    if (build && runStats)
+    {
+        logger.LogInformation($"Building {language.Code} stats data.");
+        await statBuilder.Build(language);
+        logger.LogInformation($"Built {language.Code} stats data.");
+    }
+
+    if (download && runNinja)
+    {
+        if (language.Code != gameLanguageProvider.InvariantLanguage.Code) continue;
+        logger.LogInformation("Downloading ninja data.");
+        await ninjaDownloader.Download();
+        logger.LogInformation($"Downloaded {language.Code} ninja data.");
     }
 }
