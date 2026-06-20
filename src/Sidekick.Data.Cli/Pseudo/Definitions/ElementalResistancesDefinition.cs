@@ -1,5 +1,6 @@
 using System.Text.RegularExpressions;
-namespace Sidekick.Data.Builder.Pseudo.Definitions;
+
+namespace Sidekick.Data.Cli.Pseudo.Definitions;
 
 public class ElementalResistancesDefinition : PseudoDefinitionBuilder
 {

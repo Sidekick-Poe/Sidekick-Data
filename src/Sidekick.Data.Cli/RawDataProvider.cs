@@ -3,7 +3,7 @@ using System.Text.Json.Serialization;
 using Microsoft.Extensions.Logging;
 using Sidekick.Common.Exceptions;
 
-namespace Sidekick.Data.Builder;
+namespace Sidekick.Data.Cli;
 
 public class RawDataProvider(
     ILogger<DataProvider> logger,

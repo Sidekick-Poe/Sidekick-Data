@@ -1,4 +1,4 @@
-namespace Sidekick.Data.Builder.Trade.Models;
+namespace Sidekick.Data.Cli.Trade.Models;
 
 public class RawTradeStaticItem
 {

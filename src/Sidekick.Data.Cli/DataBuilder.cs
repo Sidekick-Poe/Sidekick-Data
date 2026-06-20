@@ -1,16 +1,15 @@
 using Microsoft.Extensions.Logging;
-using Sidekick.Data.Builder.ItemClasses;
-using Sidekick.Data.Builder.ItemDefinitions;
-using Sidekick.Data.Builder.Leagues;
-using Sidekick.Data.Builder.Ninja;
-using Sidekick.Data.Builder.Pseudo;
-using Sidekick.Data.Builder.Repoe;
-using Sidekick.Data.Builder.Stats;
-using Sidekick.Data.Builder.StatsInvariant;
-using Sidekick.Data.Builder.Trade;
+using Sidekick.Data.Cli.ItemClasses;
+using Sidekick.Data.Cli.ItemDefinitions;
+using Sidekick.Data.Cli.Leagues;
+using Sidekick.Data.Cli.Ninja;
+using Sidekick.Data.Cli.Pseudo;
+using Sidekick.Data.Cli.Stats;
+using Sidekick.Data.Cli.StatsInvariant;
+using Sidekick.Data.Cli.Trade;
 using Sidekick.Data.Languages;
 
-namespace Sidekick.Data.Builder;
+namespace Sidekick.Data.Cli;
 
 public class DataBuilder(
     ILogger<DataBuilder> logger,
@@ -22,7 +21,6 @@ public class DataBuilder(
     ItemDefinitionBuilder itemDefinitionBuilder,
     ItemClassBuilder itemClassBuilder,
     StatsInvariantBuilder statsInvariantBuilder,
-    RepoeDownloader repoeDownloader,
     TradeFilterBuilder tradeFilterBuilder,
     TradeStatBuilder tradeStatBuilder,
     IGameLanguageProvider gameLanguageProvider)
@@ -30,7 +28,6 @@ public class DataBuilder(
     public async Task DownloadRawFiles(
         IGameLanguage language,
         bool trade = true,
-        bool repoe = true,
         bool ninja = true)
     {
         logger.LogInformation($"Downloading {language.Code} data files.");
@@ -42,17 +39,11 @@ public class DataBuilder(
             logger.LogInformation($"Downloaded {language.Code} trade data.");
         }
 
-        if (repoe)
-        {
-            logger.LogInformation($"Downloading {language.Code} repoe data.");
-            await repoeDownloader.Download(language);
-            logger.LogInformation($"Downloaded {language.Code} repoe data.");
-        }
+        // RePoE download step removed — game data is now fetched from the local GraphQL API at build time.
 
         if (ninja)
         {
             if (language.Code != gameLanguageProvider.InvariantLanguage.Code) return;
-
             logger.LogInformation("Downloading ninja data.");
             await ninjaDownloader.Download();
             logger.LogInformation($"Downloaded {language.Code} ninja data.");

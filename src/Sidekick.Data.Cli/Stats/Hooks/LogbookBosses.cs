@@ -1,5 +1,6 @@
 ﻿using Sidekick.Data.Stats;
-namespace Sidekick.Data.Builder.Stats.Hooks;
+
+namespace Sidekick.Data.Cli.Stats.Hooks;
 
 public class LogbookBosses(StatBuilderContext context) : BaseHook
 {

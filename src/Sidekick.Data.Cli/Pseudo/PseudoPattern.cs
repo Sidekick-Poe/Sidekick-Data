@@ -1,5 +1,6 @@
 using System.Text.RegularExpressions;
-namespace Sidekick.Data.Builder.Pseudo;
+
+namespace Sidekick.Data.Cli.Pseudo;
 
 public class PseudoPattern
 (

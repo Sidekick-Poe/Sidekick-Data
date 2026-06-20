@@ -1,13 +1,13 @@
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using Sidekick.Common;
-using Sidekick.Data.Builder.Pseudo.Definitions;
-using Sidekick.Data.Builder.Trade.Models;
+using Sidekick.Data.Cli.Pseudo.Definitions;
 using Sidekick.Data.Languages;
 using Sidekick.Data.Pseudo;
 using Sidekick.Data.Stats;
 using Sidekick.Data.Trade;
-namespace Sidekick.Data.Builder.Pseudo;
+
+namespace Sidekick.Data.Cli.Pseudo;
 
 public class PseudoBuilder
 (

@@ -4,7 +4,7 @@ using Microsoft.Extensions.Options;
 using Sidekick.Common;
 using Sidekick.Data.Languages;
 
-namespace Sidekick.Data.Builder.Trade;
+namespace Sidekick.Data.Cli.Trade;
 
 public class TradeDownloader(
     ILogger<TradeDownloader> logger,

@@ -1,4 +1,4 @@
-﻿namespace Sidekick.Data.Builder.Ninja.Models;
+﻿namespace Sidekick.Data.Cli.Ninja.Models;
 
 public class NinjaStashModifier
 {

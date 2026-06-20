@@ -1,11 +1,12 @@
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using Sidekick.Common;
-using Sidekick.Data.Builder.Trade;
-using Sidekick.Data.Builder.Trade.Models;
+using Sidekick.Data.Cli.Trade;
+using Sidekick.Data.Cli.Trade.Models;
 using Sidekick.Data.Languages;
 using Sidekick.Data.Leagues;
-namespace Sidekick.Data.Builder.Leagues;
+
+namespace Sidekick.Data.Cli.Leagues;
 
 public class LeagueBuilder
 (

@@ -2,7 +2,8 @@
 using Sidekick.Data.Extensions;
 using Sidekick.Data.Fuzzy;
 using Sidekick.Data.Languages;
-namespace Sidekick.Data.Builder.Stats;
+
+namespace Sidekick.Data.Cli.Stats;
 
 public class StatPatternBuilder
 {

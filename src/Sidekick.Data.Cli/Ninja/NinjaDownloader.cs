@@ -5,14 +5,13 @@ using Microsoft.Extensions.Options;
 using Sidekick.Common;
 using Sidekick.Common.Enums;
 using Sidekick.Common.Exceptions;
-using Sidekick.Data.Builder.Ninja.Models;
-using Sidekick.Data.Builder.Trade.Models;
+using Sidekick.Data.Cli.Ninja.Models;
 using Sidekick.Data.ItemDefinitions;
 using Sidekick.Data.Languages;
 using Sidekick.Data.Leagues;
 using Sidekick.Data.Trade;
 
-namespace Sidekick.Data.Builder.Ninja;
+namespace Sidekick.Data.Cli.Ninja;
 
 public class NinjaDownloader(
     ILogger<NinjaDownloader> logger,

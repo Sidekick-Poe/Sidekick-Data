@@ -1,13 +1,14 @@
 ﻿using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using Sidekick.Common;
-using Sidekick.Data.Builder.StatsInvariant;
-using Sidekick.Data.Builder.Trade.Models;
+using Sidekick.Data.Cli.StatsInvariant;
+using Sidekick.Data.Cli.Trade.Models;
 using Sidekick.Data.Extensions;
 using Sidekick.Data.Languages;
 using Sidekick.Data.StatsInvariant;
 using Sidekick.Data.Trade;
-namespace Sidekick.Data.Builder.Trade;
+
+namespace Sidekick.Data.Cli.Trade;
 
 public class TradeStatBuilder(
     ILogger<StatsInvariantBuilder> logger,

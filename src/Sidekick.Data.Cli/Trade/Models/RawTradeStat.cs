@@ -1,5 +1,6 @@
 using System.Text.Json.Serialization;
-namespace Sidekick.Data.Builder.Trade.Models;
+
+namespace Sidekick.Data.Cli.Trade.Models;
 
 public record RawTradeStat
 {

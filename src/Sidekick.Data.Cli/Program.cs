@@ -2,16 +2,15 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
 using Microsoft.Extensions.Logging;
 using Sidekick.Common;
-using Sidekick.Data.Builder;
-using Sidekick.Data.Builder.ItemClasses;
-using Sidekick.Data.Builder.ItemDefinitions;
-using Sidekick.Data.Builder.Leagues;
-using Sidekick.Data.Builder.Ninja;
-using Sidekick.Data.Builder.Pseudo;
-using Sidekick.Data.Builder.Repoe;
-using Sidekick.Data.Builder.Stats;
-using Sidekick.Data.Builder.StatsInvariant;
-using Sidekick.Data.Builder.Trade;
+using Sidekick.Data.Cli;
+using Sidekick.Data.Cli.ItemClasses;
+using Sidekick.Data.Cli.ItemDefinitions;
+using Sidekick.Data.Cli.Leagues;
+using Sidekick.Data.Cli.Ninja;
+using Sidekick.Data.Cli.Pseudo;
+using Sidekick.Data.Cli.Stats;
+using Sidekick.Data.Cli.StatsInvariant;
+using Sidekick.Data.Cli.Trade;
 using Sidekick.Data.Languages;
 
 #region Services
@@ -30,7 +29,6 @@ services.AddSidekickCommon(SidekickApplicationType.DataBuilder);
 services.TryAddSingleton<LeagueBuilder>();
 services.TryAddSingleton<NinjaDownloader>();
 services.TryAddSingleton<PseudoBuilder>();
-services.TryAddSingleton<RepoeDownloader>();
 services.TryAddSingleton<StatBuilder>();
 services.TryAddSingleton<TradeDownloader>();
 services.TryAddSingleton<TradeStatBuilder>();
@@ -57,7 +55,6 @@ var build = true;
 var runItems = false;
 var runStats = false;
 var runTrade = false;
-var runRepoe = false;
 var runPseudo = false;
 var runNinja = false;
 
@@ -78,9 +75,6 @@ for (var i = 0; i < args.Length; i++)
         case "--trade":
             runTrade = true;
             break;
-        case "--repoe":
-            runRepoe = true;
-            break;
         case "--pseudo":
             runPseudo = true;
             break;
@@ -95,12 +89,11 @@ for (var i = 0; i < args.Length; i++)
 
 #endregion
 
-if (!runItems && !runStats && !runTrade && !runRepoe && !runPseudo && !runNinja)
+if (!runItems && !runStats && !runTrade && !runPseudo && !runNinja)
 {
     runItems = true;
     runStats = true;
     runTrade = true;
-    runRepoe = true;
     runPseudo = true;
     runNinja = true;
 }
@@ -117,7 +110,6 @@ foreach (var language in languages)
     {
         await dataBuilder.DownloadRawFiles(language,
                                            trade: runTrade,
-                                           repoe: runRepoe,
                                            ninja: runNinja);
     }
 
