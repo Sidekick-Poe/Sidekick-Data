@@ -1,15 +1,19 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sidekick.Data", "src\Sidekick.Data\Sidekick.Data.csproj", "{2D91D747-B542-4FAE-99B2-FD57782BCFFE}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_Configuration", "_Configuration", "{E761881A-6C14-4611-AAFF-321E9A341782}"
 	ProjectSection(SolutionItems) = preProject
 		.gitattributes = .gitattributes
 		.gitignore = .gitignore
 		LICENSE = LICENSE
 		README.md = README.md
-		.github\workflows\update-data.yml = .github\workflows\update-data.yml
+		Directory.Packages.props = Directory.Packages.props
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sidekick.Data.Cli", "src\Sidekick.Data.Cli\Sidekick.Data.Cli.csproj", "{C0ED74C2-5354-477E-8C97-F94629A81213}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sidekick.Data", "..\Sidekick\src\Sidekick.Data\Sidekick.Data.csproj", "{B95229EB-7F92-4744-B770-AEF27704FE03}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sidekick.Common", "..\Sidekick\src\Sidekick.Common\Sidekick.Common.csproj", "{46E3E620-CBAD-46F4-AB27-71C79D529557}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,9 +21,17 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{2D91D747-B542-4FAE-99B2-FD57782BCFFE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2D91D747-B542-4FAE-99B2-FD57782BCFFE}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2D91D747-B542-4FAE-99B2-FD57782BCFFE}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2D91D747-B542-4FAE-99B2-FD57782BCFFE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C0ED74C2-5354-477E-8C97-F94629A81213}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C0ED74C2-5354-477E-8C97-F94629A81213}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C0ED74C2-5354-477E-8C97-F94629A81213}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C0ED74C2-5354-477E-8C97-F94629A81213}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B95229EB-7F92-4744-B770-AEF27704FE03}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B95229EB-7F92-4744-B770-AEF27704FE03}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B95229EB-7F92-4744-B770-AEF27704FE03}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B95229EB-7F92-4744-B770-AEF27704FE03}.Release|Any CPU.Build.0 = Release|Any CPU
+		{46E3E620-CBAD-46F4-AB27-71C79D529557}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{46E3E620-CBAD-46F4-AB27-71C79D529557}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{46E3E620-CBAD-46F4-AB27-71C79D529557}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{46E3E620-CBAD-46F4-AB27-71C79D529557}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
