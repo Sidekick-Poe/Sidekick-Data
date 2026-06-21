@@ -4,17 +4,18 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Sidekick.Data.Trade.Models;
 
-[Table("Leagues")]
-[PrimaryKey(nameof(Game), nameof(Language), nameof(Id))]
-public class TradeLeague
+[Table("StatOptions")]
+[PrimaryKey(nameof(Game), nameof(Language), nameof(StatId), nameof(Id))]
+public class TradeStatOption
 {
     public int Game { get; set; }
 
     [MaxLength(5)]
     public required string Language { get; set; }
 
-    public required string Id { get; set; }
+    public required string StatId { get; set; }
 
-    public string? Text { get; set; }
-    public string? Realm { get; set; }
+    public int Id { get; set; }
+
+    public required string Text { get; set; }
 }

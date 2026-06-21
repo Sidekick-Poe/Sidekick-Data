@@ -127,8 +127,8 @@ public class TradeApiDownloader
         if (result?.Result == null) return;
 
         int gameNum = (int)game;
-        var seenIds = new HashSet<string>();
-        int added = 0, skipped = 0;
+        var seenStatIds = new HashSet<string>();
+        int statsAdded = 0, statsSkipped = 0, optionsAdded = 0;
 
         foreach (var category in result.Result)
         {
@@ -139,10 +139,10 @@ public class TradeApiDownloader
             });
             foreach (var entry in category.Entries)
             {
-                var id = entry.Id + "|" + gameNum;
-                if (!seenIds.Add(id))
+                var statId = entry.Id + "|" + gameNum;
+                if (!seenStatIds.Add(statId))
                 {
-                    skipped++;
+                    statsSkipped++;
                     continue;
                 }
 
@@ -151,15 +151,29 @@ public class TradeApiDownloader
                     Game = gameNum, Language = language.Code,
                     Id = entry.Id, CategoryId = category.Id,
                     Text = entry.Text, Type = entry.Type,
-                    OptionId = entry.Options?.Options?.FirstOrDefault().Id,
-                    OptionText = entry.Options?.Options?.FirstOrDefault().Text
                 });
-                added++;
+                statsAdded++;
+
+                if (entry.Options?.Options != null)
+                {
+                    foreach (var option in entry.Options.Options)
+                    {
+                        db.StatOptions.Add(new TradeStatOption
+                        {
+                            Game = gameNum,
+                            Language = language.Code,
+                            StatId = entry.Id,
+                            Id = option.Id,
+                            Text = option.Text
+                        });
+                        optionsAdded++;
+                    }
+                }
             }
         }
 
         logger.LogInformation(
-            $"Downloaded {added} trade stats ({skipped} duplicates skipped) for {game}/{language.Code}");
+            $"Downloaded {statsAdded} trade stats ({statsSkipped} duplicates skipped) and {optionsAdded} options for {game}/{language.Code}");
     }
 
     private async Task DownloadStatic(TradeDbContext db, GameType game, IGameLanguage language)

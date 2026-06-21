@@ -19,6 +19,7 @@ public sealed class TradeDbContext : DbContext
     public DbSet<TradeItem> Items { get; init; }
     public DbSet<TradeItemCategory> ItemCategories { get; init; }
     public DbSet<TradeStat> Stats  { get; init; }
+    public DbSet<TradeStatOption> StatOptions  { get; init; }
     public DbSet<TradeStatCategory> StatCategories  { get; init; }
     public DbSet<TradeStaticItem> StaticItems  { get; init; }
     public DbSet<TradeStaticItemCategory> StaticItemCategories  { get; init; }
@@ -44,5 +45,11 @@ public sealed class TradeDbContext : DbContext
             .WithMany()
             .HasForeignKey(s => new { s.Game, s.Language, s.CategoryId })
             .HasPrincipalKey(c => new { c.Game, c.Language, c.Id });
+
+        modelBuilder.Entity<TradeStat>()
+            .HasMany(s => s.Options)
+            .WithOne()
+            .HasForeignKey(o => new { o.Game, o.Language, o.StatId })
+            .HasPrincipalKey(s => new { s.Game, s.Language, s.Id });
     }
 }

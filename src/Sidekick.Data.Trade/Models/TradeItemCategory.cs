@@ -13,7 +13,7 @@ public class TradeItemCategory
     [MaxLength(5)]
     public required string Language { get; set; }
 
-    public required string Id { get; set; }
+    public string Id { get; set; } = string.Empty;
 
     public string? Label { get; set; }
 }
