@@ -1,30 +1,27 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using Microsoft.EntityFrameworkCore;
 
 namespace Sidekick.Data.Trade.Models;
 
 [Table("Items")]
+[PrimaryKey(nameof(Game), nameof(Language), nameof(Id), nameof(Discriminator))]
 public class TradeItem
 {
-    [Key, Column(Order = 0)]
     public int Game { get; set; }
 
-    [Key, Column(Order = 1), MaxLength(5)]
+    [MaxLength(5)]
     public required string Language { get; set; }
 
-    [Key, Column(Order = 2)]
     public required string Id { get; set; }
 
-    [Key, Column(Order = 3)]
     public string? Discriminator { get; set; }
-
-    [ForeignKey(nameof(Category))]
-    public string? CategoryId { get; set; }
 
     public string? Name { get; set; }
     public string? Type { get; set; }
     public string? Text { get; set; }
     public bool IsUnique { get; set; }
 
+    public string? CategoryId { get; set; }
     public TradeItemCategory? Category { get; set; }
 }

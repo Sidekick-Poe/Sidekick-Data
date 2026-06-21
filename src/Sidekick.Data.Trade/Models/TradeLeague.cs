@@ -1,9 +1,11 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using Microsoft.EntityFrameworkCore;
 
 namespace Sidekick.Data.Trade.Models;
 
 [Table("Leagues")]
+[PrimaryKey(nameof(Game), nameof(Language), nameof(Id))]
 public class TradeLeague
 {
     [Key, Column(Order = 0)]

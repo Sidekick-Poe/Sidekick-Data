@@ -11,7 +11,7 @@ using Sidekick.Data.Trade;
 namespace Sidekick.Data.Trade.Migrations
 {
     [DbContext(typeof(TradeDbContext))]
-    [Migration("20260621015409_Initial")]
+    [Migration("20260621140214_Initial")]
     partial class Initial
     {
         /// <inheritdoc />
@@ -23,17 +23,14 @@ namespace Sidekick.Data.Trade.Migrations
             modelBuilder.Entity("Sidekick.Data.Trade.Models.TradeFilter", b =>
                 {
                     b.Property<int>("Game")
-                        .HasColumnType("INTEGER")
-                        .HasColumnOrder(0);
+                        .HasColumnType("INTEGER");
 
                     b.Property<string>("Language")
                         .HasMaxLength(5)
-                        .HasColumnType("TEXT")
-                        .HasColumnOrder(1);
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("Id")
-                        .HasColumnType("TEXT")
-                        .HasColumnOrder(2);
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("Text")
                         .HasColumnType("TEXT");
@@ -49,24 +46,20 @@ namespace Sidekick.Data.Trade.Migrations
             modelBuilder.Entity("Sidekick.Data.Trade.Models.TradeItem", b =>
                 {
                     b.Property<int>("Game")
-                        .HasColumnType("INTEGER")
-                        .HasColumnOrder(0);
+                        .HasColumnType("INTEGER");
 
                     b.Property<string>("Language")
                         .HasMaxLength(5)
-                        .HasColumnType("TEXT")
-                        .HasColumnOrder(1);
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("Id")
-                        .HasColumnType("TEXT")
-                        .HasColumnOrder(2);
-
-                    b.Property<string>("CategoryId")
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Discriminator")
-                        .HasColumnType("TEXT")
-                        .HasColumnOrder(3);
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("CategoryId")
+                        .HasColumnType("TEXT");
 
                     b.Property<bool>("IsUnique")
                         .HasColumnType("INTEGER");
@@ -80,7 +73,7 @@ namespace Sidekick.Data.Trade.Migrations
                     b.Property<string>("Type")
                         .HasColumnType("TEXT");
 
-                    b.HasKey("Game", "Language", "Id");
+                    b.HasKey("Game", "Language", "Id", "Discriminator");
 
                     b.HasIndex("Game", "Language", "CategoryId");
 
@@ -90,17 +83,14 @@ namespace Sidekick.Data.Trade.Migrations
             modelBuilder.Entity("Sidekick.Data.Trade.Models.TradeItemCategory", b =>
                 {
                     b.Property<int>("Game")
-                        .HasColumnType("INTEGER")
-                        .HasColumnOrder(0);
+                        .HasColumnType("INTEGER");
 
                     b.Property<string>("Language")
                         .HasMaxLength(5)
-                        .HasColumnType("TEXT")
-                        .HasColumnOrder(1);
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("Id")
-                        .HasColumnType("TEXT")
-                        .HasColumnOrder(2);
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("Label")
                         .HasColumnType("TEXT");
@@ -139,24 +129,20 @@ namespace Sidekick.Data.Trade.Migrations
             modelBuilder.Entity("Sidekick.Data.Trade.Models.TradeStat", b =>
                 {
                     b.Property<int>("Game")
-                        .HasColumnType("INTEGER")
-                        .HasColumnOrder(0);
+                        .HasColumnType("INTEGER");
 
                     b.Property<string>("Language")
                         .HasMaxLength(5)
-                        .HasColumnType("TEXT")
-                        .HasColumnOrder(1);
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("Id")
-                        .HasColumnType("TEXT")
-                        .HasColumnOrder(2);
-
-                    b.Property<string>("CategoryId")
                         .HasColumnType("TEXT");
 
                     b.Property<int?>("OptionId")
-                        .HasColumnType("INTEGER")
-                        .HasColumnOrder(3);
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("CategoryId")
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("OptionText")
                         .HasColumnType("TEXT");
@@ -167,7 +153,7 @@ namespace Sidekick.Data.Trade.Migrations
                     b.Property<string>("Type")
                         .HasColumnType("TEXT");
 
-                    b.HasKey("Game", "Language", "Id");
+                    b.HasKey("Game", "Language", "Id", "OptionId");
 
                     b.HasIndex("Game", "Language", "CategoryId");
 
@@ -177,17 +163,14 @@ namespace Sidekick.Data.Trade.Migrations
             modelBuilder.Entity("Sidekick.Data.Trade.Models.TradeStatCategory", b =>
                 {
                     b.Property<int>("Game")
-                        .HasColumnType("INTEGER")
-                        .HasColumnOrder(0);
+                        .HasColumnType("INTEGER");
 
                     b.Property<string>("Language")
                         .HasMaxLength(5)
-                        .HasColumnType("TEXT")
-                        .HasColumnOrder(1);
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("Id")
-                        .HasColumnType("TEXT")
-                        .HasColumnOrder(2);
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("Label")
                         .HasColumnType("TEXT");
@@ -200,17 +183,14 @@ namespace Sidekick.Data.Trade.Migrations
             modelBuilder.Entity("Sidekick.Data.Trade.Models.TradeStaticItem", b =>
                 {
                     b.Property<int>("Game")
-                        .HasColumnType("INTEGER")
-                        .HasColumnOrder(0);
+                        .HasColumnType("INTEGER");
 
                     b.Property<string>("Language")
                         .HasMaxLength(5)
-                        .HasColumnType("TEXT")
-                        .HasColumnOrder(1);
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("Id")
-                        .HasColumnType("TEXT")
-                        .HasColumnOrder(2);
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("CategoryId")
                         .HasColumnType("TEXT");
@@ -231,17 +211,14 @@ namespace Sidekick.Data.Trade.Migrations
             modelBuilder.Entity("Sidekick.Data.Trade.Models.TradeStaticItemCategory", b =>
                 {
                     b.Property<int>("Game")
-                        .HasColumnType("INTEGER")
-                        .HasColumnOrder(0);
+                        .HasColumnType("INTEGER");
 
                     b.Property<string>("Language")
                         .HasMaxLength(5)
-                        .HasColumnType("TEXT")
-                        .HasColumnOrder(1);
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("Id")
-                        .HasColumnType("TEXT")
-                        .HasColumnOrder(2);
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("Label")
                         .HasColumnType("TEXT");

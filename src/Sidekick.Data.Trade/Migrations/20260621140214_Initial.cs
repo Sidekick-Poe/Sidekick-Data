@@ -89,16 +89,16 @@ namespace Sidekick.Data.Trade.Migrations
                     Game = table.Column<int>(type: "INTEGER", nullable: false),
                     Language = table.Column<string>(type: "TEXT", maxLength: 5, nullable: false),
                     Id = table.Column<string>(type: "TEXT", nullable: false),
-                    Discriminator = table.Column<string>(type: "TEXT", nullable: true),
-                    CategoryId = table.Column<string>(type: "TEXT", nullable: true),
+                    Discriminator = table.Column<string>(type: "TEXT", nullable: false),
                     Name = table.Column<string>(type: "TEXT", nullable: true),
                     Type = table.Column<string>(type: "TEXT", nullable: true),
                     Text = table.Column<string>(type: "TEXT", nullable: true),
-                    IsUnique = table.Column<bool>(type: "INTEGER", nullable: false)
+                    IsUnique = table.Column<bool>(type: "INTEGER", nullable: false),
+                    CategoryId = table.Column<string>(type: "TEXT", nullable: true)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Items", x => new { x.Game, x.Language, x.Id });
+                    table.PrimaryKey("PK_Items", x => new { x.Game, x.Language, x.Id, x.Discriminator });
                     table.ForeignKey(
                         name: "FK_Items_ItemCategories_Game_Language_CategoryId",
                         columns: x => new { x.Game, x.Language, x.CategoryId },
@@ -113,7 +113,7 @@ namespace Sidekick.Data.Trade.Migrations
                     Game = table.Column<int>(type: "INTEGER", nullable: false),
                     Language = table.Column<string>(type: "TEXT", maxLength: 5, nullable: false),
                     Id = table.Column<string>(type: "TEXT", nullable: false),
-                    OptionId = table.Column<int>(type: "INTEGER", nullable: true),
+                    OptionId = table.Column<int>(type: "INTEGER", nullable: false),
                     Text = table.Column<string>(type: "TEXT", nullable: true),
                     Type = table.Column<string>(type: "TEXT", nullable: true),
                     OptionText = table.Column<string>(type: "TEXT", nullable: true),
@@ -121,7 +121,7 @@ namespace Sidekick.Data.Trade.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Stats", x => new { x.Game, x.Language, x.Id });
+                    table.PrimaryKey("PK_Stats", x => new { x.Game, x.Language, x.Id, x.OptionId });
                     table.ForeignKey(
                         name: "FK_Stats_StatCategories_Game_Language_CategoryId",
                         columns: x => new { x.Game, x.Language, x.CategoryId },
