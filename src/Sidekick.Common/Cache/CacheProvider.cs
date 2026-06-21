@@ -1,12 +1,15 @@
 using System.Text.Json;
 using Microsoft.Extensions.Logging;
+using Sidekick.Common.Folder;
 
 namespace Sidekick.Common.Cache;
 
 /// <summary>
 ///     Implementation for the cache provider.
 /// </summary>
-public class CacheProvider(ILogger<CacheProvider> logger) : ICacheProvider
+public class CacheProvider(
+    ILogger<CacheProvider> logger,
+    FolderProvider folderProvider) : ICacheProvider
 {
     private const string CachePath = "SidekickCache";
 
@@ -64,7 +67,7 @@ public class CacheProvider(ILogger<CacheProvider> logger) : ICacheProvider
     public async Task Clear()
     {
         EnsureDirectory();
-        Directory.Delete(path: Path.Combine(path1: SidekickPaths.GetDataFilePath(), CachePath), true);
+        Directory.Delete(path: Path.Combine(path1: folderProvider.GetUserDataPath(), CachePath), true);
         await Task.Delay(100);
     }
 
@@ -96,16 +99,16 @@ public class CacheProvider(ILogger<CacheProvider> logger) : ICacheProvider
         return data;
     }
 
-    private static void EnsureDirectory()
+    private void EnsureDirectory()
     {
-        Directory.CreateDirectory(Path.Combine(path1: SidekickPaths.GetDataFilePath(), CachePath));
+        Directory.CreateDirectory(Path.Combine(path1: folderProvider.GetUserDataPath(), CachePath));
     }
 
-    private static string GetCacheFileName(string key)
+    private string GetCacheFileName(string key)
     {
         key = string.Join("_", value: key.Split(Path.GetInvalidFileNameChars()));
         key += ".json";
 
-        return Path.Combine(path1: SidekickPaths.GetDataFilePath(), CachePath, key);
+        return Path.Combine(path1: folderProvider.GetUserDataPath(), CachePath, key);
     }
 }

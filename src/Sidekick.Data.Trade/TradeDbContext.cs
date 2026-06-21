@@ -27,15 +27,6 @@ public sealed class TradeDbContext : DbContext
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-        modelBuilder.Entity<TradeItem>().HasKey(e => new { e.Game, e.Language, e.Id });
-        modelBuilder.Entity<TradeItemCategory>().HasKey(e => new { e.Game, e.Language, e.Id });
-        modelBuilder.Entity<TradeStat>().HasKey(e => new { e.Game, e.Language, e.Id });
-        modelBuilder.Entity<TradeStatCategory>().HasKey(e => new { e.Game, e.Language, e.Id });
-        modelBuilder.Entity<TradeStaticItem>().HasKey(e => new { e.Game, e.Language, e.Id });
-        modelBuilder.Entity<TradeStaticItemCategory>().HasKey(e => new { e.Game, e.Language, e.Id });
-        modelBuilder.Entity<Models.TradeFilter>().HasKey(e => new { e.Game, e.Language, e.Id });
-        modelBuilder.Entity<TradeLeague>().HasKey(e => new { e.Game, e.Language, e.Id });
-
         modelBuilder.Entity<TradeItem>()
             .HasOne(i => i.Category)
             .WithMany()

@@ -22,7 +22,7 @@ public static class ServiceCollectionExtensions
 
         services.AddSingleton<IBrowserProvider, BrowserProvider>();
         services.AddSingleton<ICacheProvider, CacheProvider>();
-        services.AddSingleton<IFolderProvider, FolderProvider>();
+        services.AddSingleton<FolderProvider>();
         services.AddSingleton<ISettingsService, SettingsService>();
 
         services.AddSidekickInitializableService<IUiLanguageProvider, UiLanguageProvider>();

@@ -1,19 +1,15 @@
-﻿using System.Diagnostics;
-using System.Text.Json;
+﻿using System.Text.Json;
 using System.Text.Json.Serialization;
 using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Options;
-using Sidekick.Common;
 using Sidekick.Common.Enums;
 using Sidekick.Common.Exceptions;
+using Sidekick.Common.Folder;
 using Sidekick.Data.Languages;
 
 namespace Sidekick.Data;
 
-public class DataProvider
+public class DataProvider(ILogger<DataProvider> logger, FolderProvider folderProvider)
 {
-    private readonly ILogger<DataProvider> logger;
-
     private static readonly JsonSerializerOptions JsonOptions = new()
     {
         PropertyNamingPolicy = JsonNamingPolicy.CamelCase,
@@ -26,48 +22,7 @@ public class DataProvider
         },
     };
 
-    public string DataDirectory { get; }
-
-    public DataProvider(IOptions<SidekickConfiguration> configuration, ILogger<DataProvider> logger)
-    {
-        this.logger = logger;
-        DataDirectory = GetDataDirectory();
-
-        return;
-
-        string GetDataDirectory()
-        {
-            if (Debugger.IsAttached || configuration.Value.ApplicationType == SidekickApplicationType.DataBuilder || configuration.Value.ApplicationType == SidekickApplicationType.Test)
-            {
-                var solutionDirectory = FindSolutionDirectory();
-                if (!string.IsNullOrEmpty(solutionDirectory))
-                {
-                    return $"{solutionDirectory}/data";
-                }
-            }
-
-            return Path.Combine(AppContext.BaseDirectory, "wwwroot/data");
-        }
-
-        string? FindSolutionDirectory(string? startDirectory = null)
-        {
-            var dir = new DirectoryInfo(startDirectory ?? AppContext.BaseDirectory);
-
-            while (dir != null)
-            {
-                var sln = dir.EnumerateFiles("*.sln", SearchOption.TopDirectoryOnly)
-                    .OrderBy(f => f.Name, StringComparer.OrdinalIgnoreCase)
-                    .FirstOrDefault();
-
-                if (sln != null)
-                    return sln.DirectoryName;
-
-                dir = dir.Parent;
-            }
-
-            return null;
-        }
-    }
+    public string DataDirectory { get; } = folderProvider.GetDataDirectory();
 
     public Task Write(GameType game, DataType type, IGameLanguage language, object data)
     {
