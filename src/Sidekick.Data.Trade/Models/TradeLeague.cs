@@ -14,7 +14,6 @@ public class TradeLeague
     public required string Language { get; set; }
 
     public required string Id { get; set; }
-
     public string? Text { get; set; }
     public string? Realm { get; set; }
 }

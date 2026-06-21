@@ -14,10 +14,11 @@ public class TradeStaticItem
     public required string Language { get; set; }
 
     public required string Id { get; set; }
-
     public string? Text { get; set; }
     public string? Image { get; set; }
 
     public string? CategoryId { get; set; }
+
+    [ForeignKey("CategoryId")]
     public TradeStaticItemCategory? Category { get; set; }
 }

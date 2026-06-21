@@ -6,6 +6,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using Sidekick.Common;
 using Sidekick.Data.Languages;
+using Sidekick.Data.Trade.Dtos;
 using Sidekick.Data.Trade.Models;
 
 namespace Sidekick.Data.Trade;
@@ -68,7 +69,7 @@ public class TradeApiDownloader
 
         using var http = CreateHttpClient();
         var json = await http.GetStringAsync(url);
-        var result = JsonSerializer.Deserialize<RawTradeItemsResponse>(json, JsonOptions);
+        var result = JsonSerializer.Deserialize<Dtos.TradeApiResponse<Dtos.TradeItemCategoryDto>>(json, JsonOptions);
         if (result?.Result == null) return;
 
         var gameNum = (int)game;
@@ -106,7 +107,6 @@ public class TradeApiDownloader
                     Type = entry.Type,
                     Text = entry.Text,
                     Discriminator = entry.Discriminator,
-                    IsUnique = entry.Flags?.Unique ?? false
                 });
                 added++;
             }
@@ -123,7 +123,7 @@ public class TradeApiDownloader
 
         using var http = CreateHttpClient();
         var json = await http.GetStringAsync(url);
-        var result = JsonSerializer.Deserialize<RawTradeStatsResponse>(json, JsonOptions);
+        var result = JsonSerializer.Deserialize<Dtos.TradeApiResponse<Dtos.TradeStatCategoryDto>>(json, JsonOptions);
         if (result?.Result == null) return;
 
         int gameNum = (int)game;
@@ -154,9 +154,9 @@ public class TradeApiDownloader
                 });
                 statsAdded++;
 
-                if (entry.Options?.Options != null)
+                if (entry.Option?.Options != null)
                 {
-                    foreach (var option in entry.Options.Options)
+                    foreach (var option in entry.Option.Options)
                     {
                         db.StatOptions.Add(new TradeStatOption
                         {
@@ -183,7 +183,7 @@ public class TradeApiDownloader
 
         using var http = CreateHttpClient();
         var json = await http.GetStringAsync(url);
-        var result = JsonSerializer.Deserialize<RawTradeStaticResponse>(json, JsonOptions);
+        var result = JsonSerializer.Deserialize<Dtos.TradeApiResponse<Dtos.TradeStaticItemCategoryDto>>(json, JsonOptions);
         if (result?.Result == null) return;
 
         int gameNum = (int)game;
@@ -228,7 +228,7 @@ public class TradeApiDownloader
 
         using var http = CreateHttpClient();
         var json = await http.GetStringAsync(url);
-        var result = JsonSerializer.Deserialize<RawTradeFiltersResponse>(json, JsonOptions);
+        var result = JsonSerializer.Deserialize<Dtos.TradeApiResponse<Dtos.TradeFilterGroupDto>>(json, JsonOptions);
         if (result?.Result == null) return;
 
         int gameNum = (int)game;
@@ -296,43 +296,5 @@ public class TradeApiDownloader
         PropertyNameCaseInsensitive = true,
     };
 
-    // Raw JSON response models
-    private sealed record RawTradeItemsResponse(List<RawTradeItemCategory> Result);
-
-    private sealed record RawTradeItemCategory(string? Id, string? Label, List<RawTradeItem> Entries);
-
-    private sealed record RawTradeItem(
-        string? Name,
-        string? Type,
-        string? Text,
-        [property: JsonPropertyName("disc")] string? Discriminator,
-        RawTradeItemFlags? Flags);
-
-    private sealed record RawTradeItemFlags(bool Unique);
-
-    private sealed record RawTradeStatsResponse(List<RawTradeStatCategory> Result);
-
-    private sealed record RawTradeStatCategory(string? Id, string? Label, List<RawTradeStatEntry> Entries);
-
-    private sealed record RawTradeStatEntry(
-        string Id,
-        string Text,
-        string Type,
-        [property: JsonPropertyName("option")] RawTradeStatOption? Options);
-
-    private sealed record RawTradeStatOption(List<RawTradeStatOptionValue> Options);
-
-    private sealed record RawTradeStatOptionValue(int Id, string Text);
-
-    private sealed record RawTradeStaticResponse(List<RawTradeStaticCategory> Result);
-
-    private sealed record RawTradeStaticCategory(string? Id, string? Label, List<RawTradeStaticEntry> Entries);
-
-    private sealed record RawTradeStaticEntry(string Id, string? Text, string? Image);
-
-    private sealed record RawTradeFiltersResponse(List<RawTradeFilterGroup> Result);
-    private sealed record RawTradeFilterGroup(string Id, string? Text, string? Type, List<RawTradeSubFilter> Filters);
-    private sealed record RawTradeSubFilter(string Id, string? Text, bool? Hidden, bool? FullSpan, bool? HalfSpan, bool? MinMax, bool? Sockets, string? Tip, RawTradeFilterOption? Option);
-    private sealed record RawTradeFilterOption(List<RawTradeFilterOptionValue> Options);
-    private sealed record RawTradeFilterOptionValue(string? Id, string? Text);
+    // DTOs are now in TradeApiDtos.cs
 }

@@ -18,12 +18,12 @@ public class TradeItem
 
     [MaxLength(256)]
     public string? Discriminator { get; set; }
-
     public string? CategoryId { get; set; }
     public string? Name { get; set; }
     public string? Type { get; set; }
     public string? Text { get; set; }
     public bool IsUnique { get; set; }
 
+    [ForeignKey("CategoryId")]
     public TradeItemCategory? Category { get; set; }
 }

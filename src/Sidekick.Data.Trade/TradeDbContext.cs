@@ -47,10 +47,11 @@ public sealed class TradeDbContext : DbContext
             .HasForeignKey(s => new { s.Game, s.Language, s.CategoryId })
             .HasPrincipalKey(c => new { c.Game, c.Language, c.Id });
 
-        modelBuilder.Entity<TradeStat>()
-            .HasMany(s => s.Options)
+        modelBuilder.Entity<Models.TradeFilter>()
+            .HasMany(f => f.Options)
             .WithOne()
-            .HasForeignKey(o => new { o.Game, o.Language, o.StatId })
-            .HasPrincipalKey(s => new { s.Game, s.Language, s.Id });
+            .HasForeignKey(o => new { o.Game, o.Language, o.FilterGroupId, o.FilterId })
+            .HasPrincipalKey(f => new { f.Game, f.Language, f.FilterGroupId, f.Id });
+
     }
 }

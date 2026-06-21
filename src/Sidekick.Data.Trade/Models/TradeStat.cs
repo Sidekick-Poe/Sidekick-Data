@@ -14,12 +14,12 @@ public class TradeStat
     public required string Language { get; set; }
 
     public required string Id { get; set; }
-
     public string? Text { get; set; }
     public string? Type { get; set; }
+    public string? CategoryId { get; set; }
+
+    [ForeignKey("CategoryId")]
+    public TradeStatCategory? Category { get; set; }
 
     public List<TradeStatOption> Options { get; set; } = new();
-
-    public string? CategoryId { get; set; }
-    public TradeStatCategory? Category { get; set; }
 }

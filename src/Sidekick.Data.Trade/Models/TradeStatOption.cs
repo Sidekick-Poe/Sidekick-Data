@@ -14,8 +14,6 @@ public class TradeStatOption
     public required string Language { get; set; }
 
     public required string StatId { get; set; }
-
     public int Id { get; set; }
-
     public required string Text { get; set; }
 }

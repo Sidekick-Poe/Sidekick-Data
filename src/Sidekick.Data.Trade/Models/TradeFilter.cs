@@ -21,7 +21,6 @@ public class TradeFilter
 
     [MaxLength(256)]
     public string? Text { get; set; }
-    public string? Type { get; set; }
     public bool? Hidden { get; set; }
     public bool? FullSpan { get; set; }
     public bool? HalfSpan { get; set; }
