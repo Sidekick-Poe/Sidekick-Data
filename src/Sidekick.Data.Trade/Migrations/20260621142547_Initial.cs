@@ -16,13 +16,20 @@ namespace Sidekick.Data.Trade.Migrations
                 {
                     Game = table.Column<int>(type: "INTEGER", nullable: false),
                     Language = table.Column<string>(type: "TEXT", maxLength: 5, nullable: false),
-                    Id = table.Column<string>(type: "TEXT", nullable: false),
-                    Text = table.Column<string>(type: "TEXT", nullable: true),
-                    Type = table.Column<string>(type: "TEXT", nullable: true)
+                    FilterGroupId = table.Column<string>(type: "TEXT", maxLength: 128, nullable: false),
+                    Id = table.Column<string>(type: "TEXT", maxLength: 128, nullable: false),
+                    Text = table.Column<string>(type: "TEXT", maxLength: 256, nullable: true),
+                    Type = table.Column<string>(type: "TEXT", nullable: true),
+                    Hidden = table.Column<bool>(type: "INTEGER", nullable: true),
+                    FullSpan = table.Column<bool>(type: "INTEGER", nullable: true),
+                    HalfSpan = table.Column<bool>(type: "INTEGER", nullable: true),
+                    MinMax = table.Column<bool>(type: "INTEGER", nullable: true),
+                    Sockets = table.Column<bool>(type: "INTEGER", nullable: true),
+                    Tip = table.Column<string>(type: "TEXT", nullable: true)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Filters", x => new { x.Game, x.Language, x.Id });
+                    table.PrimaryKey("PK_Filters", x => new { x.Game, x.Language, x.FilterGroupId, x.Id });
                 });
 
             migrationBuilder.CreateTable(
@@ -80,6 +87,31 @@ namespace Sidekick.Data.Trade.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_StaticItemCategories", x => new { x.Game, x.Language, x.Id });
+                });
+
+            migrationBuilder.CreateTable(
+                name: "FilterOptions",
+                columns: table => new
+                {
+                    Game = table.Column<int>(type: "INTEGER", nullable: false),
+                    Language = table.Column<string>(type: "TEXT", maxLength: 5, nullable: false),
+                    FilterGroupId = table.Column<string>(type: "TEXT", maxLength: 128, nullable: false),
+                    FilterId = table.Column<string>(type: "TEXT", maxLength: 128, nullable: false),
+                    Id = table.Column<string>(type: "TEXT", maxLength: 128, nullable: false),
+                    Text = table.Column<string>(type: "TEXT", maxLength: 256, nullable: true),
+                    TradeFilterFilterGroupId = table.Column<string>(type: "TEXT", nullable: true),
+                    TradeFilterGame = table.Column<int>(type: "INTEGER", nullable: true),
+                    TradeFilterId = table.Column<string>(type: "TEXT", nullable: true),
+                    TradeFilterLanguage = table.Column<string>(type: "TEXT", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_FilterOptions", x => new { x.Game, x.Language, x.FilterGroupId, x.FilterId, x.Id });
+                    table.ForeignKey(
+                        name: "FK_FilterOptions_Filters_TradeFilterGame_TradeFilterLanguage_TradeFilterFilterGroupId_TradeFilterId",
+                        columns: x => new { x.TradeFilterGame, x.TradeFilterLanguage, x.TradeFilterFilterGroupId, x.TradeFilterId },
+                        principalTable: "Filters",
+                        principalColumns: new[] { "Game", "Language", "FilterGroupId", "Id" });
                 });
 
             migrationBuilder.CreateTable(
@@ -170,6 +202,11 @@ namespace Sidekick.Data.Trade.Migrations
                 });
 
             migrationBuilder.CreateIndex(
+                name: "IX_FilterOptions_TradeFilterGame_TradeFilterLanguage_TradeFilterFilterGroupId_TradeFilterId",
+                table: "FilterOptions",
+                columns: new[] { "TradeFilterGame", "TradeFilterLanguage", "TradeFilterFilterGroupId", "TradeFilterId" });
+
+            migrationBuilder.CreateIndex(
                 name: "IX_Items_Game_Language_CategoryId",
                 table: "Items",
                 columns: new[] { "Game", "Language", "CategoryId" });
@@ -189,7 +226,7 @@ namespace Sidekick.Data.Trade.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "Filters");
+                name: "FilterOptions");
 
             migrationBuilder.DropTable(
                 name: "Items");
@@ -202,6 +239,9 @@ namespace Sidekick.Data.Trade.Migrations
 
             migrationBuilder.DropTable(
                 name: "StatOptions");
+
+            migrationBuilder.DropTable(
+                name: "Filters");
 
             migrationBuilder.DropTable(
                 name: "ItemCategories");

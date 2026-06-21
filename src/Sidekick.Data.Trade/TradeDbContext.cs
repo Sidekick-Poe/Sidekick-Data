@@ -24,6 +24,7 @@ public sealed class TradeDbContext : DbContext
     public DbSet<TradeStaticItem> StaticItems  { get; init; }
     public DbSet<TradeStaticItemCategory> StaticItemCategories  { get; init; }
     public DbSet<Models.TradeFilter> Filters  { get; init; }
+    public DbSet<Models.TradeFilterOption> FilterOptions  { get; init; }
     public DbSet<TradeLeague> Leagues  { get; init; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)

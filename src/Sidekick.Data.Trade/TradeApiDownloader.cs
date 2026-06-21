@@ -232,17 +232,55 @@ public class TradeApiDownloader
         if (result?.Result == null) return;
 
         int gameNum = (int)game;
-        foreach (var filter in result.Result)
+        int filtersAdded = 0, optionsAdded = 0;
+
+        foreach (var filterGroup in result.Result)
         {
-            if (filter.Id == null) continue;
-            db.Filters.Add(new Models.TradeFilter()
+            if (filterGroup.Id == null) continue;
+
+            // Each filter group contains sub-filters
+            foreach (var subFilter in filterGroup.Filters)
             {
-                Game = gameNum, Language = language.Code,
-                Id = filter.Id, Text = filter.Text, Type = filter.Type
-            });
+                if (subFilter.Id == null) continue;
+
+                db.Filters.Add(new Models.TradeFilter()
+                {
+                    Game = gameNum,
+                    Language = language.Code,
+                    FilterGroupId = filterGroup.Id,
+                    Id = subFilter.Id,
+                    Text = subFilter.Text,
+                    Hidden = subFilter.Hidden,
+                    FullSpan = subFilter.FullSpan,
+                    HalfSpan = subFilter.HalfSpan,
+                    MinMax = subFilter.MinMax,
+                    Sockets = subFilter.Sockets,
+                    Tip = subFilter.Tip
+                });
+                filtersAdded++;
+
+                // Add options if present
+                if (subFilter.Option?.Options != null)
+                {
+                    foreach (var option in subFilter.Option.Options)
+                    {
+                        db.FilterOptions.Add(new Models.TradeFilterOption()
+                        {
+                            Game = gameNum,
+                            Language = language.Code,
+                            FilterGroupId = filterGroup.Id,
+                            FilterId = subFilter.Id,
+                            Id = option.Id ?? "",
+                            Text = option.Text
+                        });
+                        optionsAdded++;
+                    }
+                }
+            }
         }
 
-        logger.LogInformation($"Downloaded {result.Result.Count} trade filters for {game}/{language.Code}");
+        logger.LogInformation(
+            $"Downloaded {filtersAdded} trade filters and {optionsAdded} options for {game}/{language.Code}");
     }
 
     private static HttpClient CreateHttpClient()
@@ -292,7 +330,9 @@ public class TradeApiDownloader
 
     private sealed record RawTradeStaticEntry(string Id, string? Text, string? Image);
 
-    private sealed record RawTradeFiltersResponse(List<RawTradeFilter> Result);
-
-    private sealed record RawTradeFilter(string Id, string? Text, string? Type);
+    private sealed record RawTradeFiltersResponse(List<RawTradeFilterGroup> Result);
+    private sealed record RawTradeFilterGroup(string Id, string? Text, string? Type, List<RawTradeSubFilter> Filters);
+    private sealed record RawTradeSubFilter(string Id, string? Text, bool? Hidden, bool? FullSpan, bool? HalfSpan, bool? MinMax, bool? Sockets, string? Tip, RawTradeFilterOption? Option);
+    private sealed record RawTradeFilterOption(List<RawTradeFilterOptionValue> Options);
+    private sealed record RawTradeFilterOptionValue(string? Id, string? Text);
 }
