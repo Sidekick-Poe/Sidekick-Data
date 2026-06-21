@@ -6,15 +6,15 @@ namespace Sidekick.Common.Database;
 
 public sealed class SidekickDbContext : DbContext
 {
-    private static bool hasMigrated;
+    private static bool _hasMigrated;
 
     public SidekickDbContext(DbContextOptions<SidekickDbContext> options)
         : base(options)
     {
-        if (hasMigrated) return;
+        if (_hasMigrated) return;
 
         Database.Migrate();
-        hasMigrated = true;
+        _hasMigrated = true;
     }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)

@@ -57,6 +57,47 @@ Sidekick-Data/
 └── README.md
 ```
 
+
+## SQLite Database Architecture
+
+The data generation pipeline uses SQLite databases as its source of truth:
+
+| Database | Location | Purpose | Shared with Sidekick? |
+|----------|----------|---------|----------------------|
+| TradeApiDatabase | `data/trade.db` | Raw data from the trade API (items, stats, static, filters, leagues). Used as input for building. | No |
+| SidekickDataDatabase | `data/sidekick.db` | Built and processed data. Will replace JSON files as the data source for the main Sidekick application. | Yes (future) |
+| User Database | User's app data | User-specific settings and data. Unchanged. | Yes |
+
+### Projects
+
+```
+Sidekick-Data/
+├── src/
+│   ├── Sidekick.Data.Trade/     ← NEW: Trade API database + downloader
+│   │   ├── Data/                ← EF Core entities + DbContext
+│   │   │   ├── TradeApiDatabase.cs
+│   │   │   ├── TradeItem.cs
+│   │   │   ├── TradeStat.cs
+│   │   │   ├── TradeStaticItem.cs
+│   │   │   ├── TradeFilter.cs
+│   │   │   ├── TradeLeague.cs
+│   │   │   └── ...
+│   │   └── Download/            ← Trade API downloader
+│   │       └── TradeApiDownloader.cs
+│   ├── Sidekick.Data.Cli/       ← CLI entry point + builders
+│   │   ├── Program.cs
+│   │   ├── DataBuilder.cs
+│   │   ├── Trade/               ← Trade builders (to be refactored)
+│   │   ├── ItemClasses/
+│   │   ├── ItemDefinitions/
+│   │   ├── Stats/
+│   │   └── ...
+│   ├── Sidekick.Common/         ← Shared utilities
+│   └── Sidekick.Data/           ← Domain models
+├── data/
+│   └── trade.db                 ← TradeApiDatabase (created at runtime)
+└── Sidekick.Data.sln
+```
 ## Data Generation Pipeline
 
 The pipeline has two phases:

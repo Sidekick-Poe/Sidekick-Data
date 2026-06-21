@@ -14,6 +14,7 @@ using Sidekick.Data.Cli.Stats;
 using Sidekick.Data.Cli.StatsInvariant;
 using Sidekick.Data.Cli.Trade;
 using Sidekick.Data.Languages;
+using Sidekick.Data.Trade;
 
 #region Services
 
@@ -41,6 +42,8 @@ services.TryAddSingleton<ItemDefinitionBuilder>();
 services.TryAddSingleton<StatsInvariantBuilder>();
 services.TryAddSingleton<TradeFilterBuilder>();
 services.TryAddSingleton<RawDataProvider>();
+services.TryAddSingleton<TradeDbContext>();
+services.TryAddSingleton<TradeApiDownloader>();
 
 var serviceProvider = services.BuildServiceProvider();
 var logger = serviceProvider.GetRequiredService<ILogger<Program>>();
@@ -55,16 +58,19 @@ var statsInvariantBuilder = serviceProvider.GetRequiredService<StatsInvariantBui
 var tradeFilterBuilder = serviceProvider.GetRequiredService<TradeFilterBuilder>();
 var tradeStatBuilder = serviceProvider.GetRequiredService<TradeStatBuilder>();
 var gameLanguageProvider = serviceProvider.GetRequiredService<IGameLanguageProvider>();
+var tradeApiDownloader = serviceProvider.GetRequiredService<TradeApiDownloader>();
 
 #endregion
 
 #region Configuration
 
-var runLanguage = string.Empty;
-
 var download = false;
-var build = true;
+var build = false;
 
+var runPoe1 = false;
+var runPoe2 = false;
+
+var runLanguage = string.Empty;
 var runItems = false;
 var runStats = false;
 var runTrade = false;
@@ -97,6 +103,15 @@ for (var i = 0; i < args.Length; i++)
         case "--download":
             download = true;
             break;
+        case "--build":
+            build = true;
+            break;
+        case "--poe1":
+            runPoe1 = true;
+            break;
+        case "--poe2":
+            runPoe2 = true;
+            break;
     }
 }
 
@@ -111,19 +126,22 @@ if (!runItems && !runStats && !runTrade && !runPseudo && !runNinja)
     runNinja = true;
 }
 
-var languages = gameLanguageProvider.GetList();
-if (!string.IsNullOrEmpty(runLanguage))
+if (!runPoe1 && !runPoe2)
 {
-    languages = languages.Where(x => x.Code == runLanguage).ToList();
+    runPoe1 = true;
+    runPoe2 = true;
 }
 
-foreach (var language in languages)
+foreach (var language in gameLanguageProvider.GetList())
 {
+    if (!string.IsNullOrEmpty(runLanguage) && language.Code != runLanguage) continue;
+
     if (download && runTrade)
     {
         logger.LogInformation($"Downloading {language.Code} trade data.");
-        await leagueBuilder.Build(language);
-        await tradeDownloader.Download(language);
+        await tradeApiDownloader.Download(language);
+        // await leagueBuilder.Build(language);
+        // await tradeDownloader.Download(language);
         logger.LogInformation($"Downloaded {language.Code} trade data.");
     }
 

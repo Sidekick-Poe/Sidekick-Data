@@ -10,11 +10,16 @@
     <ItemGroup>
         <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" />
         <PackageReference Include="Microsoft.Extensions.Logging.Console" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
     </ItemGroup>
 
     <ItemGroup>
         <ProjectReference Include="..\Sidekick.Common\Sidekick.Common.csproj" />
         <ProjectReference Include="..\Sidekick.Data\Sidekick.Data.csproj" />
+    <ProjectReference Include="..\Sidekick.Data.Trade\Sidekick.Data.Trade.csproj" />
     </ItemGroup>
 
 </Project>
