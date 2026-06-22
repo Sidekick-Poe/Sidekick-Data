@@ -1,6 +1,5 @@
 using System.Text.Json;
 using Microsoft.Extensions.Logging;
-using Sidekick.Common.Folder;
 
 namespace Sidekick.Common.Cache;
 
@@ -8,8 +7,7 @@ namespace Sidekick.Common.Cache;
 ///     Implementation for the cache provider.
 /// </summary>
 public class CacheProvider(
-    ILogger<CacheProvider> logger,
-    FolderProvider folderProvider) : ICacheProvider
+    ILogger<CacheProvider> logger) : ICacheProvider
 {
     private const string CachePath = "SidekickCache";
 
@@ -67,7 +65,7 @@ public class CacheProvider(
     public async Task Clear()
     {
         EnsureDirectory();
-        Directory.Delete(path: Path.Combine(path1: folderProvider.GetUserDataPath(), CachePath), true);
+        Directory.Delete(path: Path.Combine(path1: SidekickPaths.GetUserDataPath(), CachePath), true);
         await Task.Delay(100);
     }
 
@@ -101,7 +99,7 @@ public class CacheProvider(
 
     private void EnsureDirectory()
     {
-        Directory.CreateDirectory(Path.Combine(path1: folderProvider.GetUserDataPath(), CachePath));
+        Directory.CreateDirectory(Path.Combine(path1: SidekickPaths.GetUserDataPath(), CachePath));
     }
 
     private string GetCacheFileName(string key)
@@ -109,6 +107,6 @@ public class CacheProvider(
         key = string.Join("_", value: key.Split(Path.GetInvalidFileNameChars()));
         key += ".json";
 
-        return Path.Combine(path1: folderProvider.GetUserDataPath(), CachePath, key);
+        return Path.Combine(path1: SidekickPaths.GetUserDataPath(), CachePath, key);
     }
 }

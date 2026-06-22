@@ -6,40 +6,47 @@ using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using Sidekick.Common;
 using Sidekick.Data.Languages;
+using Sidekick.Data.Leagues;
 using Sidekick.Data.Trade.Dtos;
 using Sidekick.Data.Trade.Models;
 
 namespace Sidekick.Data.Trade;
 
-public class TradeApiDownloader
+public class TradeApiDownloader(
+    ILogger<TradeApiDownloader> logger,
+    IOptions<SidekickConfiguration> configuration,
+    DbContextOptions<TradeDbContext> dbContextOptions)
 {
-    private readonly ILogger<TradeApiDownloader> logger;
-    private readonly IOptions<SidekickConfiguration> configuration;
-    private readonly string dbPath;
-
-    public TradeApiDownloader(
-        ILogger<TradeApiDownloader> logger,
-        IOptions<SidekickConfiguration> configuration)
+    private static HttpClient CreateHttpClient()
     {
-        this.logger = logger;
-        this.configuration = configuration;
-        this.dbPath = Path.Combine("data", "trade.db");
+        var http = new HttpClient();
+        http.DefaultRequestHeaders.UserAgent.Add(new ProductInfoHeaderValue("Sidekick.Data", "1.0"));
+        http.DefaultRequestHeaders.TryAddWithoutValidation("X-Powered-By", "Sidekick");
+        return http;
     }
 
-    public async Task Download(IGameLanguage language)
+    private static readonly JsonSerializerOptions JsonOptions = new()
+    {
+        PropertyNameCaseInsensitive = true,
+        PropertyNamingPolicy = JsonNamingPolicy.CamelCase,
+        DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingDefault,
+        WriteIndented = true,
+        ReferenceHandler = ReferenceHandler.Preserve,
+        Converters =
+        {
+            new JsonStringEnumConverter(JsonNamingPolicy.CamelCase)
+        },
+    };
+
+    public async Task Download(GameType game, IGameLanguage language)
     {
         try
         {
-            foreach (var game in new[] { GameType.PathOfExile1, GameType.PathOfExile2 })
-            {
-                // Use a fresh DbContext per game to avoid entity tracking conflicts
-                await using var gameDb = CreateDbContext();
-                await DownloadItems(gameDb, game, language);
-                await DownloadStats(gameDb, game, language);
-                await DownloadStatic(gameDb, game, language);
-                await DownloadFilters(gameDb, game, language);
-                await gameDb.SaveChangesAsync();
-            }
+            await DownloadLeagues(game, language);
+            await DownloadItems(game, language);
+            await DownloadStats(game, language);
+            await DownloadStatic(game, language);
+            await DownloadFilters(game, language);
         }
         catch (Exception ex)
         {
@@ -50,47 +57,74 @@ public class TradeApiDownloader
         }
     }
 
-    private TradeDbContext CreateDbContext()
-    {
-        var builder = new DbContextOptionsBuilder<TradeDbContext>();
-        builder.UseSqlite($"Data Source={dbPath}");
-        return new TradeDbContext(builder.Options);
-    }
-
     private static string GetApiBase(IGameLanguage language, GameType game)
     {
         return game == GameType.PathOfExile2 ? language.Poe2TradeApiBaseUrl : language.PoeTradeApiBaseUrl;
     }
 
-    private async Task DownloadItems(TradeDbContext db, GameType game, IGameLanguage language)
+    private async Task DownloadLeagues(GameType game, IGameLanguage language)
+    {
+        if (language.Code != "en") return;
+
+        var url = GetApiBase(language, game) + "data/leagues";
+        logger.LogInformation($"GET {url}");
+
+        using var http = CreateHttpClient();
+        var json = await http.GetStringAsync(url);
+        var result = JsonSerializer.Deserialize<TradeApiResponse<TradeLeagueDto>>(json, JsonOptions);
+        if (result?.Result == null) return;
+
+        var added = 0;
+        await using var db = new TradeDbContext(dbContextOptions);
+
+        db.Leagues.RemoveRange(db.Leagues);
+        await db.SaveChangesAsync();
+
+        foreach (var league in result.Result)
+        {
+            if (league.Id == null) continue;
+            if (league.Realm != LeagueRealm.PC && league.Realm != LeagueRealm.Poe2) continue;
+
+            db.Leagues.Add(new TradeLeague
+            {
+                Game = game,
+                Language = language.Code,
+                Id = league.Id,
+                Realm = league.Realm,
+                Text = league.Text,
+            });
+            added++;
+        }
+
+        await db.SaveChangesAsync();
+        logger.LogInformation(
+            $"Downloaded {added} trade leagues for {game}/{language.Code}");
+    }
+
+    private async Task DownloadItems(GameType game, IGameLanguage language)
     {
         var url = GetApiBase(language, game) + "data/items";
         logger.LogInformation($"GET {url}");
 
         using var http = CreateHttpClient();
         var json = await http.GetStringAsync(url);
-        var result = JsonSerializer.Deserialize<Dtos.TradeApiResponse<Dtos.TradeItemCategoryDto>>(json, JsonOptions);
+        var result = JsonSerializer.Deserialize<TradeApiResponse<TradeItemCategoryDto>>(json, JsonOptions);
         if (result?.Result == null) return;
 
-        var gameNum = (int)game;
         var seenIds = new HashSet<string>();
         int added = 0, skipped = 0;
 
+        await using var db = new TradeDbContext(dbContextOptions);
+
+        db.Items.RemoveRange(db.Items.Where(x => x.Game == game && x.Language == language.Code));
+        await db.SaveChangesAsync();
+
         foreach (var category in result.Result)
         {
-            if (category.Id == null) continue;
-            db.ItemCategories.Add(new TradeItemCategory
-            {
-                Game = gameNum,
-                Language = language.Code,
-                Id = category.Id,
-                Label = category.Label,
-            });
-
             foreach (var entry in category.Entries)
             {
                 if (entry.Name == null && entry.Type == null) continue;
-                var id = (entry.Type ?? entry.Name ?? "") + "|" + category.Id + "|" + gameNum;
+                var id = $"{entry.Type}_{entry.Name}_{entry.Text}_{entry.Discriminator}";
                 if (!seenIds.Add(id))
                 {
                     skipped++;
@@ -99,7 +133,7 @@ public class TradeApiDownloader
 
                 db.Items.Add(new TradeItem
                 {
-                    Game = gameNum,
+                    Game = game,
                     Language = language.Code,
                     Id = id,
                     CategoryId = category.Id,
@@ -112,34 +146,37 @@ public class TradeApiDownloader
             }
         }
 
+        await db.SaveChangesAsync();
         logger.LogInformation(
             $"Downloaded {added} trade items ({skipped} duplicates skipped) for {game}/{language.Code}");
     }
 
-    private async Task DownloadStats(TradeDbContext db, GameType game, IGameLanguage language)
+    private async Task DownloadStats(GameType game, IGameLanguage language)
     {
         var url = GetApiBase(language, game) + "data/stats";
         logger.LogInformation($"GET {url}");
 
         using var http = CreateHttpClient();
         var json = await http.GetStringAsync(url);
-        var result = JsonSerializer.Deserialize<Dtos.TradeApiResponse<Dtos.TradeStatCategoryDto>>(json, JsonOptions);
+        var result = JsonSerializer.Deserialize<TradeApiResponse<TradeStatCategoryDto>>(json, JsonOptions);
         if (result?.Result == null) return;
 
-        int gameNum = (int)game;
         var seenStatIds = new HashSet<string>();
         int statsAdded = 0, statsSkipped = 0, optionsAdded = 0;
 
+        await using var db = new TradeDbContext(dbContextOptions);
+
+        db.StatOptions.RemoveRange(db.StatOptions.Where(x => x.Game == game && x.Language == language.Code));
+        await db.SaveChangesAsync();
+
+        db.Stats.RemoveRange(db.Stats.Where(x => x.Game == game && x.Language == language.Code));
+        await db.SaveChangesAsync();
+
         foreach (var category in result.Result)
         {
-            if (category.Id == null) continue;
-            db.StatCategories.Add(new TradeStatCategory
-            {
-                Game = gameNum, Language = language.Code, Id = category.Id, Label = category.Label
-            });
             foreach (var entry in category.Entries)
             {
-                var statId = entry.Id + "|" + gameNum;
+                var statId = entry.Id;
                 if (!seenStatIds.Add(statId))
                 {
                     statsSkipped++;
@@ -148,9 +185,12 @@ public class TradeApiDownloader
 
                 db.Stats.Add(new TradeStat
                 {
-                    Game = gameNum, Language = language.Code,
-                    Id = entry.Id, CategoryId = category.Id,
-                    Text = entry.Text, Type = entry.Type,
+                    Game = game,
+                    Language = language.Code,
+                    Id = entry.Id,
+                    CategoryId = category.Id,
+                    Text = entry.Text,
+                    Type = entry.Type,
                 });
                 statsAdded++;
 
@@ -160,7 +200,7 @@ public class TradeApiDownloader
                     {
                         db.StatOptions.Add(new TradeStatOption
                         {
-                            Game = gameNum,
+                            Game = game,
                             Language = language.Code,
                             StatId = entry.Id,
                             Id = option.Id,
@@ -172,35 +212,35 @@ public class TradeApiDownloader
             }
         }
 
+        await db.SaveChangesAsync();
         logger.LogInformation(
             $"Downloaded {statsAdded} trade stats ({statsSkipped} duplicates skipped) and {optionsAdded} options for {game}/{language.Code}");
     }
 
-    private async Task DownloadStatic(TradeDbContext db, GameType game, IGameLanguage language)
+    private async Task DownloadStatic(GameType game, IGameLanguage language)
     {
         var url = GetApiBase(language, game) + "data/static";
         logger.LogInformation($"GET {url}");
 
         using var http = CreateHttpClient();
         var json = await http.GetStringAsync(url);
-        var result = JsonSerializer.Deserialize<Dtos.TradeApiResponse<Dtos.TradeStaticItemCategoryDto>>(json, JsonOptions);
+        var result =
+            JsonSerializer.Deserialize<TradeApiResponse<TradeStaticItemCategoryDto>>(json, JsonOptions);
         if (result?.Result == null) return;
 
-        int gameNum = (int)game;
         var seenIds = new HashSet<string>();
         int added = 0, skipped = 0;
 
+        await using var db = new TradeDbContext(dbContextOptions);
+
+        db.StaticItems.RemoveRange(db.StaticItems.Where(x => x.Game == game && x.Language == language.Code));
+        await db.SaveChangesAsync();
+
         foreach (var category in result.Result)
         {
-            if (category.Id == null) continue;
-            db.StaticItemCategories.Add(new TradeStaticItemCategory
-            {
-                Game = gameNum, Language = language.Code, Id = category.Id, Label = category.Label
-            });
             foreach (var entry in category.Entries)
             {
-                if (entry.Id == null) continue;
-                var id = entry.Id + "|" + gameNum;
+                var id = entry.Id;
                 if (!seenIds.Add(id))
                 {
                     skipped++;
@@ -209,67 +249,75 @@ public class TradeApiDownloader
 
                 db.StaticItems.Add(new TradeStaticItem
                 {
-                    Game = gameNum, Language = language.Code,
-                    Id = entry.Id, CategoryId = category.Id,
-                    Text = entry.Text, Image = entry.Image
+                    Game = game,
+                    Language = language.Code,
+                    Id = entry.Id,
+                    CategoryId = category.Id,
+                    Text = entry.Text,
+                    Image = entry.Image
                 });
                 added++;
             }
         }
 
+        await db.SaveChangesAsync();
         logger.LogInformation(
             $"Downloaded {added} trade static items ({skipped} duplicates skipped) for {game}/{language.Code}");
     }
 
-    private async Task DownloadFilters(TradeDbContext db, GameType game, IGameLanguage language)
+    private async Task DownloadFilters(GameType game, IGameLanguage language)
     {
         var url = GetApiBase(language, game) + "data/filters";
         logger.LogInformation($"GET {url}");
 
         using var http = CreateHttpClient();
         var json = await http.GetStringAsync(url);
-        var result = JsonSerializer.Deserialize<Dtos.TradeApiResponse<Dtos.TradeFilterGroupDto>>(json, JsonOptions);
+        var result = JsonSerializer.Deserialize<TradeApiResponse<TradeFilterGroupDto>>(json, JsonOptions);
         if (result?.Result == null) return;
 
-        int gameNum = (int)game;
         int filtersAdded = 0, optionsAdded = 0;
 
-        foreach (var filterGroup in result.Result)
+        await using var db = new TradeDbContext(dbContextOptions);
+
+        db.FilterOptions.RemoveRange(db.FilterOptions.Where(x => x.Game == game && x.Language == language.Code));
+        await db.SaveChangesAsync();
+
+        db.Filters.RemoveRange(db.Filters.Where(x => x.Game == game && x.Language == language.Code));
+        await db.SaveChangesAsync();
+
+        foreach (var category in result.Result)
         {
-            if (filterGroup.Id == null) continue;
+            if (category.Id == null) continue;
 
-            // Each filter group contains sub-filters
-            foreach (var subFilter in filterGroup.Filters)
+            foreach (var filter in category.Filters)
             {
-                if (subFilter.Id == null) continue;
-
                 db.Filters.Add(new Models.TradeFilter()
                 {
-                    Game = gameNum,
+                    Game = game,
                     Language = language.Code,
-                    FilterGroupId = filterGroup.Id,
-                    Id = subFilter.Id,
-                    Text = subFilter.Text,
-                    Hidden = subFilter.Hidden,
-                    FullSpan = subFilter.FullSpan,
-                    HalfSpan = subFilter.HalfSpan,
-                    MinMax = subFilter.MinMax,
-                    Sockets = subFilter.Sockets,
-                    Tip = subFilter.Tip
+                    CategoryId = category.Id,
+                    Id = filter.Id,
+                    Text = filter.Text,
+                    Hidden = filter.Hidden,
+                    FullSpan = filter.FullSpan,
+                    HalfSpan = filter.HalfSpan,
+                    MinMax = filter.MinMax,
+                    Sockets = filter.Sockets,
+                    Tip = filter.Tip
                 });
                 filtersAdded++;
 
                 // Add options if present
-                if (subFilter.Option?.Options != null)
+                if (filter.Option?.Options != null)
                 {
-                    foreach (var option in subFilter.Option.Options)
+                    foreach (var option in filter.Option.Options)
                     {
                         db.FilterOptions.Add(new Models.TradeFilterOption()
                         {
-                            Game = gameNum,
+                            Game = game,
                             Language = language.Code,
-                            FilterGroupId = filterGroup.Id,
-                            FilterId = subFilter.Id,
+                            FilterGroupId = category.Id,
+                            FilterId = filter.Id,
                             Id = option.Id ?? "",
                             Text = option.Text
                         });
@@ -279,22 +327,8 @@ public class TradeApiDownloader
             }
         }
 
+        await db.SaveChangesAsync();
         logger.LogInformation(
             $"Downloaded {filtersAdded} trade filters and {optionsAdded} options for {game}/{language.Code}");
     }
-
-    private static HttpClient CreateHttpClient()
-    {
-        var http = new HttpClient();
-        http.DefaultRequestHeaders.UserAgent.Add(new ProductInfoHeaderValue("Sidekick.Data", "1.0"));
-        http.DefaultRequestHeaders.TryAddWithoutValidation("X-Powered-By", "Sidekick");
-        return http;
-    }
-
-    private static readonly JsonSerializerOptions JsonOptions = new()
-    {
-        PropertyNameCaseInsensitive = true,
-    };
-
-    // DTOs are now in TradeApiDtos.cs
 }

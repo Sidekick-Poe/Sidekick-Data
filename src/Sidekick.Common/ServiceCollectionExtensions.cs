@@ -2,7 +2,6 @@ using System.Reflection;
 using Microsoft.Extensions.DependencyInjection;
 using Sidekick.Common.Browser;
 using Sidekick.Common.Cache;
-using Sidekick.Common.Folder;
 using Sidekick.Common.Initialization;
 using Sidekick.Common.Localization;
 using Sidekick.Common.Platform.Input;
@@ -22,7 +21,6 @@ public static class ServiceCollectionExtensions
 
         services.AddSingleton<IBrowserProvider, BrowserProvider>();
         services.AddSingleton<ICacheProvider, CacheProvider>();
-        services.AddSingleton<FolderProvider>();
         services.AddSingleton<ISettingsService, SettingsService>();
 
         services.AddSidekickInitializableService<IUiLanguageProvider, UiLanguageProvider>();

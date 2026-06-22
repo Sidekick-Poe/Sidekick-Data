@@ -17,41 +17,25 @@ public sealed class TradeDbContext : DbContext
     }
 
     public DbSet<TradeItem> Items { get; init; }
-    public DbSet<TradeItemCategory> ItemCategories { get; init; }
     public DbSet<TradeStat> Stats  { get; init; }
     public DbSet<TradeStatOption> StatOptions  { get; init; }
-    public DbSet<TradeStatCategory> StatCategories  { get; init; }
     public DbSet<TradeStaticItem> StaticItems  { get; init; }
-    public DbSet<TradeStaticItemCategory> StaticItemCategories  { get; init; }
     public DbSet<Models.TradeFilter> Filters  { get; init; }
     public DbSet<Models.TradeFilterOption> FilterOptions  { get; init; }
     public DbSet<TradeLeague> Leagues  { get; init; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-        modelBuilder.Entity<TradeItem>()
-            .HasOne(i => i.Category)
-            .WithMany()
-            .HasForeignKey(i => new { i.Game, i.Language, i.CategoryId })
-            .HasPrincipalKey(c => new { c.Game, c.Language, c.Id });
-
-        modelBuilder.Entity<TradeStat>()
-            .HasOne(s => s.Category)
-            .WithMany()
-            .HasForeignKey(s => new { s.Game, s.Language, s.CategoryId })
-            .HasPrincipalKey(c => new { c.Game, c.Language, c.Id });
-
-        modelBuilder.Entity<TradeStaticItem>()
-            .HasOne(s => s.Category)
-            .WithMany()
-            .HasForeignKey(s => new { s.Game, s.Language, s.CategoryId })
-            .HasPrincipalKey(c => new { c.Game, c.Language, c.Id });
-
         modelBuilder.Entity<Models.TradeFilter>()
             .HasMany(f => f.Options)
             .WithOne()
-            .HasForeignKey(o => new { o.Game, o.Language, o.FilterGroupId, o.FilterId })
-            .HasPrincipalKey(f => new { f.Game, f.Language, f.FilterGroupId, f.Id });
+            .HasForeignKey(o => new { o.Game, o.Language, o.FilterId })
+            .HasPrincipalKey(f => new { f.Game, f.Language, f.Id });
 
+        modelBuilder.Entity<TradeStat>()
+            .HasMany(f => f.Options)
+            .WithOne()
+            .HasForeignKey(o => new { o.Game, o.Language, o.StatId })
+            .HasPrincipalKey(f => new { f.Game, f.Language, f.Id });
     }
 }

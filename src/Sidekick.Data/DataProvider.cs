@@ -1,14 +1,14 @@
 ﻿using System.Text.Json;
 using System.Text.Json.Serialization;
 using Microsoft.Extensions.Logging;
+using Sidekick.Common;
 using Sidekick.Common.Enums;
 using Sidekick.Common.Exceptions;
-using Sidekick.Common.Folder;
 using Sidekick.Data.Languages;
 
 namespace Sidekick.Data;
 
-public class DataProvider(ILogger<DataProvider> logger, FolderProvider folderProvider)
+public class DataProvider(ILogger<DataProvider> logger)
 {
     private static readonly JsonSerializerOptions JsonOptions = new()
     {
@@ -22,7 +22,7 @@ public class DataProvider(ILogger<DataProvider> logger, FolderProvider folderPro
         },
     };
 
-    public string DataDirectory { get; } = folderProvider.GetDataDirectory();
+    public string DataDirectory { get; } = SidekickPaths.GetDataDirectory();
 
     public Task Write(GameType game, DataType type, IGameLanguage language, object data)
     {

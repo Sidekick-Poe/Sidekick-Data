@@ -8,7 +8,7 @@ namespace Sidekick.Data.Trade.Models;
 [PrimaryKey(nameof(Game), nameof(Language), nameof(FilterGroupId), nameof(FilterId), nameof(Id))]
 public class TradeFilterOption
 {
-    public int Game { get; set; }
+    public GameType Game { get; set; }
 
     [MaxLength(5)]
     public required string Language { get; set; }

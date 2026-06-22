@@ -29,6 +29,7 @@ services.AddLogging(o =>
 
 services.AddSidekickCommon(SidekickApplicationType.DataBuilder);
 services.AddSidekickData();
+services.AddSidekickDataTrade();
 
 services.TryAddSingleton<GraphQlClient>();
 services.TryAddSingleton<LeagueBuilder>();
@@ -42,8 +43,6 @@ services.TryAddSingleton<ItemDefinitionBuilder>();
 services.TryAddSingleton<StatsInvariantBuilder>();
 services.TryAddSingleton<TradeFilterBuilder>();
 services.TryAddSingleton<RawDataProvider>();
-services.TryAddSingleton<TradeDbContext>();
-services.TryAddSingleton<TradeApiDownloader>();
 
 var serviceProvider = services.BuildServiceProvider();
 var logger = serviceProvider.GetRequiredService<ILogger<Program>>();
@@ -132,55 +131,68 @@ if (!runPoe1 && !runPoe2)
     runPoe2 = true;
 }
 
-foreach (var language in gameLanguageProvider.GetList())
+foreach (var game in new[] { GameType.PathOfExile1, GameType.PathOfExile2 })
 {
-    if (!string.IsNullOrEmpty(runLanguage) && language.Code != runLanguage) continue;
-
-    if (download && runTrade)
+    switch (game)
     {
-        logger.LogInformation($"Downloading {language.Code} trade data.");
-        await tradeApiDownloader.Download(language);
-        // await leagueBuilder.Build(language);
-        // await tradeDownloader.Download(language);
-        logger.LogInformation($"Downloaded {language.Code} trade data.");
+        case GameType.PathOfExile1:
+            if (!runPoe1) continue;
+            break;
+        case GameType.PathOfExile2:
+            if (!runPoe2) continue;
+            break;
     }
 
-    if (build && runTrade)
+    foreach (var language in gameLanguageProvider.GetList())
     {
-        logger.LogInformation($"Building {language.Code} trade data.");
-        await tradeFilterBuilder.Build(language);
-        await tradeStatBuilder.Build(language);
-        await statsInvariantBuilder.Build(language);
-        logger.LogInformation($"Built {language.Code} trade data.");
-    }
+        if (!string.IsNullOrEmpty(runLanguage) && language.Code != runLanguage) continue;
 
-    if (build && runItems)
-    {
-        logger.LogInformation($"Building {language.Code} items data.");
-        await itemClassBuilder.Build(language);
-        await itemDefinitionBuilder.Build(language);
-        logger.LogInformation($"Built {language.Code} items data.");
-    }
+        if (download && runTrade)
+        {
+            logger.LogInformation($"Downloading {language.Code} trade data.");
+            await tradeApiDownloader.Download(game, language);
+            // await leagueBuilder.Build(language);
+            // await tradeDownloader.Download(language);
+            logger.LogInformation($"Downloaded {language.Code} trade data.");
+        }
 
-    if (build && runPseudo)
-    {
-        logger.LogInformation($"Building {language.Code} pseudo data.");
-        await pseudoBuilder.Build(language);
-        logger.LogInformation($"Built {language.Code} pseudo data.");
-    }
-
-    if (build && runStats)
-    {
-        logger.LogInformation($"Building {language.Code} stats data.");
-        await statBuilder.Build(language);
-        logger.LogInformation($"Built {language.Code} stats data.");
-    }
-
-    if (download && runNinja)
-    {
-        if (language.Code != gameLanguageProvider.InvariantLanguage.Code) continue;
-        logger.LogInformation("Downloading ninja data.");
-        await ninjaDownloader.Download();
-        logger.LogInformation($"Downloaded {language.Code} ninja data.");
+        // if (build && runTrade)
+        // {
+        //     logger.LogInformation($"Building {language.Code} trade data.");
+        //     await tradeFilterBuilder.Build(language);
+        //     await tradeStatBuilder.Build(language);
+        //     await statsInvariantBuilder.Build(language);
+        //     logger.LogInformation($"Built {language.Code} trade data.");
+        // }
+//
+        // if (build && runItems)
+        // {
+        //     logger.LogInformation($"Building {language.Code} items data.");
+        //     await itemClassBuilder.Build(language);
+        //     await itemDefinitionBuilder.Build(language);
+        //     logger.LogInformation($"Built {language.Code} items data.");
+        // }
+//
+        // if (build && runPseudo)
+        // {
+        //     logger.LogInformation($"Building {language.Code} pseudo data.");
+        //     await pseudoBuilder.Build(language);
+        //     logger.LogInformation($"Built {language.Code} pseudo data.");
+        // }
+//
+        // if (build && runStats)
+        // {
+        //     logger.LogInformation($"Building {language.Code} stats data.");
+        //     await statBuilder.Build(language);
+        //     logger.LogInformation($"Built {language.Code} stats data.");
+        // }
+//
+        // if (download && runNinja)
+        // {
+        //     if (language.Code != gameLanguageProvider.InvariantLanguage.Code) continue;
+        //     logger.LogInformation("Downloading ninja data.");
+        //     await ninjaDownloader.Download();
+        //     logger.LogInformation($"Downloaded {language.Code} ninja data.");
+        // }
     }
 }

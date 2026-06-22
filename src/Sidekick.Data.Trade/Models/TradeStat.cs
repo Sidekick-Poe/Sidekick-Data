@@ -8,18 +8,22 @@ namespace Sidekick.Data.Trade.Models;
 [PrimaryKey(nameof(Game), nameof(Language), nameof(Id))]
 public class TradeStat
 {
-    public int Game { get; set; }
+    public GameType Game { get; set; }
 
     [MaxLength(5)]
     public required string Language { get; set; }
 
+    [MaxLength(128)]
     public required string Id { get; set; }
-    public string? Text { get; set; }
-    public string? Type { get; set; }
-    public string? CategoryId { get; set; }
 
-    [ForeignKey("CategoryId")]
-    public TradeStatCategory? Category { get; set; }
+    [MaxLength(256)]
+    public string? Text { get; set; }
+
+    [MaxLength(128)]
+    public string? Type { get; set; }
+
+    [MaxLength(128)]
+    public string? CategoryId { get; set; }
 
     public List<TradeStatOption> Options { get; set; } = new();
 }

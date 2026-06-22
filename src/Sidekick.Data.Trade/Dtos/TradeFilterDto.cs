@@ -4,7 +4,7 @@ namespace Sidekick.Data.Trade.Dtos;
 
 internal sealed record TradeFilterDto
 {
-    public string Id { get; init; }
+    public required string Id { get; init; }
     public string? Text { get; init; }
     public string? Type { get; init; }
     public bool? Hidden { get; init; }
@@ -16,15 +16,4 @@ internal sealed record TradeFilterDto
 
     [JsonPropertyName("option")]
     public TradeFilterOptionGroupDto? Option { get; init; }
-}
-
-internal sealed record TradeFilterOptionGroupDto
-{
-    public List<TradeFilterOptionDto> Options { get; init; } = new();
-}
-
-internal sealed record TradeFilterOptionDto
-{
-    public string? Id { get; init; }
-    public string? Text { get; init; }
 }

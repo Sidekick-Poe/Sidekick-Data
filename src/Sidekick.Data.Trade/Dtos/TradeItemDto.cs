@@ -14,8 +14,3 @@ internal sealed record TradeItemDto
     [JsonPropertyName("flags")]
     public TradeItemFlagsDto? Flags { get; init; }
 }
-
-internal sealed record TradeItemFlagsDto
-{
-    public bool Unique { get; init; }
-}

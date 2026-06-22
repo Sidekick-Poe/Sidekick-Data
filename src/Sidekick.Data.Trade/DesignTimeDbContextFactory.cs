@@ -1,6 +1,5 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Design;
-using Sidekick.Data.Trade.Models;
 
 namespace Sidekick.Data.Trade;
 
