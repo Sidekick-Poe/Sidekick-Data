@@ -28,14 +28,16 @@ public sealed class TradeDbContext : DbContext
     {
         modelBuilder.Entity<Models.TradeFilter>()
             .HasMany(f => f.Options)
-            .WithOne()
-            .HasForeignKey(o => new { o.Game, o.Language, o.FilterId })
-            .HasPrincipalKey(f => new { f.Game, f.Language, f.Id });
+            .WithOne(o=> o.TradeFilter)
+            .HasForeignKey(o => o.FilterUniqueId)
+            .HasPrincipalKey(f => f.UniqueId)
+            .OnDelete(DeleteBehavior.Cascade);
 
         modelBuilder.Entity<TradeStat>()
             .HasMany(f => f.Options)
-            .WithOne()
-            .HasForeignKey(o => new { o.Game, o.Language, o.StatId })
-            .HasPrincipalKey(f => new { f.Game, f.Language, f.Id });
+            .WithOne(o => o.TradeStat)
+            .HasForeignKey(o => o.TradeStatUniqueId)
+            .HasPrincipalKey(f => f.UniqueId)
+            .OnDelete(DeleteBehavior.Cascade);
     }
 }

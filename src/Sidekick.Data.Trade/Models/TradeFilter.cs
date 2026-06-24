@@ -5,9 +5,12 @@ using Microsoft.EntityFrameworkCore;
 namespace Sidekick.Data.Trade.Models;
 
 [Table("Filters")]
-[PrimaryKey(nameof(Game), nameof(Language), nameof(Id))]
+[Index(nameof(Game), nameof(Language), nameof(Id))]
 public class TradeFilter
 {
+    [Key]
+    public Guid UniqueId { get; set; }
+
     public GameType Game { get; set; }
 
     [MaxLength(5)]

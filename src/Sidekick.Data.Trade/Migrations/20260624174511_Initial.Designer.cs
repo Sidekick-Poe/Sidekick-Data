@@ -11,7 +11,7 @@ using Sidekick.Data.Trade;
 namespace Sidekick.Data.Trade.Migrations
 {
     [DbContext(typeof(TradeDbContext))]
-    [Migration("20260622013938_Initial")]
+    [Migration("20260624174511_Initial")]
     partial class Initial
     {
         /// <inheritdoc />
@@ -22,15 +22,8 @@ namespace Sidekick.Data.Trade.Migrations
 
             modelBuilder.Entity("Sidekick.Data.Trade.Models.TradeFilter", b =>
                 {
-                    b.Property<int>("Game")
-                        .HasColumnType("INTEGER");
-
-                    b.Property<string>("Language")
-                        .HasMaxLength(5)
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("Id")
-                        .HasMaxLength(128)
+                    b.Property<Guid>("UniqueId")
+                        .ValueGeneratedOnAdd()
                         .HasColumnType("TEXT");
 
                     b.Property<string>("CategoryId")
@@ -40,11 +33,23 @@ namespace Sidekick.Data.Trade.Migrations
                     b.Property<bool?>("FullSpan")
                         .HasColumnType("INTEGER");
 
+                    b.Property<int>("Game")
+                        .HasColumnType("INTEGER");
+
                     b.Property<bool?>("HalfSpan")
                         .HasColumnType("INTEGER");
 
                     b.Property<bool?>("Hidden")
                         .HasColumnType("INTEGER");
+
+                    b.Property<string>("Id")
+                        .HasMaxLength(128)
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Language")
+                        .IsRequired()
+                        .HasMaxLength(5)
+                        .HasColumnType("TEXT");
 
                     b.Property<bool?>("MinMax")
                         .HasColumnType("INTEGER");
@@ -60,26 +65,16 @@ namespace Sidekick.Data.Trade.Migrations
                         .HasMaxLength(256)
                         .HasColumnType("TEXT");
 
-                    b.HasKey("Game", "Language", "Id");
+                    b.HasKey("UniqueId");
+
+                    b.HasIndex("Game", "Language", "Id");
 
                     b.ToTable("Filters");
                 });
 
             modelBuilder.Entity("Sidekick.Data.Trade.Models.TradeFilterOption", b =>
                 {
-                    b.Property<int>("Game")
-                        .HasColumnType("INTEGER");
-
-                    b.Property<string>("Language")
-                        .HasMaxLength(5)
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("FilterGroupId")
-                        .HasMaxLength(128)
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("FilterId")
-                        .HasMaxLength(128)
+                    b.Property<Guid>("FilterUniqueId")
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Id")
@@ -90,24 +85,15 @@ namespace Sidekick.Data.Trade.Migrations
                         .HasMaxLength(256)
                         .HasColumnType("TEXT");
 
-                    b.HasKey("Game", "Language", "FilterGroupId", "FilterId", "Id");
-
-                    b.HasIndex("Game", "Language", "FilterId");
+                    b.HasKey("FilterUniqueId", "Id");
 
                     b.ToTable("FilterOptions");
                 });
 
             modelBuilder.Entity("Sidekick.Data.Trade.Models.TradeItem", b =>
                 {
-                    b.Property<int>("Game")
-                        .HasColumnType("INTEGER");
-
-                    b.Property<string>("Language")
-                        .HasMaxLength(5)
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("Id")
-                        .HasMaxLength(256)
+                    b.Property<Guid>("UniqueId")
+                        .ValueGeneratedOnAdd()
                         .HasColumnType("TEXT");
 
                     b.Property<string>("CategoryId")
@@ -118,8 +104,16 @@ namespace Sidekick.Data.Trade.Migrations
                         .HasMaxLength(128)
                         .HasColumnType("TEXT");
 
+                    b.Property<int>("Game")
+                        .HasColumnType("INTEGER");
+
                     b.Property<bool>("IsUnique")
                         .HasColumnType("INTEGER");
+
+                    b.Property<string>("Language")
+                        .IsRequired()
+                        .HasMaxLength(5)
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("Name")
                         .HasMaxLength(256)
@@ -133,7 +127,9 @@ namespace Sidekick.Data.Trade.Migrations
                         .HasMaxLength(256)
                         .HasColumnType("TEXT");
 
-                    b.HasKey("Game", "Language", "Id");
+                    b.HasKey("UniqueId");
+
+                    b.HasIndex("Game", "Language", "CategoryId");
 
                     b.ToTable("Items");
                 });
@@ -165,19 +161,24 @@ namespace Sidekick.Data.Trade.Migrations
 
             modelBuilder.Entity("Sidekick.Data.Trade.Models.TradeStat", b =>
                 {
+                    b.Property<Guid>("UniqueId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("CategoryId")
+                        .HasMaxLength(128)
+                        .HasColumnType("TEXT");
+
                     b.Property<int>("Game")
                         .HasColumnType("INTEGER");
-
-                    b.Property<string>("Language")
-                        .HasMaxLength(5)
-                        .HasColumnType("TEXT");
 
                     b.Property<string>("Id")
                         .HasMaxLength(128)
                         .HasColumnType("TEXT");
 
-                    b.Property<string>("CategoryId")
-                        .HasMaxLength(128)
+                    b.Property<string>("Language")
+                        .IsRequired()
+                        .HasMaxLength(5)
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Text")
@@ -188,22 +189,16 @@ namespace Sidekick.Data.Trade.Migrations
                         .HasMaxLength(128)
                         .HasColumnType("TEXT");
 
-                    b.HasKey("Game", "Language", "Id");
+                    b.HasKey("UniqueId");
+
+                    b.HasIndex("Game", "Language", "Id");
 
                     b.ToTable("Stats");
                 });
 
             modelBuilder.Entity("Sidekick.Data.Trade.Models.TradeStatOption", b =>
                 {
-                    b.Property<int>("Game")
-                        .HasColumnType("INTEGER");
-
-                    b.Property<string>("Language")
-                        .HasMaxLength(5)
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("StatId")
-                        .HasMaxLength(128)
+                    b.Property<Guid>("TradeStatUniqueId")
                         .HasColumnType("TEXT");
 
                     b.Property<int>("Id")
@@ -214,25 +209,25 @@ namespace Sidekick.Data.Trade.Migrations
                         .HasMaxLength(256)
                         .HasColumnType("TEXT");
 
-                    b.HasKey("Game", "Language", "StatId", "Id");
+                    b.HasKey("TradeStatUniqueId", "Id");
 
                     b.ToTable("StatOptions");
                 });
 
             modelBuilder.Entity("Sidekick.Data.Trade.Models.TradeStaticItem", b =>
                 {
-                    b.Property<int>("Game")
-                        .HasColumnType("INTEGER");
-
-                    b.Property<string>("Language")
-                        .HasMaxLength(5)
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("Id")
-                        .HasMaxLength(128)
+                    b.Property<Guid>("UniqueId")
+                        .ValueGeneratedOnAdd()
                         .HasColumnType("TEXT");
 
                     b.Property<string>("CategoryId")
+                        .HasMaxLength(128)
+                        .HasColumnType("TEXT");
+
+                    b.Property<int>("Game")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("Id")
                         .HasMaxLength(128)
                         .HasColumnType("TEXT");
 
@@ -240,31 +235,42 @@ namespace Sidekick.Data.Trade.Migrations
                         .HasMaxLength(256)
                         .HasColumnType("TEXT");
 
+                    b.Property<string>("Language")
+                        .IsRequired()
+                        .HasMaxLength(5)
+                        .HasColumnType("TEXT");
+
                     b.Property<string>("Text")
                         .HasMaxLength(256)
                         .HasColumnType("TEXT");
 
-                    b.HasKey("Game", "Language", "Id");
+                    b.HasKey("UniqueId");
+
+                    b.HasIndex("Game", "Language", "Id");
 
                     b.ToTable("StaticItems");
                 });
 
             modelBuilder.Entity("Sidekick.Data.Trade.Models.TradeFilterOption", b =>
                 {
-                    b.HasOne("Sidekick.Data.Trade.Models.TradeFilter", null)
+                    b.HasOne("Sidekick.Data.Trade.Models.TradeFilter", "TradeFilter")
                         .WithMany("Options")
-                        .HasForeignKey("Game", "Language", "FilterId")
+                        .HasForeignKey("FilterUniqueId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.Navigation("TradeFilter");
                 });
 
             modelBuilder.Entity("Sidekick.Data.Trade.Models.TradeStatOption", b =>
                 {
-                    b.HasOne("Sidekick.Data.Trade.Models.TradeStat", null)
+                    b.HasOne("Sidekick.Data.Trade.Models.TradeStat", "TradeStat")
                         .WithMany("Options")
-                        .HasForeignKey("Game", "Language", "StatId")
+                        .HasForeignKey("TradeStatUniqueId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.Navigation("TradeStat");
                 });
 
             modelBuilder.Entity("Sidekick.Data.Trade.Models.TradeFilter", b =>

@@ -111,8 +111,7 @@ public class TradeApiDownloader(
         var result = JsonSerializer.Deserialize<TradeApiResponse<TradeItemCategoryDto>>(json, JsonOptions);
         if (result?.Result == null) return;
 
-        var seenIds = new HashSet<string>();
-        int added = 0, skipped = 0;
+        int added = 0;
 
         await using var db = new TradeDbContext(dbContextOptions);
 
@@ -123,19 +122,13 @@ public class TradeApiDownloader(
         {
             foreach (var entry in category.Entries)
             {
-                if (entry.Name == null && entry.Type == null) continue;
-                var id = $"{entry.Type}_{entry.Name}_{entry.Text}_{entry.Discriminator}";
-                if (!seenIds.Add(id))
-                {
-                    skipped++;
-                    continue;
-                }
+                var id = Guid.NewGuid();
 
                 db.Items.Add(new TradeItem
                 {
+                    UniqueId = id,
                     Game = game,
                     Language = language.Code,
-                    Id = id,
                     CategoryId = category.Id,
                     Name = entry.Name,
                     Type = entry.Type,
@@ -147,8 +140,7 @@ public class TradeApiDownloader(
         }
 
         await db.SaveChangesAsync();
-        logger.LogInformation(
-            $"Downloaded {added} trade items ({skipped} duplicates skipped) for {game}/{language.Code}");
+        logger.LogInformation($"Downloaded {added} trade items for {game}/{language.Code}");
     }
 
     private async Task DownloadStats(GameType game, IGameLanguage language)
@@ -161,13 +153,9 @@ public class TradeApiDownloader(
         var result = JsonSerializer.Deserialize<TradeApiResponse<TradeStatCategoryDto>>(json, JsonOptions);
         if (result?.Result == null) return;
 
-        var seenStatIds = new HashSet<string>();
-        int statsAdded = 0, statsSkipped = 0, optionsAdded = 0;
+        int statsAdded = 0, optionsAdded = 0;
 
         await using var db = new TradeDbContext(dbContextOptions);
-
-        db.StatOptions.RemoveRange(db.StatOptions.Where(x => x.Game == game && x.Language == language.Code));
-        await db.SaveChangesAsync();
 
         db.Stats.RemoveRange(db.Stats.Where(x => x.Game == game && x.Language == language.Code));
         await db.SaveChangesAsync();
@@ -176,15 +164,11 @@ public class TradeApiDownloader(
         {
             foreach (var entry in category.Entries)
             {
-                var statId = entry.Id;
-                if (!seenStatIds.Add(statId))
-                {
-                    statsSkipped++;
-                    continue;
-                }
+                var id = Guid.NewGuid();
 
                 db.Stats.Add(new TradeStat
                 {
+                    UniqueId = id,
                     Game = game,
                     Language = language.Code,
                     Id = entry.Id,
@@ -200,11 +184,9 @@ public class TradeApiDownloader(
                     {
                         db.StatOptions.Add(new TradeStatOption
                         {
-                            Game = game,
-                            Language = language.Code,
-                            StatId = entry.Id,
+                            TradeStatUniqueId = id,
                             Id = option.Id,
-                            Text = option.Text
+                            Text = option.Text,
                         });
                         optionsAdded++;
                     }
@@ -214,7 +196,7 @@ public class TradeApiDownloader(
 
         await db.SaveChangesAsync();
         logger.LogInformation(
-            $"Downloaded {statsAdded} trade stats ({statsSkipped} duplicates skipped) and {optionsAdded} options for {game}/{language.Code}");
+            $"Downloaded {statsAdded} trade stats and {optionsAdded} options for {game}/{language.Code}");
     }
 
     private async Task DownloadStatic(GameType game, IGameLanguage language)
@@ -228,8 +210,7 @@ public class TradeApiDownloader(
             JsonSerializer.Deserialize<TradeApiResponse<TradeStaticItemCategoryDto>>(json, JsonOptions);
         if (result?.Result == null) return;
 
-        var seenIds = new HashSet<string>();
-        int added = 0, skipped = 0;
+        var added = 0;
 
         await using var db = new TradeDbContext(dbContextOptions);
 
@@ -240,15 +221,9 @@ public class TradeApiDownloader(
         {
             foreach (var entry in category.Entries)
             {
-                var id = entry.Id;
-                if (!seenIds.Add(id))
-                {
-                    skipped++;
-                    continue;
-                }
-
                 db.StaticItems.Add(new TradeStaticItem
                 {
+                    UniqueId = Guid.NewGuid(),
                     Game = game,
                     Language = language.Code,
                     Id = entry.Id,
@@ -262,7 +237,7 @@ public class TradeApiDownloader(
 
         await db.SaveChangesAsync();
         logger.LogInformation(
-            $"Downloaded {added} trade static items ({skipped} duplicates skipped) for {game}/{language.Code}");
+            $"Downloaded {added} trade static items for {game}/{language.Code}");
     }
 
     private async Task DownloadFilters(GameType game, IGameLanguage language)
@@ -279,9 +254,6 @@ public class TradeApiDownloader(
 
         await using var db = new TradeDbContext(dbContextOptions);
 
-        db.FilterOptions.RemoveRange(db.FilterOptions.Where(x => x.Game == game && x.Language == language.Code));
-        await db.SaveChangesAsync();
-
         db.Filters.RemoveRange(db.Filters.Where(x => x.Game == game && x.Language == language.Code));
         await db.SaveChangesAsync();
 
@@ -291,8 +263,11 @@ public class TradeApiDownloader(
 
             foreach (var filter in category.Filters)
             {
+                var id = Guid.NewGuid();
+
                 db.Filters.Add(new Models.TradeFilter()
                 {
+                    UniqueId = id,
                     Game = game,
                     Language = language.Code,
                     CategoryId = category.Id,
@@ -303,7 +278,7 @@ public class TradeApiDownloader(
                     HalfSpan = filter.HalfSpan,
                     MinMax = filter.MinMax,
                     Sockets = filter.Sockets,
-                    Tip = filter.Tip
+                    Tip = filter.Tip,
                 });
                 filtersAdded++;
 
@@ -314,10 +289,7 @@ public class TradeApiDownloader(
                     {
                         db.FilterOptions.Add(new Models.TradeFilterOption()
                         {
-                            Game = game,
-                            Language = language.Code,
-                            FilterGroupId = category.Id,
-                            FilterId = filter.Id,
+                            FilterUniqueId = id,
                             Id = option.Id ?? "",
                             Text = option.Text
                         });
