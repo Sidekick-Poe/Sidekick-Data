@@ -1,4 +1,4 @@
-namespace Sidekick.Data.Trade.Dtos;
+namespace Sidekick.Data.Cli.Trade.Dtos;
 
 internal sealed record TradeStaticItemCategoryDto
 {

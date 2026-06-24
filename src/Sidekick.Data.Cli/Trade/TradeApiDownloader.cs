@@ -5,12 +5,13 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using Sidekick.Common;
+using Sidekick.Data.Cli.Trade.Dtos;
 using Sidekick.Data.Languages;
 using Sidekick.Data.Leagues;
-using Sidekick.Data.Trade.Dtos;
+using Sidekick.Data.Trade;
 using Sidekick.Data.Trade.Models;
 
-namespace Sidekick.Data.Trade;
+namespace Sidekick.Data.Cli.Trade;
 
 public class TradeApiDownloader(
     ILogger<TradeApiDownloader> logger,
@@ -64,8 +65,6 @@ public class TradeApiDownloader(
 
     private async Task DownloadLeagues(GameType game, IGameLanguage language)
     {
-        if (language.Code != "en") return;
-
         var url = GetApiBase(language, game) + "data/leagues";
         logger.LogInformation($"GET {url}");
 
@@ -77,7 +76,7 @@ public class TradeApiDownloader(
         var added = 0;
         await using var db = new TradeDbContext(dbContextOptions);
 
-        db.Leagues.RemoveRange(db.Leagues);
+        db.Leagues.RemoveRange(db.Leagues.Where(x => x.Game == game && x.Language == language.Code));
         await db.SaveChangesAsync();
 
         foreach (var league in result.Result)
@@ -115,21 +114,29 @@ public class TradeApiDownloader(
 
         await using var db = new TradeDbContext(dbContextOptions);
 
-        db.Items.RemoveRange(db.Items.Where(x => x.Game == game && x.Language == language.Code));
+        db.ItemCategories.RemoveRange(db.ItemCategories.Where(x => x.Game == game && x.Language == language.Code));
         await db.SaveChangesAsync();
 
         foreach (var category in result.Result)
         {
+            var categoryId = Guid.NewGuid();
+            db.ItemCategories.Add(new TradeItemCategory
+            {
+                UniqueId = categoryId,
+                Game = game,
+                Language = language.Code,
+                Id = category.Id,
+                Label = category.Label,
+            });
+
             foreach (var entry in category.Entries)
             {
-                var id = Guid.NewGuid();
-
                 db.Items.Add(new TradeItem
                 {
-                    UniqueId = id,
+                    UniqueId = Guid.NewGuid(),
                     Game = game,
                     Language = language.Code,
-                    CategoryId = category.Id,
+                    CategoryId = categoryId,
                     Name = entry.Name,
                     Type = entry.Type,
                     Text = entry.Text,
@@ -157,11 +164,21 @@ public class TradeApiDownloader(
 
         await using var db = new TradeDbContext(dbContextOptions);
 
-        db.Stats.RemoveRange(db.Stats.Where(x => x.Game == game && x.Language == language.Code));
+        db.StatCategories.RemoveRange(db.StatCategories.Where(x => x.Game == game && x.Language == language.Code));
         await db.SaveChangesAsync();
 
         foreach (var category in result.Result)
         {
+            var categoryId = Guid.NewGuid();
+            db.StatCategories.Add(new TradeStatCategory
+            {
+                UniqueId = categoryId,
+                Game = game,
+                Language = language.Code,
+                Id = category.Id,
+                Label = category.Label,
+            });
+
             foreach (var entry in category.Entries)
             {
                 var id = Guid.NewGuid();
@@ -172,7 +189,7 @@ public class TradeApiDownloader(
                     Game = game,
                     Language = language.Code,
                     Id = entry.Id,
-                    CategoryId = category.Id,
+                    CategoryId = categoryId,
                     Text = entry.Text,
                     Type = entry.Type,
                 });
@@ -214,11 +231,21 @@ public class TradeApiDownloader(
 
         await using var db = new TradeDbContext(dbContextOptions);
 
-        db.StaticItems.RemoveRange(db.StaticItems.Where(x => x.Game == game && x.Language == language.Code));
+        db.StaticItemCategories.RemoveRange(db.StaticItemCategories.Where(x => x.Game == game && x.Language == language.Code));
         await db.SaveChangesAsync();
 
         foreach (var category in result.Result)
         {
+            var categoryId = Guid.NewGuid();
+            db.StaticItemCategories.Add(new TradeStaticItemCategory
+            {
+                UniqueId = categoryId,
+                Game = game,
+                Language = language.Code,
+                Id = category.Id,
+                Label = category.Label,
+            });
+
             foreach (var entry in category.Entries)
             {
                 db.StaticItems.Add(new TradeStaticItem
@@ -227,7 +254,7 @@ public class TradeApiDownloader(
                     Game = game,
                     Language = language.Code,
                     Id = entry.Id,
-                    CategoryId = category.Id,
+                    CategoryId = categoryId,
                     Text = entry.Text,
                     Image = entry.Image
                 });
@@ -254,23 +281,32 @@ public class TradeApiDownloader(
 
         await using var db = new TradeDbContext(dbContextOptions);
 
-        db.Filters.RemoveRange(db.Filters.Where(x => x.Game == game && x.Language == language.Code));
+        db.FilterCategories.RemoveRange(db.FilterCategories.Where(x => x.Game == game && x.Language == language.Code));
         await db.SaveChangesAsync();
 
         foreach (var category in result.Result)
         {
             if (category.Id == null) continue;
 
+            var categoryId = Guid.NewGuid();
+            db.FilterCategories.Add(new Data.Trade.Models.TradeFilterCategory
+            {
+                UniqueId = categoryId,
+                Game = game,
+                Language = language.Code,
+                Id = category.Id,
+            });
+
             foreach (var filter in category.Filters)
             {
                 var id = Guid.NewGuid();
 
-                db.Filters.Add(new Models.TradeFilter()
+                db.Filters.Add(new Data.Trade.Models.TradeFilter()
                 {
                     UniqueId = id,
                     Game = game,
                     Language = language.Code,
-                    CategoryId = category.Id,
+                    CategoryId = categoryId,
                     Id = filter.Id,
                     Text = filter.Text,
                     Hidden = filter.Hidden,
@@ -287,7 +323,7 @@ public class TradeApiDownloader(
                 {
                     foreach (var option in filter.Option.Options)
                     {
-                        db.FilterOptions.Add(new Models.TradeFilterOption()
+                        db.FilterOptions.Add(new Data.Trade.Models.TradeFilterOption()
                         {
                             FilterUniqueId = id,
                             Id = option.Id ?? "",

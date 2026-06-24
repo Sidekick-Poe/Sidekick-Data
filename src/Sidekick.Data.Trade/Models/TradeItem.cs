@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore;
 namespace Sidekick.Data.Trade.Models;
 
 [Table("Items")]
-[Index(nameof(Game), nameof(Language), nameof(CategoryId))]
+[Index(nameof(Game), nameof(Language), nameof(CategoryId), IsUnique = false)]
 public class TradeItem
 {
     [Key]
@@ -16,8 +16,7 @@ public class TradeItem
     [MaxLength(5)]
     public required string Language { get; set; }
 
-    [MaxLength(128)]
-    public string? CategoryId { get; set; }
+    public Guid CategoryId { get; set; }
 
     [MaxLength(128)]
     public string? Discriminator { get; set; }
@@ -32,4 +31,7 @@ public class TradeItem
     public string? Text { get; set; }
 
     public bool IsUnique { get; set; }
+
+    [ForeignKey("CategoryId")]
+    public TradeItemCategory? Category { get; set; }
 }

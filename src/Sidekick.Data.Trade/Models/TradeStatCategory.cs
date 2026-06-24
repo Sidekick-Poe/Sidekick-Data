@@ -4,9 +4,9 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Sidekick.Data.Trade.Models;
 
-[Table("StaticItems")]
+[Table("StatCategories")]
 [Index(nameof(Game), nameof(Language), nameof(Id), IsUnique = false)]
-public class TradeStaticItem
+public class TradeStatCategory
 {
     [Key]
     public Guid UniqueId { get; set; }
@@ -17,16 +17,10 @@ public class TradeStaticItem
     public required string Language { get; set; }
 
     [MaxLength(128)]
-    public required string Id { get; set; }
+    public string? Id { get; set; }
 
     [MaxLength(256)]
-    public string? Text { get; set; }
+    public string? Label { get; set; }
 
-    [MaxLength(256)]
-    public string? Image { get; set; }
-
-    public Guid CategoryId { get; set; }
-
-    [ForeignKey("CategoryId")]
-    public TradeStaticItemCategory? Category { get; set; }
+    public List<TradeStat> Stats { get; set; } = new();
 }

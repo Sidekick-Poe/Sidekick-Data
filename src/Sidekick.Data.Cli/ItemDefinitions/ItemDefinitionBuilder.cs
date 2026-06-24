@@ -5,7 +5,6 @@ using Sidekick.Common;
 using Sidekick.Data.Cli.GraphQl;
 using Sidekick.Data.Cli.GraphQl.Models;
 using Sidekick.Data.Cli.Ninja;
-using Sidekick.Data.Cli.Trade.Models;
 using Sidekick.Data.ItemDefinitions;
 using Sidekick.Data.Languages;
 
@@ -146,39 +145,41 @@ public class ItemDefinitionBuilder(
 
     private async Task<List<StaticItem>> GetStaticDictionary(GameType game, IGameLanguage language)
     {
-        var raw = await dataProvider.Read<RawTradeResult<List<RawTradeStaticItemCategory>>>(game, DataType.RawTradeStatic, language);
-        var result = new List<StaticItem>();
-        foreach (var category in raw.Result)
-            foreach (var entry in category.Entries)
-            {
-                if (entry.Id == null! || entry.Text == null || entry.Id == "sep") continue;
-                var image = string.IsNullOrEmpty(entry.Image) ? null : $"https://web.poecdn.com{entry.Image}";
-                result.Add(new StaticItem(entry.Id, entry.Text, image));
-            }
-        return result;
+        return [];
+        // var raw = await dataProvider.Read<RawTradeResult<List<RawTradeStaticItemCategory>>>(game, DataType.RawTradeStatic, language);
+        // var result = new List<StaticItem>();
+        // foreach (var category in raw.Result)
+        //     foreach (var entry in category.Entries)
+        //     {
+        //         if (entry.Id == null! || entry.Text == null || entry.Id == "sep") continue;
+        //         var image = string.IsNullOrEmpty(entry.Image) ? null : $"https://web.poecdn.com{entry.Image}";
+        //         result.Add(new StaticItem(entry.Id, entry.Text, image));
+        //     }
+        // return result;
     }
 
     private async Task<List<TradeItemDefinition>> GetTradeItems(GameType game, IGameLanguage language)
     {
-        var itemsResult = await dataProvider.Read<RawTradeResult<List<RawTradeItemCategory>>>(game, DataType.RawTradeItems, language);
-        var staticItems = await GetStaticDictionary(game, language);
-        StaticItem? GetStatic(string? name, string? type)
-        {
-            var data = !string.IsNullOrEmpty(name) ? staticItems.FirstOrDefault(x => x.Text == name) : null;
-            data ??= !string.IsNullOrEmpty(type) ? staticItems.FirstOrDefault(x => x.Text == type) : null;
-            return data;
-        }
-        var result = new List<TradeItemDefinition>();
-        foreach (var category in itemsResult.Result)
-            foreach (var entry in category.Entries)
-            {
-                var staticItem = GetStatic(entry.Name, entry.Type);
-                var text = staticItem?.Text ?? entry.Text;
-                if (text == entry.Name || text == entry.Type) text = null;
-                if (entry.Discriminator == "legacy") continue;
-                result.Add(new TradeItemDefinition() { Id = staticItem?.Id, Image = staticItem?.Image, Name = entry.Name, Type = entry.Type, Text = text, Category = category.Id, Discriminator = entry.Discriminator });
-            }
-        return result;
+        return [];
+        // var itemsResult = await dataProvider.Read<RawTradeResult<List<RawTradeItemCategory>>>(game, DataType.RawTradeItems, language);
+        // var staticItems = await GetStaticDictionary(game, language);
+        // StaticItem? GetStatic(string? name, string? type)
+        // {
+        //     var data = !string.IsNullOrEmpty(name) ? staticItems.FirstOrDefault(x => x.Text == name) : null;
+        //     data ??= !string.IsNullOrEmpty(type) ? staticItems.FirstOrDefault(x => x.Text == type) : null;
+        //     return data;
+        // }
+        // var result = new List<TradeItemDefinition>();
+        // foreach (var category in itemsResult.Result)
+        //     foreach (var entry in category.Entries)
+        //     {
+        //         var staticItem = GetStatic(entry.Name, entry.Type);
+        //         var text = staticItem?.Text ?? entry.Text;
+        //         if (text == entry.Name || text == entry.Type) text = null;
+        //         if (entry.Discriminator == "legacy") continue;
+        //         result.Add(new TradeItemDefinition() { Id = staticItem?.Id, Image = staticItem?.Image, Name = entry.Name, Type = entry.Type, Text = text, Category = category.Id, Discriminator = entry.Discriminator });
+        //     }
+        // return result;
     }
 
     private async Task<List<BaseItemDefinition>> GetBaseItems(GameType game, IGameLanguage language)

@@ -23,8 +23,7 @@ namespace Sidekick.Data.Trade.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("TEXT");
 
-                    b.Property<string>("CategoryId")
-                        .HasMaxLength(128)
+                    b.Property<Guid>("CategoryId")
                         .HasColumnType("TEXT");
 
                     b.Property<bool?>("FullSpan")
@@ -64,9 +63,40 @@ namespace Sidekick.Data.Trade.Migrations
 
                     b.HasKey("UniqueId");
 
+                    b.HasIndex("CategoryId");
+
                     b.HasIndex("Game", "Language", "Id");
 
                     b.ToTable("Filters");
+                });
+
+            modelBuilder.Entity("Sidekick.Data.Trade.Models.TradeFilterCategory", b =>
+                {
+                    b.Property<Guid>("UniqueId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("TEXT");
+
+                    b.Property<int>("Game")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("Id")
+                        .HasMaxLength(128)
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Label")
+                        .HasMaxLength(256)
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Language")
+                        .IsRequired()
+                        .HasMaxLength(5)
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("UniqueId");
+
+                    b.HasIndex("Game", "Language", "Id");
+
+                    b.ToTable("FilterCategories");
                 });
 
             modelBuilder.Entity("Sidekick.Data.Trade.Models.TradeFilterOption", b =>
@@ -93,8 +123,7 @@ namespace Sidekick.Data.Trade.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("TEXT");
 
-                    b.Property<string>("CategoryId")
-                        .HasMaxLength(128)
+                    b.Property<Guid>("CategoryId")
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Discriminator")
@@ -126,9 +155,40 @@ namespace Sidekick.Data.Trade.Migrations
 
                     b.HasKey("UniqueId");
 
+                    b.HasIndex("CategoryId");
+
                     b.HasIndex("Game", "Language", "CategoryId");
 
                     b.ToTable("Items");
+                });
+
+            modelBuilder.Entity("Sidekick.Data.Trade.Models.TradeItemCategory", b =>
+                {
+                    b.Property<Guid>("UniqueId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("TEXT");
+
+                    b.Property<int>("Game")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("Id")
+                        .HasMaxLength(128)
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Label")
+                        .HasMaxLength(256)
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Language")
+                        .IsRequired()
+                        .HasMaxLength(5)
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("UniqueId");
+
+                    b.HasIndex("Game", "Language", "Id");
+
+                    b.ToTable("ItemCategories");
                 });
 
             modelBuilder.Entity("Sidekick.Data.Trade.Models.TradeLeague", b =>
@@ -162,8 +222,7 @@ namespace Sidekick.Data.Trade.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("TEXT");
 
-                    b.Property<string>("CategoryId")
-                        .HasMaxLength(128)
+                    b.Property<Guid>("CategoryId")
                         .HasColumnType("TEXT");
 
                     b.Property<int>("Game")
@@ -188,9 +247,40 @@ namespace Sidekick.Data.Trade.Migrations
 
                     b.HasKey("UniqueId");
 
+                    b.HasIndex("CategoryId");
+
                     b.HasIndex("Game", "Language", "Id");
 
                     b.ToTable("Stats");
+                });
+
+            modelBuilder.Entity("Sidekick.Data.Trade.Models.TradeStatCategory", b =>
+                {
+                    b.Property<Guid>("UniqueId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("TEXT");
+
+                    b.Property<int>("Game")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("Id")
+                        .HasMaxLength(128)
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Label")
+                        .HasMaxLength(256)
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Language")
+                        .IsRequired()
+                        .HasMaxLength(5)
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("UniqueId");
+
+                    b.HasIndex("Game", "Language", "Id");
+
+                    b.ToTable("StatCategories");
                 });
 
             modelBuilder.Entity("Sidekick.Data.Trade.Models.TradeStatOption", b =>
@@ -217,8 +307,7 @@ namespace Sidekick.Data.Trade.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("TEXT");
 
-                    b.Property<string>("CategoryId")
-                        .HasMaxLength(128)
+                    b.Property<Guid>("CategoryId")
                         .HasColumnType("TEXT");
 
                     b.Property<int>("Game")
@@ -243,9 +332,51 @@ namespace Sidekick.Data.Trade.Migrations
 
                     b.HasKey("UniqueId");
 
+                    b.HasIndex("CategoryId");
+
                     b.HasIndex("Game", "Language", "Id");
 
                     b.ToTable("StaticItems");
+                });
+
+            modelBuilder.Entity("Sidekick.Data.Trade.Models.TradeStaticItemCategory", b =>
+                {
+                    b.Property<Guid>("UniqueId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("TEXT");
+
+                    b.Property<int>("Game")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("Id")
+                        .HasMaxLength(128)
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Label")
+                        .HasMaxLength(256)
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Language")
+                        .IsRequired()
+                        .HasMaxLength(5)
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("UniqueId");
+
+                    b.HasIndex("Game", "Language", "Id");
+
+                    b.ToTable("StaticItemCategories");
+                });
+
+            modelBuilder.Entity("Sidekick.Data.Trade.Models.TradeFilter", b =>
+                {
+                    b.HasOne("Sidekick.Data.Trade.Models.TradeFilterCategory", "Category")
+                        .WithMany("Children")
+                        .HasForeignKey("CategoryId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Category");
                 });
 
             modelBuilder.Entity("Sidekick.Data.Trade.Models.TradeFilterOption", b =>
@@ -259,6 +390,28 @@ namespace Sidekick.Data.Trade.Migrations
                     b.Navigation("TradeFilter");
                 });
 
+            modelBuilder.Entity("Sidekick.Data.Trade.Models.TradeItem", b =>
+                {
+                    b.HasOne("Sidekick.Data.Trade.Models.TradeItemCategory", "Category")
+                        .WithMany("Items")
+                        .HasForeignKey("CategoryId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Category");
+                });
+
+            modelBuilder.Entity("Sidekick.Data.Trade.Models.TradeStat", b =>
+                {
+                    b.HasOne("Sidekick.Data.Trade.Models.TradeStatCategory", "Category")
+                        .WithMany("Stats")
+                        .HasForeignKey("CategoryId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Category");
+                });
+
             modelBuilder.Entity("Sidekick.Data.Trade.Models.TradeStatOption", b =>
                 {
                     b.HasOne("Sidekick.Data.Trade.Models.TradeStat", "TradeStat")
@@ -270,14 +423,45 @@ namespace Sidekick.Data.Trade.Migrations
                     b.Navigation("TradeStat");
                 });
 
+            modelBuilder.Entity("Sidekick.Data.Trade.Models.TradeStaticItem", b =>
+                {
+                    b.HasOne("Sidekick.Data.Trade.Models.TradeStaticItemCategory", "Category")
+                        .WithMany("StaticItems")
+                        .HasForeignKey("CategoryId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Category");
+                });
+
             modelBuilder.Entity("Sidekick.Data.Trade.Models.TradeFilter", b =>
                 {
                     b.Navigation("Options");
                 });
 
+            modelBuilder.Entity("Sidekick.Data.Trade.Models.TradeFilterCategory", b =>
+                {
+                    b.Navigation("Children");
+                });
+
+            modelBuilder.Entity("Sidekick.Data.Trade.Models.TradeItemCategory", b =>
+                {
+                    b.Navigation("Items");
+                });
+
             modelBuilder.Entity("Sidekick.Data.Trade.Models.TradeStat", b =>
                 {
                     b.Navigation("Options");
+                });
+
+            modelBuilder.Entity("Sidekick.Data.Trade.Models.TradeStatCategory", b =>
+                {
+                    b.Navigation("Stats");
+                });
+
+            modelBuilder.Entity("Sidekick.Data.Trade.Models.TradeStaticItemCategory", b =>
+                {
+                    b.Navigation("StaticItems");
                 });
 #pragma warning restore 612, 618
         }
