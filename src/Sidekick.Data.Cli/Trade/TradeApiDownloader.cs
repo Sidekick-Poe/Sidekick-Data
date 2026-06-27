@@ -231,7 +231,8 @@ public class TradeApiDownloader(
 
         await using var db = new TradeDbContext(dbContextOptions);
 
-        db.StaticItemCategories.RemoveRange(db.StaticItemCategories.Where(x => x.Game == game && x.Language == language.Code));
+        db.StaticItemCategories.RemoveRange(
+            db.StaticItemCategories.Where(x => x.Game == game && x.Language == language.Code));
         await db.SaveChangesAsync();
 
         foreach (var category in result.Result)
