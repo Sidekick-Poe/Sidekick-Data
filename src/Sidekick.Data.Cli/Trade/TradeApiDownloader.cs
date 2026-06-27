@@ -3,8 +3,6 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Options;
-using Sidekick.Common;
 using Sidekick.Data.Cli.Trade.Dtos;
 using Sidekick.Data.Extensions;
 using Sidekick.Data.Languages;
@@ -14,7 +12,6 @@ namespace Sidekick.Data.Cli.Trade;
 
 public class TradeApiDownloader(
     ILogger<TradeApiDownloader> logger,
-    IOptions<SidekickConfiguration> configuration,
     DbContextOptions<DataDbContext> dbContextOptions)
 {
     private static HttpClient CreateHttpClient()
@@ -71,10 +68,10 @@ public class TradeApiDownloader(
         foreach (var league in result.Result)
         {
             if (league.Id == null) continue;
-            if (league.Realm != TradeLeagueRealm.PC && league.Realm != TradeLeagueRealm.Poe2) continue;
 
             db.TradeLeagues.Add(new TradeLeague
             {
+                SidekickId = Guid.NewGuid(),
                 Game = game,
                 Language = language.Code,
                 Id = league.Id,

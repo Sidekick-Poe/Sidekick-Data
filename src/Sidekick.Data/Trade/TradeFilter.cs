@@ -5,7 +5,6 @@ using Microsoft.EntityFrameworkCore;
 namespace Sidekick.Data.Trade;
 
 [Table("TradeFilters")]
-[Index(nameof(Game), nameof(Language), nameof(Id), IsUnique = false)]
 public class TradeFilter
 {
     [Key]

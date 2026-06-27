@@ -5,9 +5,11 @@ using Microsoft.EntityFrameworkCore;
 namespace Sidekick.Data.Trade;
 
 [Table("TradeLeagues")]
-[PrimaryKey(nameof(Game), nameof(Language), nameof(Id))]
 public class TradeLeague
 {
+    [Key]
+    public Guid SidekickId { get; set; }
+
     public GameType Game { get; set; }
 
     [MaxLength(5)]

@@ -1,6 +1,3 @@
-using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Options;
-using Sidekick.Common;
 using Sidekick.Data.Stats;
 using Sidekick.Data.StatsInvariant;
 using Sidekick.Data.Trade;
@@ -9,8 +6,6 @@ using Microsoft.EntityFrameworkCore;
 namespace Sidekick.Data.Cli.StatsInvariant;
 
 public class StatsInvariantBuilder(
-    ILogger<StatsInvariantBuilder> logger,
-    IOptions<SidekickConfiguration> configuration,
     DbContextOptions<DataDbContext> dbContextOptions)
 {
     public async Task Build(GameType game)
