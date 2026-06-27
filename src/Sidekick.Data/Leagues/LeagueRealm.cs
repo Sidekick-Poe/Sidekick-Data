@@ -1,6 +1,6 @@
 namespace Sidekick.Data.Leagues;
 
-public enum LeagueRealm
+public enum LeagueRealm : byte
 {
     PC = 0,
     Xbox = 1,

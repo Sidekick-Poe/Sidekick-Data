@@ -1,6 +1,6 @@
 namespace Sidekick.Data.Items;
 
-public enum SocketColour
+public enum SocketColour : byte
 {
     Undefined,
 

@@ -2,7 +2,7 @@ using Sidekick.Common.Enums;
 
 namespace Sidekick.Data;
 
-public enum DataType
+public enum DataType : byte
 {
     [EnumValue("items/{0}.json")]
     Items,

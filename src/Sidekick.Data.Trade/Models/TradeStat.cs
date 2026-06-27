@@ -9,7 +9,7 @@ namespace Sidekick.Data.Trade.Models;
 public class TradeStat
 {
     [Key]
-    public Guid UniqueId { get; set; }
+    public Guid SidekickId { get; set; }
 
     public GameType Game { get; set; }
 
@@ -22,13 +22,14 @@ public class TradeStat
     [MaxLength(256)]
     public string? Text { get; set; }
 
+    [MaxLength(256)]
+    public string? OptionText { get; set; }
+
     [MaxLength(128)]
     public string? Type { get; set; }
 
     public Guid CategoryId { get; set; }
 
-    [ForeignKey("CategoryId")]
+    [ForeignKey(nameof(CategoryId))]
     public TradeStatCategory? Category { get; set; }
-
-    public List<TradeStatOption> Options { get; set; } = new();
 }

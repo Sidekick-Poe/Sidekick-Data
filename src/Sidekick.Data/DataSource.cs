@@ -1,6 +1,6 @@
 ﻿namespace Sidekick.Data;
 
-public enum DataSource
+public enum DataSource : byte
 {
     Undefined,
     Game,

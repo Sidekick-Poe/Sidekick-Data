@@ -1,7 +1,7 @@
 using Sidekick.Common.Enums;
 namespace Sidekick.Data;
 
-public enum GameType
+public enum GameType : byte
 {
     Unknown = 0,
 

@@ -9,7 +9,7 @@ namespace Sidekick.Data.Trade.Models;
 public class TradeFilterCategory
 {
     [Key]
-    public Guid UniqueId { get; set; }
+    public Guid SidekickId { get; set; }
 
     public GameType Game { get; set; }
 
@@ -22,5 +22,5 @@ public class TradeFilterCategory
     [MaxLength(256)]
     public string? Label { get; set; }
 
-    public List<TradeFilter> Children { get; set; } = new();
+    public List<TradeFilter> Filters { get; set; } = [];
 }

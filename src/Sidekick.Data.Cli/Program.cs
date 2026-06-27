@@ -160,8 +160,6 @@ foreach (var game in new[] { GameType.PathOfExile1, GameType.PathOfExile2 })
         // if (build && runTrade)
         // {
         //     logger.LogInformation($"Building {language.Code} trade data.");
-        //     await tradeFilterBuilder.Build(language);
-        //     await tradeStatBuilder.Build(language);
         //     await statsInvariantBuilder.Build(language);
         //     logger.LogInformation($"Built {language.Code} trade data.");
         // }
@@ -186,14 +184,6 @@ foreach (var game in new[] { GameType.PathOfExile1, GameType.PathOfExile2 })
         //     logger.LogInformation($"Building {language.Code} stats data.");
         //     await statBuilder.Build(language);
         //     logger.LogInformation($"Built {language.Code} stats data.");
-        // }
-//
-        // if (download && runNinja)
-        // {
-        //     if (language.Code != gameLanguageProvider.InvariantLanguage.Code) continue;
-        //     logger.LogInformation("Downloading ninja data.");
-        //     await ninjaDownloader.Download();
-        //     logger.LogInformation($"Downloaded {language.Code} ninja data.");
         // }
     }
 }

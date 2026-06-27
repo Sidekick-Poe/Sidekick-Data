@@ -21,7 +21,7 @@ public static class StatCategoryExtensions
     }
 }
 
-public enum StatCategory
+public enum StatCategory : byte
 {
     Undefined = 0,
 

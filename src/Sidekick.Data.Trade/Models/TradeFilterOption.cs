@@ -5,10 +5,10 @@ using Microsoft.EntityFrameworkCore;
 namespace Sidekick.Data.Trade.Models;
 
 [Table("FilterOptions")]
-[PrimaryKey(nameof(FilterUniqueId), nameof(Id))]
 public class TradeFilterOption
 {
-    public Guid FilterUniqueId { get; set; }
+    [Key]
+    public Guid SidekickId { get; set; }
 
     [MaxLength(128)]
     public required string Id { get; set; }
@@ -16,5 +16,8 @@ public class TradeFilterOption
     [MaxLength(256)]
     public string? Text { get; set; }
 
+    public Guid FilterId { get; set; }
+
+    [ForeignKey(nameof(FilterId))]
     public TradeFilter TradeFilter { get; set; } = null!;
 }

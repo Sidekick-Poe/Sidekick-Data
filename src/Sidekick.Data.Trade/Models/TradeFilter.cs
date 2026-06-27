@@ -9,7 +9,7 @@ namespace Sidekick.Data.Trade.Models;
 public class TradeFilter
 {
     [Key]
-    public Guid UniqueId { get; set; }
+    public Guid SidekickId { get; set; }
 
     public GameType Game { get; set; }
 
@@ -37,7 +37,7 @@ public class TradeFilter
 
     public Guid CategoryId { get; set; }
 
-    [ForeignKey("CategoryId")]
+    [ForeignKey(nameof(CategoryId))]
     public TradeFilterCategory? Category { get; set; }
 
     public List<TradeFilterOption> Options { get; set; } = new();

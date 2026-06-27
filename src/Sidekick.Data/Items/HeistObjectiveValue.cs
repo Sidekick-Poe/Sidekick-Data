@@ -1,7 +1,7 @@
 ﻿using Sidekick.Common.Enums;
 namespace Sidekick.Data.Items;
 
-public enum HeistObjectiveValue
+public enum HeistObjectiveValue : byte
 {
     Undefined,
 

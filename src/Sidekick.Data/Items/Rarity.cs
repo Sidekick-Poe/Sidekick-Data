@@ -1,6 +1,6 @@
 namespace Sidekick.Data.Items;
 
-public enum Rarity
+public enum Rarity : byte
 {
     Normal = 0,
     Magic = 1,

@@ -36,7 +36,7 @@ public class NinjaStashItem
     [MaxLength(256)]
     public string? Variant { get; set; }
 
-    public List<NinjaStashTradeStat> TradeStats { get; set; } = new();
+    public List<NinjaStashTradeStat> TradeStats { get; set; } = [];
 
-    public List<NinjaStashMutatedStat> MutatedStats { get; set; } = new();
+    public List<NinjaStashMutatedStat> MutatedStats { get; set; } = [];
 }

@@ -88,7 +88,7 @@ public class NinjaDownloader(
     public async Task Download(GameType game)
     {
         await using var tradeDb = new TradeDbContext(tradeDbContextOptions);
-        var league = await tradeDb.Leagues.FirstAsync(x => x.Game == game && x.Language == "en");
+        var league = await tradeDb.TradeLeagues.FirstAsync(x => x.Game == game && x.Language == "en");
 
         try
         {

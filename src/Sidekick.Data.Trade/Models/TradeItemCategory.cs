@@ -9,7 +9,7 @@ namespace Sidekick.Data.Trade.Models;
 public class TradeItemCategory
 {
     [Key]
-    public Guid UniqueId { get; set; }
+    public Guid SidekickId { get; set; }
 
     public GameType Game { get; set; }
 

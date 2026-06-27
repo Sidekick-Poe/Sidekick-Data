@@ -1,6 +1,6 @@
 namespace Sidekick.Data.Tokenizers;
 
-public enum ItemNameTokenType
+public enum ItemNameTokenType : byte
 {
     Set,
     If,

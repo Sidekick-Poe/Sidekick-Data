@@ -9,14 +9,12 @@ namespace Sidekick.Data.Trade.Models;
 public class TradeItem
 {
     [Key]
-    public Guid UniqueId { get; set; }
+    public Guid SidekickId { get; set; }
 
     public GameType Game { get; set; }
 
     [MaxLength(5)]
     public required string Language { get; set; }
-
-    public Guid CategoryId { get; set; }
 
     [MaxLength(128)]
     public string? Discriminator { get; set; }
@@ -32,6 +30,8 @@ public class TradeItem
 
     public bool IsUnique { get; set; }
 
-    [ForeignKey("CategoryId")]
+    public Guid CategoryId { get; set; }
+
+    [ForeignKey(nameof(CategoryId))]
     public TradeItemCategory? Category { get; set; }
 }
