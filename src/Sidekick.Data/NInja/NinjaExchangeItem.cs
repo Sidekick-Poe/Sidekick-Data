@@ -2,7 +2,7 @@ using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using Microsoft.EntityFrameworkCore;
 
-namespace Sidekick.Data.Ninja.Models;
+namespace Sidekick.Data.Ninja;
 
 [Table("NinjaExchangeItems")]
 [Index(nameof(Game), nameof(Type))]

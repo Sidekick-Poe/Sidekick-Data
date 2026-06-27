@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
-namespace Sidekick.Data.Trade.Migrations
+namespace Sidekick.Data.Migrations
 {
     /// <inheritdoc />
     public partial class Initial : Migration
@@ -54,6 +54,43 @@ namespace Sidekick.Data.Trade.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Leagues", x => new { x.Game, x.Language, x.Id });
+                });
+
+            migrationBuilder.CreateTable(
+                name: "NinjaExchangeItems",
+                columns: table => new
+                {
+                    SidekickId = table.Column<Guid>(type: "TEXT", nullable: false),
+                    Game = table.Column<byte>(type: "INTEGER", nullable: false),
+                    Type = table.Column<string>(type: "TEXT", maxLength: 64, nullable: false),
+                    Id = table.Column<string>(type: "TEXT", maxLength: 256, nullable: true),
+                    DetailsId = table.Column<string>(type: "TEXT", maxLength: 256, nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_NinjaExchangeItems", x => x.SidekickId);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "NinjaStashItems",
+                columns: table => new
+                {
+                    SidekickId = table.Column<Guid>(type: "TEXT", nullable: false),
+                    DetailsId = table.Column<string>(type: "TEXT", maxLength: 256, nullable: true),
+                    Game = table.Column<byte>(type: "INTEGER", nullable: false),
+                    Type = table.Column<string>(type: "TEXT", maxLength: 64, nullable: false),
+                    Name = table.Column<string>(type: "TEXT", maxLength: 512, nullable: true),
+                    BaseType = table.Column<string>(type: "TEXT", maxLength: 256, nullable: true),
+                    Corrupted = table.Column<bool>(type: "INTEGER", nullable: true),
+                    GemLevel = table.Column<int>(type: "INTEGER", nullable: true),
+                    GemQuality = table.Column<int>(type: "INTEGER", nullable: true),
+                    Links = table.Column<int>(type: "INTEGER", nullable: true),
+                    LevelRequired = table.Column<int>(type: "INTEGER", nullable: true),
+                    Variant = table.Column<string>(type: "TEXT", maxLength: 256, nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_NinjaStashItems", x => x.SidekickId);
                 });
 
             migrationBuilder.CreateTable(
@@ -135,6 +172,48 @@ namespace Sidekick.Data.Trade.Migrations
                         name: "FK_Items_ItemCategories_CategoryId",
                         column: x => x.CategoryId,
                         principalTable: "ItemCategories",
+                        principalColumn: "SidekickId",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "NinjaStashMutatedStats",
+                columns: table => new
+                {
+                    SidekickId = table.Column<Guid>(type: "TEXT", nullable: false),
+                    Text = table.Column<string>(type: "TEXT", maxLength: 512, nullable: true),
+                    Optional = table.Column<bool>(type: "INTEGER", nullable: false),
+                    StashItemId = table.Column<Guid>(type: "TEXT", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_NinjaStashMutatedStats", x => x.SidekickId);
+                    table.ForeignKey(
+                        name: "FK_NinjaStashMutatedStats_NinjaStashItems_StashItemId",
+                        column: x => x.StashItemId,
+                        principalTable: "NinjaStashItems",
+                        principalColumn: "SidekickId",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "NinjaStashTradeStats",
+                columns: table => new
+                {
+                    SidekickId = table.Column<Guid>(type: "TEXT", nullable: false),
+                    Mod = table.Column<string>(type: "TEXT", maxLength: 512, nullable: true),
+                    Min = table.Column<int>(type: "INTEGER", nullable: true),
+                    Max = table.Column<int>(type: "INTEGER", nullable: true),
+                    Option = table.Column<string>(type: "TEXT", maxLength: 512, nullable: true),
+                    StashItemId = table.Column<Guid>(type: "TEXT", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_NinjaStashTradeStats", x => x.SidekickId);
+                    table.ForeignKey(
+                        name: "FK_NinjaStashTradeStats_NinjaStashItems_StashItemId",
+                        column: x => x.StashItemId,
+                        principalTable: "NinjaStashItems",
                         principalColumn: "SidekickId",
                         onDelete: ReferentialAction.Cascade);
                 });
@@ -242,6 +321,21 @@ namespace Sidekick.Data.Trade.Migrations
                 columns: new[] { "Game", "Language", "CategoryId" });
 
             migrationBuilder.CreateIndex(
+                name: "IX_NinjaExchangeItems_Game_Type",
+                table: "NinjaExchangeItems",
+                columns: new[] { "Game", "Type" });
+
+            migrationBuilder.CreateIndex(
+                name: "IX_NinjaStashMutatedStats_StashItemId",
+                table: "NinjaStashMutatedStats",
+                column: "StashItemId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_NinjaStashTradeStats_StashItemId",
+                table: "NinjaStashTradeStats",
+                column: "StashItemId");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_StatCategories_Game_Language_Id",
                 table: "StatCategories",
                 columns: new[] { "Game", "Language", "Id" });
@@ -285,6 +379,15 @@ namespace Sidekick.Data.Trade.Migrations
                 name: "Leagues");
 
             migrationBuilder.DropTable(
+                name: "NinjaExchangeItems");
+
+            migrationBuilder.DropTable(
+                name: "NinjaStashMutatedStats");
+
+            migrationBuilder.DropTable(
+                name: "NinjaStashTradeStats");
+
+            migrationBuilder.DropTable(
                 name: "StaticItems");
 
             migrationBuilder.DropTable(
@@ -295,6 +398,9 @@ namespace Sidekick.Data.Trade.Migrations
 
             migrationBuilder.DropTable(
                 name: "ItemCategories");
+
+            migrationBuilder.DropTable(
+                name: "NinjaStashItems");
 
             migrationBuilder.DropTable(
                 name: "StaticItemCategories");

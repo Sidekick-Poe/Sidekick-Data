@@ -8,16 +8,14 @@ using Sidekick.Common;
 using Sidekick.Data.Cli.Trade.Dtos;
 using Sidekick.Data.Extensions;
 using Sidekick.Data.Languages;
-using Sidekick.Data.Leagues;
 using Sidekick.Data.Trade;
-using Sidekick.Data.Trade.Models;
 
 namespace Sidekick.Data.Cli.Trade;
 
 public class TradeApiDownloader(
     ILogger<TradeApiDownloader> logger,
     IOptions<SidekickConfiguration> configuration,
-    DbContextOptions<TradeDbContext> dbContextOptions)
+    DbContextOptions<DataDbContext> dbContextOptions)
 {
     private static HttpClient CreateHttpClient()
     {
@@ -75,7 +73,7 @@ public class TradeApiDownloader(
         if (result?.Result == null) return;
 
         var added = 0;
-        await using var db = new TradeDbContext(dbContextOptions);
+        await using var db = new DataDbContext(dbContextOptions);
 
         db.TradeLeagues.RemoveRange(db.TradeLeagues.Where(x => x.Game == game && x.Language == language.Code));
         await db.SaveChangesAsync();
@@ -83,7 +81,7 @@ public class TradeApiDownloader(
         foreach (var league in result.Result)
         {
             if (league.Id == null) continue;
-            if (league.Realm != LeagueRealm.PC && league.Realm != LeagueRealm.Poe2) continue;
+            if (league.Realm != TradeLeagueRealm.PC && league.Realm != TradeLeagueRealm.Poe2) continue;
 
             db.TradeLeagues.Add(new TradeLeague
             {
@@ -113,7 +111,7 @@ public class TradeApiDownloader(
 
         int added = 0;
 
-        await using var db = new TradeDbContext(dbContextOptions);
+        await using var db = new DataDbContext(dbContextOptions);
 
         db.TradeItemCategories.RemoveRange(db.TradeItemCategories.Where(x => x.Game == game && x.Language == language.Code));
         await db.SaveChangesAsync();
@@ -164,7 +162,7 @@ public class TradeApiDownloader(
 
         var statsAdded = 0;
 
-        await using var db = new TradeDbContext(dbContextOptions);
+        await using var db = new DataDbContext(dbContextOptions);
 
         db.TradeStatCategories.RemoveRange(db.TradeStatCategories.Where(x => x.Game == game && x.Language == language.Code));
         await db.SaveChangesAsync();
@@ -237,7 +235,7 @@ public class TradeApiDownloader(
 
         var added = 0;
 
-        await using var db = new TradeDbContext(dbContextOptions);
+        await using var db = new DataDbContext(dbContextOptions);
 
         db.TradeStaticItemCategories.RemoveRange(
             db.TradeStaticItemCategories.Where(x => x.Game == game && x.Language == language.Code));
@@ -288,7 +286,7 @@ public class TradeApiDownloader(
 
         int filtersAdded = 0, optionsAdded = 0;
 
-        await using var db = new TradeDbContext(dbContextOptions);
+        await using var db = new DataDbContext(dbContextOptions);
 
         db.TradeFilterCategories.RemoveRange(db.TradeFilterCategories.Where(x => x.Game == game && x.Language == language.Code));
         await db.SaveChangesAsync();
@@ -298,7 +296,7 @@ public class TradeApiDownloader(
             if (category.Id == null) continue;
 
             var categoryId = Guid.NewGuid();
-            db.TradeFilterCategories.Add(new Data.Trade.Models.TradeFilterCategory
+            db.TradeFilterCategories.Add(new TradeFilterCategory
             {
                 SidekickId = categoryId,
                 Game = game,
@@ -310,7 +308,7 @@ public class TradeApiDownloader(
             {
                 var id = Guid.NewGuid();
 
-                db.TradeFilters.Add(new Data.Trade.Models.TradeFilter()
+                db.TradeFilters.Add(new TradeFilter()
                 {
                     SidekickId = id,
                     Game = game,
@@ -332,7 +330,7 @@ public class TradeApiDownloader(
                 {
                     foreach (var option in filter.Option.Options)
                     {
-                        db.TradeFilterOptions.Add(new Data.Trade.Models.TradeFilterOption()
+                        db.TradeFilterOptions.Add(new TradeFilterOption()
                         {
                             SidekickId = Guid.NewGuid(),
                             FilterId = id,

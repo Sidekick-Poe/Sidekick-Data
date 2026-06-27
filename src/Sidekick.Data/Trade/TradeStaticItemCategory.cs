@@ -2,11 +2,11 @@ using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using Microsoft.EntityFrameworkCore;
 
-namespace Sidekick.Data.Trade.Models;
+namespace Sidekick.Data.Trade;
 
-[Table("StatCategories")]
+[Table("TradeStaticItemCategories")]
 [Index(nameof(Game), nameof(Language), nameof(Id), IsUnique = false)]
-public class TradeStatCategory
+public class TradeStaticItemCategory
 {
     [Key]
     public Guid SidekickId { get; set; }
@@ -22,5 +22,5 @@ public class TradeStatCategory
     [MaxLength(256)]
     public string? Label { get; set; }
 
-    public List<TradeStat> Stats { get; set; } = new();
+    public List<TradeStaticItem> StaticItems { get; set; } = new();
 }

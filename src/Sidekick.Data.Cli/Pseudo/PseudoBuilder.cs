@@ -5,7 +5,6 @@ using Sidekick.Data.Cli.Pseudo.Definitions;
 using Sidekick.Data.Languages;
 using Sidekick.Data.Pseudo;
 using Sidekick.Data.Stats;
-using Sidekick.Data.Trade;
 
 namespace Sidekick.Data.Cli.Pseudo;
 

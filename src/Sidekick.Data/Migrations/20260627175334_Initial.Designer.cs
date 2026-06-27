@@ -4,14 +4,14 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using Sidekick.Data.Trade;
+using Sidekick.Data;
 
 #nullable disable
 
-namespace Sidekick.Data.Trade.Migrations
+namespace Sidekick.Data.Migrations
 {
-    [DbContext(typeof(TradeDbContext))]
-    [Migration("20260627173530_Initial")]
+    [DbContext(typeof(DataDbContext))]
+    [Migration("20260627175334_Initial")]
     partial class Initial
     {
         /// <inheritdoc />
@@ -20,7 +20,139 @@ namespace Sidekick.Data.Trade.Migrations
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "8.0.21");
 
-            modelBuilder.Entity("Sidekick.Data.Trade.Models.TradeFilter", b =>
+            modelBuilder.Entity("Sidekick.Data.Ninja.NinjaExchangeItem", b =>
+                {
+                    b.Property<Guid>("SidekickId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("DetailsId")
+                        .HasMaxLength(256)
+                        .HasColumnType("TEXT");
+
+                    b.Property<byte>("Game")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("Id")
+                        .HasMaxLength(256)
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Type")
+                        .IsRequired()
+                        .HasMaxLength(64)
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("SidekickId");
+
+                    b.HasIndex("Game", "Type");
+
+                    b.ToTable("NinjaExchangeItems");
+                });
+
+            modelBuilder.Entity("Sidekick.Data.Ninja.NinjaStashItem", b =>
+                {
+                    b.Property<Guid>("SidekickId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("BaseType")
+                        .HasMaxLength(256)
+                        .HasColumnType("TEXT");
+
+                    b.Property<bool?>("Corrupted")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("DetailsId")
+                        .HasMaxLength(256)
+                        .HasColumnType("TEXT");
+
+                    b.Property<byte>("Game")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int?>("GemLevel")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int?>("GemQuality")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int?>("LevelRequired")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int?>("Links")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("Name")
+                        .HasMaxLength(512)
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Type")
+                        .IsRequired()
+                        .HasMaxLength(64)
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Variant")
+                        .HasMaxLength(256)
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("SidekickId");
+
+                    b.ToTable("NinjaStashItems");
+                });
+
+            modelBuilder.Entity("Sidekick.Data.Ninja.NinjaStashMutatedStat", b =>
+                {
+                    b.Property<Guid>("SidekickId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("TEXT");
+
+                    b.Property<bool>("Optional")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<Guid>("StashItemId")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Text")
+                        .HasMaxLength(512)
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("SidekickId");
+
+                    b.HasIndex("StashItemId");
+
+                    b.ToTable("NinjaStashMutatedStats");
+                });
+
+            modelBuilder.Entity("Sidekick.Data.Ninja.NinjaStashTradeStat", b =>
+                {
+                    b.Property<Guid>("SidekickId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("TEXT");
+
+                    b.Property<int?>("Max")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int?>("Min")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("Mod")
+                        .HasMaxLength(512)
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Option")
+                        .HasMaxLength(512)
+                        .HasColumnType("TEXT");
+
+                    b.Property<Guid>("StashItemId")
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("SidekickId");
+
+                    b.HasIndex("StashItemId");
+
+                    b.ToTable("NinjaStashTradeStats");
+                });
+
+            modelBuilder.Entity("Sidekick.Data.Trade.TradeFilter", b =>
                 {
                     b.Property<Guid>("SidekickId")
                         .ValueGeneratedOnAdd()
@@ -73,7 +205,7 @@ namespace Sidekick.Data.Trade.Migrations
                     b.ToTable("Filters");
                 });
 
-            modelBuilder.Entity("Sidekick.Data.Trade.Models.TradeFilterCategory", b =>
+            modelBuilder.Entity("Sidekick.Data.Trade.TradeFilterCategory", b =>
                 {
                     b.Property<Guid>("SidekickId")
                         .ValueGeneratedOnAdd()
@@ -102,7 +234,7 @@ namespace Sidekick.Data.Trade.Migrations
                     b.ToTable("FilterCategories");
                 });
 
-            modelBuilder.Entity("Sidekick.Data.Trade.Models.TradeFilterOption", b =>
+            modelBuilder.Entity("Sidekick.Data.Trade.TradeFilterOption", b =>
                 {
                     b.Property<Guid>("SidekickId")
                         .ValueGeneratedOnAdd()
@@ -126,7 +258,7 @@ namespace Sidekick.Data.Trade.Migrations
                     b.ToTable("FilterOptions");
                 });
 
-            modelBuilder.Entity("Sidekick.Data.Trade.Models.TradeItem", b =>
+            modelBuilder.Entity("Sidekick.Data.Trade.TradeItem", b =>
                 {
                     b.Property<Guid>("SidekickId")
                         .ValueGeneratedOnAdd()
@@ -171,7 +303,7 @@ namespace Sidekick.Data.Trade.Migrations
                     b.ToTable("Items");
                 });
 
-            modelBuilder.Entity("Sidekick.Data.Trade.Models.TradeItemCategory", b =>
+            modelBuilder.Entity("Sidekick.Data.Trade.TradeItemCategory", b =>
                 {
                     b.Property<Guid>("SidekickId")
                         .ValueGeneratedOnAdd()
@@ -200,7 +332,7 @@ namespace Sidekick.Data.Trade.Migrations
                     b.ToTable("ItemCategories");
                 });
 
-            modelBuilder.Entity("Sidekick.Data.Trade.Models.TradeLeague", b =>
+            modelBuilder.Entity("Sidekick.Data.Trade.TradeLeague", b =>
                 {
                     b.Property<byte>("Game")
                         .HasColumnType("INTEGER");
@@ -225,7 +357,7 @@ namespace Sidekick.Data.Trade.Migrations
                     b.ToTable("Leagues");
                 });
 
-            modelBuilder.Entity("Sidekick.Data.Trade.Models.TradeStat", b =>
+            modelBuilder.Entity("Sidekick.Data.Trade.TradeStat", b =>
                 {
                     b.Property<Guid>("SidekickId")
                         .ValueGeneratedOnAdd()
@@ -267,7 +399,7 @@ namespace Sidekick.Data.Trade.Migrations
                     b.ToTable("Stats");
                 });
 
-            modelBuilder.Entity("Sidekick.Data.Trade.Models.TradeStatCategory", b =>
+            modelBuilder.Entity("Sidekick.Data.Trade.TradeStatCategory", b =>
                 {
                     b.Property<Guid>("SidekickId")
                         .ValueGeneratedOnAdd()
@@ -296,7 +428,7 @@ namespace Sidekick.Data.Trade.Migrations
                     b.ToTable("StatCategories");
                 });
 
-            modelBuilder.Entity("Sidekick.Data.Trade.Models.TradeStaticItem", b =>
+            modelBuilder.Entity("Sidekick.Data.Trade.TradeStaticItem", b =>
                 {
                     b.Property<Guid>("SidekickId")
                         .ValueGeneratedOnAdd()
@@ -334,7 +466,7 @@ namespace Sidekick.Data.Trade.Migrations
                     b.ToTable("StaticItems");
                 });
 
-            modelBuilder.Entity("Sidekick.Data.Trade.Models.TradeStaticItemCategory", b =>
+            modelBuilder.Entity("Sidekick.Data.Trade.TradeStaticItemCategory", b =>
                 {
                     b.Property<Guid>("SidekickId")
                         .ValueGeneratedOnAdd()
@@ -363,9 +495,31 @@ namespace Sidekick.Data.Trade.Migrations
                     b.ToTable("StaticItemCategories");
                 });
 
-            modelBuilder.Entity("Sidekick.Data.Trade.Models.TradeFilter", b =>
+            modelBuilder.Entity("Sidekick.Data.Ninja.NinjaStashMutatedStat", b =>
                 {
-                    b.HasOne("Sidekick.Data.Trade.Models.TradeFilterCategory", "Category")
+                    b.HasOne("Sidekick.Data.Ninja.NinjaStashItem", "StashItem")
+                        .WithMany("MutatedStats")
+                        .HasForeignKey("StashItemId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("StashItem");
+                });
+
+            modelBuilder.Entity("Sidekick.Data.Ninja.NinjaStashTradeStat", b =>
+                {
+                    b.HasOne("Sidekick.Data.Ninja.NinjaStashItem", "StashItem")
+                        .WithMany("TradeStats")
+                        .HasForeignKey("StashItemId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("StashItem");
+                });
+
+            modelBuilder.Entity("Sidekick.Data.Trade.TradeFilter", b =>
+                {
+                    b.HasOne("Sidekick.Data.Trade.TradeFilterCategory", "Category")
                         .WithMany("Filters")
                         .HasForeignKey("CategoryId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -374,9 +528,9 @@ namespace Sidekick.Data.Trade.Migrations
                     b.Navigation("Category");
                 });
 
-            modelBuilder.Entity("Sidekick.Data.Trade.Models.TradeFilterOption", b =>
+            modelBuilder.Entity("Sidekick.Data.Trade.TradeFilterOption", b =>
                 {
-                    b.HasOne("Sidekick.Data.Trade.Models.TradeFilter", "TradeFilter")
+                    b.HasOne("Sidekick.Data.Trade.TradeFilter", "TradeFilter")
                         .WithMany("Options")
                         .HasForeignKey("FilterId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -385,9 +539,9 @@ namespace Sidekick.Data.Trade.Migrations
                     b.Navigation("TradeFilter");
                 });
 
-            modelBuilder.Entity("Sidekick.Data.Trade.Models.TradeItem", b =>
+            modelBuilder.Entity("Sidekick.Data.Trade.TradeItem", b =>
                 {
-                    b.HasOne("Sidekick.Data.Trade.Models.TradeItemCategory", "Category")
+                    b.HasOne("Sidekick.Data.Trade.TradeItemCategory", "Category")
                         .WithMany("Items")
                         .HasForeignKey("CategoryId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -396,9 +550,9 @@ namespace Sidekick.Data.Trade.Migrations
                     b.Navigation("Category");
                 });
 
-            modelBuilder.Entity("Sidekick.Data.Trade.Models.TradeStat", b =>
+            modelBuilder.Entity("Sidekick.Data.Trade.TradeStat", b =>
                 {
-                    b.HasOne("Sidekick.Data.Trade.Models.TradeStatCategory", "Category")
+                    b.HasOne("Sidekick.Data.Trade.TradeStatCategory", "Category")
                         .WithMany("Stats")
                         .HasForeignKey("CategoryId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -407,9 +561,9 @@ namespace Sidekick.Data.Trade.Migrations
                     b.Navigation("Category");
                 });
 
-            modelBuilder.Entity("Sidekick.Data.Trade.Models.TradeStaticItem", b =>
+            modelBuilder.Entity("Sidekick.Data.Trade.TradeStaticItem", b =>
                 {
-                    b.HasOne("Sidekick.Data.Trade.Models.TradeStaticItemCategory", "Category")
+                    b.HasOne("Sidekick.Data.Trade.TradeStaticItemCategory", "Category")
                         .WithMany("StaticItems")
                         .HasForeignKey("CategoryId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -418,27 +572,34 @@ namespace Sidekick.Data.Trade.Migrations
                     b.Navigation("Category");
                 });
 
-            modelBuilder.Entity("Sidekick.Data.Trade.Models.TradeFilter", b =>
+            modelBuilder.Entity("Sidekick.Data.Ninja.NinjaStashItem", b =>
+                {
+                    b.Navigation("MutatedStats");
+
+                    b.Navigation("TradeStats");
+                });
+
+            modelBuilder.Entity("Sidekick.Data.Trade.TradeFilter", b =>
                 {
                     b.Navigation("Options");
                 });
 
-            modelBuilder.Entity("Sidekick.Data.Trade.Models.TradeFilterCategory", b =>
+            modelBuilder.Entity("Sidekick.Data.Trade.TradeFilterCategory", b =>
                 {
                     b.Navigation("Filters");
                 });
 
-            modelBuilder.Entity("Sidekick.Data.Trade.Models.TradeItemCategory", b =>
+            modelBuilder.Entity("Sidekick.Data.Trade.TradeItemCategory", b =>
                 {
                     b.Navigation("Items");
                 });
 
-            modelBuilder.Entity("Sidekick.Data.Trade.Models.TradeStatCategory", b =>
+            modelBuilder.Entity("Sidekick.Data.Trade.TradeStatCategory", b =>
                 {
                     b.Navigation("Stats");
                 });
 
-            modelBuilder.Entity("Sidekick.Data.Trade.Models.TradeStaticItemCategory", b =>
+            modelBuilder.Entity("Sidekick.Data.Trade.TradeStaticItemCategory", b =>
                 {
                     b.Navigation("StaticItems");
                 });

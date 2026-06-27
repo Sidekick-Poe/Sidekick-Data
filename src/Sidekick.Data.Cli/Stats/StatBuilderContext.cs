@@ -1,7 +1,6 @@
 ﻿using Sidekick.Data.Cli.GraphQl.Models;
 using Sidekick.Data.Languages;
 using Sidekick.Data.StatsInvariant;
-using Sidekick.Data.Trade;
 
 namespace Sidekick.Data.Cli.Stats;
 

@@ -1,11 +1,10 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using Microsoft.EntityFrameworkCore;
-using Sidekick.Data.Leagues;
 
-namespace Sidekick.Data.Trade.Models;
+namespace Sidekick.Data.Trade;
 
-[Table("Leagues")]
+[Table("TradeLeagues")]
 [PrimaryKey(nameof(Game), nameof(Language), nameof(Id))]
 public class TradeLeague
 {
@@ -20,5 +19,5 @@ public class TradeLeague
     [MaxLength(256)]
     public string? Text { get; set; }
 
-    public LeagueRealm Realm { get; set; }
+    public TradeLeagueRealm Realm { get; set; }
 }

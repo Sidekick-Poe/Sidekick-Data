@@ -2,11 +2,11 @@ using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using Microsoft.EntityFrameworkCore;
 
-namespace Sidekick.Data.Trade.Models;
+namespace Sidekick.Data.Trade;
 
-[Table("Stats")]
-[Index(nameof(Game), nameof(Language), nameof(Id), IsUnique = false)]
-public class TradeStat
+[Table("TradeItems")]
+[Index(nameof(Game), nameof(Language), nameof(CategoryId), IsUnique = false)]
+public class TradeItem
 {
     [Key]
     public Guid SidekickId { get; set; }
@@ -17,19 +17,21 @@ public class TradeStat
     public required string Language { get; set; }
 
     [MaxLength(128)]
-    public required string Id { get; set; }
+    public string? Discriminator { get; set; }
+
+    [MaxLength(256)]
+    public string? Name { get; set; }
+
+    [MaxLength(256)]
+    public string? Type { get; set; }
 
     [MaxLength(256)]
     public string? Text { get; set; }
 
-    [MaxLength(256)]
-    public string? OptionText { get; set; }
-
-    [MaxLength(128)]
-    public string? Type { get; set; }
+    public bool IsUnique { get; set; }
 
     public Guid CategoryId { get; set; }
 
     [ForeignKey(nameof(CategoryId))]
-    public TradeStatCategory? Category { get; set; }
+    public TradeItemCategory? Category { get; set; }
 }

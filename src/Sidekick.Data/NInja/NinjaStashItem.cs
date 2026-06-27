@@ -1,7 +1,7 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace Sidekick.Data.Ninja.Models;
+namespace Sidekick.Data.Ninja;
 
 [Table("NinjaStashItems")]
 public class NinjaStashItem

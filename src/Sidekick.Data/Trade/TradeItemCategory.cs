@@ -2,9 +2,9 @@ using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using Microsoft.EntityFrameworkCore;
 
-namespace Sidekick.Data.Trade.Models;
+namespace Sidekick.Data.Trade;
 
-[Table("ItemCategories")]
+[Table("TradeItemCategories")]
 [Index(nameof(Game), nameof(Language), nameof(Id), IsUnique = false)]
 public class TradeItemCategory
 {

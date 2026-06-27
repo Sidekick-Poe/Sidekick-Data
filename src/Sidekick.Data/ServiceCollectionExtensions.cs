@@ -1,3 +1,4 @@
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
 using Sidekick.Common;
@@ -13,10 +14,12 @@ public static class ServiceCollectionExtensions
     {
         services.AddSidekickInitializableService<ICurrentGameLanguage, CurrentGameLanguage>();
 
-        services.AddSingleton<DataProvider>();
         services.AddSingleton<IGameLanguageProvider, GameLanguageProvider>();
 
         services.TryAddSingleton<IFuzzyService, FuzzyService>();
+
+        var path = Path.Combine(SidekickPaths.GetDataDirectory(), "data.db");
+        services.AddDbContextPool<DataDbContext>(o => o.UseSqlite("Data Source=" + path));
 
         return services;
     }

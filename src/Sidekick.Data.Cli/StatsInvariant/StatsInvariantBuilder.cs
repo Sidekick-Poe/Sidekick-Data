@@ -4,7 +4,6 @@ using Sidekick.Common;
 using Sidekick.Data.Languages;
 using Sidekick.Data.Stats;
 using Sidekick.Data.StatsInvariant;
-using Sidekick.Data.Trade;
 
 namespace Sidekick.Data.Cli.StatsInvariant;
 

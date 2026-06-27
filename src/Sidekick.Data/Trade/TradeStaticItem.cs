@@ -2,11 +2,11 @@ using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using Microsoft.EntityFrameworkCore;
 
-namespace Sidekick.Data.Trade.Models;
+namespace Sidekick.Data.Trade;
 
-[Table("Filters")]
+[Table("TradeStaticItems")]
 [Index(nameof(Game), nameof(Language), nameof(Id), IsUnique = false)]
-public class TradeFilter
+public class TradeStaticItem
 {
     [Key]
     public Guid SidekickId { get; set; }
@@ -22,23 +22,11 @@ public class TradeFilter
     [MaxLength(256)]
     public string? Text { get; set; }
 
-    public bool? Hidden { get; set; }
-
-    public bool? FullSpan { get; set; }
-
-    public bool? HalfSpan { get; set; }
-
-    public bool? MinMax { get; set; }
-
-    public bool? Sockets { get; set; }
-
     [MaxLength(256)]
-    public string? Tip { get; set; }
+    public string? Image { get; set; }
 
     public Guid CategoryId { get; set; }
 
     [ForeignKey(nameof(CategoryId))]
-    public TradeFilterCategory? Category { get; set; }
-
-    public List<TradeFilterOption> Options { get; set; } = new();
+    public TradeStaticItemCategory? Category { get; set; }
 }

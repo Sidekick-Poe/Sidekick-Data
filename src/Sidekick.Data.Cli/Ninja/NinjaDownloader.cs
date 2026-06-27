@@ -7,16 +7,13 @@ using Sidekick.Common;
 using Sidekick.Common.Enums;
 using Sidekick.Data.Cli.Ninja.Dtos;
 using Sidekick.Data.Ninja;
-using Sidekick.Data.Ninja.Models;
-using Sidekick.Data.Trade;
 
 namespace Sidekick.Data.Cli.Ninja;
 
 public class NinjaDownloader(
     ILogger<NinjaDownloader> logger,
     IOptions<SidekickConfiguration> configuration,
-    DbContextOptions<NinjaDbContext> dbContextOptions,
-    DbContextOptions<TradeDbContext> tradeDbContextOptions)
+    DbContextOptions<DataDbContext> dbContextOptions)
 {
     private static readonly List<NinjaPage> Poe1Pages =
     [
@@ -87,8 +84,8 @@ public class NinjaDownloader(
 
     public async Task Download(GameType game)
     {
-        await using var tradeDb = new TradeDbContext(tradeDbContextOptions);
-        var league = await tradeDb.TradeLeagues.FirstAsync(x => x.Game == game && x.Language == "en");
+        await using var db = new DataDbContext(dbContextOptions);
+        var league = await db.TradeLeagues.FirstAsync(x => x.Game == game && x.Language == "en");
 
         try
         {
@@ -109,7 +106,7 @@ public class NinjaDownloader(
         var pages = game == GameType.PathOfExile1 ? Poe1Pages : Poe2Pages;
 
         using var http = CreateHttpClient();
-        await using var db = new NinjaDbContext(dbContextOptions);
+        await using var db = new DataDbContext(dbContextOptions);
         db.NinjaExchangeItems.RemoveRange(db.NinjaExchangeItems.Where(x => x.Game == game));
         await db.SaveChangesAsync();
 
@@ -144,7 +141,7 @@ public class NinjaDownloader(
         var pages = game == GameType.PathOfExile1 ? Poe1Pages : Poe2Pages;
 
         using var http = CreateHttpClient();
-        await using var db = new NinjaDbContext(dbContextOptions);
+        await using var db = new DataDbContext(dbContextOptions);
         db.NinjaStashItems.RemoveRange(db.NinjaStashItems.Where(x => x.Game == game));
         await db.SaveChangesAsync();
 

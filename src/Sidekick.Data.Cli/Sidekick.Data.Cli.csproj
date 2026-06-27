@@ -18,9 +18,31 @@
 
     <ItemGroup>
         <ProjectReference Include="..\Sidekick.Common\Sidekick.Common.csproj" />
-        <ProjectReference Include="..\Sidekick.Data.Ninja\Sidekick.Data.Ninja.csproj" />
         <ProjectReference Include="..\Sidekick.Data\Sidekick.Data.csproj" />
-    <ProjectReference Include="..\Sidekick.Data.Trade\Sidekick.Data.Trade.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Compile Remove="ItemClasses\**" />
+      <Compile Remove="ItemDefinitions\**" />
+      <Compile Remove="Pseudo\**" />
+      <Compile Remove="Stats\**" />
+      <Compile Remove="StatsInvariant\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <EmbeddedResource Remove="ItemClasses\**" />
+      <EmbeddedResource Remove="ItemDefinitions\**" />
+      <EmbeddedResource Remove="Pseudo\**" />
+      <EmbeddedResource Remove="Stats\**" />
+      <EmbeddedResource Remove="StatsInvariant\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="ItemClasses\**" />
+      <None Remove="ItemDefinitions\**" />
+      <None Remove="Pseudo\**" />
+      <None Remove="Stats\**" />
+      <None Remove="StatsInvariant\**" />
     </ItemGroup>
 
 </Project>

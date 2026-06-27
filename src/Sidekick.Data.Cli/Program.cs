@@ -3,18 +3,10 @@ using Microsoft.Extensions.DependencyInjection.Extensions;
 using Microsoft.Extensions.Logging;
 using Sidekick.Common;
 using Sidekick.Data;
-using Sidekick.Data.Cli;
 using Sidekick.Data.Cli.GraphQl;
-using Sidekick.Data.Cli.ItemClasses;
-using Sidekick.Data.Cli.ItemDefinitions;
 using Sidekick.Data.Cli.Ninja;
-using Sidekick.Data.Cli.Pseudo;
-using Sidekick.Data.Cli.Stats;
-using Sidekick.Data.Cli.StatsInvariant;
 using Sidekick.Data.Cli.Trade;
 using Sidekick.Data.Languages;
-using Sidekick.Data.Ninja;
-using Sidekick.Data.Trade;
 
 #region Services
 
@@ -29,27 +21,14 @@ services.AddLogging(o =>
 
 services.AddSidekickCommon(SidekickApplicationType.DataBuilder);
 services.AddSidekickData();
-services.AddSidekickDataNinja();
-services.AddSidekickDataTrade();
 
 services.TryAddSingleton<GraphQlClient>();
 services.TryAddSingleton<NinjaDownloader>();
-services.TryAddSingleton<PseudoBuilder>();
-services.TryAddSingleton<StatBuilder>();
-services.TryAddSingleton<ItemClassBuilder>();
-services.TryAddSingleton<ItemDefinitionBuilder>();
-services.TryAddSingleton<StatsInvariantBuilder>();
-services.TryAddSingleton<RawDataProvider>();
 services.TryAddSingleton<TradeApiDownloader>();
 
 var serviceProvider = services.BuildServiceProvider();
 var logger = serviceProvider.GetRequiredService<ILogger<Program>>();
 var ninjaDownloader = serviceProvider.GetRequiredService<NinjaDownloader>();
-var statBuilder = serviceProvider.GetRequiredService<StatBuilder>();
-var pseudoBuilder = serviceProvider.GetRequiredService<PseudoBuilder>();
-var itemDefinitionBuilder = serviceProvider.GetRequiredService<ItemDefinitionBuilder>();
-var itemClassBuilder = serviceProvider.GetRequiredService<ItemClassBuilder>();
-var statsInvariantBuilder = serviceProvider.GetRequiredService<StatsInvariantBuilder>();
 var gameLanguageProvider = serviceProvider.GetRequiredService<IGameLanguageProvider>();
 var tradeApiDownloader = serviceProvider.GetRequiredService<TradeApiDownloader>();
 
@@ -108,8 +87,6 @@ for (var i = 0; i < args.Length; i++)
     }
 }
 
-#endregion
-
 if (!runItems && !runStats && !runTrade && !runPseudo && !runNinja)
 {
     runItems = true;
@@ -124,6 +101,8 @@ if (!runPoe1 && !runPoe2)
     runPoe1 = true;
     runPoe2 = true;
 }
+
+#endregion
 
 foreach (var game in new[] { GameType.PathOfExile1, GameType.PathOfExile2 })
 {
