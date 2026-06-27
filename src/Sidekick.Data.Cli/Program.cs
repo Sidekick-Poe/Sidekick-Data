@@ -5,6 +5,7 @@ using Sidekick.Common;
 using Sidekick.Data;
 using Sidekick.Data.Cli.GraphQl;
 using Sidekick.Data.Cli.Ninja;
+using Sidekick.Data.Cli.StatsInvariant;
 using Sidekick.Data.Cli.Trade;
 using Sidekick.Data.Languages;
 
@@ -24,12 +25,14 @@ services.AddSidekickData();
 
 services.TryAddSingleton<GraphQlClient>();
 services.TryAddSingleton<NinjaDownloader>();
+services.TryAddSingleton<StatsInvariantBuilder>();
 services.TryAddSingleton<TradeApiDownloader>();
 
 var serviceProvider = services.BuildServiceProvider();
 var logger = serviceProvider.GetRequiredService<ILogger<Program>>();
 var ninjaDownloader = serviceProvider.GetRequiredService<NinjaDownloader>();
 var gameLanguageProvider = serviceProvider.GetRequiredService<IGameLanguageProvider>();
+var statsInvariantBuilder = serviceProvider.GetRequiredService<StatsInvariantBuilder>();
 var tradeApiDownloader = serviceProvider.GetRequiredService<TradeApiDownloader>();
 
 #endregion
@@ -102,6 +105,11 @@ if (!runPoe1 && !runPoe2)
     runPoe2 = true;
 }
 
+if (!build && !download)
+{
+    logger.LogCritical("Specify either --download or --build");
+}
+
 #endregion
 
 foreach (var game in new[] { GameType.PathOfExile1, GameType.PathOfExile2 })
@@ -124,8 +132,6 @@ foreach (var game in new[] { GameType.PathOfExile1, GameType.PathOfExile2 })
         {
             logger.LogInformation($"Downloading {game}/{language.Code} trade data.");
             await tradeApiDownloader.Download(game, language);
-            // await leagueBuilder.Build(language);
-            // await tradeDownloader.Download(language);
             logger.LogInformation($"Downloaded {game}/{language.Code} trade data.");
         }
 
@@ -136,13 +142,13 @@ foreach (var game in new[] { GameType.PathOfExile1, GameType.PathOfExile2 })
             logger.LogInformation($"Downloaded {game} ninja data.");
         }
 
-        // if (build && runTrade)
-        // {
-        //     logger.LogInformation($"Building {language.Code} trade data.");
-        //     await statsInvariantBuilder.Build(language);
-        //     logger.LogInformation($"Built {language.Code} trade data.");
-        // }
-//
+        if (build && runTrade && language.Code == gameLanguageProvider.InvariantLanguage.Code)
+        {
+            logger.LogInformation($"Building {game} invariant stats data.");
+            await statsInvariantBuilder.Build(game);
+            logger.LogInformation($"Built {game} invariant stats data.");
+        }
+
         // if (build && runItems)
         // {
         //     logger.LogInformation($"Building {language.Code} items data.");

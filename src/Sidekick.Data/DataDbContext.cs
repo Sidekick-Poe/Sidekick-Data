@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using Sidekick.Data.Ninja;
+using Sidekick.Data.StatsInvariant;
 using Sidekick.Data.Trade;
 
 namespace Sidekick.Data;
@@ -22,14 +23,23 @@ public sealed class DataDbContext : DbContext
     public DbSet<NinjaStashTradeStat> NinjaStashTradeStats => Set<NinjaStashTradeStat>();
     public DbSet<NinjaStashMutatedStat> NinjaStashMutatedStats => Set<NinjaStashMutatedStat>();
 
-    public DbSet<TradeLeague> TradeLeagues  { get; init; }
-    public DbSet<TradeItem> TradeItems { get; init; }
-    public DbSet<TradeItemCategory> TradeItemCategories { get; init; }
-    public DbSet<TradeStat> TradeStats  { get; init; }
-    public DbSet<TradeStatCategory> TradeStatCategories { get; init; }
-    public DbSet<TradeStaticItem> TradeStaticItems  { get; init; }
-    public DbSet<TradeStaticItemCategory> TradeStaticItemCategories { get; init; }
-    public DbSet<TradeFilter> TradeFilters  { get; init; }
-    public DbSet<TradeFilterCategory> TradeFilterCategories { get; init; }
-    public DbSet<TradeFilterOption> TradeFilterOptions  { get; init; }
+    public DbSet<StatsInvariantIgnore> StatsInvariantIgnore => Set<StatsInvariantIgnore>();
+    public DbSet<StatsInvariantFireWeaponDamage> StatsInvariantFireWeaponDamage => Set<StatsInvariantFireWeaponDamage>();
+    public DbSet<StatsInvariantColdWeaponDamage> StatsInvariantColdWeaponDamage => Set<StatsInvariantColdWeaponDamage>();
+    public DbSet<StatsInvariantLightningWeaponDamage> StatsInvariantLightningWeaponDamage => Set<StatsInvariantLightningWeaponDamage>();
+    public DbSet<StatsInvariantIncursionRoom> StatsInvariantIncursionRoom => Set<StatsInvariantIncursionRoom>();
+    public DbSet<StatsInvariantLogbookFaction> StatsInvariantLogbookFaction => Set<StatsInvariantLogbookFaction>();
+    public DbSet<StatsInvariantLogbookBoss> StatsInvariantLogbookBoss => Set<StatsInvariantLogbookBoss>();
+
+    public DbSet<TradeLeague> TradeLeagues => Set<TradeLeague>();
+    public DbSet<TradeItem> TradeItems => Set<TradeItem>();
+    public DbSet<TradeItemCategory> TradeItemCategories => Set<TradeItemCategory>();
+    public DbSet<TradeStat> TradeStats => Set<TradeStat>();
+    public DbSet<TradeStatCategory> TradeStatCategories => Set<TradeStatCategory>();
+    public DbSet<TradeStaticItem> TradeStaticItems => Set<TradeStaticItem>();
+    public DbSet<TradeStaticItemCategory> TradeStaticItemCategories => Set<TradeStaticItemCategory>();
+    public DbSet<TradeFilter> TradeFilters => Set<TradeFilter>();
+    public DbSet<TradeFilterCategory> TradeFilterCategories => Set<TradeFilterCategory>();
+    public DbSet<TradeFilterOption> TradeFilterOptions => Set<TradeFilterOption>();
+
 }

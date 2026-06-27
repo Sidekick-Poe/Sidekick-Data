@@ -26,7 +26,6 @@
       <Compile Remove="ItemDefinitions\**" />
       <Compile Remove="Pseudo\**" />
       <Compile Remove="Stats\**" />
-      <Compile Remove="StatsInvariant\**" />
     </ItemGroup>
 
     <ItemGroup>
@@ -34,7 +33,6 @@
       <EmbeddedResource Remove="ItemDefinitions\**" />
       <EmbeddedResource Remove="Pseudo\**" />
       <EmbeddedResource Remove="Stats\**" />
-      <EmbeddedResource Remove="StatsInvariant\**" />
     </ItemGroup>
 
     <ItemGroup>
@@ -42,7 +40,6 @@
       <None Remove="ItemDefinitions\**" />
       <None Remove="Pseudo\**" />
       <None Remove="Stats\**" />
-      <None Remove="StatsInvariant\**" />
     </ItemGroup>
 
 </Project>
