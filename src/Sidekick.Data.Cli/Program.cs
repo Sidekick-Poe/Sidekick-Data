@@ -150,11 +150,11 @@ foreach (var game in new[] { GameType.PathOfExile1, GameType.PathOfExile2 })
             logger.LogInformation($"Downloaded {game}/{language.Code} trade data.");
         }
 
-        if (download && runNinja)
+        if (download && runNinja && language.Code == gameLanguageProvider.InvariantLanguage.Code)
         {
-            logger.LogInformation($"Downloading {game}/{language.Code} ninja data.");
-            await ninjaDownloader.Download(game, language);
-            logger.LogInformation($"Downloaded {game}/{language.Code} ninja data.");
+            logger.LogInformation($"Downloading {game} ninja data.");
+            await ninjaDownloader.Download(game);
+            logger.LogInformation($"Downloaded {game} ninja data.");
         }
 
         // if (build && runTrade)

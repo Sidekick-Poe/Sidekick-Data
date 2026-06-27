@@ -6,19 +6,16 @@ using Sidekick.Data;
 namespace Sidekick.Data.Ninja.Models;
 
 [Table("StashItems")]
-[Index(nameof(Game), nameof(Type))]
 public class NinjaStashItem
 {
     [Key]
-    public Guid UniqueId { get; set; }
+    [MaxLength(256)]
+    public string? DetailsId { get; set; }
 
     public GameType Game { get; set; }
 
     [MaxLength(64)]
     public required string Type { get; set; }
-
-    [MaxLength(256)]
-    public string? DetailsId { get; set; }
 
     [MaxLength(512)]
     public string? Name { get; set; }
@@ -38,4 +35,8 @@ public class NinjaStashItem
 
     [MaxLength(256)]
     public string? Variant { get; set; }
+
+    public List<NinjaStashTradeStat> TradeStats { get; set; } = new();
+
+    public List<NinjaStashMutatedStat> MutatedStats { get; set; } = new();
 }

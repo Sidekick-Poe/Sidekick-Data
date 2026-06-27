@@ -22,12 +22,4 @@ public class NinjaExchangeItem
 
     [MaxLength(256)]
     public string? DetailsId { get; set; }
-
-    [MaxLength(256)]
-    public string? CurrencyId { get; set; }
-
-    [MaxLength(256)]
-    public string? CurrencyDetailsId { get; set; }
-
-    public long? ChaosValue { get; set; }
 }

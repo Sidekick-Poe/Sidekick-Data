@@ -11,7 +11,7 @@ using Sidekick.Data.Ninja;
 namespace Sidekick.Data.Ninja.Migrations
 {
     [DbContext(typeof(NinjaDbContext))]
-    [Migration("20260627155409_Initial")]
+    [Migration("20260627162127_Initial")]
     partial class Initial
     {
         /// <inheritdoc />
@@ -24,17 +24,6 @@ namespace Sidekick.Data.Ninja.Migrations
                 {
                     b.Property<Guid>("UniqueId")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("TEXT");
-
-                    b.Property<long?>("ChaosValue")
-                        .HasColumnType("INTEGER");
-
-                    b.Property<string>("CurrencyDetailsId")
-                        .HasMaxLength(256)
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("CurrencyId")
-                        .HasMaxLength(256)
                         .HasColumnType("TEXT");
 
                     b.Property<string>("DetailsId")
@@ -62,8 +51,8 @@ namespace Sidekick.Data.Ninja.Migrations
 
             modelBuilder.Entity("Sidekick.Data.Ninja.Models.NinjaStashItem", b =>
                 {
-                    b.Property<Guid>("UniqueId")
-                        .ValueGeneratedOnAdd()
+                    b.Property<string>("DetailsId")
+                        .HasMaxLength(256)
                         .HasColumnType("TEXT");
 
                     b.Property<string>("BaseType")
@@ -72,10 +61,6 @@ namespace Sidekick.Data.Ninja.Migrations
 
                     b.Property<bool?>("Corrupted")
                         .HasColumnType("INTEGER");
-
-                    b.Property<string>("DetailsId")
-                        .HasMaxLength(256)
-                        .HasColumnType("TEXT");
 
                     b.Property<int>("Game")
                         .HasColumnType("INTEGER");
@@ -105,11 +90,83 @@ namespace Sidekick.Data.Ninja.Migrations
                         .HasMaxLength(256)
                         .HasColumnType("TEXT");
 
-                    b.HasKey("UniqueId");
-
-                    b.HasIndex("Game", "Type");
+                    b.HasKey("DetailsId");
 
                     b.ToTable("StashItems");
+                });
+
+            modelBuilder.Entity("Sidekick.Data.Ninja.Models.NinjaStashMutatedStat", b =>
+                {
+                    b.Property<Guid>("UniqueId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("StashItemDetailsId")
+                        .HasMaxLength(256)
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Text")
+                        .HasMaxLength(512)
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("UniqueId");
+
+                    b.HasIndex("StashItemDetailsId");
+
+                    b.ToTable("StashMutatedStats");
+                });
+
+            modelBuilder.Entity("Sidekick.Data.Ninja.Models.NinjaStashTradeStat", b =>
+                {
+                    b.Property<Guid>("UniqueId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Mod")
+                        .HasMaxLength(512)
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Option")
+                        .HasMaxLength(256)
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("StashItemDetailsId")
+                        .HasMaxLength(256)
+                        .HasColumnType("TEXT");
+
+                    b.Property<int?>("Value")
+                        .HasColumnType("INTEGER");
+
+                    b.HasKey("UniqueId");
+
+                    b.HasIndex("StashItemDetailsId");
+
+                    b.ToTable("StashTradeStats");
+                });
+
+            modelBuilder.Entity("Sidekick.Data.Ninja.Models.NinjaStashMutatedStat", b =>
+                {
+                    b.HasOne("Sidekick.Data.Ninja.Models.NinjaStashItem", "StashItem")
+                        .WithMany("MutatedStats")
+                        .HasForeignKey("StashItemDetailsId");
+
+                    b.Navigation("StashItem");
+                });
+
+            modelBuilder.Entity("Sidekick.Data.Ninja.Models.NinjaStashTradeStat", b =>
+                {
+                    b.HasOne("Sidekick.Data.Ninja.Models.NinjaStashItem", "StashItem")
+                        .WithMany("TradeStats")
+                        .HasForeignKey("StashItemDetailsId");
+
+                    b.Navigation("StashItem");
+                });
+
+            modelBuilder.Entity("Sidekick.Data.Ninja.Models.NinjaStashItem", b =>
+                {
+                    b.Navigation("MutatedStats");
+
+                    b.Navigation("TradeStats");
                 });
 #pragma warning restore 612, 618
         }

@@ -5,7 +5,6 @@ using Microsoft.Extensions.Options;
 using Sidekick.Common;
 using Sidekick.Common.Enums;
 using Sidekick.Data.Cli.Ninja.Dtos;
-using Sidekick.Data.Languages;
 using Sidekick.Data.Ninja;
 using Sidekick.Data.Ninja.Models;
 using Sidekick.Data.Trade;
@@ -85,12 +84,10 @@ public class NinjaDownloader(
         bool SupportsExchange,
         bool SupportsStash);
 
-    public async Task Download(GameType game, IGameLanguage language)
+    public async Task Download(GameType game)
     {
-        if (language.Code != "en") return;
-
         await using var tradeDb = new TradeDbContext(tradeDbContextOptions);
-        var league = await tradeDb.Leagues.FirstAsync(x => x.Game == game && x.Language == language.Code);
+        var league = await tradeDb.Leagues.FirstAsync(x => x.Game == game && x.Language == "en");
 
         try
         {
@@ -102,7 +99,7 @@ public class NinjaDownloader(
             if (configuration.Value.ApplicationType == SidekickApplicationType.DataBuilder ||
                 configuration.Value.ApplicationType == SidekickApplicationType.Test)
                 throw;
-            logger.LogError(ex, $"Failed to download ninja data for {language.Code}.");
+            logger.LogError(ex, $"Failed to download ninja data for {game}.");
         }
     }
 
@@ -112,6 +109,8 @@ public class NinjaDownloader(
 
         using var http = CreateHttpClient();
         await using var db = new NinjaDbContext(dbContextOptions);
+        db.ExchangeItems.RemoveRange(db.ExchangeItems.Where(x => x.Game == game));
+        await db.SaveChangesAsync();
 
         foreach (var page in pages)
         {
@@ -144,6 +143,8 @@ public class NinjaDownloader(
 
         using var http = CreateHttpClient();
         await using var db = new NinjaDbContext(dbContextOptions);
+        db.StashItems.RemoveRange(db.StashItems.Where(x => x.Game == game));
+        await db.SaveChangesAsync();
 
         foreach (var page in pages)
         {
@@ -157,7 +158,6 @@ public class NinjaDownloader(
             {
                 db.StashItems.Add(new NinjaStashItem
                 {
-                    UniqueId = Guid.NewGuid(),
                     Game = game,
                     Type = page.Type,
                     DetailsId = item.DetailsId,

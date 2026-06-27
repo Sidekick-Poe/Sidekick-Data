@@ -18,4 +18,6 @@ public sealed class NinjaDbContext : DbContext
 
     public DbSet<NinjaExchangeItem> ExchangeItems => Set<NinjaExchangeItem>();
     public DbSet<NinjaStashItem> StashItems => Set<NinjaStashItem>();
+    public DbSet<NinjaStashTradeStat> TradeStats => Set<NinjaStashTradeStat>();
+    public DbSet<NinjaStashMutatedStat> MutatedStats => Set<NinjaStashMutatedStat>();
 }

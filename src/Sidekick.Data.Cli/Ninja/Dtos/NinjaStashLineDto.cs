@@ -11,6 +11,6 @@ public sealed class NinjaStashLineDto
     public int? Links { get; init; }
     public int? LevelRequired { get; init; }
     public string? Variant { get; init; }
-    public List<NinjaModTextDto>? TradeInfo { get; init; }
-    public List<NinjaModIdDto>? MutatedModifiers { get; init; }
+    public List<NinjaStashTradeStatDto>? TradeInfo { get; init; }
+    public List<NinjaStashMutatedStatDto>? MutatedModifiers { get; init; }
 }

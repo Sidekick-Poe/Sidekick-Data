@@ -1,6 +1,6 @@
 ﻿namespace Sidekick.Data.Cli.Ninja.Dtos;
 
-public class NinjaModIdDto
+public class NinjaStashMutatedStatDto
 {
     public string? Mod { get; init; }
     public int? Min { get; init; }
