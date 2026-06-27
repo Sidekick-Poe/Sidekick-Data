@@ -1,6 +1,6 @@
-﻿namespace Sidekick.Data.Cli.Ninja.Models;
+namespace Sidekick.Data.Cli.Ninja.Dtos;
 
-public class NinjaStashLine
+public sealed class NinjaStashLineDto
 {
     public string? DetailsId { get; init; }
     public string? Name { get; init; }
@@ -11,6 +11,6 @@ public class NinjaStashLine
     public int? Links { get; init; }
     public int? LevelRequired { get; init; }
     public string? Variant { get; init; }
-    public List<NinjaStashTradeInfo>? TradeInfo { get; init; }
-    public List<NinjaStashModifier>? MutatedModifiers { get; init; }
+    public List<NinjaModTextDto>? TradeInfo { get; init; }
+    public List<NinjaModIdDto>? MutatedModifiers { get; init; }
 }

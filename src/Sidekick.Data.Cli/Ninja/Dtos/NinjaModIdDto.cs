@@ -1,6 +1,6 @@
-﻿namespace Sidekick.Data.Cli.Ninja.Models;
+﻿namespace Sidekick.Data.Cli.Ninja.Dtos;
 
-public class NinjaStashTradeInfo
+public class NinjaModIdDto
 {
     public string? Mod { get; init; }
     public int? Min { get; init; }

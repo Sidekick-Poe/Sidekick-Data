@@ -1,6 +1,6 @@
-﻿namespace Sidekick.Data.Cli.Ninja.Models;
+﻿namespace Sidekick.Data.Cli.Ninja.Dtos;
 
-public class NinjaStashModifier
+public class NinjaModTextDto
 {
     public string? Text { get; init; }
     public bool Optional { get; init; }

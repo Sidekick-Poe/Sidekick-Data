@@ -13,6 +13,7 @@ using Sidekick.Data.Cli.Stats;
 using Sidekick.Data.Cli.StatsInvariant;
 using Sidekick.Data.Cli.Trade;
 using Sidekick.Data.Languages;
+using Sidekick.Data.Ninja;
 using Sidekick.Data.Trade;
 
 #region Services
@@ -28,6 +29,7 @@ services.AddLogging(o =>
 
 services.AddSidekickCommon(SidekickApplicationType.DataBuilder);
 services.AddSidekickData();
+services.AddSidekickDataNinja();
 services.AddSidekickDataTrade();
 
 services.TryAddSingleton<GraphQlClient>();
@@ -141,11 +143,18 @@ foreach (var game in new[] { GameType.PathOfExile1, GameType.PathOfExile2 })
 
         if (download && runTrade)
         {
-            logger.LogInformation($"Downloading {language.Code} trade data.");
+            logger.LogInformation($"Downloading {game}/{language.Code} trade data.");
             await tradeApiDownloader.Download(game, language);
             // await leagueBuilder.Build(language);
             // await tradeDownloader.Download(language);
-            logger.LogInformation($"Downloaded {language.Code} trade data.");
+            logger.LogInformation($"Downloaded {game}/{language.Code} trade data.");
+        }
+
+        if (download && runNinja)
+        {
+            logger.LogInformation($"Downloading {game}/{language.Code} ninja data.");
+            await ninjaDownloader.Download(game, language);
+            logger.LogInformation($"Downloaded {game}/{language.Code} ninja data.");
         }
 
         // if (build && runTrade)

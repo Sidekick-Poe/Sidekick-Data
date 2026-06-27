@@ -60,7 +60,7 @@ public class ItemDefinitionBuilder(
         var tradeItems = await GetTradeItems(game, language);
         var baseItems = await GetBaseItems(game, language);
         var uniqueItems = await GetUniqueItems(game, language);
-        var ninjaItems = await ninjaDownloader.GetDefinitions(game);
+        var ninjaItems = new List<NinjaItemDefinition>(); //await ninjaDownloader.GetDefinitions(game);
 
         var list = new List<ItemDefinition>();
         foreach (var tradeItem in tradeItems)
