@@ -12,10 +12,10 @@ namespace Sidekick.Data.Ninja.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "ExchangeItems",
+                name: "NinjaExchangeItems",
                 columns: table => new
                 {
-                    UniqueId = table.Column<Guid>(type: "TEXT", nullable: false),
+                    SidekickId = table.Column<Guid>(type: "TEXT", nullable: false),
                     Game = table.Column<int>(type: "INTEGER", nullable: false),
                     Type = table.Column<string>(type: "TEXT", maxLength: 64, nullable: false),
                     Id = table.Column<string>(type: "TEXT", maxLength: 256, nullable: true),
@@ -23,14 +23,15 @@ namespace Sidekick.Data.Ninja.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_ExchangeItems", x => x.UniqueId);
+                    table.PrimaryKey("PK_NinjaExchangeItems", x => x.SidekickId);
                 });
 
             migrationBuilder.CreateTable(
-                name: "StashItems",
+                name: "NinjaStashItems",
                 columns: table => new
                 {
-                    DetailsId = table.Column<string>(type: "TEXT", maxLength: 256, nullable: false),
+                    SidekickId = table.Column<Guid>(type: "TEXT", nullable: false),
+                    DetailsId = table.Column<string>(type: "TEXT", maxLength: 256, nullable: true),
                     Game = table.Column<int>(type: "INTEGER", nullable: false),
                     Type = table.Column<string>(type: "TEXT", maxLength: 64, nullable: false),
                     Name = table.Column<string>(type: "TEXT", maxLength: 512, nullable: true),
@@ -44,77 +45,81 @@ namespace Sidekick.Data.Ninja.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_StashItems", x => x.DetailsId);
+                    table.PrimaryKey("PK_NinjaStashItems", x => x.SidekickId);
                 });
 
             migrationBuilder.CreateTable(
-                name: "StashMutatedStats",
+                name: "NinjaStashMutatedStats",
                 columns: table => new
                 {
-                    UniqueId = table.Column<Guid>(type: "TEXT", nullable: false),
-                    StashItemDetailsId = table.Column<string>(type: "TEXT", maxLength: 256, nullable: true),
-                    Text = table.Column<string>(type: "TEXT", maxLength: 512, nullable: true)
+                    SidekickId = table.Column<Guid>(type: "TEXT", nullable: false),
+                    Text = table.Column<string>(type: "TEXT", maxLength: 512, nullable: true),
+                    Optional = table.Column<bool>(type: "INTEGER", nullable: false),
+                    StashItemId = table.Column<Guid>(type: "TEXT", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_StashMutatedStats", x => x.UniqueId);
+                    table.PrimaryKey("PK_NinjaStashMutatedStats", x => x.SidekickId);
                     table.ForeignKey(
-                        name: "FK_StashMutatedStats_StashItems_StashItemDetailsId",
-                        column: x => x.StashItemDetailsId,
-                        principalTable: "StashItems",
-                        principalColumn: "DetailsId");
+                        name: "FK_NinjaStashMutatedStats_NinjaStashItems_StashItemId",
+                        column: x => x.StashItemId,
+                        principalTable: "NinjaStashItems",
+                        principalColumn: "SidekickId",
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
-                name: "StashTradeStats",
+                name: "NinjaStashTradeStats",
                 columns: table => new
                 {
-                    UniqueId = table.Column<Guid>(type: "TEXT", nullable: false),
-                    StashItemDetailsId = table.Column<string>(type: "TEXT", maxLength: 256, nullable: true),
+                    SidekickId = table.Column<Guid>(type: "TEXT", nullable: false),
                     Mod = table.Column<string>(type: "TEXT", maxLength: 512, nullable: true),
-                    Value = table.Column<int>(type: "INTEGER", nullable: true),
-                    Option = table.Column<string>(type: "TEXT", maxLength: 256, nullable: true)
+                    Min = table.Column<int>(type: "INTEGER", nullable: true),
+                    Max = table.Column<int>(type: "INTEGER", nullable: true),
+                    Option = table.Column<string>(type: "TEXT", maxLength: 512, nullable: true),
+                    StashItemId = table.Column<Guid>(type: "TEXT", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_StashTradeStats", x => x.UniqueId);
+                    table.PrimaryKey("PK_NinjaStashTradeStats", x => x.SidekickId);
                     table.ForeignKey(
-                        name: "FK_StashTradeStats_StashItems_StashItemDetailsId",
-                        column: x => x.StashItemDetailsId,
-                        principalTable: "StashItems",
-                        principalColumn: "DetailsId");
+                        name: "FK_NinjaStashTradeStats_NinjaStashItems_StashItemId",
+                        column: x => x.StashItemId,
+                        principalTable: "NinjaStashItems",
+                        principalColumn: "SidekickId",
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_ExchangeItems_Game_Type",
-                table: "ExchangeItems",
+                name: "IX_NinjaExchangeItems_Game_Type",
+                table: "NinjaExchangeItems",
                 columns: new[] { "Game", "Type" });
 
             migrationBuilder.CreateIndex(
-                name: "IX_StashMutatedStats_StashItemDetailsId",
-                table: "StashMutatedStats",
-                column: "StashItemDetailsId");
+                name: "IX_NinjaStashMutatedStats_StashItemId",
+                table: "NinjaStashMutatedStats",
+                column: "StashItemId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_StashTradeStats_StashItemDetailsId",
-                table: "StashTradeStats",
-                column: "StashItemDetailsId");
+                name: "IX_NinjaStashTradeStats_StashItemId",
+                table: "NinjaStashTradeStats",
+                column: "StashItemId");
         }
 
         /// <inheritdoc />
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "ExchangeItems");
+                name: "NinjaExchangeItems");
 
             migrationBuilder.DropTable(
-                name: "StashMutatedStats");
+                name: "NinjaStashMutatedStats");
 
             migrationBuilder.DropTable(
-                name: "StashTradeStats");
+                name: "NinjaStashTradeStats");
 
             migrationBuilder.DropTable(
-                name: "StashItems");
+                name: "NinjaStashItems");
         }
     }
 }

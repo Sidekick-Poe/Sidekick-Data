@@ -2,6 +2,8 @@
 
 public class NinjaStashTradeStatDto
 {
-    public string? Text { get; init; }
-    public bool Optional { get; init; }
+    public string? Mod { get; init; }
+    public int? Min { get; init; }
+    public int? Max { get; init; }
+    public string? Option { get; init; }
 }

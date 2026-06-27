@@ -1,16 +1,15 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using Microsoft.EntityFrameworkCore;
-using Sidekick.Data;
 
 namespace Sidekick.Data.Ninja.Models;
 
-[Table("ExchangeItems")]
+[Table("NinjaExchangeItems")]
 [Index(nameof(Game), nameof(Type))]
 public class NinjaExchangeItem
 {
     [Key]
-    public Guid UniqueId { get; set; }
+    public Guid SidekickId { get; set; }
 
     public GameType Game { get; set; }
 

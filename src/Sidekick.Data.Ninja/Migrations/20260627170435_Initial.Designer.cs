@@ -11,7 +11,7 @@ using Sidekick.Data.Ninja;
 namespace Sidekick.Data.Ninja.Migrations
 {
     [DbContext(typeof(NinjaDbContext))]
-    [Migration("20260627162127_Initial")]
+    [Migration("20260627170435_Initial")]
     partial class Initial
     {
         /// <inheritdoc />
@@ -22,7 +22,7 @@ namespace Sidekick.Data.Ninja.Migrations
 
             modelBuilder.Entity("Sidekick.Data.Ninja.Models.NinjaExchangeItem", b =>
                 {
-                    b.Property<Guid>("UniqueId")
+                    b.Property<Guid>("SidekickId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("TEXT");
 
@@ -42,17 +42,17 @@ namespace Sidekick.Data.Ninja.Migrations
                         .HasMaxLength(64)
                         .HasColumnType("TEXT");
 
-                    b.HasKey("UniqueId");
+                    b.HasKey("SidekickId");
 
                     b.HasIndex("Game", "Type");
 
-                    b.ToTable("ExchangeItems");
+                    b.ToTable("NinjaExchangeItems");
                 });
 
             modelBuilder.Entity("Sidekick.Data.Ninja.Models.NinjaStashItem", b =>
                 {
-                    b.Property<string>("DetailsId")
-                        .HasMaxLength(256)
+                    b.Property<Guid>("SidekickId")
+                        .ValueGeneratedOnAdd()
                         .HasColumnType("TEXT");
 
                     b.Property<string>("BaseType")
@@ -61,6 +61,10 @@ namespace Sidekick.Data.Ninja.Migrations
 
                     b.Property<bool?>("Corrupted")
                         .HasColumnType("INTEGER");
+
+                    b.Property<string>("DetailsId")
+                        .HasMaxLength(256)
+                        .HasColumnType("TEXT");
 
                     b.Property<int>("Game")
                         .HasColumnType("INTEGER");
@@ -90,65 +94,71 @@ namespace Sidekick.Data.Ninja.Migrations
                         .HasMaxLength(256)
                         .HasColumnType("TEXT");
 
-                    b.HasKey("DetailsId");
+                    b.HasKey("SidekickId");
 
-                    b.ToTable("StashItems");
+                    b.ToTable("NinjaStashItems");
                 });
 
             modelBuilder.Entity("Sidekick.Data.Ninja.Models.NinjaStashMutatedStat", b =>
                 {
-                    b.Property<Guid>("UniqueId")
+                    b.Property<Guid>("SidekickId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("TEXT");
 
-                    b.Property<string>("StashItemDetailsId")
-                        .HasMaxLength(256)
+                    b.Property<bool>("Optional")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<Guid>("StashItemId")
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Text")
                         .HasMaxLength(512)
                         .HasColumnType("TEXT");
 
-                    b.HasKey("UniqueId");
+                    b.HasKey("SidekickId");
 
-                    b.HasIndex("StashItemDetailsId");
+                    b.HasIndex("StashItemId");
 
-                    b.ToTable("StashMutatedStats");
+                    b.ToTable("NinjaStashMutatedStats");
                 });
 
             modelBuilder.Entity("Sidekick.Data.Ninja.Models.NinjaStashTradeStat", b =>
                 {
-                    b.Property<Guid>("UniqueId")
+                    b.Property<Guid>("SidekickId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("TEXT");
+
+                    b.Property<int?>("Max")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int?>("Min")
+                        .HasColumnType("INTEGER");
 
                     b.Property<string>("Mod")
                         .HasMaxLength(512)
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Option")
-                        .HasMaxLength(256)
+                        .HasMaxLength(512)
                         .HasColumnType("TEXT");
 
-                    b.Property<string>("StashItemDetailsId")
-                        .HasMaxLength(256)
+                    b.Property<Guid>("StashItemId")
                         .HasColumnType("TEXT");
 
-                    b.Property<int?>("Value")
-                        .HasColumnType("INTEGER");
+                    b.HasKey("SidekickId");
 
-                    b.HasKey("UniqueId");
+                    b.HasIndex("StashItemId");
 
-                    b.HasIndex("StashItemDetailsId");
-
-                    b.ToTable("StashTradeStats");
+                    b.ToTable("NinjaStashTradeStats");
                 });
 
             modelBuilder.Entity("Sidekick.Data.Ninja.Models.NinjaStashMutatedStat", b =>
                 {
                     b.HasOne("Sidekick.Data.Ninja.Models.NinjaStashItem", "StashItem")
                         .WithMany("MutatedStats")
-                        .HasForeignKey("StashItemDetailsId");
+                        .HasForeignKey("StashItemId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("StashItem");
                 });
@@ -157,7 +167,9 @@ namespace Sidekick.Data.Ninja.Migrations
                 {
                     b.HasOne("Sidekick.Data.Ninja.Models.NinjaStashItem", "StashItem")
                         .WithMany("TradeStats")
-                        .HasForeignKey("StashItemDetailsId");
+                        .HasForeignKey("StashItemId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("StashItem");
                 });

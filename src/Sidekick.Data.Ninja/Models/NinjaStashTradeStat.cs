@@ -1,26 +1,26 @@
-﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using Microsoft.EntityFrameworkCore;
 
 namespace Sidekick.Data.Ninja.Models;
 
-[Table("StashTradeStats")]
+[Table("NinjaStashTradeStats")]
 public class NinjaStashTradeStat
 {
     [Key]
-    public Guid UniqueId { get; set; }
-
-    [MaxLength(256)]
-    public string? StashItemDetailsId { get; set; }
+    public Guid SidekickId { get; set; }
 
     [MaxLength(512)]
-    public string? Mod { get; set; }
+    public string? Mod { get; init; }
 
-    public int? Value { get; set; }
+    public int? Min { get; init; }
 
-    [MaxLength(256)]
-    public string? Option { get; set; }
+    public int? Max { get; init; }
 
-    [ForeignKey(nameof(StashItemDetailsId))]
+    [MaxLength(512)]
+    public string? Option { get; init; }
+
+    public Guid StashItemId { get; set; }
+
+    [ForeignKey(nameof(StashItemId))]
     public NinjaStashItem? StashItem { get; set; }
 }

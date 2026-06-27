@@ -16,8 +16,8 @@ public sealed class NinjaDbContext : DbContext
         _hasMigrated = true;
     }
 
-    public DbSet<NinjaExchangeItem> ExchangeItems => Set<NinjaExchangeItem>();
-    public DbSet<NinjaStashItem> StashItems => Set<NinjaStashItem>();
-    public DbSet<NinjaStashTradeStat> TradeStats => Set<NinjaStashTradeStat>();
-    public DbSet<NinjaStashMutatedStat> MutatedStats => Set<NinjaStashMutatedStat>();
+    public DbSet<NinjaExchangeItem> NinjaExchangeItems => Set<NinjaExchangeItem>();
+    public DbSet<NinjaStashItem> NinjaStashItems => Set<NinjaStashItem>();
+    public DbSet<NinjaStashTradeStat> NinjaStashTradeStats => Set<NinjaStashTradeStat>();
+    public DbSet<NinjaStashMutatedStat> NinjaStashMutatedStats => Set<NinjaStashMutatedStat>();
 }

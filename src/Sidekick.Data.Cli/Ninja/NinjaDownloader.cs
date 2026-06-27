@@ -1,3 +1,4 @@
+using System.Diagnostics;
 using System.Net.Http.Headers;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
@@ -109,22 +110,23 @@ public class NinjaDownloader(
 
         using var http = CreateHttpClient();
         await using var db = new NinjaDbContext(dbContextOptions);
-        db.ExchangeItems.RemoveRange(db.ExchangeItems.Where(x => x.Game == game));
+        db.NinjaExchangeItems.RemoveRange(db.NinjaExchangeItems.Where(x => x.Game == game));
         await db.SaveChangesAsync();
 
         foreach (var page in pages)
         {
             if (!page.SupportsExchange) continue;
 
-            var url = $"https://poe.ninja/{game.GetValueAttribute()}/api/economy/exchange/current/overview?league={league.Replace(" ", "+")}&type={page.Type}";
+            var url =
+                $"https://poe.ninja/{game.GetValueAttribute()}/api/economy/exchange/current/overview?league={league.Replace(" ", "+")}&type={page.Type}";
             var items = await DownloadExchangePage(http, url);
             if (items == null) continue;
 
             foreach (var item in items)
             {
-                db.ExchangeItems.Add(new NinjaExchangeItem
+                db.NinjaExchangeItems.Add(new NinjaExchangeItem
                 {
-                    UniqueId = Guid.NewGuid(),
+                    SidekickId = Guid.NewGuid(),
                     Game = game,
                     Type = page.Type,
                     Id = item.Id,
@@ -143,21 +145,24 @@ public class NinjaDownloader(
 
         using var http = CreateHttpClient();
         await using var db = new NinjaDbContext(dbContextOptions);
-        db.StashItems.RemoveRange(db.StashItems.Where(x => x.Game == game));
+        db.NinjaStashItems.RemoveRange(db.NinjaStashItems.Where(x => x.Game == game));
         await db.SaveChangesAsync();
 
         foreach (var page in pages)
         {
             if (!page.SupportsStash || page.SupportsExchange) continue;
 
-            var url = $"https://poe.ninja/{game.GetValueAttribute()}/api/economy/stash/current/item/overview?league={league.Replace(" ", "+")}&type={page.Type}";
+            var url =
+                $"https://poe.ninja/{game.GetValueAttribute()}/api/economy/stash/current/item/overview?league={league.Replace(" ", "+")}&type={page.Type}";
             var items = await DownloadStashPage(http, url);
             if (items == null) continue;
 
             foreach (var item in items)
             {
-                db.StashItems.Add(new NinjaStashItem
+                var itemId = Guid.NewGuid();
+                db.NinjaStashItems.Add(new NinjaStashItem
                 {
+                    SidekickId = itemId,
                     Game = game,
                     Type = page.Type,
                     DetailsId = item.DetailsId,
@@ -170,6 +175,40 @@ public class NinjaDownloader(
                     LevelRequired = item.LevelRequired,
                     Variant = item.Variant,
                 });
+
+                if (item.TradeInfo != null)
+                {
+                    foreach (var stat in item.TradeInfo)
+                    {
+                        if (stat.Mod == null)
+                        {
+                            Debugger.Break();
+                        }
+                        db.NinjaStashTradeStats.Add(new NinjaStashTradeStat
+                        {
+                            SidekickId = Guid.NewGuid(),
+                            Mod = stat.Mod,
+                            Min = stat.Min,
+                            Max = stat.Max,
+                            Option = stat.Option,
+                            StashItemId = itemId,
+                        });
+                    }
+                }
+
+                if (item.MutatedModifiers != null)
+                {
+                    foreach (var stat in item.MutatedModifiers)
+                    {
+                        db.NinjaStashMutatedStats.Add(new NinjaStashMutatedStat
+                        {
+                            SidekickId = Guid.NewGuid(),
+                            Text = stat.Text,
+                            Optional = stat.Optional,
+                            StashItemId = itemId,
+                        });
+                    }
+                }
             }
 
             await db.SaveChangesAsync();
@@ -221,5 +260,4 @@ public class NinjaDownloader(
     {
         PropertyNameCaseInsensitive = true,
     };
-
 }

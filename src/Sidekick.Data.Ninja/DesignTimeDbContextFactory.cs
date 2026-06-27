@@ -8,7 +8,7 @@ public class NinjaDbDesignTime : IDesignTimeDbContextFactory<NinjaDbContext>
     public NinjaDbContext CreateDbContext(string[] args)
     {
         var builder = new DbContextOptionsBuilder<NinjaDbContext>();
-        builder.UseSqlite("Filename=ninja.db");
+        builder.UseSqlite("Filename=../../data/ninja.db");
         return new NinjaDbContext(builder.Options);
     }
 }

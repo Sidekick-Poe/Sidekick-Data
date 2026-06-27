@@ -8,7 +8,7 @@ public class DesignTimeDbContextFactory : IDesignTimeDbContextFactory<TradeDbCon
     public TradeDbContext CreateDbContext(string[] args)
     {
         var builder = new DbContextOptionsBuilder<TradeDbContext>();
-        builder.UseSqlite("Filename=trade.db");
+        builder.UseSqlite("Filename=../../data/trade.db");
         return new TradeDbContext(builder.Options);
     }
 }

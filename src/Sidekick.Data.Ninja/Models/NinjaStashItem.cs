@@ -1,14 +1,14 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using Microsoft.EntityFrameworkCore;
-using Sidekick.Data;
 
 namespace Sidekick.Data.Ninja.Models;
 
-[Table("StashItems")]
+[Table("NinjaStashItems")]
 public class NinjaStashItem
 {
     [Key]
+    public Guid SidekickId { get; set; }
+
     [MaxLength(256)]
     public string? DetailsId { get; set; }
 
