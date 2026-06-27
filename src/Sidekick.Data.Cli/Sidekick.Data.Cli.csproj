@@ -22,21 +22,18 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Compile Remove="ItemClasses\**" />
       <Compile Remove="ItemDefinitions\**" />
       <Compile Remove="Pseudo\**" />
       <Compile Remove="Stats\**" />
     </ItemGroup>
 
     <ItemGroup>
-      <EmbeddedResource Remove="ItemClasses\**" />
       <EmbeddedResource Remove="ItemDefinitions\**" />
       <EmbeddedResource Remove="Pseudo\**" />
       <EmbeddedResource Remove="Stats\**" />
     </ItemGroup>
 
     <ItemGroup>
-      <None Remove="ItemClasses\**" />
       <None Remove="ItemDefinitions\**" />
       <None Remove="Pseudo\**" />
       <None Remove="Stats\**" />

@@ -4,6 +4,7 @@ using Microsoft.Extensions.Logging;
 using Sidekick.Common;
 using Sidekick.Data;
 using Sidekick.Data.Cli.GraphQl;
+using Sidekick.Data.Cli.ItemClasses;
 using Sidekick.Data.Cli.Ninja;
 using Sidekick.Data.Cli.StatsInvariant;
 using Sidekick.Data.Cli.Trade;
@@ -27,6 +28,7 @@ services.TryAddSingleton<GraphQlClient>();
 services.TryAddSingleton<NinjaDownloader>();
 services.TryAddSingleton<StatsInvariantBuilder>();
 services.TryAddSingleton<TradeApiDownloader>();
+services.TryAddSingleton<ItemClassBuilder>();
 
 var serviceProvider = services.BuildServiceProvider();
 var logger = serviceProvider.GetRequiredService<ILogger<Program>>();
@@ -34,6 +36,7 @@ var ninjaDownloader = serviceProvider.GetRequiredService<NinjaDownloader>();
 var gameLanguageProvider = serviceProvider.GetRequiredService<IGameLanguageProvider>();
 var statsInvariantBuilder = serviceProvider.GetRequiredService<StatsInvariantBuilder>();
 var tradeApiDownloader = serviceProvider.GetRequiredService<TradeApiDownloader>();
+var itemClassBuilder = serviceProvider.GetRequiredService<ItemClassBuilder>();
 
 #endregion
 
@@ -144,31 +147,16 @@ foreach (var game in new[] { GameType.PathOfExile1, GameType.PathOfExile2 })
 
         if (build && runTrade && language.Code == gameLanguageProvider.InvariantLanguage.Code)
         {
-            logger.LogInformation($"Building {game} invariant stats data.");
+            logger.LogInformation($"Building {game} invariant stats.");
             await statsInvariantBuilder.Build(game);
-            logger.LogInformation($"Built {game} invariant stats data.");
+            logger.LogInformation($"Built {game} invariant stats.");
         }
 
-        // if (build && runItems)
-        // {
-        //     logger.LogInformation($"Building {language.Code} items data.");
-        //     await itemClassBuilder.Build(language);
-        //     await itemDefinitionBuilder.Build(language);
-        //     logger.LogInformation($"Built {language.Code} items data.");
-        // }
-//
-        // if (build && runPseudo)
-        // {
-        //     logger.LogInformation($"Building {language.Code} pseudo data.");
-        //     await pseudoBuilder.Build(language);
-        //     logger.LogInformation($"Built {language.Code} pseudo data.");
-        // }
-//
-        // if (build && runStats)
-        // {
-        //     logger.LogInformation($"Building {language.Code} stats data.");
-        //     await statBuilder.Build(language);
-        //     logger.LogInformation($"Built {language.Code} stats data.");
-        // }
+        if (build && runItems)
+        {
+            logger.LogInformation($"Building {language.Code} item classes.");
+            await itemClassBuilder.Build(game, language);
+            logger.LogInformation($"Built {language.Code} item classes.");
+        }
     }
 }

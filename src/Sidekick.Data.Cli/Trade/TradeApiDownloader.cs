@@ -40,21 +40,11 @@ public class TradeApiDownloader(
 
     public async Task Download(GameType game, IGameLanguage language)
     {
-        try
-        {
-            await DownloadLeagues(game, language);
-            await DownloadItems(game, language);
-            await DownloadStats(game, language);
-            await DownloadStatic(game, language);
-            await DownloadFilters(game, language);
-        }
-        catch (Exception ex)
-        {
-            if (configuration.Value.ApplicationType == SidekickApplicationType.DataBuilder ||
-                configuration.Value.ApplicationType == SidekickApplicationType.Test)
-                throw;
-            logger.LogError(ex, $"Failed to download trade data for {language.Code}.");
-        }
+        await DownloadLeagues(game, language);
+        await DownloadItems(game, language);
+        await DownloadStats(game, language);
+        await DownloadStatic(game, language);
+        await DownloadFilters(game, language);
     }
 
     private static string GetApiBase(IGameLanguage language, GameType game)
@@ -113,7 +103,8 @@ public class TradeApiDownloader(
 
         await using var db = new DataDbContext(dbContextOptions);
 
-        db.TradeItemCategories.RemoveRange(db.TradeItemCategories.Where(x => x.Game == game && x.Language == language.Code));
+        db.TradeItemCategories.RemoveRange(
+            db.TradeItemCategories.Where(x => x.Game == game && x.Language == language.Code));
         await db.SaveChangesAsync();
 
         foreach (var category in result.Result)
@@ -164,7 +155,8 @@ public class TradeApiDownloader(
 
         await using var db = new DataDbContext(dbContextOptions);
 
-        db.TradeStatCategories.RemoveRange(db.TradeStatCategories.Where(x => x.Game == game && x.Language == language.Code));
+        db.TradeStatCategories.RemoveRange(
+            db.TradeStatCategories.Where(x => x.Game == game && x.Language == language.Code));
         await db.SaveChangesAsync();
 
         foreach (var category in result.Result)
@@ -288,7 +280,8 @@ public class TradeApiDownloader(
 
         await using var db = new DataDbContext(dbContextOptions);
 
-        db.TradeFilterCategories.RemoveRange(db.TradeFilterCategories.Where(x => x.Game == game && x.Language == language.Code));
+        db.TradeFilterCategories.RemoveRange(
+            db.TradeFilterCategories.Where(x => x.Game == game && x.Language == language.Code));
         await db.SaveChangesAsync();
 
         foreach (var category in result.Result)

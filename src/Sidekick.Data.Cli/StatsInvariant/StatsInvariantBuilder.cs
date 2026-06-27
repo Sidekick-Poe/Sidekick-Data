@@ -15,107 +15,94 @@ public class StatsInvariantBuilder(
 {
     public async Task Build(GameType game)
     {
-        try
+        await using var db = new DataDbContext(dbContextOptions);
+        var stats = await db.TradeStats
+            .Where(s => s.Game == game && s.Language == "en")
+            .ToListAsync();
+
+        // Clear existing entries for this game/language
+        db.StatsInvariantIgnore.RemoveRange(db.StatsInvariantIgnore.Where(s => s.Game == game));
+        db.StatsInvariantFireWeaponDamage.RemoveRange(db.StatsInvariantFireWeaponDamage.Where(s => s.Game == game));
+        db.StatsInvariantColdWeaponDamage.RemoveRange(db.StatsInvariantColdWeaponDamage.Where(s => s.Game == game));
+        db.StatsInvariantLightningWeaponDamage.RemoveRange(
+            db.StatsInvariantLightningWeaponDamage.Where(s => s.Game == game));
+        db.StatsInvariantIncursionRoom.RemoveRange(db.StatsInvariantIncursionRoom.Where(s => s.Game == game));
+        db.StatsInvariantLogbookFaction.RemoveRange(db.StatsInvariantLogbookFaction.Where(s => s.Game == game));
+        db.StatsInvariantLogbookBoss.RemoveRange(db.StatsInvariantLogbookBoss.Where(s => s.Game == game));
+        await db.SaveChangesAsync();
+
+        // Insert new entries
+        foreach (var id in GetIgnoreStatIds(stats))
         {
-            await using var db = new DataDbContext(dbContextOptions);
-            var stats = await db.TradeStats
-                .Where(s => s.Game == game && s.Language == "en")
-                .ToListAsync();
-
-            // Clear existing entries for this game/language
-            db.StatsInvariantIgnore.RemoveRange(db.StatsInvariantIgnore.Where(s => s.Game == game));
-            db.StatsInvariantFireWeaponDamage.RemoveRange(db.StatsInvariantFireWeaponDamage.Where(s => s.Game == game));
-            db.StatsInvariantColdWeaponDamage.RemoveRange(db.StatsInvariantColdWeaponDamage.Where(s => s.Game == game));
-            db.StatsInvariantLightningWeaponDamage.RemoveRange(
-                db.StatsInvariantLightningWeaponDamage.Where(s => s.Game == game));
-            db.StatsInvariantIncursionRoom.RemoveRange(db.StatsInvariantIncursionRoom.Where(s => s.Game == game));
-            db.StatsInvariantLogbookFaction.RemoveRange(db.StatsInvariantLogbookFaction.Where(s => s.Game == game));
-            db.StatsInvariantLogbookBoss.RemoveRange(db.StatsInvariantLogbookBoss.Where(s => s.Game == game));
-            await db.SaveChangesAsync();
-
-            // Insert new entries
-            foreach (var id in GetIgnoreStatIds(stats))
+            db.StatsInvariantIgnore.Add(new StatsInvariantIgnore
             {
-                db.StatsInvariantIgnore.Add(new StatsInvariantIgnore
-                {
-                    SidekickId = Guid.NewGuid(),
-                    Game = game,
-                    StatId = id,
-                });
-            }
-
-            foreach (var id in GetFireWeaponDamageIds(stats))
-            {
-                db.StatsInvariantFireWeaponDamage.Add(new StatsInvariantFireWeaponDamage
-                {
-                    SidekickId = Guid.NewGuid(),
-                    Game = game,
-                    StatId = id,
-                });
-            }
-
-            foreach (var id in GetColdWeaponDamageIds(stats))
-            {
-                db.StatsInvariantColdWeaponDamage.Add(new StatsInvariantColdWeaponDamage
-                {
-                    SidekickId = Guid.NewGuid(),
-                    Game = game,
-                    StatId = id,
-                });
-            }
-
-            foreach (var id in GetLightningWeaponDamageIds(stats))
-            {
-                db.StatsInvariantLightningWeaponDamage.Add(new StatsInvariantLightningWeaponDamage
-                {
-                    SidekickId = Guid.NewGuid(),
-                    Game = game,
-                    StatId = id,
-                });
-            }
-
-            foreach (var id in GetIncursionRooms(stats))
-            {
-                db.StatsInvariantIncursionRoom.Add(new StatsInvariantIncursionRoom
-                {
-                    SidekickId = Guid.NewGuid(),
-                    Game = game,
-                    StatId = id,
-                });
-            }
-
-            foreach (var id in GetLogbookFactions(stats))
-            {
-                db.StatsInvariantLogbookFaction.Add(new StatsInvariantLogbookFaction
-                {
-                    SidekickId = Guid.NewGuid(),
-                    Game = game,
-                    StatId = id,
-                });
-            }
-
-            foreach (var id in GetLogbookBosses(stats))
-            {
-                db.StatsInvariantLogbookBoss.Add(new StatsInvariantLogbookBoss
-                {
-                    SidekickId = Guid.NewGuid(),
-                    Game = game,
-                    StatId = id,
-                });
-            }
-
-            await db.SaveChangesAsync();
+                SidekickId = Guid.NewGuid(),
+                Game = game,
+                StatId = id,
+            });
         }
-        catch (Exception ex)
+
+        foreach (var id in GetFireWeaponDamageIds(stats))
         {
-            if (configuration.Value.ApplicationType == SidekickApplicationType.DataBuilder ||
-                configuration.Value.ApplicationType == SidekickApplicationType.Test)
+            db.StatsInvariantFireWeaponDamage.Add(new StatsInvariantFireWeaponDamage
             {
-                throw;
-            }
-
-            logger.LogError(ex, "Failed to build invariant trade stats.");
+                SidekickId = Guid.NewGuid(),
+                Game = game,
+                StatId = id,
+            });
         }
+
+        foreach (var id in GetColdWeaponDamageIds(stats))
+        {
+            db.StatsInvariantColdWeaponDamage.Add(new StatsInvariantColdWeaponDamage
+            {
+                SidekickId = Guid.NewGuid(),
+                Game = game,
+                StatId = id,
+            });
+        }
+
+        foreach (var id in GetLightningWeaponDamageIds(stats))
+        {
+            db.StatsInvariantLightningWeaponDamage.Add(new StatsInvariantLightningWeaponDamage
+            {
+                SidekickId = Guid.NewGuid(),
+                Game = game,
+                StatId = id,
+            });
+        }
+
+        foreach (var id in GetIncursionRooms(stats))
+        {
+            db.StatsInvariantIncursionRoom.Add(new StatsInvariantIncursionRoom
+            {
+                SidekickId = Guid.NewGuid(),
+                Game = game,
+                StatId = id,
+            });
+        }
+
+        foreach (var id in GetLogbookFactions(stats))
+        {
+            db.StatsInvariantLogbookFaction.Add(new StatsInvariantLogbookFaction
+            {
+                SidekickId = Guid.NewGuid(),
+                Game = game,
+                StatId = id,
+            });
+        }
+
+        foreach (var id in GetLogbookBosses(stats))
+        {
+            db.StatsInvariantLogbookBoss.Add(new StatsInvariantLogbookBoss
+            {
+                SidekickId = Guid.NewGuid(),
+                Game = game,
+                StatId = id,
+            });
+        }
+
+        await db.SaveChangesAsync();
     }
 
     private IEnumerable<string> GetIgnoreStatIds(List<TradeStat> stats)

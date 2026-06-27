@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using Sidekick.Data.ItemClasses;
 using Sidekick.Data.Ninja;
 using Sidekick.Data.StatsInvariant;
 using Sidekick.Data.Trade;
@@ -17,6 +18,8 @@ public sealed class DataDbContext : DbContext
         Database.Migrate();
         _hasMigrated = true;
     }
+
+    public DbSet<ItemClassEntity> ItemClasses => Set<ItemClassEntity>();
 
     public DbSet<NinjaExchangeItem> NinjaExchangeItems => Set<NinjaExchangeItem>();
     public DbSet<NinjaStashItem> NinjaStashItems => Set<NinjaStashItem>();

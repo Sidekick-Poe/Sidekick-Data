@@ -305,3 +305,117 @@ public enum ItemClass
     [ItemClassGameId(GameType.PathOfExile2, "MapFragment")]
     MapFragments,
 }
+
+public static class ItemClassExtensions {
+
+    private static readonly ItemClass[] Equipment =
+    [
+        ItemClass.BodyArmour,
+        ItemClass.Boots,
+        ItemClass.Gloves,
+        ItemClass.Helmet,
+        ItemClass.Quiver,
+        ItemClass.Shield,
+        ItemClass.Focus,
+        ItemClass.Buckler,
+    ];
+
+    public static bool IsEquipment(this ItemClass itemClass) => Equipment.Contains(itemClass);
+
+    private static readonly ItemClass[] Weapons =
+    [
+        ItemClass.Bow,
+        ItemClass.Crossbow,
+        ItemClass.Claw,
+        ItemClass.Dagger,
+        ItemClass.OneHandAxe,
+        ItemClass.OneHandMace,
+        ItemClass.OneHandSword,
+        ItemClass.Sceptre,
+        ItemClass.Staff,
+        ItemClass.FishingRod,
+        ItemClass.Talisman,
+        ItemClass.TwoHandAxe,
+        ItemClass.TwoHandMace,
+        ItemClass.TwoHandSword,
+        ItemClass.Wand,
+        ItemClass.Warstaff,
+        ItemClass.Spear,
+    ];
+
+    public static bool IsWeapon(this ItemClass itemClass) => Weapons.Contains(itemClass);
+
+    private static readonly ItemClass[] Accessories =
+    [
+        ItemClass.Amulet,
+        ItemClass.Belt,
+        ItemClass.Ring,
+        ItemClass.Trinket,
+    ];
+
+    public static bool IsAccessory(this ItemClass itemClass) => Accessories.Contains(itemClass);
+
+    private static readonly ItemClass[] Jewels =
+    [
+        ItemClass.Jewel,
+        ItemClass.AbyssJewel,
+    ];
+
+    public static bool IsJewel(this ItemClass itemClass) => Jewels.Contains(itemClass);
+
+    private static readonly ItemClass[] Flasks =
+    [
+        ItemClass.Flask,
+        ItemClass.LifeFlask,
+        ItemClass.ManaFlask,
+        ItemClass.Tincture,
+        ItemClass.Charms,
+    ];
+
+    public static bool IsFlask(this ItemClass itemClass) => Flasks.Contains(itemClass);
+
+    private static readonly ItemClass[] Areas =
+    [
+        ItemClass.HeistBlueprint,
+        ItemClass.HeistContract,
+        ItemClass.ExpeditionLogbook,
+        ItemClass.Tablet,
+        ItemClass.Map,
+        ItemClass.Barya,
+        ItemClass.Ultimatum,
+        ItemClass.SanctumResearch,
+    ];
+
+    public static bool IsArea(this ItemClass itemClass) => Areas.Contains(itemClass);
+
+    private static readonly ItemClass[] Gems =
+    [
+        ItemClass.ActiveSkillGem,
+        ItemClass.SupportSkillGem,
+    ];
+
+    public static bool IsGem(this ItemClass itemClass) => Gems.Contains(itemClass);
+
+    private static readonly ItemClass[] WithStats =
+    [
+        ..Equipment,
+        ..Weapons,
+        ..Accessories,
+        ..Flasks,
+
+        ..Jewels,
+        ..Areas,
+
+        ItemClass.Idol,
+
+        ItemClass.HeistEquipmentReward,
+        ItemClass.HeistEquipmentUtility,
+        ItemClass.HeistEquipmentWeapon,
+        ItemClass.HeistEquipmentTool,
+
+        ItemClass.SanctumRelic,
+        ItemClass.ActiveSkillGem,
+    ];
+
+    public static bool CanHaveStats(this ItemClass itemClass) => WithStats.Contains(itemClass);
+}

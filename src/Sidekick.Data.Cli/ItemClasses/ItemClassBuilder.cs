@@ -1,9 +1,8 @@
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Options;
-using Sidekick.Common;
 using Sidekick.Common.Enums;
 using Sidekick.Data.Cli.GraphQl;
-using Sidekick.Data.Cli.GraphQl.Models;
+using Sidekick.Data.Cli.ItemClasses.Responses;
 using Sidekick.Data.ItemClasses;
 using Sidekick.Data.ItemDefinitions;
 using Sidekick.Data.Languages;
@@ -12,49 +11,45 @@ namespace Sidekick.Data.Cli.ItemClasses;
 
 public class ItemClassBuilder(
     ILogger<ItemClassBuilder> logger,
-    IOptions<SidekickConfiguration> configuration,
-    DataProvider dataProvider,
+    DbContextOptions<DataDbContext> dbContextOptions,
     GraphQlClient graphQlClient)
 {
-    public async Task Build(IGameLanguage language)
-    {
-        try
-        {
-            await BuildForGame(GameType.PathOfExile1, language);
-            await BuildForGame(GameType.PathOfExile2, language);
-        }
-        catch (Exception ex)
-        {
-            if (configuration.Value.ApplicationType == SidekickApplicationType.DataBuilder || configuration.Value.ApplicationType == SidekickApplicationType.Test)
-                throw;
-            logger.LogError(ex, "Failed to build item class data.");
-        }
-    }
-
-    private async Task BuildForGame(GameType game, IGameLanguage language)
+    public async Task Build(GameType game, IGameLanguage language)
     {
         var lang = GraphQlClient.GetLanguageName(language.Code);
         var prefix = game == GameType.PathOfExile1 ? "poe1" : "poe2";
-        var query = $"query {{ {prefix}_itemClasses(lang: \"{lang}\") {{ id name }} }}";
-        var result = await graphQlClient.QueryAsync<ItemClassesResponse>(query);
+        var query = $"query {{ {prefix}_itemClasses(lang: \"{lang}\") {{ Id Name }} }}";
+        var result = await graphQlClient.QueryAsync<GraphQlItemClassesResponse>(query);
         var items = game == GameType.PathOfExile1 ? result?.Poe1ItemClasses : result?.Poe2ItemClasses;
         if (items == null || items.Count == 0)
         {
             logger.LogWarning("[ItemClassBuilder] No item classes from GraphQL for {Game}/{Lang}", game, language.Code);
             return;
         }
-        var defs = new List<ItemClassDefinition>();
+
+        await using var dbContext = new DataDbContext(dbContextOptions);
+        dbContext.ItemClasses.RemoveRange(
+            dbContext.ItemClasses.Where(x => x.Game == game && x.Language == language.Code));
+        await dbContext.SaveChangesAsync();
+        var added = 0;
+
         foreach (var item in items)
         {
             if (string.IsNullOrEmpty(item.Id)) continue;
-            defs.Add(new ItemClassDefinition()
+            var type = EnumExtensions.FindValue<ItemClass>(ic =>
+                ic.FindAttributes<ItemClassGameId>().Any(attr => attr.Id == item.Id && attr.Game == game));
+            dbContext.ItemClasses.Add(new ItemClassEntity
             {
+                Game = game,
+                Language = language.Code,
                 Id = item.Id,
                 Name = item.Name,
-                Type = EnumExtensions.FindValue<ItemClass>(ic => ic.FindAttributes<ItemClassGameId>().Any(attr => attr.Id == item.Id && attr.Game == game)),
+                Type = type
             });
+            added++;
         }
-        await dataProvider.Write(game, DataType.ItemClasses, language, defs);
-    }
 
+        await dbContext.SaveChangesAsync();
+        logger.LogInformation($"Built {added} item classes for {game}/{language.Code}");
+    }
 }

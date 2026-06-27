@@ -22,7 +22,7 @@ public class Item
 
     public string? Type { get; set; }
 
-    public ItemClassDefinition ItemClass { get; set; } = null!;
+    public ItemClassEntity ItemClass { get; set; } = null!;
 
     public ItemDefinition Definition { get; set; } = null!;
 
