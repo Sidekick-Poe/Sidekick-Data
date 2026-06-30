@@ -38,9 +38,9 @@ public class TradeApiDownloader(
     public async Task Download(GameType game, IGameLanguage language)
     {
         await DownloadLeagues(game, language);
+        await DownloadStatic(game, language);
         await DownloadItems(game, language);
         await DownloadStats(game, language);
-        await DownloadStatic(game, language);
         await DownloadFilters(game, language);
     }
 
@@ -52,7 +52,7 @@ public class TradeApiDownloader(
     private async Task DownloadLeagues(GameType game, IGameLanguage language)
     {
         var url = GetApiBase(language, game) + "data/leagues";
-        logger.LogInformation($"GET {url}");
+        logger.LogDebug($"[TradeApiDownloader] GET {url}");
 
         using var http = CreateHttpClient();
         var json = await http.GetStringAsync(url);
@@ -83,22 +83,21 @@ public class TradeApiDownloader(
 
         await db.SaveChangesAsync();
         logger.LogInformation(
-            $"Downloaded {added} trade leagues for {game}/{language.Code}");
+            $"[TradeApiDownloader] Downloaded {added} trade leagues for {game}/{language.Code}");
     }
 
     private async Task DownloadItems(GameType game, IGameLanguage language)
     {
         var url = GetApiBase(language, game) + "data/items";
-        logger.LogInformation($"GET {url}");
+        logger.LogDebug($"[TradeApiDownloader] GET {url}");
 
         using var http = CreateHttpClient();
         var json = await http.GetStringAsync(url);
         var result = JsonSerializer.Deserialize<TradeApiResponse<TradeItemCategoryDto>>(json, JsonOptions);
         if (result?.Result == null) return;
 
-        int added = 0;
-
         await using var db = new DataDbContext(dbContextOptions);
+        var added = 0;
 
         db.TradeItemCategories.RemoveRange(
             db.TradeItemCategories.Where(x => x.Game == game && x.Language == language.Code));
@@ -129,19 +128,33 @@ public class TradeApiDownloader(
                     Text = entry.Text,
                     Discriminator = entry.Discriminator,
                     IsUnique = entry.Flags?.Unique ?? false,
+                    StaticItem = await GetTradeStaticItem(db, entry.Text, entry.Type),
                 });
                 added++;
             }
         }
 
         await db.SaveChangesAsync();
-        logger.LogInformation($"Downloaded {added} trade items for {game}/{language.Code}");
+        logger.LogInformation($"[TradeApiDownloader] Downloaded {added} trade items for {game}/{language.Code}");
+
+        return;
+
+        async Task<TradeStaticItem?> GetTradeStaticItem(DataDbContext dbContext, string? name, string? type)
+        {
+            var staticItem = await dbContext.TradeStaticItems
+                .Where(x => x.Game == game && x.Language == language.Code)
+                .FirstOrDefaultAsync(x => x.Text == name);
+            staticItem ??= await dbContext.TradeStaticItems
+                .Where(x => x.Game == game && x.Language == language.Code)
+                .FirstOrDefaultAsync(x => x.Text == type);
+            return staticItem;
+        }
     }
 
     private async Task DownloadStats(GameType game, IGameLanguage language)
     {
         var url = GetApiBase(language, game) + "data/stats";
-        logger.LogInformation($"GET {url}");
+        logger.LogDebug($"[TradeApiDownloader] GET {url}");
 
         using var http = CreateHttpClient();
         var json = await http.GetStringAsync(url);
@@ -207,14 +220,13 @@ public class TradeApiDownloader(
         }
 
         await db.SaveChangesAsync();
-        logger.LogInformation(
-            $"Downloaded {statsAdded} trade stats for {game}/{language.Code}");
+        logger.LogInformation($"[TradeApiDownloader] Downloaded {statsAdded} trade stats for {game}/{language.Code}");
     }
 
     private async Task DownloadStatic(GameType game, IGameLanguage language)
     {
         var url = GetApiBase(language, game) + "data/static";
-        logger.LogInformation($"GET {url}");
+        logger.LogDebug($"[TradeApiDownloader] GET {url}");
 
         using var http = CreateHttpClient();
         var json = await http.GetStringAsync(url);
@@ -259,14 +271,13 @@ public class TradeApiDownloader(
         }
 
         await db.SaveChangesAsync();
-        logger.LogInformation(
-            $"Downloaded {added} trade static items for {game}/{language.Code}");
+        logger.LogInformation($"[TradeApiDownloader] Downloaded {added} trade static items for {game}/{language.Code}");
     }
 
     private async Task DownloadFilters(GameType game, IGameLanguage language)
     {
         var url = GetApiBase(language, game) + "data/filters";
-        logger.LogInformation($"GET {url}");
+        logger.LogDebug($"[TradeApiDownloader] GET {url}");
 
         using var http = CreateHttpClient();
         var json = await http.GetStringAsync(url);
@@ -334,7 +345,6 @@ public class TradeApiDownloader(
         }
 
         await db.SaveChangesAsync();
-        logger.LogInformation(
-            $"Downloaded {filtersAdded} trade filters and {optionsAdded} options for {game}/{language.Code}");
+        logger.LogInformation($"[TradeApiDownloader] Downloaded {filtersAdded} trade filters and {optionsAdded} options for {game}/{language.Code}");
     }
 }

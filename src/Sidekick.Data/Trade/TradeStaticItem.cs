@@ -5,6 +5,7 @@ using Microsoft.EntityFrameworkCore;
 namespace Sidekick.Data.Trade;
 
 [Table("TradeStaticItems")]
+[Index(nameof(Game), nameof(Language), nameof(Id))]
 public class TradeStaticItem
 {
     [Key]
@@ -27,5 +28,5 @@ public class TradeStaticItem
     public Guid CategoryId { get; set; }
 
     [ForeignKey(nameof(CategoryId))]
-    public TradeStaticItemCategory? Category { get; set; }
+    public TradeStaticItemCategory Category { get; set; } = null!;
 }

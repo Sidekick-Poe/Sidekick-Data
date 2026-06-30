@@ -4,7 +4,6 @@ using Sidekick.Common.Enums;
 using Sidekick.Data.Cli.GraphQl;
 using Sidekick.Data.Cli.ItemClasses.Responses;
 using Sidekick.Data.ItemClasses;
-using Sidekick.Data.ItemDefinitions;
 using Sidekick.Data.Languages;
 
 namespace Sidekick.Data.Cli.ItemClasses;
@@ -17,14 +16,13 @@ public class ItemClassBuilder(
     public async Task Build(GameType game, IGameLanguage language)
     {
         var lang = GraphQlClient.GetLanguageName(language.Code);
-        var prefix = game == GameType.PathOfExile1 ? "poe1" : "poe2";
-        var query = $"query {{ {prefix}_itemClasses(lang: \"{lang}\") {{ Id Name }} }}";
+
+        var query = GraphQlItemClass.GetQuery(game, lang);
         var result = await graphQlClient.QueryAsync<GraphQlItemClassesResponse>(query);
-        var items = game == GameType.PathOfExile1 ? result?.Poe1ItemClasses : result?.Poe2ItemClasses;
+        var items = result?.Poe1 ?? result?.Poe2;
         if (items == null || items.Count == 0)
         {
-            logger.LogWarning("[ItemClassBuilder] No item classes from GraphQL for {Game}/{Lang}", game, language.Code);
-            return;
+            throw new Exception($"[ItemClassBuilder] No item classes from GraphQL for {game}/{language.Code}");
         }
 
         await using var dbContext = new DataDbContext(dbContextOptions);
@@ -44,12 +42,12 @@ public class ItemClassBuilder(
                 Language = language.Code,
                 Id = item.Id,
                 Name = item.Name,
-                Type = type
+                Type = type,
             });
             added++;
         }
 
         await dbContext.SaveChangesAsync();
-        logger.LogInformation($"Built {added} item classes for {game}/{language.Code}");
+        logger.LogInformation("[ItemClassBuilder] Created {Added} item classes for {GameType}/{LanguageCode}", added, game, language.Code);
     }
 }

@@ -1,251 +1,354 @@
+using System.Text;
 using System.Text.RegularExpressions;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Options;
-using Sidekick.Common;
+using Sidekick.Data.BaseItemTypes;
 using Sidekick.Data.Cli.GraphQl;
 using Sidekick.Data.Cli.GraphQl.Models;
-using Sidekick.Data.Cli.Ninja;
+using Sidekick.Data.Cli.ItemClasses.Responses;
+using Sidekick.Data.Cli.ItemDefinitions.Responses;
 using Sidekick.Data.ItemDefinitions;
 using Sidekick.Data.Languages;
+using Sidekick.Data.Ninja;
+using Sidekick.Data.Trade;
 
 namespace Sidekick.Data.Cli.ItemDefinitions;
 
 public class ItemDefinitionBuilder(
     ILogger<ItemDefinitionBuilder> logger,
-    IOptions<SidekickConfiguration> configuration,
-    DataProvider dataProvider,
-    IGameLanguageProvider gameLanguageProvider,
-    GraphQlClient graphQlClient,
-    NinjaDownloader ninjaDownloader)
+    DbContextOptions<DataDbContext> dbContextOptions,
+    GraphQlClient graphQlClient)
 {
     private static readonly Dictionary<string, string> BaseItemToTradeItemMappings = new()
     {
-        { "Metadata/Items/Maps/MapKeyTier1", "Metadata/Items/TradeProxy/MapKey" }, // (PoE1) Maps are not on the trade, we map them to the main Map item.
-        { "Metadata/Items/Maps/MapKeyTier2", "Metadata/Items/TradeProxy/MapKey" }, // (PoE1) Maps are not on the trade, we map them to the main Map item.
-        { "Metadata/Items/Maps/MapKeyTier3", "Metadata/Items/TradeProxy/MapKey" }, // (PoE1) Maps are not on the trade, we map them to the main Map item.
-        { "Metadata/Items/Maps/MapKeyTier4", "Metadata/Items/TradeProxy/MapKey" }, // (PoE1) Maps are not on the trade, we map them to the main Map item.
-        { "Metadata/Items/Maps/MapKeyTier5", "Metadata/Items/TradeProxy/MapKey" }, // (PoE1) Maps are not on the trade, we map them to the main Map item.
-        { "Metadata/Items/Maps/MapKeyTier6", "Metadata/Items/TradeProxy/MapKey" }, // (PoE1) Maps are not on the trade, we map them to the main Map item.
-        { "Metadata/Items/Maps/MapKeyTier7", "Metadata/Items/TradeProxy/MapKey" }, // (PoE1) Maps are not on the trade, we map them to the main Map item.
-        { "Metadata/Items/Maps/MapKeyTier8", "Metadata/Items/TradeProxy/MapKey" }, // (PoE1) Maps are not on the trade, we map them to the main Map item.
-        { "Metadata/Items/Maps/MapKeyTier9", "Metadata/Items/TradeProxy/MapKey" }, // (PoE1) Maps are not on the trade, we map them to the main Map item.
-        { "Metadata/Items/Maps/MapKeyTier10", "Metadata/Items/TradeProxy/MapKey" }, // (PoE1) Maps are not on the trade, we map them to the main Map item.
-        { "Metadata/Items/Maps/MapKeyTier11", "Metadata/Items/TradeProxy/MapKey" }, // (PoE1) Maps are not on the trade, we map them to the main Map item.
-        { "Metadata/Items/Maps/MapKeyTier12", "Metadata/Items/TradeProxy/MapKey" }, // (PoE1) Maps are not on the trade, we map them to the main Map item.
-        { "Metadata/Items/Maps/MapKeyTier13", "Metadata/Items/TradeProxy/MapKey" }, // (PoE1) Maps are not on the trade, we map them to the main Map item.
-        { "Metadata/Items/Maps/MapKeyTier14", "Metadata/Items/TradeProxy/MapKey" }, // (PoE1) Maps are not on the trade, we map them to the main Map item.
-        { "Metadata/Items/Maps/MapKeyTier15", "Metadata/Items/TradeProxy/MapKey" }, // (PoE1) Maps are not on the trade, we map them to the main Map item.
-        { "Metadata/Items/Maps/MapKeyTier16", "Metadata/Items/TradeProxy/MapKey" }, // (PoE1) Maps are not on the trade, we map them to the main Map item.
-        { "Metadata/Items/TradeProxy/BlightedMap", "Metadata/Items/TradeProxy/MapKey" }, // (PoE1) Maps are not on the trade, we map them to the main Map item.
-        { "Metadata/Items/TradeProxy/UberBlightedMap", "Metadata/Items/TradeProxy/MapKey" }, // (PoE1) Maps are not on the trade, we map them to the main Map item.
+        { "Metadata/Items/Maps/MapKeyTier1", "Metadata/Items/TradeProxy/MapKey" },
+        { "Metadata/Items/Maps/MapKeyTier2", "Metadata/Items/TradeProxy/MapKey" },
+        { "Metadata/Items/Maps/MapKeyTier3", "Metadata/Items/TradeProxy/MapKey" },
+        { "Metadata/Items/Maps/MapKeyTier4", "Metadata/Items/TradeProxy/MapKey" },
+        { "Metadata/Items/Maps/MapKeyTier5", "Metadata/Items/TradeProxy/MapKey" },
+        { "Metadata/Items/Maps/MapKeyTier6", "Metadata/Items/TradeProxy/MapKey" },
+        { "Metadata/Items/Maps/MapKeyTier7", "Metadata/Items/TradeProxy/MapKey" },
+        { "Metadata/Items/Maps/MapKeyTier8", "Metadata/Items/TradeProxy/MapKey" },
+        { "Metadata/Items/Maps/MapKeyTier9", "Metadata/Items/TradeProxy/MapKey" },
+        { "Metadata/Items/Maps/MapKeyTier10", "Metadata/Items/TradeProxy/MapKey" },
+        { "Metadata/Items/Maps/MapKeyTier11", "Metadata/Items/TradeProxy/MapKey" },
+        { "Metadata/Items/Maps/MapKeyTier12", "Metadata/Items/TradeProxy/MapKey" },
+        { "Metadata/Items/Maps/MapKeyTier13", "Metadata/Items/TradeProxy/MapKey" },
+        { "Metadata/Items/Maps/MapKeyTier14", "Metadata/Items/TradeProxy/MapKey" },
+        { "Metadata/Items/Maps/MapKeyTier15", "Metadata/Items/TradeProxy/MapKey" },
+        { "Metadata/Items/Maps/MapKeyTier16", "Metadata/Items/TradeProxy/MapKey" },
+        { "Metadata/Items/TradeProxy/BlightedMap", "Metadata/Items/TradeProxy/MapKey" },
+        { "Metadata/Items/TradeProxy/UberBlightedMap", "Metadata/Items/TradeProxy/MapKey" },
     };
 
-    public async Task Build(IGameLanguage language)
+    public async Task Build(GameType game, IGameLanguage language)
     {
-        try
-        {
-            await BuildForGame(GameType.PathOfExile1, language);
-            await BuildForGame(GameType.PathOfExile2, language);
-        }
-        catch (Exception ex)
-        {
-            if (configuration.Value.ApplicationType == SidekickApplicationType.DataBuilder || configuration.Value.ApplicationType == SidekickApplicationType.Test)
-                throw;
-            logger.LogError(ex, "Failed to build items data.");
-        }
-    }
+        await using var dbContext = new DataDbContext(dbContextOptions);
+        dbContext.ItemDefinitions.RemoveRange(
+            dbContext.ItemDefinitions.Where(x => x.Game == game && x.Language == language.Code));
+        await dbContext.SaveChangesAsync();
 
-    private async Task BuildForGame(GameType game, IGameLanguage language)
-    {
-        var tradeItems = await GetTradeItems(game, language);
-        var baseItems = await GetBaseItems(game, language);
-        var uniqueItems = await GetUniqueItems(game, language);
-        var ninjaItems = new List<NinjaItemDefinition>(); //await ninjaDownloader.GetDefinitions(game);
+        // Load data from database (Trade, Ninja) and GraphQL (BaseItems)
+        var tradeItems = await dbContext.TradeItems
+            .Include(x => x.Category)
+            .Include(x => x.StaticItem)
+            .Where(x => x.Game == game && x.Language == language.Code)
+            .ToListAsync();
+        var baseItems = await GetBaseItems(dbContext, game, language);
+        var uniqueItems = await GetOrCreateUniqueItems(game, language);
+        var ninjaStashItems = await dbContext.NinjaStashItems
+            .Where(x => x.Game == game)
+            .Include(x => x.TradeStats)
+            .Include(x => x.MutatedStats)
+            .ToListAsync();
+        var ninjaExchangeItems = await dbContext.NinjaExchangeItems
+            .Where(x => x.Game == game)
+            .ToListAsync();
 
-        var list = new List<ItemDefinition>();
+        // 1. Process trade items - match with base/unique/ninja
         foreach (var tradeItem in tradeItems)
         {
-            var baseItem = baseItems.FirstOrDefault(x => !string.IsNullOrEmpty(tradeItem.Text) && x.Name == tradeItem.Text);
-            baseItem ??= baseItems.FirstOrDefault(x => x.Name == tradeItem.Type);
+            var baseItem = FindMatchingBaseItem(baseItems, tradeItem);
             var uniqueItem = uniqueItems.FirstOrDefault(x => x.Name == tradeItem.Name);
-            list.Add(new ItemDefinition
+
+            dbContext.ItemDefinitions.Add(new ItemDefinitionEntity
             {
-                TradeItem = tradeItem, BaseItem = baseItem, UniqueItem = uniqueItem,
-                NinjaItems = GetNinjaItems(tradeItem, baseItem, uniqueItem),
-                NamePattern = GetNamePattern(tradeItem),
-                TypePattern = GetTypePattern(tradeItem.Type, uniqueItem != null),
-                TextPattern = GetTextPattern(tradeItem, uniqueItem != null),
+                SidekickId = Guid.NewGuid(),
+                Game = game,
+                Language = language.Code,
+                TradeItemId = tradeItem.SidekickId,
+                BaseItemId = baseItem?.SidekickId,
+                UniqueItemId = uniqueItem?.SidekickId,
+                NamePattern = GetNamePatternString(tradeItem),
+                TypePattern = GetTypePatternString(tradeItem.Type, uniqueItem != null),
+                TextPattern = GetTextPatternString(tradeItem, uniqueItem != null),
+                NinjaExchangeItem = FindMatchingNinjaExchangeItem(ninjaExchangeItems, tradeItem),
+                NinjaStashItems = FindMatchingNinjaStashItems(ninjaStashItems, tradeItem, baseItem, uniqueItem),
             });
         }
 
+        // 2. Process base items that don't have a trade item
         foreach (var baseItem in baseItems)
         {
-            if (list.Any(x => x.BaseItem == baseItem)) continue;
-            var tradeItem = tradeItems.FirstOrDefault(x => x.Type == baseItem.Name);
-            tradeItem ??= tradeItems.FirstOrDefault(x => x.Name == baseItem.Name);
-            tradeItem ??= tradeItems.FirstOrDefault(x => x.Text == baseItem.Name);
-            if (tradeItem == null && baseItem.Id != null && BaseItemToTradeItemMappings.TryGetValue(baseItem.Id, out var mapping))
+            if (definitions.Any(x => x.BaseItemId == baseItem.SidekickId)) continue;
+
+            var tradeItem = FindMatchingTradeItem(baseItem, tradeItems, baseItems);
+            var (ninjaStashItem, ninjaExchangeItem) =
+                FindMatchingNinjaItems(tradeItem, baseItem, null, ninjaStashItems, ninjaExchangeItems);
+
+            var entity = new ItemDefinitionEntity
             {
-                var baseItemMapping = baseItems.FirstOrDefault(x => x.Id == mapping);
-                if (baseItemMapping != null)
-                {
-                    tradeItem ??= tradeItems.FirstOrDefault(x => x.Type == baseItemMapping.Name);
-                    tradeItem ??= tradeItems.FirstOrDefault(x => x.Name == baseItemMapping.Name);
-                    tradeItem ??= tradeItems.FirstOrDefault(x => x.Text == baseItemMapping.Name);
-                }
+                SidekickId = Guid.NewGuid(),
+                Game = game,
+                Language = language.Code,
+                TradeItemId = tradeItem?.SidekickId,
+                BaseItemId = baseItem.SidekickId,
+                NinjaStashItemId = ninjaStashItem?.SidekickId,
+                NinjaExchangeItemId = ninjaExchangeItem?.SidekickId,
+                TypePattern = tradeItem == null ? null : GetTypePatternString(baseItem.Name, false),
+            };
+            definitions.Add(entity);
+        }
+
+        // Upsert: remove existing for this game/language, then add new
+        var existing = await dbContext.ItemDefinitions
+            .Where(x => x.Game == game && x.Language == language.Code)
+            .ToListAsync();
+
+        if (existing.Count > 0)
+        {
+            dbContext.ItemDefinitions.RemoveRange(existing);
+        }
+
+        await dbContext.ItemDefinitions.AddRangeAsync(definitions);
+        await dbContext.SaveChangesAsync();
+
+        logger.LogInformation("[ItemDefinitionBuilder] Saved {Count} item definitions for {Game}/{Lang}",
+            definitions.Count, game, language.Code);
+    }
+
+    private BaseItemType? FindMatchingBaseItem(List<BaseItemType> baseItems, TradeItem tradeItem)
+    {
+        BaseItemType? baseItem = null;
+        if (!string.IsNullOrEmpty(tradeItem.Text)) baseItem ??= baseItems.FirstOrDefault(x => x.Name == tradeItem.Text);
+        baseItem ??= baseItems.FirstOrDefault(x => x.Name == tradeItem.Type);
+        return baseItem;
+    }
+
+    private TradeItem? FindMatchingTradeItem(BaseItemType baseItem, List<TradeItem> tradeItems,
+        List<BaseItemType> baseItems)
+    {
+        var tradeItem = tradeItems.FirstOrDefault(x => x.Type == baseItem.Name);
+        tradeItem ??= tradeItems.FirstOrDefault(x => x.Name == baseItem.Name);
+        tradeItem ??= tradeItems.FirstOrDefault(x => x.Text == baseItem.Name);
+
+        if (tradeItem == null && baseItem.Id != null &&
+            BaseItemToTradeItemMappings.TryGetValue(baseItem.Id, out var mapping))
+        {
+            var baseItemMapping = baseItems.FirstOrDefault(x => x.Id == mapping);
+            if (baseItemMapping != null)
+            {
+                tradeItem ??= tradeItems.FirstOrDefault(x => x.Type == baseItemMapping.Name);
+                tradeItem ??= tradeItems.FirstOrDefault(x => x.Name == baseItemMapping.Name);
+                tradeItem ??= tradeItems.FirstOrDefault(x => x.Text == baseItemMapping.Name);
             }
-            list.Add(new ItemDefinition
+        }
+
+        return tradeItem;
+    }
+
+    private NinjaExchangeItem? FindMatchingNinjaExchangeItem(
+        List<NinjaExchangeItem> ninjaExchangeItems,
+        TradeItem? tradeItem)
+    {
+        if (tradeItem?.StaticItem == null) return null;
+        return ninjaExchangeItems.FirstOrDefault(x => x.Id == tradeItem.StaticItem.Id);
+    }
+
+    private IEnumerable<NinjaStashItem> FindMatchingNinjaStashItems(
+        List<NinjaStashItem> ninjaStashItems,
+        TradeItem? tradeItem,
+        BaseItemType? baseItem,
+        UniqueItemEntity? uniqueItem)
+    {
+        if (language.Code != gameLanguageProvider.InvariantLanguage.Code) yield break;
+
+        foreach (var ninjaItem in ninjaStashItems)
+        {
+            // Unique items, support for foulborn uniques
+            if (uniqueItem != null)
             {
-                TradeItem = tradeItem, BaseItem = baseItem,
-                NinjaItems = GetNinjaItems(tradeItem, baseItem, null),
-                TypePattern = tradeItem == null ? null : GetTypePattern(baseItem.Name, false),
-            });
-        }
-
-        await dataProvider.Write(game, DataType.Items, language, list);
-
-        return;
-
-        Regex? GetNamePattern(TradeItemDefinition? tradeItem)
-        {
-            if (string.IsNullOrEmpty(tradeItem?.Name)) return null;
-            return new Regex($"^{Regex.Escape(tradeItem.Name)}|{Regex.Escape(tradeItem.Name)}$");
-        }
-
-        Regex? GetTypePattern(string? type, bool isUnique)
-        {
-            if (string.IsNullOrEmpty(type) || isUnique) return null;
-            return new Regex($@"(?<!\\p{{L}}){Regex.Escape(type)}(?!\\p{{L}})");
-        }
-
-        Regex? GetTextPattern(TradeItemDefinition? tradeItem, bool isUnique)
-        {
-            if (string.IsNullOrEmpty(tradeItem?.Text) || tradeItem.Text == tradeItem.Type || isUnique) return null;
-            return new Regex(Regex.Escape(tradeItem.Text));
-        }
-
-        List<NinjaItemDefinition>? GetNinjaItems(TradeItemDefinition? tradeItem, BaseItemDefinition? baseItem, UniqueItemDefinition? uniqueItem)
-        {
-            if (language.Code != gameLanguageProvider.InvariantLanguage.Code) return null;
-            var result = new List<NinjaItemDefinition>();
-            foreach (var ninjaItem in ninjaItems)
-            {
-                if (tradeItem != null && ninjaItem.Exchange?.Id != null && ninjaItem.Exchange.Id == tradeItem.Id) result.Add(ninjaItem);
-                else if (uniqueItem != null && ninjaItem.Stash?.Name != null && (ninjaItem.Stash.Name == uniqueItem.Name || ninjaItem.Stash.Name == $"Foulborn {uniqueItem.Name}")) result.Add(ninjaItem);
-                else if (tradeItem is { Text: not null, Name: null } && ninjaItem.Stash?.Name == tradeItem.Text) result.Add(ninjaItem);
-                else if (baseItem != null && ninjaItem.Stash?.Name != null && (ninjaItem.Stash.Name == baseItem.Name || (baseItem.Name == "Map (Tier 16)" && ninjaItem.Stash.Name == "Al-Hezmin Map (Tier 16)") || (baseItem.Name == "Map (Tier 16)" && ninjaItem.Stash.Name == "Baran Map (Tier 16)") || (baseItem.Name == "Map (Tier 16)" && ninjaItem.Stash.Name == "Drox Map (Tier 16)") || (baseItem.Name == "Map (Tier 16)" && ninjaItem.Stash.Name == "Veritania Map (Tier 16)") || (baseItem.Name == "Map (Tier 16)" && ninjaItem.Stash.Name == "The Constrictor Map (Tier 16)") || (baseItem.Name == "Map (Tier 16)" && ninjaItem.Stash.Name == "The Enslaver Map (Tier 16)") || (baseItem.Name == "Map (Tier 16)" && ninjaItem.Stash.Name == "The Eradicator Map (Tier 16)") || (baseItem.Name == "Map (Tier 16)" && ninjaItem.Stash.Name == "The Purifier Map (Tier 16)") || (baseItem.Name == "Blighted Map" && ninjaItem.Stash.Name.StartsWith("Blighted Map (Tier ")) || (baseItem.Name == "Blight-ravaged Map" && ninjaItem.Stash.Name == "Blight-ravaged Map (Tier 16)"))) result.Add(ninjaItem);
-                else if (baseItem != null && ninjaItem.Stash?.BaseType != null && ninjaItem.Type != "UniqueJewel" && ninjaItem.Stash.BaseType == baseItem.Name && baseItem.Name is "Small Cluster Jewel" or "Medium Cluster Jewel" or "Large Cluster Jewel") result.Add(ninjaItem);
-                else if (ninjaItem.Stash?.Name == (baseItem?.Name ?? tradeItem?.Type)) result.Add(ninjaItem);
+                if (ninjaItem.Name != null &&
+                    (
+                        ninjaItem.Name == uniqueItem.Name ||
+                        ninjaItem.Name == $"Foulborn {uniqueItem.Name}"
+                    )) yield return ninjaItem;
             }
-            return result.Count == 0 ? null : result;
+
+            // Text comparison, support for transfigured gems
+            else if (tradeItem is
+                     {
+                         Text: not null,
+                         Name: null,
+                     })
+            {
+                if (ninjaItem.Name != null &&
+                    ninjaItem.Name == tradeItem.Text) yield return ninjaItem;
+            }
+
+            // Base items, support for maps
+            else if (baseItem != null &&
+                     ninjaItem.Name != null &&
+                     (
+                         ninjaItem.Name == baseItem.Name ||
+                         (baseItem.Name == "Map (Tier 16)" && ninjaItem.Name == "Al-Hezmin Map (Tier 16)") ||
+                         (baseItem.Name == "Map (Tier 16)" && ninjaItem.Name == "Baran Map (Tier 16)") ||
+                         (baseItem.Name == "Map (Tier 16)" && ninjaItem.Name == "Drox Map (Tier 16)") ||
+                         (baseItem.Name == "Map (Tier 16)" && ninjaItem.Name == "Veritania Map (Tier 16)") ||
+                         (baseItem.Name == "Map (Tier 16)" && ninjaItem.Name == "The Constrictor Map (Tier 16)") ||
+                         (baseItem.Name == "Map (Tier 16)" && ninjaItem.Name == "The Enslaver Map (Tier 16)") ||
+                         (baseItem.Name == "Map (Tier 16)" && ninjaItem.Name == "The Eradicator Map (Tier 16)") ||
+                         (baseItem.Name == "Map (Tier 16)" && ninjaItem.Name == "The Purifier Map (Tier 16)") ||
+                         (baseItem.Name == "Blighted Map" && ninjaItem.Name.StartsWith("Blighted Map (Tier ")) ||
+                         (baseItem.Name == "Blight-ravaged Map" && ninjaItem.Name == "Blight-ravaged Map (Tier 16)")
+                     )) yield return ninjaItem;
+
+            // Cluster jewel support
+            else if (baseItem != null &&
+                     ninjaItem.BaseType != null &&
+                     ninjaItem.Type != "UniqueJewel" &&
+                     ninjaItem.BaseType == baseItem.Name &&
+                     baseItem.Name is "Small Cluster Jewel" or "Medium Cluster Jewel" or "Large Cluster Jewel")
+                yield return ninjaItem;
+
+            // Name match
+            else if (ninjaItem.Name == (baseItem?.Name ?? tradeItem?.Type)) yield return ninjaItem;
         }
     }
 
-    private record StaticItem(string Id, string? Text, string? Image);
 
-    private async Task<List<StaticItem>> GetStaticDictionary(GameType game, IGameLanguage language)
+    private async Task<List<BaseItemType>> GetBaseItems(DataDbContext dbContext, GameType game,
+        IGameLanguage language)
     {
-        return [];
-        // var raw = await dataProvider.Read<RawTradeResult<List<RawTradeStaticItemCategory>>>(game, DataType.RawTradeStatic, language);
-        // var result = new List<StaticItem>();
-        // foreach (var category in raw.Result)
-        //     foreach (var entry in category.Entries)
-        //     {
-        //         if (entry.Id == null! || entry.Text == null || entry.Id == "sep") continue;
-        //         var image = string.IsNullOrEmpty(entry.Image) ? null : $"https://web.poecdn.com{entry.Image}";
-        //         result.Add(new StaticItem(entry.Id, entry.Text, image));
-        //     }
-        // return result;
-    }
+        dbContext.BaseItems.RemoveRange(dbContext.BaseItems.Where(x => x.Game == game && x.Language == language.Code));
+        await dbContext.SaveChangesAsync();
 
-    private async Task<List<TradeItemDefinition>> GetTradeItems(GameType game, IGameLanguage language)
-    {
-        return [];
-        // var itemsResult = await dataProvider.Read<RawTradeResult<List<RawTradeItemCategory>>>(game, DataType.RawTradeItems, language);
-        // var staticItems = await GetStaticDictionary(game, language);
-        // StaticItem? GetStatic(string? name, string? type)
-        // {
-        //     var data = !string.IsNullOrEmpty(name) ? staticItems.FirstOrDefault(x => x.Text == name) : null;
-        //     data ??= !string.IsNullOrEmpty(type) ? staticItems.FirstOrDefault(x => x.Text == type) : null;
-        //     return data;
-        // }
-        // var result = new List<TradeItemDefinition>();
-        // foreach (var category in itemsResult.Result)
-        //     foreach (var entry in category.Entries)
-        //     {
-        //         var staticItem = GetStatic(entry.Name, entry.Type);
-        //         var text = staticItem?.Text ?? entry.Text;
-        //         if (text == entry.Name || text == entry.Type) text = null;
-        //         if (entry.Discriminator == "legacy") continue;
-        //         result.Add(new TradeItemDefinition() { Id = staticItem?.Id, Image = staticItem?.Image, Name = entry.Name, Type = entry.Type, Text = text, Category = category.Id, Discriminator = entry.Discriminator });
-        //     }
-        // return result;
-    }
-
-    private async Task<List<BaseItemDefinition>> GetBaseItems(GameType game, IGameLanguage language)
-    {
-        var lang = GetLanguageName(language.Code);
+        // Fetch from GraphQL
+        var lang = GraphQlClient.GetLanguageName(language.Code);
         var prefix = game == GameType.PathOfExile1 ? "poe1" : "poe2";
 
-        var query = $"query {{ {prefix}_baseItemTypes(lang: \"{lang}\") {{ _index id name itemClassesKey itemClass dropLevel }} }}";
-        var result = await graphQlClient.QueryAsync<BaseItemTypesResponse>(query);
-        var graphItems = game == GameType.PathOfExile1 ? result?.Poe1BaseItemTypes : result?.Poe2BaseItemTypes;
+        var query = $@"
+          query {{
+            {prefix}_baseItemTypes(lang: ""{lang}"") {{
+              {GraphQlItemClass.GraphQlQueryProperties}
+            }}
+          }}";
+        var result = await graphQlClient.QueryAsync<GraphQlBaseItemTypesResponse>(query);
+        var graphItems = result?.Poe1BaseItemTypes ?? result?.Poe2BaseItemTypes;
         if (graphItems == null || graphItems.Count == 0)
         {
-            logger.LogWarning("[ItemDefinitionBuilder] No base items from GraphQL for {Game}/{Lang}", game, language.Code);
-            return new List<BaseItemDefinition>();
+            logger.LogWarning("[ItemDefinitionBuilder] No base items from GraphQL for {Game}/{Lang}", game,
+                language.Code);
+            return [];
         }
 
-        var armourQuery = $"query {{ {prefix}_armourTypes(lang: \"{lang}\") {{ baseItemTypesKey armourMin armourMax evasionMin evasionMax energyShieldMin energyShieldMax wardMin wardMax }} }}";
-        var armourResult = await graphQlClient.QueryAsync<ArmourTypesResponse>(armourQuery);
-        var armourItems = game == GameType.PathOfExile1 ? armourResult?.Poe1ArmourTypes : armourResult?.Poe2ArmourTypes;
-        var armourLookup = armourItems?.ToDictionary(a => a.BaseItemTypesKey, a => a) ?? new Dictionary<int, GraphQlArmourType>();
+        var armourQuery = $@"
+          query {{
+            {prefix}_armourTypes(lang: ""{lang}"") {{
+              {GraphQlArmourType.GraphQlQueryProperties}
+            }}
+          }}";
+        var armourResult = await graphQlClient.QueryAsync<GraphQlArmourTypesResponse>(armourQuery);
+        var armourItems = armourResult?.Poe1ArmourTypes ?? armourResult?.Poe2ArmourTypes;
+        var armourLookup = armourItems?.ToDictionary(a => a.BaseItem.Id, a => a) ?? new();
 
-        var baseItemDefinitions = new List<BaseItemDefinition>();
+        var requirementQuery = $@"
+          query {{
+            {prefix}_componentAttributeRequirements(lang: ""{lang}"") {{
+              {GraphQlAttributeRequirement.GraphQlQueryProperties}
+            }}
+          }}";
+        var requirementResult = await graphQlClient.QueryAsync<GraphQlAttributeRequirementsResponse>(requirementQuery);
+        var requirementItems =
+            requirementResult?.Poe1AttributeRequirements ?? requirementResult?.Poe2AttributeRequirements;
+        var requirementLookup = requirementItems?.ToDictionary(a => a.BaseItemId, a => a) ?? new();
+
+        var entities = new List<BaseItemType>();
         foreach (var item in graphItems)
         {
             if (string.IsNullOrEmpty(item.Name)) continue;
-            var itemClassId = ResolveItemClassId(game, item);
-            BaseItemProperties? properties = null;
-            BaseItemRequirements? requirements = null;
-            if (armourLookup.TryGetValue(item.Index, out var armour))
+            var entity = new BaseItemType
             {
-                properties = new BaseItemProperties
-                {
-                    Armour = armour.ArmourMin.HasValue || armour.ArmourMax.HasValue ? new BaseItemPropertyValues { Min = armour.ArmourMin, Max = armour.ArmourMax } : null,
-                    EnergyShield = armour.EnergyShieldMin.HasValue || armour.EnergyShieldMax.HasValue ? new BaseItemPropertyValues { Min = armour.EnergyShieldMin, Max = armour.EnergyShieldMax } : null,
-                    Evasion = armour.EvasionMin.HasValue || armour.EvasionMax.HasValue ? new BaseItemPropertyValues { Min = armour.EvasionMin, Max = armour.EvasionMax } : null,
-                    Ward = armour.WardMin.HasValue || armour.WardMax.HasValue ? new BaseItemPropertyValues { Min = armour.WardMin, Max = armour.WardMax } : null,
-                };
-                requirements = new BaseItemRequirements { Level = item.DropLevel ?? 0 };
-            }
-            else if (item.DropLevel.HasValue)
+                SidekickId = Guid.NewGuid(),
+                Game = game,
+                Language = language.Code,
+                Id = item.Id,
+                Name = item.Name,
+                DropLevel = item.DropLevel ?? 0,
+            };
+
+            if (armourLookup.TryGetValue(item.Id, out var armour))
             {
-                requirements = new BaseItemRequirements { Level = item.DropLevel.Value };
+                entity.ArmourMin = armour.ArmourMin;
+                entity.ArmourMax = armour.ArmourMax;
+                entity.EnergyShieldMin = armour.EnergyShieldMin;
+                entity.EnergyShieldMax = armour.EnergyShieldMax;
+                entity.EvasionMin = armour.EvasionMin;
+                entity.EvasionMax = armour.EvasionMax;
+                entity.WardMin = armour.WardMin;
+                entity.WardMax = armour.WardMax;
             }
-            baseItemDefinitions.Add(new BaseItemDefinition() { Id = item.Id, Name = item.Name, ItemClassId = itemClassId, Requirements = requirements, Properties = properties });
+
+            if (requirementLookup.TryGetValue(item.Id, out var requirement))
+            {
+                entity.RequiresDexterity = requirement.RequiresDexterity;
+                entity.RequiresIntelligence = requirement.RequiresIntelligence;
+                entity.RequiresStrength = requirement.RequiresStrength;
+            }
+
+            entities.Add(entity);
         }
-        return baseItemDefinitions;
+
+        dbContext.BaseItems.AddRange(entities);
+        await dbContext.SaveChangesAsync();
+        logger.LogInformation("[ItemDefinitionBuilder] Created {Count} base items for {Game}/{Lang}", entities.Count,
+            game, language.Code);
+        return entities;
     }
 
-    private async Task<List<UniqueItemDefinition>> GetUniqueItems(GameType game, IGameLanguage language)
+    private async Task<List<UniqueItemEntity>> GetUniqueItems(DataDbContext dbContext, GameType game, IGameLanguage language)
     {
-        logger.LogDebug("[ItemDefinitionBuilder] Unique items not available from GraphQL API for {Game}/{Lang}.", game, language.Code);
-        return new List<UniqueItemDefinition>();
+        // Unique items not available from GraphQL API yet
+        logger.LogDebug("[ItemDefinitionBuilder] Unique items not available from GraphQL API for {Game}/{Lang}.", game,
+            language.Code);
+        return [];
     }
 
-    private static string? ResolveItemClassId(GameType game, GraphQlBaseItem item)
+    private static string? GetNamePatternString(TradeItem? tradeItem)
     {
-        if (game == GameType.PathOfExile1)
-            return item.ItemClassesKey.HasValue ? item.ItemClassesKey.Value.ToString() : null;
-        else
-            return item.ItemClass.HasValue ? item.ItemClass.Value.ToString() : null;
+        if (string.IsNullOrEmpty(tradeItem?.Name)) return null;
+        return $"^{Regex.Escape(tradeItem.Name)}|{Regex.Escape(tradeItem.Name)}$";
     }
 
-    private static string GetLanguageName(string code) => code switch
+    private static string? GetTypePatternString(string? type, bool isUnique)
     {
-        "en" => "English", "de" => "German", "es" => "Spanish", "fr" => "French",
-        "ja" => "Japanese", "ko" => "Korean", "pt" => "Portuguese", "ru" => "Russian",
-        "th" => "Thai", "zh" => "Traditional Chinese", _ => "English",
-    };
+        if (string.IsNullOrEmpty(type) || isUnique) return null;
+        return $@"(?<!\p{{L}}){Regex.Escape(type)}(?!\p{{L}})";
+    }
+
+    private static string? GetTextPatternString(TradeItem? tradeItem, bool isUnique)
+    {
+        if (string.IsNullOrEmpty(tradeItem?.Text) || tradeItem.Text == tradeItem.Type || isUnique) return null;
+        return Regex.Escape(tradeItem.Text);
+    }
+
+    private string GetInvariantKey(UniqueItemEntity? uniqueItem, TradeItem? tradeItem, BaseItemType? baseItem)
+    {
+        var key = new StringBuilder();
+        if (!string.IsNullOrEmpty(uniqueItem?.Id)) key.Append(uniqueItem.Id);
+        if (!string.IsNullOrEmpty(tradeItem?.StaticItem?.Id)) key.Append(tradeItem.StaticItem.Id);
+        if (!string.IsNullOrEmpty(tradeItem?.Discriminator)) key.Append(tradeItem.Discriminator);
+        if (!string.IsNullOrEmpty(baseItem?.Id)) key.Append(baseItem.Id);
+        return key.ToString();
+    }
 }

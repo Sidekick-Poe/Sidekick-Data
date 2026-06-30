@@ -22,5 +22,5 @@ public class NinjaStashTradeStat
     public Guid StashItemId { get; set; }
 
     [ForeignKey(nameof(StashItemId))]
-    public NinjaStashItem? StashItem { get; set; }
+    public NinjaStashItem StashItem { get; set; } = null!;
 }

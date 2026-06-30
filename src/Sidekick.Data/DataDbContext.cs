@@ -1,8 +1,11 @@
 using Microsoft.EntityFrameworkCore;
+using Sidekick.Data.BaseItems;
 using Sidekick.Data.ItemClasses;
+using Sidekick.Data.ItemDefinitions;
 using Sidekick.Data.Ninja;
 using Sidekick.Data.StatsInvariant;
 using Sidekick.Data.Trade;
+using Sidekick.Data.Uniques;
 
 namespace Sidekick.Data;
 
@@ -45,4 +48,20 @@ public sealed class DataDbContext : DbContext
     public DbSet<TradeFilterCategory> TradeFilterCategories => Set<TradeFilterCategory>();
     public DbSet<TradeFilterOption> TradeFilterOptions => Set<TradeFilterOption>();
 
+    // Item Definitions
+    public DbSet<ItemDefinitionEntity> ItemDefinitions => Set<ItemDefinitionEntity>();
+    public DbSet<BaseItem> BaseItems => Set<BaseItem>();
+    public DbSet<UniqueItem> UniqueItems => Set<UniqueItem>();
+
+    protected override void OnModelCreating(ModelBuilder modelBuilder)
+    {
+        base.OnModelCreating(modelBuilder);
+
+        foreach (var foreignKey in modelBuilder.Model
+                     .GetEntityTypes()
+                     .SelectMany(entityType => entityType.GetForeignKeys()))
+        {
+            foreignKey.DeleteBehavior = DeleteBehavior.Cascade;
+        }
+    }
 }

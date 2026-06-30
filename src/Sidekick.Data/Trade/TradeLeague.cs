@@ -5,6 +5,7 @@ using Microsoft.EntityFrameworkCore;
 namespace Sidekick.Data.Trade;
 
 [Table("TradeLeagues")]
+[Index(nameof(Game), nameof(Language), nameof(Id))]
 public class TradeLeague
 {
     [Key]

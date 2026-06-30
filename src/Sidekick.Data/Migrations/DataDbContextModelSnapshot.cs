@@ -17,6 +17,111 @@ namespace Sidekick.Data.Migrations
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "8.0.21");
 
+            modelBuilder.Entity("ItemDefinitionEntityNinjaStashItem", b =>
+                {
+                    b.Property<Guid>("ItemDefinitionsSidekickId")
+                        .HasColumnType("TEXT");
+
+                    b.Property<Guid>("NinjaStashItemsSidekickId")
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("ItemDefinitionsSidekickId", "NinjaStashItemsSidekickId");
+
+                    b.HasIndex("NinjaStashItemsSidekickId");
+
+                    b.ToTable("ItemDefinitionEntityNinjaStashItem");
+                });
+
+            modelBuilder.Entity("Sidekick.Data.BaseItems.BaseItem", b =>
+                {
+                    b.Property<Guid>("SidekickId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("TEXT");
+
+                    b.Property<int>("ArmourMax")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("ArmourMin")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<double>("AttacksPerSecond")
+                        .HasColumnType("REAL");
+
+                    b.Property<int>("Block")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<double>("CriticalHitChance")
+                        .HasColumnType("REAL");
+
+                    b.Property<int>("DropLevel")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("EnergyShieldMax")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("EnergyShieldMin")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("EvasionMax")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("EvasionMin")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<byte>("Game")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("Id")
+                        .HasMaxLength(128)
+                        .HasColumnType("TEXT");
+
+                    b.Property<Guid?>("ItemClassId")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("ItemVisualIdentityId")
+                        .HasMaxLength(256)
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Language")
+                        .IsRequired()
+                        .HasMaxLength(5)
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(256)
+                        .HasColumnType("TEXT");
+
+                    b.Property<int>("PhysicalDamageMax")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("PhysicalDamageMin")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("RequiresDexterity")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("RequiresIntelligence")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("RequiresStrength")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("WardMax")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("WardMin")
+                        .HasColumnType("INTEGER");
+
+                    b.HasKey("SidekickId");
+
+                    b.HasIndex("ItemClassId");
+
+                    b.HasIndex("Game", "Language");
+
+                    b.ToTable("BaseItems");
+                });
+
             modelBuilder.Entity("Sidekick.Data.ItemClasses.ItemClassEntity", b =>
                 {
                     b.Property<Guid>("SidekickId")
@@ -49,6 +154,59 @@ namespace Sidekick.Data.Migrations
                     b.ToTable("ItemClasses");
                 });
 
+            modelBuilder.Entity("Sidekick.Data.ItemDefinitions.ItemDefinitionEntity", b =>
+                {
+                    b.Property<Guid>("SidekickId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("TEXT");
+
+                    b.Property<Guid?>("BaseItemId")
+                        .HasColumnType("TEXT");
+
+                    b.Property<byte>("Game")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("Language")
+                        .IsRequired()
+                        .HasMaxLength(5)
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("NamePattern")
+                        .HasMaxLength(512)
+                        .HasColumnType("TEXT");
+
+                    b.Property<Guid?>("NinjaExchangeItemId")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("TextPattern")
+                        .HasMaxLength(512)
+                        .HasColumnType("TEXT");
+
+                    b.Property<Guid?>("TradeItemId")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("TypePattern")
+                        .HasMaxLength(512)
+                        .HasColumnType("TEXT");
+
+                    b.Property<Guid?>("UniqueItemId")
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("SidekickId");
+
+                    b.HasIndex("BaseItemId");
+
+                    b.HasIndex("NinjaExchangeItemId");
+
+                    b.HasIndex("TradeItemId");
+
+                    b.HasIndex("UniqueItemId");
+
+                    b.HasIndex("Game", "Language");
+
+                    b.ToTable("ItemDefinitions");
+                });
+
             modelBuilder.Entity("Sidekick.Data.Ninja.NinjaExchangeItem", b =>
                 {
                     b.Property<Guid>("SidekickId")
@@ -69,6 +227,11 @@ namespace Sidekick.Data.Migrations
                     b.Property<string>("Type")
                         .IsRequired()
                         .HasMaxLength(64)
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Url")
+                        .IsRequired()
+                        .HasMaxLength(128)
                         .HasColumnType("TEXT");
 
                     b.HasKey("SidekickId");
@@ -117,6 +280,11 @@ namespace Sidekick.Data.Migrations
                     b.Property<string>("Type")
                         .IsRequired()
                         .HasMaxLength(64)
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Url")
+                        .IsRequired()
+                        .HasMaxLength(128)
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Variant")
@@ -362,6 +530,8 @@ namespace Sidekick.Data.Migrations
 
                     b.HasIndex("CategoryId");
 
+                    b.HasIndex("Game", "Language", "Id");
+
                     b.ToTable("TradeFilters");
                 });
 
@@ -388,6 +558,8 @@ namespace Sidekick.Data.Migrations
                         .HasColumnType("TEXT");
 
                     b.HasKey("SidekickId");
+
+                    b.HasIndex("Game", "Language", "Id");
 
                     b.ToTable("TradeFilterCategories");
                 });
@@ -444,6 +616,9 @@ namespace Sidekick.Data.Migrations
                         .HasMaxLength(256)
                         .HasColumnType("TEXT");
 
+                    b.Property<Guid?>("StaticItemId")
+                        .HasColumnType("TEXT");
+
                     b.Property<string>("Text")
                         .HasMaxLength(256)
                         .HasColumnType("TEXT");
@@ -455,6 +630,10 @@ namespace Sidekick.Data.Migrations
                     b.HasKey("SidekickId");
 
                     b.HasIndex("CategoryId");
+
+                    b.HasIndex("StaticItemId");
+
+                    b.HasIndex("Game", "Language");
 
                     b.ToTable("TradeItems");
                 });
@@ -482,6 +661,8 @@ namespace Sidekick.Data.Migrations
                         .HasColumnType("TEXT");
 
                     b.HasKey("SidekickId");
+
+                    b.HasIndex("Game", "Language", "Id");
 
                     b.ToTable("TradeItemCategories");
                 });
@@ -512,6 +693,8 @@ namespace Sidekick.Data.Migrations
                         .HasColumnType("TEXT");
 
                     b.HasKey("SidekickId");
+
+                    b.HasIndex("Game", "Language", "Id");
 
                     b.ToTable("TradeLeagues");
                 });
@@ -553,6 +736,8 @@ namespace Sidekick.Data.Migrations
 
                     b.HasIndex("CategoryId");
 
+                    b.HasIndex("Game", "Language", "Id");
+
                     b.ToTable("TradeStats");
                 });
 
@@ -579,6 +764,8 @@ namespace Sidekick.Data.Migrations
                         .HasColumnType("TEXT");
 
                     b.HasKey("SidekickId");
+
+                    b.HasIndex("Game", "Language", "Id");
 
                     b.ToTable("TradeStatCategories");
                 });
@@ -616,6 +803,8 @@ namespace Sidekick.Data.Migrations
 
                     b.HasIndex("CategoryId");
 
+                    b.HasIndex("Game", "Language", "Id");
+
                     b.ToTable("TradeStaticItems");
                 });
 
@@ -643,7 +832,104 @@ namespace Sidekick.Data.Migrations
 
                     b.HasKey("SidekickId");
 
+                    b.HasIndex("Game", "Language", "Id");
+
                     b.ToTable("TradeStaticItemCategories");
+                });
+
+            modelBuilder.Entity("Sidekick.Data.Uniques.UniqueItem", b =>
+                {
+                    b.Property<Guid>("SidekickId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("TEXT");
+
+                    b.Property<Guid?>("BaseItemId")
+                        .HasColumnType("TEXT");
+
+                    b.Property<byte>("Game")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("Id")
+                        .HasMaxLength(128)
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Image")
+                        .HasMaxLength(512)
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Language")
+                        .IsRequired()
+                        .HasMaxLength(5)
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(256)
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("SidekickId");
+
+                    b.HasIndex("BaseItemId");
+
+                    b.HasIndex("Game", "Language");
+
+                    b.ToTable("UniqueItems");
+                });
+
+            modelBuilder.Entity("ItemDefinitionEntityNinjaStashItem", b =>
+                {
+                    b.HasOne("Sidekick.Data.ItemDefinitions.ItemDefinitionEntity", null)
+                        .WithMany()
+                        .HasForeignKey("ItemDefinitionsSidekickId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Sidekick.Data.Ninja.NinjaStashItem", null)
+                        .WithMany()
+                        .HasForeignKey("NinjaStashItemsSidekickId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("Sidekick.Data.BaseItems.BaseItem", b =>
+                {
+                    b.HasOne("Sidekick.Data.ItemClasses.ItemClassEntity", "ItemClass")
+                        .WithMany()
+                        .HasForeignKey("ItemClassId")
+                        .OnDelete(DeleteBehavior.Cascade);
+
+                    b.Navigation("ItemClass");
+                });
+
+            modelBuilder.Entity("Sidekick.Data.ItemDefinitions.ItemDefinitionEntity", b =>
+                {
+                    b.HasOne("Sidekick.Data.BaseItems.BaseItem", "BaseItem")
+                        .WithMany()
+                        .HasForeignKey("BaseItemId")
+                        .OnDelete(DeleteBehavior.Cascade);
+
+                    b.HasOne("Sidekick.Data.Ninja.NinjaExchangeItem", "NinjaExchangeItem")
+                        .WithMany()
+                        .HasForeignKey("NinjaExchangeItemId")
+                        .OnDelete(DeleteBehavior.Cascade);
+
+                    b.HasOne("Sidekick.Data.Trade.TradeItem", "TradeItem")
+                        .WithMany()
+                        .HasForeignKey("TradeItemId")
+                        .OnDelete(DeleteBehavior.Cascade);
+
+                    b.HasOne("Sidekick.Data.Uniques.UniqueItem", "UniqueItem")
+                        .WithMany()
+                        .HasForeignKey("UniqueItemId")
+                        .OnDelete(DeleteBehavior.Cascade);
+
+                    b.Navigation("BaseItem");
+
+                    b.Navigation("NinjaExchangeItem");
+
+                    b.Navigation("TradeItem");
+
+                    b.Navigation("UniqueItem");
                 });
 
             modelBuilder.Entity("Sidekick.Data.Ninja.NinjaStashMutatedStat", b =>
@@ -698,7 +984,14 @@ namespace Sidekick.Data.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
+                    b.HasOne("Sidekick.Data.Trade.TradeStaticItem", "StaticItem")
+                        .WithMany()
+                        .HasForeignKey("StaticItemId")
+                        .OnDelete(DeleteBehavior.Cascade);
+
                     b.Navigation("Category");
+
+                    b.Navigation("StaticItem");
                 });
 
             modelBuilder.Entity("Sidekick.Data.Trade.TradeStat", b =>
@@ -721,6 +1014,16 @@ namespace Sidekick.Data.Migrations
                         .IsRequired();
 
                     b.Navigation("Category");
+                });
+
+            modelBuilder.Entity("Sidekick.Data.Uniques.UniqueItem", b =>
+                {
+                    b.HasOne("Sidekick.Data.BaseItems.BaseItem", "BaseItem")
+                        .WithMany()
+                        .HasForeignKey("BaseItemId")
+                        .OnDelete(DeleteBehavior.Cascade);
+
+                    b.Navigation("BaseItem");
                 });
 
             modelBuilder.Entity("Sidekick.Data.Ninja.NinjaStashItem", b =>

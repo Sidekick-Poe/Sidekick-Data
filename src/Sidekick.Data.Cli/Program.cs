@@ -3,12 +3,15 @@ using Microsoft.Extensions.DependencyInjection.Extensions;
 using Microsoft.Extensions.Logging;
 using Sidekick.Common;
 using Sidekick.Data;
+using Sidekick.Data.Cli.BaseItems;
 using Sidekick.Data.Cli.GraphQl;
 using Sidekick.Data.Cli.ItemClasses;
 using Sidekick.Data.Cli.Ninja;
 using Sidekick.Data.Cli.StatsInvariant;
 using Sidekick.Data.Cli.Trade;
+using Sidekick.Data.Cli.Uniques;
 using Sidekick.Data.Languages;
+using Sidekick.Game;
 
 #region Services
 
@@ -22,6 +25,7 @@ services.AddLogging(o =>
 });
 
 services.AddSidekickCommon(SidekickApplicationType.DataBuilder);
+services.AddSidekickGame();
 services.AddSidekickData();
 
 services.TryAddSingleton<GraphQlClient>();
@@ -29,6 +33,8 @@ services.TryAddSingleton<NinjaDownloader>();
 services.TryAddSingleton<StatsInvariantBuilder>();
 services.TryAddSingleton<TradeApiDownloader>();
 services.TryAddSingleton<ItemClassBuilder>();
+services.TryAddSingleton<BaseItemBuilder>();
+services.TryAddSingleton<UniqueItemBuilder>();
 
 var serviceProvider = services.BuildServiceProvider();
 var logger = serviceProvider.GetRequiredService<ILogger<Program>>();
@@ -37,6 +43,8 @@ var gameLanguageProvider = serviceProvider.GetRequiredService<IGameLanguageProvi
 var statsInvariantBuilder = serviceProvider.GetRequiredService<StatsInvariantBuilder>();
 var tradeApiDownloader = serviceProvider.GetRequiredService<TradeApiDownloader>();
 var itemClassBuilder = serviceProvider.GetRequiredService<ItemClassBuilder>();
+var baseItemBuilder = serviceProvider.GetRequiredService<BaseItemBuilder>();
+var uniqueItemBuilder = serviceProvider.GetRequiredService<UniqueItemBuilder>();
 
 #endregion
 
@@ -49,7 +57,9 @@ var runPoe1 = false;
 var runPoe2 = false;
 
 var runLanguage = string.Empty;
-var runItems = false;
+var runItemClasses = false;
+var runBaseItems = false;
+var runUniqueItems = false;
 var runStats = false;
 var runTrade = false;
 var runPseudo = false;
@@ -63,8 +73,14 @@ for (var i = 0; i < args.Length; i++)
         case "--language" when i + 1 < args.Length:
             runLanguage = args[++i];
             break;
-        case "--items":
-            runItems = true;
+        case "--item-classes":
+            runItemClasses = true;
+            break;
+        case "--base-items":
+            runBaseItems = true;
+            break;
+        case "--unique-items":
+            runUniqueItems = true;
             break;
         case "--stats":
             runStats = true;
@@ -93,9 +109,11 @@ for (var i = 0; i < args.Length; i++)
     }
 }
 
-if (!runItems && !runStats && !runTrade && !runPseudo && !runNinja)
+if (!runItemClasses && !runBaseItems && !runStats && !runTrade && !runPseudo && !runNinja)
 {
-    runItems = true;
+    runItemClasses = true;
+    runBaseItems = true;
+    runUniqueItems = true;
     runStats = true;
     runTrade = true;
     runPseudo = true;
@@ -127,7 +145,9 @@ foreach (var game in new[] { GameType.PathOfExile1, GameType.PathOfExile2 })
             break;
     }
 
-    foreach (var language in gameLanguageProvider.GetList())
+    foreach (var language in gameLanguageProvider.GetList()
+                 .OrderBy(x => x.Code == "en" ? 0 : 1)
+                 .ThenBy(x => x.Code))
     {
         if (!string.IsNullOrEmpty(runLanguage) && language.Code != runLanguage) continue;
 
@@ -152,11 +172,25 @@ foreach (var game in new[] { GameType.PathOfExile1, GameType.PathOfExile2 })
             logger.LogInformation($"Built {game} invariant stats.");
         }
 
-        if (build && runItems)
+        if (build && runItemClasses)
         {
-            logger.LogInformation($"Building {language.Code} item classes.");
+            logger.LogInformation($"Building {game}/{language.Code} item classes.");
             await itemClassBuilder.Build(game, language);
-            logger.LogInformation($"Built {language.Code} item classes.");
+            logger.LogInformation($"Built {game}/{language.Code} item classes.");
+        }
+
+        if (build && runBaseItems)
+        {
+            logger.LogInformation($"Building {game}/{language.Code} base item types.");
+            await baseItemBuilder.Build(game, language);
+            logger.LogInformation($"Built {game}/{language.Code} base item types.");
+        }
+
+        if (build && runUniqueItems)
+        {
+            logger.LogInformation($"Building {game}/{language.Code} unique items.");
+            await uniqueItemBuilder.Build(game, language);
+            logger.LogInformation($"Built {game}/{language.Code} unique items.");
         }
     }
 }

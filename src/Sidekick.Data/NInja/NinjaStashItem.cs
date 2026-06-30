@@ -1,5 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using Sidekick.Data.ItemDefinitions;
 
 namespace Sidekick.Data.Ninja;
 
@@ -16,6 +17,9 @@ public class NinjaStashItem
 
     [MaxLength(64)]
     public required string Type { get; set; }
+
+    [MaxLength(128)]
+    public required string Url { get; set; }
 
     [MaxLength(512)]
     public string? Name { get; set; }
@@ -39,4 +43,6 @@ public class NinjaStashItem
     public List<NinjaStashTradeStat> TradeStats { get; set; } = [];
 
     public List<NinjaStashMutatedStat> MutatedStats { get; set; } = [];
+
+    public List<ItemDefinitionEntity> ItemDefinitions { get; set; } = [];
 }

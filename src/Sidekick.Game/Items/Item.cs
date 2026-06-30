@@ -24,9 +24,9 @@ public class Item
 
     public ItemClassEntity ItemClass { get; set; } = null!;
 
-    public ItemDefinition Definition { get; set; } = null!;
+    public ItemDefinitionEntity Definition { get; set; } = null!;
 
-    public ItemDefinition Invariant { get; set; } = null!;
+    public ItemDefinitionEntity Invariant { get; set; } = null!;
 
     public ItemProperties Properties { get; } = new();
 

@@ -19,24 +19,27 @@
     <ItemGroup>
         <ProjectReference Include="..\Sidekick.Common\Sidekick.Common.csproj" />
         <ProjectReference Include="..\Sidekick.Data\Sidekick.Data.csproj" />
+        <ProjectReference Include="..\Sidekick.Game\Sidekick.Game.csproj" />
     </ItemGroup>
 
     <ItemGroup>
-      <Compile Remove="ItemDefinitions\**" />
       <Compile Remove="Pseudo\**" />
       <Compile Remove="Stats\**" />
+      <Compile Remove="ItemDefinitions\ItemDefinitionBuilder.cs" />
     </ItemGroup>
 
     <ItemGroup>
-      <EmbeddedResource Remove="ItemDefinitions\**" />
       <EmbeddedResource Remove="Pseudo\**" />
       <EmbeddedResource Remove="Stats\**" />
     </ItemGroup>
 
     <ItemGroup>
-      <None Remove="ItemDefinitions\**" />
       <None Remove="Pseudo\**" />
       <None Remove="Stats\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="ItemDefinitions\" />
     </ItemGroup>
 
 </Project>

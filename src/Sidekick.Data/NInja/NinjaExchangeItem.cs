@@ -1,6 +1,7 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using Microsoft.EntityFrameworkCore;
+using Sidekick.Data.ItemDefinitions;
 
 namespace Sidekick.Data.Ninja;
 
@@ -15,6 +16,9 @@ public class NinjaExchangeItem
 
     [MaxLength(64)]
     public required string Type { get; set; }
+
+    [MaxLength(128)]
+    public required string Url { get; set; }
 
     [MaxLength(256)]
     public string? Id { get; set; }

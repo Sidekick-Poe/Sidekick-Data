@@ -2,8 +2,6 @@ using System.Diagnostics;
 using System.Net.Http.Headers;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Options;
-using Sidekick.Common;
 using Sidekick.Common.Enums;
 using Sidekick.Data.Cli.Ninja.Dtos;
 using Sidekick.Data.Ninja;
@@ -12,7 +10,6 @@ namespace Sidekick.Data.Cli.Ninja;
 
 public class NinjaDownloader(
     ILogger<NinjaDownloader> logger,
-    IOptions<SidekickConfiguration> configuration,
     DbContextOptions<DataDbContext> dbContextOptions)
 {
     private static readonly List<NinjaPage> Poe1Pages =
@@ -87,18 +84,8 @@ public class NinjaDownloader(
         await using var db = new DataDbContext(dbContextOptions);
         var league = await db.TradeLeagues.FirstAsync(x => x.Game == game && x.Language == "en");
 
-        try
-        {
-            await DownloadExchange(game, league.Id);
-            await DownloadStash(game, league.Id);
-        }
-        catch (Exception ex)
-        {
-            if (configuration.Value.ApplicationType == SidekickApplicationType.DataBuilder ||
-                configuration.Value.ApplicationType == SidekickApplicationType.Test)
-                throw;
-            logger.LogError(ex, $"Failed to download ninja data for {game}.");
-        }
+        await DownloadExchange(game, league.Id);
+        await DownloadStash(game, league.Id);
     }
 
     private async Task DownloadExchange(GameType game, string league)
@@ -126,13 +113,14 @@ public class NinjaDownloader(
                     SidekickId = Guid.NewGuid(),
                     Game = game,
                     Type = page.Type,
+                    Url = page.Url,
                     Id = item.Id,
                     DetailsId = item.DetailsId,
                 });
             }
 
             await db.SaveChangesAsync();
-            logger.LogInformation($"Downloaded {items.Count} exchange items for {page.Type}/{game}");
+            logger.LogInformation($"[NinjaDownloader] Downloaded {items.Count} exchange items for {page.Type}/{game}");
         }
     }
 
@@ -162,6 +150,7 @@ public class NinjaDownloader(
                     SidekickId = itemId,
                     Game = game,
                     Type = page.Type,
+                    Url = page.Url,
                     DetailsId = item.DetailsId,
                     Name = item.Name,
                     BaseType = item.BaseType,
@@ -181,6 +170,7 @@ public class NinjaDownloader(
                         {
                             Debugger.Break();
                         }
+
                         db.NinjaStashTradeStats.Add(new NinjaStashTradeStat
                         {
                             SidekickId = Guid.NewGuid(),
@@ -209,40 +199,24 @@ public class NinjaDownloader(
             }
 
             await db.SaveChangesAsync();
-            logger.LogInformation($"Downloaded {items.Count} stash items for {page.Type}/{game}");
+            logger.LogInformation($"[NinjaDownloader] Downloaded {items.Count} stash items for {page.Type}/{game}");
         }
     }
 
     private async Task<List<NinjaExchangeItemDto>?> DownloadExchangePage(HttpClient http, string url)
     {
-        try
-        {
-            logger.LogDebug($"GET {url}");
-            var json = await http.GetStringAsync(url);
-            var result = System.Text.Json.JsonSerializer.Deserialize<NinjaExchangeOverview>(json, JsonOptions);
-            return result?.Items;
-        }
-        catch (Exception ex)
-        {
-            logger.LogError(ex, $"Failed for {url}: {ex.Message}");
-            return null;
-        }
+        logger.LogDebug($"GET {url}");
+        var json = await http.GetStringAsync(url);
+        var result = System.Text.Json.JsonSerializer.Deserialize<NinjaExchangeOverview>(json, JsonOptions);
+        return result?.Items;
     }
 
     private async Task<List<NinjaStashLineDto>?> DownloadStashPage(HttpClient http, string url)
     {
-        try
-        {
-            logger.LogDebug($"GET {url}");
-            var json = await http.GetStringAsync(url);
-            var result = System.Text.Json.JsonSerializer.Deserialize<NinjaStashOverview>(json, JsonOptions);
-            return result?.Lines;
-        }
-        catch (Exception ex)
-        {
-            logger.LogError(ex, $"Failed for {url}: {ex.Message}");
-            return null;
-        }
+        logger.LogDebug($"GET {url}");
+        var json = await http.GetStringAsync(url);
+        var result = System.Text.Json.JsonSerializer.Deserialize<NinjaStashOverview>(json, JsonOptions);
+        return result?.Lines;
     }
 
     private static HttpClient CreateHttpClient()
